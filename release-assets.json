@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    { "logicalPath": "index.html", "source": "server/web_tools/beautify_home/index.html", "classification": "owned", "mime": "text/html; charset=utf-8" },
+    { "logicalPath": "fetch-522-retry.js", "source": "server/static/fetch-522-retry.js", "classification": "owned", "mime": "text/javascript; charset=utf-8" },
+    { "logicalPath": "tool-h5-launch-gate.js", "source": "server/static/tool-h5-launch-gate.js", "classification": "owned", "mime": "text/javascript; charset=utf-8" },
+
+    { "logicalPath": "font-adjustment-local/index.html", "source": "server/static/font-adjustment-local/index.html", "classification": "owned", "mime": "text/html; charset=utf-8" },
+    { "logicalPath": "font-adjustment-local/styles.css", "source": "server/static/font-adjustment-local/styles.css", "classification": "owned", "mime": "text/css; charset=utf-8" },
+    { "logicalPath": "font-adjustment-local/app.js", "source": "server/static/font-adjustment-local/app.js", "classification": "owned", "mime": "text/javascript; charset=utf-8" },
+    { "logicalPath": "font-adjustment-local/font-adjustment.worker.js", "source": "server/static/font-adjustment-local/font-adjustment.worker.js", "classification": "owned", "mime": "text/javascript; charset=utf-8" },
+    { "logicalPath": "font-adjustment-local/font_processor.py", "source": "server/static/font-adjustment-local/font_processor.py", "classification": "owned", "mime": "text/x-python; charset=utf-8" },
+
+    { "logicalPath": "font-glyph-editor/index.html", "source": "server/static/font-glyph-editor/index.html", "classification": "owned", "mime": "text/html; charset=utf-8" },
+    { "logicalPath": "font-glyph-editor/editor.js", "source": "server/static/font-glyph-editor/editor.js", "classification": "owned", "mime": "text/javascript; charset=utf-8" },
+    { "logicalPath": "font-glyph-editor/font-glyph-editor.vendor.js", "source": "server/static/font-glyph-editor/font-glyph-editor.vendor.js", "classification": "vendor", "mime": "text/javascript; charset=utf-8" },
+    { "logicalPath": "font-marker-local/marker.worker.js", "source": "server/static/font-marker-local/marker.worker.js", "classification": "owned", "mime": "text/javascript; charset=utf-8" },
+    { "logicalPath": "font-marker-local/font-marker.vendor.js", "source": "server/static/font-marker-local/font-marker.vendor.js", "classification": "vendor", "mime": "text/javascript; charset=utf-8" },
+
+    { "logicalPath": "psd-layer-split/index.html", "source": "server/static/psd-layer-split/index.html", "classification": "owned", "mime": "text/html; charset=utf-8" },
+    { "logicalPath": "psd-layer-split/styles.css", "source": "server/static/psd-layer-split/styles.css", "classification": "owned", "mime": "text/css; charset=utf-8" },
+    { "logicalPath": "psd-layer-split/app.js", "source": "server/static/psd-layer-split/app.js", "classification": "owned", "mime": "text/javascript; charset=utf-8" },
+    { "logicalPath": "psd-layer-split/psd-worker.js", "source": "server/static/psd-layer-split/psd-worker.js", "classification": "owned", "mime": "text/javascript; charset=utf-8" },
+    { "logicalPath": "psd-layer-split/psd-worker.vendor.js", "source": "server/static/psd-layer-split/psd-worker.vendor.js", "classification": "vendor", "mime": "text/javascript; charset=utf-8" },
+
+    { "logicalPath": "font-adjustment-local/vendor/runtime-assets.json", "source": "server/static/font-adjustment-local/vendor/runtime-assets.json", "classification": "vendor", "mime": "application/json; charset=utf-8" },
+    { "logicalPath": "font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md", "source": "server/static/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md", "classification": "vendor", "mime": "text/markdown; charset=utf-8" },
+    { "logicalPath": "font-adjustment-local/vendor/jweixin-1.6.0.js", "source": "server/static/font-adjustment-local/vendor/jweixin-1.6.0.js", "classification": "vendor", "mime": "text/javascript; charset=utf-8" },
+    { "logicalPath": "font-adjustment-local/vendor/pyodide/pyodide.js", "source": "server/static/font-adjustment-local/vendor/pyodide/pyodide.js", "classification": "vendor", "mime": "text/javascript; charset=utf-8" },
+    { "logicalPath": "font-adjustment-local/vendor/pyodide/pyodide.asm.js", "source": "server/static/font-adjustment-local/vendor/pyodide/pyodide.asm.js", "classification": "vendor", "mime": "text/javascript; charset=utf-8" },
+    { "logicalPath": "font-adjustment-local/vendor/pyodide/pyodide.asm.wasm", "source": "server/static/font-adjustment-local/vendor/pyodide/pyodide.asm.wasm", "classification": "vendor", "mime": "application/wasm" },
+    { "logicalPath": "font-adjustment-local/vendor/pyodide/python_stdlib.zip", "source": "server/static/font-adjustment-local/vendor/pyodide/python_stdlib.zip", "classification": "vendor", "mime": "application/zip" },
+    { "logicalPath": "font-adjustment-local/vendor/pyodide/pyodide-lock.json", "source": "server/static/font-adjustment-local/vendor/pyodide/pyodide-lock.json", "classification": "vendor", "mime": "application/json; charset=utf-8" },
+    { "logicalPath": "font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl", "source": "server/static/font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl", "classification": "vendor", "mime": "application/zip" },
+    { "logicalPath": "psd-layer-split/vendor/THIRD_PARTY_NOTICES.md", "source": "server/static/psd-layer-split/vendor/THIRD_PARTY_NOTICES.md", "classification": "vendor", "mime": "text/markdown; charset=utf-8" },
+
+    { "logicalPath": "licenses/pako-LICENSE", "source": "external-services/font-marker-worker/node_modules/pako/LICENSE", "classification": "vendor", "mime": "text/plain; charset=utf-8" },
+    { "logicalPath": "licenses/fflate-LICENSE", "source": "external-services/font-marker-worker/node_modules/fflate/LICENSE", "classification": "vendor", "mime": "text/plain; charset=utf-8" },
+    { "logicalPath": "licenses/fonteditor-core-LICENSE", "source": "external-services/font-marker-worker/node_modules/fonteditor-core/LICENSE", "classification": "vendor", "mime": "text/plain; charset=utf-8" },
+    { "logicalPath": "licenses/imagetracerjs-LICENSE", "source": "external-services/font-marker-worker/node_modules/imagetracerjs/LICENSE", "classification": "vendor", "mime": "text/plain; charset=utf-8" },
+    { "logicalPath": "licenses/ag-psd-LICENSE", "source": "server/web_tools/psd_layer_split/node_modules/ag-psd/LICENSE", "classification": "vendor", "mime": "text/plain; charset=utf-8" },
+    { "logicalPath": "licenses/fast-png-LICENSE", "source": "server/web_tools/psd_layer_split/node_modules/fast-png/LICENSE", "classification": "vendor", "mime": "text/plain; charset=utf-8" },
+    { "logicalPath": "licenses/base64-js-LICENSE", "source": "server/web_tools/psd_layer_split/node_modules/base64-js/LICENSE", "classification": "vendor", "mime": "text/plain; charset=utf-8" },
+    { "logicalPath": "licenses/iobuffer-LICENSE", "source": "server/web_tools/psd_layer_split/node_modules/iobuffer/LICENSE", "classification": "vendor", "mime": "text/plain; charset=utf-8" }
+  ]
+}

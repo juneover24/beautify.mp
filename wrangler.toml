@@ -1,0 +1,8 @@
+name = "beautify-mp-static"
+compatibility_date = "2026-07-18"
+workers_dev = false
+
+[assets]
+directory = "./site"
+html_handling = "none"
+not_found_handling = "404-page"

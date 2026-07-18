@@ -1,0 +1,15 @@
+{
+  "name": "beautify.mp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "deploy": "npm run build && wrangler deploy",
+    "keys:generate": "node scripts/generate-keyring.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.13.0"
+  }
+}

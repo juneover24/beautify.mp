@@ -1,0 +1,9 @@
+Copyright (c) JuneOver24. All rights reserved.
+
+The encrypted first-party assets, bootstrap integration code, manifests, and
+other original JuneOver24 material in this repository are proprietary and are
+not licensed for copying, modification, redistribution, or derivative use.
+
+Third-party components remain governed by their respective licenses. Their
+license texts and notices are distributed under the release `licenses/` and
+vendor notice paths and are not covered by this proprietary notice.

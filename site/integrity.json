@@ -6,14 +6,6 @@
       "bytes": 2,
       "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
     },
-    "card-link.html": {
-      "bytes": 27204,
-      "sha256": "cc8920be8e9c639b35e066fb5921ceaeb1934439f3a1fa1b87aafb0f59fce5d0"
-    },
-    "card-link/index.html": {
-      "bytes": 27204,
-      "sha256": "cc8920be8e9c639b35e066fb5921ceaeb1934439f3a1fa1b87aafb0f59fce5d0"
-    },
     "current.json": {
       "bytes": 58,
       "sha256": "3a15fb4d893fba08420b6923f2cb2a222ba927c710e5dd7fe454dfce8ecff909"
@@ -642,6 +634,10 @@
       "bytes": 30056,
       "sha256": "2f4c601287e0a1f58d20477e05055395bd0b09b8d66e1feaf4c048a74edeb222"
     },
+    "releases/20260810-1/cipher/39aff4186943f22209fb54f534dc079028f0010c50f1deea64517fa029283787.bin": {
+      "bytes": 27220,
+      "sha256": "39aff4186943f22209fb54f534dc079028f0010c50f1deea64517fa029283787"
+    },
     "releases/20260810-1/cipher/3f534dbcc3e0166e5fd6433e10831cc90b6e5428010afadea1c7911547f287ba.bin": {
       "bytes": 5254,
       "sha256": "3f534dbcc3e0166e5fd6433e10831cc90b6e5428010afadea1c7911547f287ba"
@@ -681,6 +677,10 @@
     "releases/20260810-1/cipher/805fdaa86ce25e1a6bf2dfb747b4c9cb0e3f3a8d783633fb1d39936143ac08bb.bin": {
       "bytes": 17610,
       "sha256": "805fdaa86ce25e1a6bf2dfb747b4c9cb0e3f3a8d783633fb1d39936143ac08bb"
+    },
+    "releases/20260810-1/cipher/80cc7a75d012bc4e7c95fb514d913608535860f8b3a6aef2e6405749e1c20f2d.bin": {
+      "bytes": 27220,
+      "sha256": "80cc7a75d012bc4e7c95fb514d913608535860f8b3a6aef2e6405749e1c20f2d"
     },
     "releases/20260810-1/cipher/8808aab599f880b9c4a452d542e0acbaa79f5b444f42b0c03db9a7a0e0c0622d.bin": {
       "bytes": 916,
@@ -739,8 +739,8 @@
       "sha256": "fd5a4428ce615ff86eec86fe3998aa218b49483b801bd4bcc2d450b9b69ee9cb"
     },
     "releases/20260810-1/manifest.json": {
-      "bytes": 30611,
-      "sha256": "6e9b600fce848dd4df00ce33c076437192ea4827b5a80d617991718cfc3dcacf"
+      "bytes": 31098,
+      "sha256": "ed6eaa1a67abc36e2816f75f9baed531f7b1b4e360fc916f4017dcd3763bc6d2"
     },
     "releases/20260810-1/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
       "bytes": 882,

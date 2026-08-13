@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "releaseId": "20260810-1",
-  "createdAt": "2026-08-10T10:46:31.975Z",
+  "createdAt": "2026-08-13T15:59:24.370Z",
   "enc": "A256GCM",
   "recipients": [
     {
@@ -780,11 +780,45 @@
           "publicPath": "public/licenses/iobuffer-LICENSE"
         }
       ]
+    },
+    "card-link.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-cc8920be8e9c639b35e0",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 27204,
+          "sha256": "cc8920be8e9c639b35e066fb5921ceaeb1934439f3a1fa1b87aafb0f59fce5d0",
+          "cipherPath": "cipher/39aff4186943f22209fb54f534dc079028f0010c50f1deea64517fa029283787.bin",
+          "cipherSha256": "39aff4186943f22209fb54f534dc079028f0010c50f1deea64517fa029283787",
+          "iv": "PYKm5nsMQu4ohCpw",
+          "aadVersion": 1
+        }
+      ]
+    },
+    "card-link": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-cc8920be8e9c639b35e0",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 27204,
+          "sha256": "cc8920be8e9c639b35e066fb5921ceaeb1934439f3a1fa1b87aafb0f59fce5d0",
+          "cipherPath": "cipher/80cc7a75d012bc4e7c95fb514d913608535860f8b3a6aef2e6405749e1c20f2d.bin",
+          "cipherSha256": "80cc7a75d012bc4e7c95fb514d913608535860f8b3a6aef2e6405749e1c20f2d",
+          "iv": "GYVnQz7bpjyodVvw",
+          "aadVersion": 1
+        }
+      ]
     }
   },
   "signature": {
     "kid": "manifest-primary",
     "alg": "ES256",
-    "value": "YlCW293ZpFMYEmcJh5b/PIiYBQIiDWQv1HxLYNWjfz6q1/R0gjDZIxk5lo0OvDyeaAuPhne17qdOwkJztyx6MQ=="
+    "value": "Yp1rxWUbJzIPgxUIzIKsowwvVm07Wuity1TT7cUTY74mJ7gyoeESKWQo7awGqxJ+eODbK+BGCYAEP9RlP4xNBA=="
   }
 }

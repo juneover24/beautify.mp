@@ -27,6 +27,8 @@ test('every first-party route is ciphertext and every public part is explicitly 
   const { releaseRoot, manifest } = await currentRelease();
   const requiredOwned = [
     'index.html',
+    'card-link.html',
+    'card-link',
     'fetch-522-retry.js',
     'tool-h5-launch-gate.js',
     'font-adjustment-local/app.js',
@@ -76,6 +78,8 @@ test('public integrity inventory rejects raw bundles, source maps, pyc and priva
   const integrity = JSON.parse(await readFile(path.join(site, 'integrity.json'), 'utf8'));
   assert.equal(integrity.schemaVersion, 2);
   const paths = Object.keys(integrity.files);
+  assert.ok(!paths.includes('card-link.html'));
+  assert.ok(!paths.includes('card-link/index.html'));
   assert.ok(paths.every(file => !/\.map(?:\.json)?$/i.test(file)));
   assert.ok(paths.every(file => !/(?:^|\/)__pycache__\/|\.pyc$/i.test(file)));
   assert.ok(paths.every(file => !/\.raw\.js$|private\.pem$/i.test(file)));

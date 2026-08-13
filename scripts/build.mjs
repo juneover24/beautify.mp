@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { cp, mkdir, readFile, readdir, rm, stat, writeFile } from 'node:fs/promises';
+import { copyFile, mkdir, readFile, readdir, rm, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import {
@@ -29,6 +29,11 @@ async function walk(directory) {
     else if (entry.isFile()) result.push(absolute);
   }
   return result;
+}
+
+async function publishPublicBootstrap() {
+  await copyFile(path.join(packageRoot, 'pages', '.nojekyll'), path.join(siteRoot, '.nojekyll'));
+  await copyFile(path.join(packageRoot, 'pages', 'index.html'), path.join(siteRoot, 'index.html'));
 }
 
 async function validatePublishedSnapshot() {
@@ -105,7 +110,7 @@ for (const [relative, bytes] of release.outputFiles) {
 }
 await writeFile(path.join(releaseRoot, 'manifest.json'), `${JSON.stringify(release.manifest, null, 2)}\n`, 'utf8');
 await writeFile(path.join(siteRoot, 'current.json'), `${JSON.stringify({ schemaVersion: 1, releaseId }, null, 2)}\n`, 'utf8');
-await cp(path.join(packageRoot, 'pages'), siteRoot, { recursive: true, force: true });
+await publishPublicBootstrap();
 
 const integrity = {};
 for (const file of (await walk(siteRoot)).sort()) {

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "assets": [
-    { "logicalPath": "index.html", "source": "server/web_tools/beautify_home/index.html", "classification": "owned", "mime": "text/html; charset=utf-8" },
+    { "logicalPath": "index.html", "source": "beautify.mp/pages/card-link.html", "classification": "owned", "mime": "text/html; charset=utf-8" },
     { "logicalPath": "card-link.html", "source": "beautify.mp/pages/card-link.html", "classification": "owned", "mime": "text/html; charset=utf-8" },
     { "logicalPath": "card-link", "source": "beautify.mp/pages/card-link.html", "classification": "owned", "mime": "text/html; charset=utf-8" },
     { "logicalPath": "fetch-522-retry.js", "source": "server/static/fetch-522-retry.js", "classification": "owned", "mime": "text/javascript; charset=utf-8" },

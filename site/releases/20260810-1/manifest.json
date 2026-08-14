@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "releaseId": "20260810-1",
-  "createdAt": "2026-08-13T15:59:24.370Z",
+  "createdAt": "2026-08-14T01:38:12.554Z",
   "enc": "A256GCM",
   "recipients": [
     {
@@ -16,14 +16,14 @@
       "cacheMode": "no-store",
       "parts": [
         {
-          "id": "asset-230b352e3ecb1c0111a8",
+          "id": "asset-cc8920be8e9c639b35e0",
           "kind": "owned",
           "mime": "text/html; charset=utf-8",
-          "bytes": 900,
-          "sha256": "230b352e3ecb1c0111a87e84f88f19ba614a8aa81c5be5fc446f21c74cf10c96",
-          "cipherPath": "cipher/8808aab599f880b9c4a452d542e0acbaa79f5b444f42b0c03db9a7a0e0c0622d.bin",
-          "cipherSha256": "8808aab599f880b9c4a452d542e0acbaa79f5b444f42b0c03db9a7a0e0c0622d",
-          "iv": "sbLZNx4jLQf/yKGA",
+          "bytes": 27204,
+          "sha256": "cc8920be8e9c639b35e066fb5921ceaeb1934439f3a1fa1b87aafb0f59fce5d0",
+          "cipherPath": "cipher/8d31239235835106e19509f2f1ff55d9364910a88185d82be8ca28618d32c7d3.bin",
+          "cipherSha256": "8d31239235835106e19509f2f1ff55d9364910a88185d82be8ca28618d32c7d3",
+          "iv": "tulV6FgtrSARSPBj",
           "aadVersion": 1
         }
       ]
@@ -819,6 +819,6 @@
   "signature": {
     "kid": "manifest-primary",
     "alg": "ES256",
-    "value": "Yp1rxWUbJzIPgxUIzIKsowwvVm07Wuity1TT7cUTY74mJ7gyoeESKWQo7awGqxJ+eODbK+BGCYAEP9RlP4xNBA=="
+    "value": "CEz6aGl75Gv/XDmPJvVHTizBG59oRD+vYhLXMZ+rVshSTEvmg1nkqsCC3Gc6CYynoid+IB8cn+GOSWEN8dvyPA=="
   }
 }

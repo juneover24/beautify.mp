@@ -686,6 +686,10 @@
       "bytes": 916,
       "sha256": "8808aab599f880b9c4a452d542e0acbaa79f5b444f42b0c03db9a7a0e0c0622d"
     },
+    "releases/20260810-1/cipher/8d31239235835106e19509f2f1ff55d9364910a88185d82be8ca28618d32c7d3.bin": {
+      "bytes": 27220,
+      "sha256": "8d31239235835106e19509f2f1ff55d9364910a88185d82be8ca28618d32c7d3"
+    },
     "releases/20260810-1/cipher/9fe127f90b6014becd85e73a55ce3ca2c343e375278e26a320e42b862f35dcae.bin": {
       "bytes": 5722,
       "sha256": "9fe127f90b6014becd85e73a55ce3ca2c343e375278e26a320e42b862f35dcae"
@@ -739,8 +743,8 @@
       "sha256": "fd5a4428ce615ff86eec86fe3998aa218b49483b801bd4bcc2d450b9b69ee9cb"
     },
     "releases/20260810-1/manifest.json": {
-      "bytes": 31098,
-      "sha256": "ed6eaa1a67abc36e2816f75f9baed531f7b1b4e360fc916f4017dcd3763bc6d2"
+      "bytes": 31100,
+      "sha256": "0e77f25e29756167d56f028ebb26dd779124439ae0e6a16533d18659341a7a61"
     },
     "releases/20260810-1/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
       "bytes": 882,

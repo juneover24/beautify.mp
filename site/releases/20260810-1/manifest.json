@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "releaseId": "20260810-1",
-  "createdAt": "2026-08-14T01:50:58.519Z",
+  "createdAt": "2026-08-14T04:54:32.827Z",
   "enc": "A256GCM",
   "recipients": [
     {
@@ -16,14 +16,14 @@
       "cacheMode": "no-store",
       "parts": [
         {
-          "id": "asset-33881635d706874c1c69",
+          "id": "asset-0a623d3438ef88e6c142",
           "kind": "owned",
           "mime": "text/html; charset=utf-8",
-          "bytes": 27092,
-          "sha256": "33881635d706874c1c69231b5d2c15b5c202ec9dd580c54fe4e944af3ee8326e",
-          "cipherPath": "cipher/fe5f16c50d29e16c5bf62e661c76da9bdc373d356ded5073667c0bd691686c56.bin",
-          "cipherSha256": "fe5f16c50d29e16c5bf62e661c76da9bdc373d356ded5073667c0bd691686c56",
-          "iv": "EkI5wdfmi8lfWdRL",
+          "bytes": 5907,
+          "sha256": "0a623d3438ef88e6c142c9747db2ad09bc8766a67e9726473d5b3328a3764ff8",
+          "cipherPath": "cipher/d14a85475c388169f65323b4aeea2c0a61a8be335585c54b7fc4b231806cb9f0.bin",
+          "cipherSha256": "d14a85475c388169f65323b4aeea2c0a61a8be335585c54b7fc4b231806cb9f0",
+          "iv": "gr4+M8Ng/zWKMm+t",
           "aadVersion": 1
         }
       ]
@@ -786,14 +786,14 @@
       "cacheMode": "no-store",
       "parts": [
         {
-          "id": "asset-33881635d706874c1c69",
+          "id": "asset-0a623d3438ef88e6c142",
           "kind": "owned",
           "mime": "text/html; charset=utf-8",
-          "bytes": 27092,
-          "sha256": "33881635d706874c1c69231b5d2c15b5c202ec9dd580c54fe4e944af3ee8326e",
-          "cipherPath": "cipher/6fb0224eb2886e99aea3fffeb775a50683bde64d0b76dfca170cf88359e36965.bin",
-          "cipherSha256": "6fb0224eb2886e99aea3fffeb775a50683bde64d0b76dfca170cf88359e36965",
-          "iv": "GxB1ijn1hJAQtw76",
+          "bytes": 5907,
+          "sha256": "0a623d3438ef88e6c142c9747db2ad09bc8766a67e9726473d5b3328a3764ff8",
+          "cipherPath": "cipher/7a7626c8c748c461807d52d506f01531a64de0ff6a1b191c8d5a3472427408f2.bin",
+          "cipherSha256": "7a7626c8c748c461807d52d506f01531a64de0ff6a1b191c8d5a3472427408f2",
+          "iv": "1I1V8NMXav3NumzF",
           "aadVersion": 1
         }
       ]
@@ -803,14 +803,31 @@
       "cacheMode": "no-store",
       "parts": [
         {
-          "id": "asset-33881635d706874c1c69",
+          "id": "asset-0a623d3438ef88e6c142",
           "kind": "owned",
           "mime": "text/html; charset=utf-8",
-          "bytes": 27092,
-          "sha256": "33881635d706874c1c69231b5d2c15b5c202ec9dd580c54fe4e944af3ee8326e",
-          "cipherPath": "cipher/e17926b8bbb8389d24abaf58621b52b294a635bebb0583d76d97eda5db3b7674.bin",
-          "cipherSha256": "e17926b8bbb8389d24abaf58621b52b294a635bebb0583d76d97eda5db3b7674",
-          "iv": "v81HbNVMvYRH/Vmr",
+          "bytes": 5907,
+          "sha256": "0a623d3438ef88e6c142c9747db2ad09bc8766a67e9726473d5b3328a3764ff8",
+          "cipherPath": "cipher/2c1f06018aa951ba91468188a1774a51defffbedc6860aaeefc425a4ecd93976.bin",
+          "cipherSha256": "2c1f06018aa951ba91468188a1774a51defffbedc6860aaeefc425a4ecd93976",
+          "iv": "3LRYliyslf5i/M1c",
+          "aadVersion": 1
+        }
+      ]
+    },
+    "card-link.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-b672a215d8ac31cf4d37",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 19080,
+          "sha256": "b672a215d8ac31cf4d3796262c9454c961d961c71c90f78eb98aae0d56c4d58a",
+          "cipherPath": "cipher/bcc44faf5b9f06087fa5d254e2b360f579fa4e0c1141b1f4df8fdc7b988de06b.bin",
+          "cipherSha256": "bcc44faf5b9f06087fa5d254e2b360f579fa4e0c1141b1f4df8fdc7b988de06b",
+          "iv": "1oJ0OxEqf1V2luFa",
           "aadVersion": 1
         }
       ]
@@ -819,6 +836,6 @@
   "signature": {
     "kid": "manifest-primary",
     "alg": "ES256",
-    "value": "1QhJDLp7dxWE9ooLmXo82jL+Vdr8s1B170Vo7XXIYx1iZmrxKr+/X8Ggv1UVXTGES3Q1ORXw+hBAwTtdWMXJ2w=="
+    "value": "6OHxUbo6w1zqFCRlOPvowMvlpC4hZcG3xDHhK4jm3pUkv+zyUMtUmLaSVd/jI8gkmgzDidmggNC35crkcrQRGw=="
   }
 }

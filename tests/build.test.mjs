@@ -29,6 +29,7 @@ test('every first-party route is ciphertext and every public part is explicitly 
     'index.html',
     'card-link.html',
     'card-link',
+    'card-link.js',
     'fetch-522-retry.js',
     'tool-h5-launch-gate.js',
     'font-adjustment-local/app.js',
@@ -76,19 +77,27 @@ test('GitHub Pages root is only a gateway bootstrap and exposes no tool source l
 
 test('tools root and card-link routes share the encrypted card-link source', async () => {
   const policy = JSON.parse(await readFile(path.join(root, 'release-assets.json'), 'utf8'));
-  for (const logicalPath of ['index.html', 'card-link.html', 'card-link']) {
+  const expected = new Map([
+    ['index.html', ['beautify.mp/pages/card-link.html', 'text/html; charset=utf-8']],
+    ['card-link.html', ['beautify.mp/pages/card-link.html', 'text/html; charset=utf-8']],
+    ['card-link', ['beautify.mp/pages/card-link.html', 'text/html; charset=utf-8']],
+    ['card-link.js', ['beautify.mp/pages/card-link.js', 'text/javascript; charset=utf-8']],
+  ]);
+  for (const [logicalPath, [source, mime]] of expected.entries()) {
     const entry = policy.assets.find(asset => asset.logicalPath === logicalPath);
     assert.ok(entry, logicalPath);
-    assert.equal(entry.source, 'beautify.mp/pages/card-link.html');
+    assert.equal(entry.source, source);
     assert.equal(entry.classification, 'owned');
-    assert.equal(entry.mime, 'text/html; charset=utf-8');
+    assert.equal(entry.mime, mime);
   }
 
   const { manifest } = await currentRelease();
   const rootPart = manifest.routes['index.html']?.parts?.[0];
   const cardPart = manifest.routes['card-link.html']?.parts?.[0];
+  const scriptPart = manifest.routes['card-link.js']?.parts?.[0];
   assert.equal(rootPart?.kind, 'owned');
   assert.equal(cardPart?.kind, 'owned');
+  assert.equal(scriptPart?.kind, 'owned');
   // index.html、card-link.html 和 card-link 都是同一个卡密页源文件；密文文件仍按
   // logicalPath 独立生成，因为 AAD 会绑定路由名，避免跨路由替换密文也能解密。
   assert.equal(rootPart.sha256, cardPart.sha256);
@@ -102,6 +111,7 @@ test('public integrity inventory rejects raw bundles, source maps, pyc and priva
   const paths = Object.keys(integrity.files);
   assert.ok(!paths.includes('card-link.html'));
   assert.ok(!paths.includes('card-link/index.html'));
+  assert.ok(!paths.includes('card-link.js'));
   assert.ok(paths.every(file => !/\.map(?:\.json)?$/i.test(file)));
   assert.ok(paths.every(file => !/(?:^|\/)__pycache__\/|\.pyc$/i.test(file)));
   assert.ok(paths.every(file => !/\.raw\.js$|private\.pem$/i.test(file)));

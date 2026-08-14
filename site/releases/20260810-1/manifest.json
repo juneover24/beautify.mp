@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "releaseId": "20260810-1",
-  "createdAt": "2026-08-14T01:38:12.554Z",
+  "createdAt": "2026-08-14T01:50:58.519Z",
   "enc": "A256GCM",
   "recipients": [
     {
@@ -16,14 +16,14 @@
       "cacheMode": "no-store",
       "parts": [
         {
-          "id": "asset-cc8920be8e9c639b35e0",
+          "id": "asset-33881635d706874c1c69",
           "kind": "owned",
           "mime": "text/html; charset=utf-8",
-          "bytes": 27204,
-          "sha256": "cc8920be8e9c639b35e066fb5921ceaeb1934439f3a1fa1b87aafb0f59fce5d0",
-          "cipherPath": "cipher/8d31239235835106e19509f2f1ff55d9364910a88185d82be8ca28618d32c7d3.bin",
-          "cipherSha256": "8d31239235835106e19509f2f1ff55d9364910a88185d82be8ca28618d32c7d3",
-          "iv": "tulV6FgtrSARSPBj",
+          "bytes": 27092,
+          "sha256": "33881635d706874c1c69231b5d2c15b5c202ec9dd580c54fe4e944af3ee8326e",
+          "cipherPath": "cipher/fe5f16c50d29e16c5bf62e661c76da9bdc373d356ded5073667c0bd691686c56.bin",
+          "cipherSha256": "fe5f16c50d29e16c5bf62e661c76da9bdc373d356ded5073667c0bd691686c56",
+          "iv": "EkI5wdfmi8lfWdRL",
           "aadVersion": 1
         }
       ]
@@ -786,14 +786,14 @@
       "cacheMode": "no-store",
       "parts": [
         {
-          "id": "asset-cc8920be8e9c639b35e0",
+          "id": "asset-33881635d706874c1c69",
           "kind": "owned",
           "mime": "text/html; charset=utf-8",
-          "bytes": 27204,
-          "sha256": "cc8920be8e9c639b35e066fb5921ceaeb1934439f3a1fa1b87aafb0f59fce5d0",
-          "cipherPath": "cipher/39aff4186943f22209fb54f534dc079028f0010c50f1deea64517fa029283787.bin",
-          "cipherSha256": "39aff4186943f22209fb54f534dc079028f0010c50f1deea64517fa029283787",
-          "iv": "PYKm5nsMQu4ohCpw",
+          "bytes": 27092,
+          "sha256": "33881635d706874c1c69231b5d2c15b5c202ec9dd580c54fe4e944af3ee8326e",
+          "cipherPath": "cipher/6fb0224eb2886e99aea3fffeb775a50683bde64d0b76dfca170cf88359e36965.bin",
+          "cipherSha256": "6fb0224eb2886e99aea3fffeb775a50683bde64d0b76dfca170cf88359e36965",
+          "iv": "GxB1ijn1hJAQtw76",
           "aadVersion": 1
         }
       ]
@@ -803,14 +803,14 @@
       "cacheMode": "no-store",
       "parts": [
         {
-          "id": "asset-cc8920be8e9c639b35e0",
+          "id": "asset-33881635d706874c1c69",
           "kind": "owned",
           "mime": "text/html; charset=utf-8",
-          "bytes": 27204,
-          "sha256": "cc8920be8e9c639b35e066fb5921ceaeb1934439f3a1fa1b87aafb0f59fce5d0",
-          "cipherPath": "cipher/80cc7a75d012bc4e7c95fb514d913608535860f8b3a6aef2e6405749e1c20f2d.bin",
-          "cipherSha256": "80cc7a75d012bc4e7c95fb514d913608535860f8b3a6aef2e6405749e1c20f2d",
-          "iv": "GYVnQz7bpjyodVvw",
+          "bytes": 27092,
+          "sha256": "33881635d706874c1c69231b5d2c15b5c202ec9dd580c54fe4e944af3ee8326e",
+          "cipherPath": "cipher/e17926b8bbb8389d24abaf58621b52b294a635bebb0583d76d97eda5db3b7674.bin",
+          "cipherSha256": "e17926b8bbb8389d24abaf58621b52b294a635bebb0583d76d97eda5db3b7674",
+          "iv": "v81HbNVMvYRH/Vmr",
           "aadVersion": 1
         }
       ]
@@ -819,6 +819,6 @@
   "signature": {
     "kid": "manifest-primary",
     "alg": "ES256",
-    "value": "CEz6aGl75Gv/XDmPJvVHTizBG59oRD+vYhLXMZ+rVshSTEvmg1nkqsCC3Gc6CYynoid+IB8cn+GOSWEN8dvyPA=="
+    "value": "1QhJDLp7dxWE9ooLmXo82jL+Vdr8s1B170Vo7XXIYx1iZmrxKr+/X8Ggv1UVXTGES3Q1ORXw+hBAwTtdWMXJ2w=="
   }
 }

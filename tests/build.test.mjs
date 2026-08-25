@@ -27,18 +27,18 @@ test('every first-party route is ciphertext and every public part is explicitly 
   const { releaseRoot, manifest } = await currentRelease();
   const requiredOwned = [
     'index.html',
-    'card-link.html',
-    'card-link',
-    'card-link.js',
+    'manage-direct-upload.html',
     'fetch-522-retry.js',
-    'tool-h5-launch-gate.js',
     'font-adjustment-local/app.js',
     'font-adjustment-local/font-adjustment.worker.js',
     'font-adjustment-local/font_processor.py',
-    'font-marker-local/marker.worker.js',
     'font-glyph-editor/editor.js',
+    'font-marker-local/marker.worker.js',
     'psd-layer-split/app.js',
     'psd-layer-split/psd-worker.js',
+    'video-sound-conversion/app.js',
+    'skin-keyboard-simplify/compression-core.js',
+    'font-compress-local/font-compress.worker.js',
   ];
   requiredOwned.forEach(logicalPath => {
     assert.ok(manifest.routes[logicalPath], logicalPath);
@@ -75,34 +75,27 @@ test('GitHub Pages root is only a gateway bootstrap and exposes no tool source l
   assert.ok(!html.includes('font_processor.py'));
 });
 
-test('tools root and card-link routes share the encrypted card-link source', async () => {
+test('tool routes are encrypted assets and not public Pages files', async () => {
   const policy = JSON.parse(await readFile(path.join(root, 'release-assets.json'), 'utf8'));
   const expected = new Map([
-    ['index.html', ['beautify.mp/pages/card-link.html', 'text/html; charset=utf-8']],
-    ['card-link.html', ['beautify.mp/pages/card-link.html', 'text/html; charset=utf-8']],
-    ['card-link', ['beautify.mp/pages/card-link.html', 'text/html; charset=utf-8']],
-    ['card-link.js', ['beautify.mp/pages/card-link.js', 'text/javascript; charset=utf-8']],
+    ['index.html', ['server/web_tools/beautify_home/index.html', 'text/html; charset=utf-8']],
+    ['manage-direct-upload.html', ['server/static/manage-direct-upload.html', 'text/html; charset=utf-8']],
   ]);
   for (const [logicalPath, [source, mime]] of expected.entries()) {
     const entry = policy.assets.find(asset => asset.logicalPath === logicalPath);
     assert.ok(entry, logicalPath);
+    // tools 网关根路径解析为 index.html；HTML 和脚本都必须作为 owned 密文发布，
+    // 避免公开 Pages 源站暴露自研实现。
     assert.equal(entry.source, source);
     assert.equal(entry.classification, 'owned');
     assert.equal(entry.mime, mime);
   }
 
-  const { manifest } = await currentRelease();
-  const rootPart = manifest.routes['index.html']?.parts?.[0];
-  const cardPart = manifest.routes['card-link.html']?.parts?.[0];
-  const scriptPart = manifest.routes['card-link.js']?.parts?.[0];
-  assert.equal(rootPart?.kind, 'owned');
-  assert.equal(cardPart?.kind, 'owned');
-  assert.equal(scriptPart?.kind, 'owned');
-  // index.html、card-link.html 和 card-link 都是同一个卡密页源文件；密文文件仍按
-  // logicalPath 独立生成，因为 AAD 会绑定路由名，避免跨路由替换密文也能解密。
-  assert.equal(rootPart.sha256, cardPart.sha256);
-  assert.equal(rootPart.bytes, cardPart.bytes);
-  assert.notEqual(rootPart.cipherPath, cardPart.cipherPath);
+  const integrity = JSON.parse(await readFile(path.join(site, 'integrity.json'), 'utf8'));
+  const paths = Object.keys(integrity.files);
+  assert.ok(!paths.includes('card-link.html'));
+  assert.ok(!paths.includes('card-link/index.html'));
+  assert.ok(!paths.includes('card-link.js'));
 });
 
 test('public integrity inventory rejects raw bundles, source maps, pyc and private PEM files', async () => {

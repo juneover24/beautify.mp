@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260909-download-bridge-v2",
+  "toolKey": "download_bridge",
+  "createdAt": "2026-09-08T17:16:26.461Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "download-bridge/index.html",
+    "styles": [
+      "download-bridge/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "download-bridge/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260909-download-bridge-v2:download_bridge",
+      "wrappedKey": "D9WewRKO8RGdo/E783aJhB+U879mjB0vNoSyTvMumbNHaoAkKvaKUtkkbCOp+Hz9PRFDcLDW/oAYQydxVyRfcp7Sq9Y85D1hWqz1rN1hr2ropMgC+VIWo9C0wn1C2dc3FtOAU3vLVHlAKnIrZuepdTy2khgGV3G0gsjmrjW00Qh/z3NRZDLR62zxhajw3jc/sAhqUol57uMDC5gQzV8Ohn4fofr5EavJ7e/4g6EDwaVw0By7oZ8AkxwsQaBy6XjM1n3ESQiKn0TGAtB+dwMPZpdDJKsoj6U2pybp+kAmxbx+D7Gr4FPFMXxkYACT/mt9gw+oEvE5K446OwrbWKvsTLXlwEpli/MMcrmJGoYgcfFXvUuMSEeIwhQY89bsxgj3JJCuS/MLYhWPR/3vJkjjMvYvNq3ObF253H2qZhFx2V5P12GPCMxoEGvLZtLfN0hfj4pFGXp1wte+UXg2iOcNQo6ie6Us8vHT95arfJFHqsrC5zkaZBo8mjXEfVwjToB4"
+    }
+  ],
+  "routes": {
+    "download-bridge/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-fc3c94571b7e62309227",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 919,
+          "sha256": "fc3c94571b7e6230922769f9876b35c8e35dbe3b8b1a335352a06e6093ea787b",
+          "cipherPath": "cipher/06174d7998a2408cb2956fb3e6f6d88627d82db6802cfa80532ad0c53a150275.bin",
+          "cipherSha256": "06174d7998a2408cb2956fb3e6f6d88627d82db6802cfa80532ad0c53a150275",
+          "iv": "d3vGdc8pI7LNDoMF",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-4cab9172a2fa3fb4d6f7",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 1256,
+          "sha256": "4cab9172a2fa3fb4d6f79924664d371363af37da52745ec230830a9c09aa247e",
+          "cipherPath": "cipher/d2b6f8e392732bacb3c123260affe17c7613812e72531fc8273040735faefd0d.bin",
+          "cipherSha256": "d2b6f8e392732bacb3c123260affe17c7613812e72531fc8273040735faefd0d",
+          "iv": "gi+W4NPy+Dnh0sFY",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-d513c909e739993b9714",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 37379,
+          "sha256": "d513c909e739993b97140edf0ba643d6dfb0ac303eec34710259f84ac86e4330",
+          "cipherPath": "cipher/cd4e073001285e713f13f464eafb87bcbd5608e3a726a0ecbda412d157b4548d.bin",
+          "cipherSha256": "cd4e073001285e713f13f464eafb87bcbd5608e3a726a0ecbda412d157b4548d",
+          "iv": "SCewcaITRgH5BD3H",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "3b4psQgsvs3ZkWpO6rozDDCTYVtbPu5/yNaRgg7e2C5fVSB13p+oYRRNruMslYp+lXwINEmix+XY6mwSpwfFbA=="
+  }
+}

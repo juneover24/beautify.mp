@@ -8,7 +8,7 @@
     },
     "current.json": {
       "bytes": 58,
-      "sha256": "203361c579689263102d05f5071948761a1c16a8eff7c9f9f3a338707434612c"
+      "sha256": "cf15974185ca3b774c94116fe03db5de68d32c00453986a889ef97ea852a42bc"
     },
     "index.html": {
       "bytes": 530,
@@ -78,10 +78,6 @@
       "bytes": 21690,
       "sha256": "f03d12270e642db539956017c0bcbc9d2cea7fe497fae4682662c19a72e31622"
     },
-    "releases/20260718-1/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 882,
-      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
-    },
     "releases/20260718-1/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
       "bytes": 12938,
       "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
@@ -113,6 +109,10 @@
     "releases/20260718-1/public/font-adjustment-local/vendor/runtime-assets.json": {
       "bytes": 2066,
       "sha256": "43edf99e04ddd8bb3968f4fdcac68674951a082f490282d8c66a81678afefc75"
+    },
+    "releases/20260718-1/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 882,
+      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
     },
     "releases/20260718-1/public/font-glyph-editor/font-glyph-editor.vendor.js": {
       "bytes": 391423,
@@ -230,10 +230,6 @@
       "bytes": 22380,
       "sha256": "0da245b79153b717580558e2be7f6388ad1119b88fe863405b123a4fb8b848e8"
     },
-    "releases/20260723-1/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 882,
-      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
-    },
     "releases/20260723-1/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
       "bytes": 12938,
       "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
@@ -265,6 +261,10 @@
     "releases/20260723-1/public/font-adjustment-local/vendor/runtime-assets.json": {
       "bytes": 2066,
       "sha256": "43edf99e04ddd8bb3968f4fdcac68674951a082f490282d8c66a81678afefc75"
+    },
+    "releases/20260723-1/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 882,
+      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
     },
     "releases/20260723-1/public/font-glyph-editor/font-glyph-editor.vendor.js": {
       "bytes": 391423,
@@ -382,10 +382,6 @@
       "bytes": 22373,
       "sha256": "af58b7b21b2945a7e3469906befe542f1fe687c21b46c8a4f1f7dc9a53f77c16"
     },
-    "releases/20260723-2/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 882,
-      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
-    },
     "releases/20260723-2/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
       "bytes": 12938,
       "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
@@ -417,6 +413,10 @@
     "releases/20260723-2/public/font-adjustment-local/vendor/runtime-assets.json": {
       "bytes": 2066,
       "sha256": "43edf99e04ddd8bb3968f4fdcac68674951a082f490282d8c66a81678afefc75"
+    },
+    "releases/20260723-2/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 882,
+      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
     },
     "releases/20260723-2/public/font-glyph-editor/font-glyph-editor.vendor.js": {
       "bytes": 391423,
@@ -534,10 +534,6 @@
       "bytes": 22374,
       "sha256": "d4ee9445b916a0fc7c6eddcc715f1c7a2d3e6f37a1c4c31d95b5d748e7966f20"
     },
-    "releases/20260727-1/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 882,
-      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
-    },
     "releases/20260727-1/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
       "bytes": 12938,
       "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
@@ -569,6 +565,10 @@
     "releases/20260727-1/public/font-adjustment-local/vendor/runtime-assets.json": {
       "bytes": 2066,
       "sha256": "43edf99e04ddd8bb3968f4fdcac68674951a082f490282d8c66a81678afefc75"
+    },
+    "releases/20260727-1/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 882,
+      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
     },
     "releases/20260727-1/public/font-glyph-editor/font-glyph-editor.vendor.js": {
       "bytes": 391423,
@@ -774,10 +774,6 @@
       "bytes": 32589,
       "sha256": "90b7e95af3e8a14f486baf1d8a108d5b5c5932852ab6ea460c952bc776c5ecab"
     },
-    "releases/20260810-1/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 882,
-      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
-    },
     "releases/20260810-1/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
       "bytes": 12938,
       "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
@@ -809,6 +805,10 @@
     "releases/20260810-1/public/font-adjustment-local/vendor/runtime-assets.json": {
       "bytes": 2066,
       "sha256": "43edf99e04ddd8bb3968f4fdcac68674951a082f490282d8c66a81678afefc75"
+    },
+    "releases/20260810-1/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 882,
+      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
     },
     "releases/20260810-1/public/font-glyph-editor/font-glyph-editor.vendor.js": {
       "bytes": 391423,
@@ -986,10 +986,6 @@
       "bytes": 32589,
       "sha256": "812a7a4d33620063e29df0c6c430bdad80986f089ca0da30e5b44f7d1a98c7be"
     },
-    "releases/20260819-1/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 882,
-      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
-    },
     "releases/20260819-1/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
       "bytes": 12938,
       "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
@@ -1021,6 +1017,10 @@
     "releases/20260819-1/public/font-adjustment-local/vendor/runtime-assets.json": {
       "bytes": 2066,
       "sha256": "43edf99e04ddd8bb3968f4fdcac68674951a082f490282d8c66a81678afefc75"
+    },
+    "releases/20260819-1/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 882,
+      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
     },
     "releases/20260819-1/public/font-glyph-editor/font-glyph-editor.vendor.js": {
       "bytes": 391423,
@@ -1198,10 +1198,6 @@
       "bytes": 32589,
       "sha256": "1cac1faad63c84f28535b74527ccc6b5ec9039a22f50b79b7646c598099c222b"
     },
-    "releases/20260820-1/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 882,
-      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
-    },
     "releases/20260820-1/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
       "bytes": 12938,
       "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
@@ -1233,6 +1229,10 @@
     "releases/20260820-1/public/font-adjustment-local/vendor/runtime-assets.json": {
       "bytes": 2066,
       "sha256": "43edf99e04ddd8bb3968f4fdcac68674951a082f490282d8c66a81678afefc75"
+    },
+    "releases/20260820-1/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 882,
+      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
     },
     "releases/20260820-1/public/font-glyph-editor/font-glyph-editor.vendor.js": {
       "bytes": 391423,
@@ -1427,12 +1427,8 @@
       "sha256": "f57b07e436ed37f73ca84a3c60d6a79598b7d245ea2cbc336a6524e70037944f"
     },
     "releases/20260825-1/manifest.json": {
-      "bytes": 38704,
-      "sha256": "d783432503c0bc8c3ebbf0db8ffab00ce310e0ec4a6fd459a476cf3e630cc7c9"
-    },
-    "releases/20260825-1/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 869,
-      "sha256": "12f0e5d72adb78058dba39c6aade30a8b3d7de6da3b312c293e1632ade43b5d5"
+      "bytes": 39728,
+      "sha256": "a744b49a54b7bfba63792a47343a1de562a88ed1bf0d89b7a9c580403370e803"
     },
     "releases/20260825-1/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
       "bytes": 12938,
@@ -1447,72 +1443,76 @@
       "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac"
     },
     "releases/20260825-1/public/font-adjustment-local/vendor/pyodide/pyodide.asm.js": {
-      "bytes": 1074322,
-      "sha256": "1263f02b5b26099b96112378156f242dd98b39a8201ba7765e5fe3d455c5ce91"
+      "bytes": 1074337,
+      "sha256": "f4f3c6f756c779f073af1a6324b83d10fd11a10fbae70c942c32a05383670285"
     },
     "releases/20260825-1/public/font-adjustment-local/vendor/pyodide/pyodide.asm.wasm": {
       "bytes": 8647684,
       "sha256": "e2f4ee75b325e35eb31bfb8c613d4dd5098f5502c156a97847686875b5025480"
     },
     "releases/20260825-1/public/font-adjustment-local/vendor/pyodide/pyodide.js": {
-      "bytes": 18597,
-      "sha256": "718d40f1c015dd25ec724cc8fc4e2325d6a45a92ae225121ff6953f224a16f72"
+      "bytes": 18603,
+      "sha256": "ebcc4755cb00e6d0654c74bda4f03d7ca3b75849d990bd62b28397f29f8d5a3b"
     },
     "releases/20260825-1/public/font-adjustment-local/vendor/pyodide/python_stdlib.zip": {
       "bytes": 2423989,
       "sha256": "4298b6ee445cb724c3973437da47789752b9e6ff4e26619026b283ec801fc46b"
     },
     "releases/20260825-1/public/font-adjustment-local/vendor/runtime-assets.json": {
-      "bytes": 2018,
-      "sha256": "a4fbff0ac1d7506a73264c09c2ee508a11e585393461e6b1d3f642bb43dfce6f"
+      "bytes": 2066,
+      "sha256": "43edf99e04ddd8bb3968f4fdcac68674951a082f490282d8c66a81678afefc75"
+    },
+    "releases/20260825-1/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 882,
+      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
     },
     "releases/20260825-1/public/font-glyph-editor/font-glyph-editor.vendor.js": {
-      "bytes": 391387,
-      "sha256": "eb1c15c9148466922e55128383c96a2548e040af0530c2dd3a332123c16dfb66"
+      "bytes": 391423,
+      "sha256": "70ecee5e99920f12bfbeaad04cc552b0b3d8bab86c1f9315f076307eae29048a"
     },
     "releases/20260825-1/public/font-marker-local/font-marker.vendor.js": {
-      "bytes": 56102,
-      "sha256": "72992b7cbc992b099d06a844e12e3f0445fd5e71a90addb17ea0de34028f975d"
+      "bytes": 56108,
+      "sha256": "73afb597bf6a6a7a01f4405ab145a0b15f44a5e749b9e00c2b363fe661412a48"
     },
     "releases/20260825-1/public/licenses/ag-psd-LICENSE": {
-      "bytes": 1205,
-      "sha256": "035430250509b801de02201d2f9bc9388a1220198f9276d38f4059df882e585c"
+      "bytes": 1231,
+      "sha256": "fd8e722f78b408e98f5e48bdfbd7926c2341c809ccf86b1c5e1b66aa961a71d0"
     },
     "releases/20260825-1/public/licenses/base64-js-LICENSE": {
-      "bytes": 1081,
-      "sha256": "5b37224c080cdcc97c871ada971c224e9926370fe74f11b539aa1cf9f3b1aca1"
+      "bytes": 1102,
+      "sha256": "482427d02038d42f21a845ddefc3843674d9695ea9e6f3079dff70b8ea3ccf92"
     },
     "releases/20260825-1/public/licenses/fast-png-LICENSE": {
-      "bytes": 1071,
-      "sha256": "47ec9747cf2c470a505fcb20f3ec2ff2e60ea4febaf2e1e7041a24fc369fac3c"
+      "bytes": 1092,
+      "sha256": "0b5c16a99369326fc48d607b618804dcf7f54d7ab816b676250f4ece1ffd9288"
     },
     "releases/20260825-1/public/licenses/fflate-LICENSE": {
-      "bytes": 1069,
-      "sha256": "805f6cb28bb8b6d3a0badd83c93bccd9671fa01a3b4b92b7042b0743325ac243"
+      "bytes": 1089,
+      "sha256": "d3268a8f7476666635fe067d0094ee68f9fa1412eb77263520619c980e1e535c"
     },
     "releases/20260825-1/public/licenses/fonteditor-core-LICENSE": {
-      "bytes": 1072,
-      "sha256": "56da234b06e4b46e2d3ad7c83721ebc98493849972c7eeadfa5079308261f0b1"
+      "bytes": 1092,
+      "sha256": "e8b23c0668fb62ddc63f8c668647c208461749963bae6ae522454b4463060d90"
     },
     "releases/20260825-1/public/licenses/imagetracerjs-LICENSE": {
-      "bytes": 1211,
-      "sha256": "60d2c28d19d2bdf7bbaa59829e7a595234265e8111a01ccb74d25d6c4d2d013a"
+      "bytes": 1236,
+      "sha256": "a9af3f7b85834f6274bcaba07255e0e832a3aa281cae17f1372fcdf56aff209a"
     },
     "releases/20260825-1/public/licenses/iobuffer-LICENSE": {
-      "bytes": 1082,
-      "sha256": "1c22118fd112e8c394a5ec0598d2e2dfcdc19b3e1055ac3eaccdb2522b777335"
+      "bytes": 1104,
+      "sha256": "e59b3d932ded3b5466790422194837b297c3e92806faf1e1a0dbe56c142740ec"
     },
     "releases/20260825-1/public/licenses/pako-LICENSE": {
-      "bytes": 1104,
-      "sha256": "a04665b3b2de56c66730c1f720f528175739e4104f79073614aa611da1e85539"
+      "bytes": 1125,
+      "sha256": "3319fd990508d4e84f55ba80153512217f37eb6dbfda57b2ff8c9f72c2268f20"
     },
     "releases/20260825-1/public/psd-layer-split/psd-worker.vendor.js": {
-      "bytes": 335174,
-      "sha256": "5e1e9c04a92ee585f43eca84096fd1410a4bbd3574f5e48ae87a20b0172de412"
+      "bytes": 335185,
+      "sha256": "c3d4e6c236dfad995262f7be8ad80d19da4a576d36b0877331a0739fa842093b"
     },
     "releases/20260825-1/public/psd-layer-split/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 8236,
-      "sha256": "a2f5cd88ce4c80d3ea3780f13452dfe0e503e957abdecd075b5f3787ee9b9dc9"
+      "bytes": 8419,
+      "sha256": "c7741dee664c5ca4a058a698f1f880f380de823f6d57164d415be1e0e07f6178"
     },
     "releases/20260825-1/public/skin-keyboard-simplify/compression-worker.vendor.js": {
       "bytes": 64656,
@@ -1521,10 +1521,6 @@
     "releases/20260825-1/public/skin-keyboard-simplify/vendor/THIRD_PARTY_NOTICES.md": {
       "bytes": 627,
       "sha256": "4cf225dea4bde7aac63ede188af8c42439f1c31735e96923c513aa13d62f2b72"
-    },
-    "releases/20260825-1/public/video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 2983,
-      "sha256": "84da95a2c7645232766dc138243337e7bf64d3a17f4443ff7027fecd0d13d4f5"
     },
     "releases/20260825-1/public/video-sound-conversion/vendor/ffmpeg-core.js": {
       "bytes": 111817,
@@ -1535,12 +1531,16 @@
       "sha256": "9f57947a5bd530d8f00c5b3f2cb2a3492faa7e5d823315342d6a8656d0a6b7b7"
     },
     "releases/20260825-1/public/video-sound-conversion/vendor/ffmpeg.worker.js": {
-      "bytes": 2511,
-      "sha256": "16370a642e2bd09cc877ad9c5b6684c5518f52a0cc6fddcc33ce595ceb6f148f"
+      "bytes": 2512,
+      "sha256": "2d7442995fdd5714ed33d7e56fe55e7727d3c4716e3b9fadefc7f3a4349164c9"
+    },
+    "releases/20260825-1/public/video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 2983,
+      "sha256": "84da95a2c7645232766dc138243337e7bf64d3a17f4443ff7027fecd0d13d4f5"
     },
     "releases/20260825-1/public/video-sound-conversion/vendor/video-sound.vendor.js": {
-      "bytes": 13404,
-      "sha256": "4bcc71104dc7e2bebc8dcc67dfcacbabae96dbb0d7f639b37afe3d60c1625224"
+      "bytes": 13405,
+      "sha256": "04608fd87a9ae0462376573f6272cfecaf3f93aa792e85dcee2bb8fd8fe13a37"
     },
     "v2/releases/20260810-v2-1/font_adjustment/cipher/0e2601a4bc0bff7a93a93d6ba1d61ec8cad06a68c435f54dbd0da204af94e7c9.bin": {
       "bytes": 5722,
@@ -1574,10 +1574,6 @@
       "bytes": 11732,
       "sha256": "95e1031ec7205a8b2277c48d38224e1221eb4cac113741fb1a1b1c048f8a37c6"
     },
-    "v2/releases/20260810-v2-1/font_adjustment/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 882,
-      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
-    },
     "v2/releases/20260810-v2-1/font_adjustment/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
       "bytes": 12938,
       "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
@@ -1609,6 +1605,10 @@
     "v2/releases/20260810-v2-1/font_adjustment/public/font-adjustment-local/vendor/runtime-assets.json": {
       "bytes": 2066,
       "sha256": "43edf99e04ddd8bb3968f4fdcac68674951a082f490282d8c66a81678afefc75"
+    },
+    "v2/releases/20260810-v2-1/font_adjustment/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 882,
+      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
     },
     "v2/releases/20260810-v2-1/font_adjustment/public/font-marker-local/font-marker.vendor.js": {
       "bytes": 56108,
@@ -1810,10 +1810,6 @@
       "bytes": 11733,
       "sha256": "cd7ae9f23b0db2418948c0daab2b14e3ca5987fcbcf48534a8a98810ef21676b"
     },
-    "v2/releases/20260822-v2-1/font_adjustment/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 882,
-      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
-    },
     "v2/releases/20260822-v2-1/font_adjustment/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
       "bytes": 12938,
       "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
@@ -1845,6 +1841,10 @@
     "v2/releases/20260822-v2-1/font_adjustment/public/font-adjustment-local/vendor/runtime-assets.json": {
       "bytes": 2066,
       "sha256": "43edf99e04ddd8bb3968f4fdcac68674951a082f490282d8c66a81678afefc75"
+    },
+    "v2/releases/20260822-v2-1/font_adjustment/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 882,
+      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
     },
     "v2/releases/20260822-v2-1/font_adjustment/public/font-marker-local/font-marker.vendor.js": {
       "bytes": 56108,
@@ -2066,10 +2066,6 @@
       "bytes": 12938,
       "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
     },
-    "v2/releases/20260822-v2-1/video_sound_conversion/public/video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 2983,
-      "sha256": "84da95a2c7645232766dc138243337e7bf64d3a17f4443ff7027fecd0d13d4f5"
-    },
     "v2/releases/20260822-v2-1/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg-core.js": {
       "bytes": 111817,
       "sha256": "fe39c2885ea13d8c8b6d48a55b7c39d35e1f1b0f03d497e457ac57adcc537a4b"
@@ -2081,6 +2077,10 @@
     "v2/releases/20260822-v2-1/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg.worker.js": {
       "bytes": 2512,
       "sha256": "2d7442995fdd5714ed33d7e56fe55e7727d3c4716e3b9fadefc7f3a4349164c9"
+    },
+    "v2/releases/20260822-v2-1/video_sound_conversion/public/video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 2983,
+      "sha256": "84da95a2c7645232766dc138243337e7bf64d3a17f4443ff7027fecd0d13d4f5"
     },
     "v2/releases/20260822-v2-1/video_sound_conversion/public/video-sound-conversion/vendor/video-sound.vendor.js": {
       "bytes": 13405,
@@ -2118,10 +2118,6 @@
       "bytes": 11733,
       "sha256": "fb52b71f847c82fac1300e1736f1cb59454afa26057a177aee5fbb3336826c11"
     },
-    "v2/releases/20260822-v2-3/font_adjustment/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 882,
-      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
-    },
     "v2/releases/20260822-v2-3/font_adjustment/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
       "bytes": 12938,
       "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
@@ -2153,6 +2149,10 @@
     "v2/releases/20260822-v2-3/font_adjustment/public/font-adjustment-local/vendor/runtime-assets.json": {
       "bytes": 2066,
       "sha256": "43edf99e04ddd8bb3968f4fdcac68674951a082f490282d8c66a81678afefc75"
+    },
+    "v2/releases/20260822-v2-3/font_adjustment/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 882,
+      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
     },
     "v2/releases/20260822-v2-3/font_adjustment/public/font-marker-local/font-marker.vendor.js": {
       "bytes": 56108,
@@ -2374,10 +2374,6 @@
       "bytes": 12938,
       "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
     },
-    "v2/releases/20260822-v2-3/video_sound_conversion/public/video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 2983,
-      "sha256": "84da95a2c7645232766dc138243337e7bf64d3a17f4443ff7027fecd0d13d4f5"
-    },
     "v2/releases/20260822-v2-3/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg-core.js": {
       "bytes": 111817,
       "sha256": "fe39c2885ea13d8c8b6d48a55b7c39d35e1f1b0f03d497e457ac57adcc537a4b"
@@ -2389,6 +2385,10 @@
     "v2/releases/20260822-v2-3/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg.worker.js": {
       "bytes": 2512,
       "sha256": "2d7442995fdd5714ed33d7e56fe55e7727d3c4716e3b9fadefc7f3a4349164c9"
+    },
+    "v2/releases/20260822-v2-3/video_sound_conversion/public/video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 2983,
+      "sha256": "84da95a2c7645232766dc138243337e7bf64d3a17f4443ff7027fecd0d13d4f5"
     },
     "v2/releases/20260822-v2-3/video_sound_conversion/public/video-sound-conversion/vendor/video-sound.vendor.js": {
       "bytes": 13405,
@@ -2426,10 +2426,6 @@
       "bytes": 11733,
       "sha256": "488c03a031dc636cdac66446677a18cfc6b212c68d1f4f1e0d2653180b75cd65"
     },
-    "v2/releases/20260824-v2-1/font_adjustment/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 882,
-      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
-    },
     "v2/releases/20260824-v2-1/font_adjustment/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
       "bytes": 12938,
       "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
@@ -2461,6 +2457,10 @@
     "v2/releases/20260824-v2-1/font_adjustment/public/font-adjustment-local/vendor/runtime-assets.json": {
       "bytes": 2066,
       "sha256": "43edf99e04ddd8bb3968f4fdcac68674951a082f490282d8c66a81678afefc75"
+    },
+    "v2/releases/20260824-v2-1/font_adjustment/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 882,
+      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
     },
     "v2/releases/20260824-v2-1/font_adjustment/public/font-marker-local/font-marker.vendor.js": {
       "bytes": 56108,
@@ -2682,10 +2682,6 @@
       "bytes": 12938,
       "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
     },
-    "v2/releases/20260824-v2-1/video_sound_conversion/public/video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md": {
-      "bytes": 2983,
-      "sha256": "84da95a2c7645232766dc138243337e7bf64d3a17f4443ff7027fecd0d13d4f5"
-    },
     "v2/releases/20260824-v2-1/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg-core.js": {
       "bytes": 111817,
       "sha256": "fe39c2885ea13d8c8b6d48a55b7c39d35e1f1b0f03d497e457ac57adcc537a4b"
@@ -2698,7 +2694,351 @@
       "bytes": 2512,
       "sha256": "2d7442995fdd5714ed33d7e56fe55e7727d3c4716e3b9fadefc7f3a4349164c9"
     },
+    "v2/releases/20260824-v2-1/video_sound_conversion/public/video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 2983,
+      "sha256": "84da95a2c7645232766dc138243337e7bf64d3a17f4443ff7027fecd0d13d4f5"
+    },
     "v2/releases/20260824-v2-1/video_sound_conversion/public/video-sound-conversion/vendor/video-sound.vendor.js": {
+      "bytes": 13405,
+      "sha256": "04608fd87a9ae0462376573f6272cfecaf3f93aa792e85dcee2bb8fd8fe13a37"
+    },
+    "v2/releases/20260909-download-bridge-v2/download_bridge/cipher/06174d7998a2408cb2956fb3e6f6d88627d82db6802cfa80532ad0c53a150275.bin": {
+      "bytes": 935,
+      "sha256": "06174d7998a2408cb2956fb3e6f6d88627d82db6802cfa80532ad0c53a150275"
+    },
+    "v2/releases/20260909-download-bridge-v2/download_bridge/cipher/cd4e073001285e713f13f464eafb87bcbd5608e3a726a0ecbda412d157b4548d.bin": {
+      "bytes": 37395,
+      "sha256": "cd4e073001285e713f13f464eafb87bcbd5608e3a726a0ecbda412d157b4548d"
+    },
+    "v2/releases/20260909-download-bridge-v2/download_bridge/cipher/d2b6f8e392732bacb3c123260affe17c7613812e72531fc8273040735faefd0d.bin": {
+      "bytes": 1272,
+      "sha256": "d2b6f8e392732bacb3c123260affe17c7613812e72531fc8273040735faefd0d"
+    },
+    "v2/releases/20260909-download-bridge-v2/download_bridge/manifest.json": {
+      "bytes": 3994,
+      "sha256": "bccc82027cc03f0ef29704aafa25a7cbf75ce453e38f1f50415e84060c528b1a"
+    },
+    "v2/releases/20260909-download-bridge-v2/download_bridge/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/cipher/0ddf75e2d44ced4a7d833bf0ebafccec91779c6413f81292aea1fc90bb0ca82e.bin": {
+      "bytes": 10748,
+      "sha256": "0ddf75e2d44ced4a7d833bf0ebafccec91779c6413f81292aea1fc90bb0ca82e"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/cipher/416445fedadcf8d00fa6a496cbf2afb8a9ece208b36df73d47deeb059893359e.bin": {
+      "bytes": 11992,
+      "sha256": "416445fedadcf8d00fa6a496cbf2afb8a9ece208b36df73d47deeb059893359e"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/cipher/4b83124a3f87fef3732014e1020eb3145186c4a64171b64a83433fafd4ba0f78.bin": {
+      "bytes": 13454,
+      "sha256": "4b83124a3f87fef3732014e1020eb3145186c4a64171b64a83433fafd4ba0f78"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/cipher/58894303caf88c2d00c32df36bff57264940ade42d2d25fc9a2ac5a0d5fdf7f8.bin": {
+      "bytes": 67404,
+      "sha256": "58894303caf88c2d00c32df36bff57264940ade42d2d25fc9a2ac5a0d5fdf7f8"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/cipher/5a0219b18803a27fcce64370bf1127eaf89ec0da715998c20d3eccf2550b5b8f.bin": {
+      "bytes": 5779,
+      "sha256": "5a0219b18803a27fcce64370bf1127eaf89ec0da715998c20d3eccf2550b5b8f"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/cipher/9e3fad76bf7b650abdcb79ccfb5f83cd34e51382b6c26de2e3aa1665ad88a340.bin": {
+      "bytes": 95370,
+      "sha256": "9e3fad76bf7b650abdcb79ccfb5f83cd34e51382b6c26de2e3aa1665ad88a340"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/cipher/aa5ada6f6bc8b352c7c64b76c46bb32b6034d4dfb8c7e954be586a6c0d9663ea.bin": {
+      "bytes": 100919,
+      "sha256": "aa5ada6f6bc8b352c7c64b76c46bb32b6034d4dfb8c7e954be586a6c0d9663ea"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/cipher/d9b12597e7c287cc42fa5394f1d4b8295de303b2d89ce45a7f3a703ccc1dc533.bin": {
+      "bytes": 133728,
+      "sha256": "d9b12597e7c287cc42fa5394f1d4b8295de303b2d89ce45a7f3a703ccc1dc533"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/manifest.json": {
+      "bytes": 12129,
+      "sha256": "b015d6459ab1b038dc1fabf26db0c40bcfb094fd7cd5e1e0055571582bde9289"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl": {
+      "bytes": 1089800,
+      "sha256": "9d6518c8ad4d88019bc72045108eca154301014215222408aa047cf4955c726d"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide-lock.json": {
+      "bytes": 120010,
+      "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.asm.js": {
+      "bytes": 1074337,
+      "sha256": "f4f3c6f756c779f073af1a6324b83d10fd11a10fbae70c942c32a05383670285"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.asm.wasm": {
+      "bytes": 8647684,
+      "sha256": "e2f4ee75b325e35eb31bfb8c613d4dd5098f5502c156a97847686875b5025480"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.js": {
+      "bytes": 18603,
+      "sha256": "ebcc4755cb00e6d0654c74bda4f03d7ca3b75849d990bd62b28397f29f8d5a3b"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/python_stdlib.zip": {
+      "bytes": 2423989,
+      "sha256": "4298b6ee445cb724c3973437da47789752b9e6ff4e26619026b283ec801fc46b"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/runtime-assets.json": {
+      "bytes": 2066,
+      "sha256": "43edf99e04ddd8bb3968f4fdcac68674951a082f490282d8c66a81678afefc75"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 882,
+      "sha256": "2dabfbeb7ace85a24b3583b9fb9e760a679d46ff874c0236a97d5707a13c0a5a"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_adjustment/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58328,
+      "sha256": "a561e631aba58de7521b5f3fa35f19f31055f9f76246576bd6c165723677b24a"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/cipher/0bfdaae9728e24c44aa41b6b73569fa4d116fd9d099e0c88928221b92de84558.bin": {
+      "bytes": 108760,
+      "sha256": "0bfdaae9728e24c44aa41b6b73569fa4d116fd9d099e0c88928221b92de84558"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/cipher/0d155ca992499dc6c0eb45978caecaf37d79744ea6c8ea448562a8214b6e5c2b.bin": {
+      "bytes": 776,
+      "sha256": "0d155ca992499dc6c0eb45978caecaf37d79744ea6c8ea448562a8214b6e5c2b"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/cipher/1488f5d2728415c7affe07bcc40b805590e4005f08f0397e2b53c3dd6225be3c.bin": {
+      "bytes": 65108,
+      "sha256": "1488f5d2728415c7affe07bcc40b805590e4005f08f0397e2b53c3dd6225be3c"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/cipher/42cfc3fb56a8a320b5c87425b62c0c1d42ce3d022f7418cd1d9f9d7fbd2e7056.bin": {
+      "bytes": 20752,
+      "sha256": "42cfc3fb56a8a320b5c87425b62c0c1d42ce3d022f7418cd1d9f9d7fbd2e7056"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/cipher/5413723598197a60143e4f3beae6282dbda0c2e82d491987854593888e79f080.bin": {
+      "bytes": 7792,
+      "sha256": "5413723598197a60143e4f3beae6282dbda0c2e82d491987854593888e79f080"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/cipher/58ad950e32275d9cc99ef27d8dd5ed4bd3b4bb97e63fc667e42a9b6a68c9f607.bin": {
+      "bytes": 95370,
+      "sha256": "58ad950e32275d9cc99ef27d8dd5ed4bd3b4bb97e63fc667e42a9b6a68c9f607"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/cipher/83ccc8dc49ba6e99f95fbe7ec42f4faf740f1c5a5e087e73dcb78b22f51a6dba.bin": {
+      "bytes": 67404,
+      "sha256": "83ccc8dc49ba6e99f95fbe7ec42f4faf740f1c5a5e087e73dcb78b22f51a6dba"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/cipher/8b54675f43367926f0359eba190961b79723ce90b1ba39b8168badd78b3e8c9d.bin": {
+      "bytes": 9006,
+      "sha256": "8b54675f43367926f0359eba190961b79723ce90b1ba39b8168badd78b3e8c9d"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/cipher/8d2757d4052b7d1c9bd6d5f5802ef405309f75ae5825d37cab8d854d1783144d.bin": {
+      "bytes": 25129,
+      "sha256": "8d2757d4052b7d1c9bd6d5f5802ef405309f75ae5825d37cab8d854d1783144d"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/cipher/8f7d9fd8077757e7eb50e7aecf81c44cc765df81090aa86aec46f68d0cde3b22.bin": {
+      "bytes": 43976,
+      "sha256": "8f7d9fd8077757e7eb50e7aecf81c44cc765df81090aa86aec46f68d0cde3b22"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/cipher/9c59da97c0074d106aa080cce275c91d3cbe0769ad5ea50b6a98b4e0ed6be94e.bin": {
+      "bytes": 30056,
+      "sha256": "9c59da97c0074d106aa080cce275c91d3cbe0769ad5ea50b6a98b4e0ed6be94e"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/cipher/b032e9fba3802b159d38c1a383c803c6f0a321733065611c3ed3131b652cf0e0.bin": {
+      "bytes": 10325,
+      "sha256": "b032e9fba3802b159d38c1a383c803c6f0a321733065611c3ed3131b652cf0e0"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/cipher/df5b55322c743bc8a911217e805bdacfde6f207ce6fbb4a61b9ab39c0294ad06.bin": {
+      "bytes": 144936,
+      "sha256": "df5b55322c743bc8a911217e805bdacfde6f207ce6fbb4a61b9ab39c0294ad06"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/cipher/e8c7e671197a8ee8b52cf1e497562d8a7f0f60dde4d24664d825ef8057f756f8.bin": {
+      "bytes": 54120,
+      "sha256": "e8c7e671197a8ee8b52cf1e497562d8a7f0f60dde4d24664d825ef8057f756f8"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/cipher/e9a13199b156791c26b5de202343723243f16e705083bae8de00718bc62f0b0e.bin": {
+      "bytes": 5779,
+      "sha256": "e9a13199b156791c26b5de202343723243f16e705083bae8de00718bc62f0b0e"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/manifest.json": {
+      "bytes": 16290,
+      "sha256": "4608231ee90ecb89207d3665a238d6973603743b3231b1b2138bf5cc5abdc4b2"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/public/font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl": {
+      "bytes": 1089800,
+      "sha256": "9d6518c8ad4d88019bc72045108eca154301014215222408aa047cf4955c726d"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide-lock.json": {
+      "bytes": 120010,
+      "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.asm.js": {
+      "bytes": 1074337,
+      "sha256": "f4f3c6f756c779f073af1a6324b83d10fd11a10fbae70c942c32a05383670285"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.asm.wasm": {
+      "bytes": 8647684,
+      "sha256": "e2f4ee75b325e35eb31bfb8c613d4dd5098f5502c156a97847686875b5025480"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.js": {
+      "bytes": 18603,
+      "sha256": "ebcc4755cb00e6d0654c74bda4f03d7ca3b75849d990bd62b28397f29f8d5a3b"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/public/font-adjustment-local/vendor/pyodide/python_stdlib.zip": {
+      "bytes": 2423989,
+      "sha256": "4298b6ee445cb724c3973437da47789752b9e6ff4e26619026b283ec801fc46b"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/public/font-adjustment-local/vendor/runtime-assets.json": {
+      "bytes": 2066,
+      "sha256": "43edf99e04ddd8bb3968f4fdcac68674951a082f490282d8c66a81678afefc75"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_compress/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58328,
+      "sha256": "a561e631aba58de7521b5f3fa35f19f31055f9f76246576bd6c165723677b24a"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_glyph_edit/cipher/10eb4b7f301c7fb13850f3ecb9d673f896d56a255e533dcbc00a115a0a3b046a.bin": {
+      "bytes": 5779,
+      "sha256": "10eb4b7f301c7fb13850f3ecb9d673f896d56a255e533dcbc00a115a0a3b046a"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_glyph_edit/cipher/17263f16865cbc6e7fc204fb35fa9193d3af80452a28168946ec34ba0735f670.bin": {
+      "bytes": 95370,
+      "sha256": "17263f16865cbc6e7fc204fb35fa9193d3af80452a28168946ec34ba0735f670"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_glyph_edit/cipher/cded15b7fda974313b7fd41c8141dc018c8cbfa459aeb6a8e13ab58998e8f24a.bin": {
+      "bytes": 32579,
+      "sha256": "cded15b7fda974313b7fd41c8141dc018c8cbfa459aeb6a8e13ab58998e8f24a"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_glyph_edit/cipher/ebc2eb1a9776ba61289cd85f67ef0639ebb95196adc4981ff975b25b7cbec440.bin": {
+      "bytes": 179394,
+      "sha256": "ebc2eb1a9776ba61289cd85f67ef0639ebb95196adc4981ff975b25b7cbec440"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_glyph_edit/manifest.json": {
+      "bytes": 5782,
+      "sha256": "f71b33d22b81fd45c417f018d7ca280e421c870cea304142ea7e460d4e070290"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_glyph_edit/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_glyph_edit/public/font-glyph-editor/font-glyph-editor.vendor.js": {
+      "bytes": 391458,
+      "sha256": "9192aeae2ff8c92c54742989d0810f2c3a7aa948ba39631b3f769e633ee70c90"
+    },
+    "v2/releases/20260909-download-bridge-v2/font_glyph_edit/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58328,
+      "sha256": "a561e631aba58de7521b5f3fa35f19f31055f9f76246576bd6c165723677b24a"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_keyboard_simplify/cipher/02e16d1e1e06ca3b41f015495e6929d41c33d7869b8e9aca0c4016fc55ed1a21.bin": {
+      "bytes": 2635,
+      "sha256": "02e16d1e1e06ca3b41f015495e6929d41c33d7869b8e9aca0c4016fc55ed1a21"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_keyboard_simplify/cipher/22a785e4762f9035dce74f4f2d9b0695fd841e6e5558b6c7fe01eae39e1019e5.bin": {
+      "bytes": 3535,
+      "sha256": "22a785e4762f9035dce74f4f2d9b0695fd841e6e5558b6c7fe01eae39e1019e5"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_keyboard_simplify/cipher/4c2cb34d5c0a463d8a155f0384fe0f4600d58e0a128709896d877392d88f77c5.bin": {
+      "bytes": 55071,
+      "sha256": "4c2cb34d5c0a463d8a155f0384fe0f4600d58e0a128709896d877392d88f77c5"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_keyboard_simplify/cipher/741277c9124beb25a58915953a0092e7259d7b41dd902eeb0e8b6fb15a7001ce.bin": {
+      "bytes": 3564,
+      "sha256": "741277c9124beb25a58915953a0092e7259d7b41dd902eeb0e8b6fb15a7001ce"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_keyboard_simplify/cipher/76ce121f70d52e0f44bf3297a8075a691e17b583693f0e30884c73eb23c7364a.bin": {
+      "bytes": 8445,
+      "sha256": "76ce121f70d52e0f44bf3297a8075a691e17b583693f0e30884c73eb23c7364a"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_keyboard_simplify/manifest.json": {
+      "bytes": 6503,
+      "sha256": "219a5dd496e95f540858b514ee291b06f32ff2500b155b1e98029af0b2d09542"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_keyboard_simplify/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_keyboard_simplify/public/skin-keyboard-simplify/compression-worker.vendor.js": {
+      "bytes": 64656,
+      "sha256": "b4cc75ce5b5e40b160489c91e99f6547d6cf5e9d4a0596683df8360b2ffb41cd"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_keyboard_simplify/public/skin-keyboard-simplify/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 627,
+      "sha256": "4cf225dea4bde7aac63ede188af8c42439f1c31735e96923c513aa13d62f2b72"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_pic_part/cipher/6a6d257ca9b93dd63df9ef2f01aaa39ab45ec83043c942d2d10e17680c3b5774.bin": {
+      "bytes": 10937,
+      "sha256": "6a6d257ca9b93dd63df9ef2f01aaa39ab45ec83043c942d2d10e17680c3b5774"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_pic_part/cipher/8b155cc935705f49ff55ebd5bb0ebab965f1fa787fc30268918ad47d3e4e6797.bin": {
+      "bytes": 8606,
+      "sha256": "8b155cc935705f49ff55ebd5bb0ebab965f1fa787fc30268918ad47d3e4e6797"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_pic_part/cipher/a389ca0135103763f9adaf166a335960ee203a2afa7b89aeebe3a0ae546d444b.bin": {
+      "bytes": 5089,
+      "sha256": "a389ca0135103763f9adaf166a335960ee203a2afa7b89aeebe3a0ae546d444b"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_pic_part/cipher/a9d8979a4dc393930be44eb868b93ee08e1955fd26974a5163ecc59d257ec031.bin": {
+      "bytes": 4176,
+      "sha256": "a9d8979a4dc393930be44eb868b93ee08e1955fd26974a5163ecc59d257ec031"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_pic_part/cipher/aa6ac9e286c6d9bb29cff11a995ad9e8d7f8835e5ab9010c39b24d1c31e09915.bin": {
+      "bytes": 5779,
+      "sha256": "aa6ac9e286c6d9bb29cff11a995ad9e8d7f8835e5ab9010c39b24d1c31e09915"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_pic_part/manifest.json": {
+      "bytes": 6375,
+      "sha256": "e64fff8495e08942ccbc7ffc231eed2358b83bb78a3521653821550eac9378ca"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_pic_part/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_pic_part/public/psd-layer-split/psd-worker.vendor.js": {
+      "bytes": 335185,
+      "sha256": "c3d4e6c236dfad995262f7be8ad80d19da4a576d36b0877331a0739fa842093b"
+    },
+    "v2/releases/20260909-download-bridge-v2/skin_pic_part/public/psd-layer-split/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 8419,
+      "sha256": "c7741dee664c5ca4a058a698f1f880f380de823f6d57164d415be1e0e07f6178"
+    },
+    "v2/releases/20260909-download-bridge-v2/video_sound_conversion/cipher/2cdb96657dc0110cfac17e65b8daa36033cbcdfbf3938413094ee15e55ac8147.bin": {
+      "bytes": 2988,
+      "sha256": "2cdb96657dc0110cfac17e65b8daa36033cbcdfbf3938413094ee15e55ac8147"
+    },
+    "v2/releases/20260909-download-bridge-v2/video_sound_conversion/cipher/cc011dd0945f9f2378d079cfcd17ef1e5e2f7f89564432402f7b981c8c0b689e.bin": {
+      "bytes": 10389,
+      "sha256": "cc011dd0945f9f2378d079cfcd17ef1e5e2f7f89564432402f7b981c8c0b689e"
+    },
+    "v2/releases/20260909-download-bridge-v2/video_sound_conversion/cipher/e95e630b676be5e48783c6ba1589067350be161466353eacb244da51fb179587.bin": {
+      "bytes": 3181,
+      "sha256": "e95e630b676be5e48783c6ba1589067350be161466353eacb244da51fb179587"
+    },
+    "v2/releases/20260909-download-bridge-v2/video_sound_conversion/manifest.json": {
+      "bytes": 6700,
+      "sha256": "229bc802f2c768d0f59ef62c03c9d0251a3e45ca9c7878e4afd43624a54fa6d7"
+    },
+    "v2/releases/20260909-download-bridge-v2/video_sound_conversion/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260909-download-bridge-v2/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg-core.js": {
+      "bytes": 111817,
+      "sha256": "fe39c2885ea13d8c8b6d48a55b7c39d35e1f1b0f03d497e457ac57adcc537a4b"
+    },
+    "v2/releases/20260909-download-bridge-v2/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg-core.wasm": {
+      "bytes": 32232419,
+      "sha256": "9f57947a5bd530d8f00c5b3f2cb2a3492faa7e5d823315342d6a8656d0a6b7b7"
+    },
+    "v2/releases/20260909-download-bridge-v2/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg.worker.js": {
+      "bytes": 2512,
+      "sha256": "2d7442995fdd5714ed33d7e56fe55e7727d3c4716e3b9fadefc7f3a4349164c9"
+    },
+    "v2/releases/20260909-download-bridge-v2/video_sound_conversion/public/video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 2983,
+      "sha256": "84da95a2c7645232766dc138243337e7bf64d3a17f4443ff7027fecd0d13d4f5"
+    },
+    "v2/releases/20260909-download-bridge-v2/video_sound_conversion/public/video-sound-conversion/vendor/video-sound.vendor.js": {
       "bytes": 13405,
       "sha256": "04608fd87a9ae0462376573f6272cfecaf3f93aa792e85dcee2bb8fd8fe13a37"
     }

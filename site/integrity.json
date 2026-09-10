@@ -3041,6 +3041,374 @@
     "v2/releases/20260909-download-bridge-v2/video_sound_conversion/public/video-sound-conversion/vendor/video-sound.vendor.js": {
       "bytes": 13405,
       "sha256": "04608fd87a9ae0462376573f6272cfecaf3f93aa792e85dcee2bb8fd8fe13a37"
+    },
+    "v2/releases/20260910-download-bridge-v2/download_bridge/cipher/01a90cfd4fb4f63be750c9f07d8a2b7e19de3b35ed95e6595d07c200b9b0faec.bin": {
+      "bytes": 1195,
+      "sha256": "01a90cfd4fb4f63be750c9f07d8a2b7e19de3b35ed95e6595d07c200b9b0faec"
+    },
+    "v2/releases/20260910-download-bridge-v2/download_bridge/cipher/945fa1a625991db653c6b4abbacbc7168bf5390febdcb5bea1e416c96ef454b8.bin": {
+      "bytes": 36635,
+      "sha256": "945fa1a625991db653c6b4abbacbc7168bf5390febdcb5bea1e416c96ef454b8"
+    },
+    "v2/releases/20260910-download-bridge-v2/download_bridge/cipher/dda806da4d9980ac1c3f3eedf11e7ce22942d542e338874c07bb4bc537c61f78.bin": {
+      "bytes": 911,
+      "sha256": "dda806da4d9980ac1c3f3eedf11e7ce22942d542e338874c07bb4bc537c61f78"
+    },
+    "v2/releases/20260910-download-bridge-v2/download_bridge/manifest.json": {
+      "bytes": 3994,
+      "sha256": "f500baef19118d95cd03a02ebdbe0b5819614fd2c5a191a01ec4864a355ea50b"
+    },
+    "v2/releases/20260910-download-bridge-v2/download_bridge/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/cipher/040c26947bce186aa858f59ff37b332ac5c7c1031a13c207b699be708c236248.bin": {
+      "bytes": 65801,
+      "sha256": "040c26947bce186aa858f59ff37b332ac5c7c1031a13c207b699be708c236248"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/cipher/2630dd6838159893a62351d4e78ee46890d951a4f42e660f917ba39cde1a75de.bin": {
+      "bytes": 95368,
+      "sha256": "2630dd6838159893a62351d4e78ee46890d951a4f42e660f917ba39cde1a75de"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/cipher/29c974ca19cf6c6b34ab6c346e5f83fe8041799772cc6be23c2905d4b56d3ca3.bin": {
+      "bytes": 13454,
+      "sha256": "29c974ca19cf6c6b34ab6c346e5f83fe8041799772cc6be23c2905d4b56d3ca3"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/cipher/65e0a48668b0b52be5abc1981c500415c3c0db7800698989156e5fb32bc0595e.bin": {
+      "bytes": 133728,
+      "sha256": "65e0a48668b0b52be5abc1981c500415c3c0db7800698989156e5fb32bc0595e"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/cipher/9109878a43ecaf08185e465725650b26dd27d1a438ba59e1df8974fb27d45e28.bin": {
+      "bytes": 11992,
+      "sha256": "9109878a43ecaf08185e465725650b26dd27d1a438ba59e1df8974fb27d45e28"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/cipher/a8fd827589a6f044f539e307abe1fb88f9728c29ae8385ee20d6b4c3eab0a5bc.bin": {
+      "bytes": 100919,
+      "sha256": "a8fd827589a6f044f539e307abe1fb88f9728c29ae8385ee20d6b4c3eab0a5bc"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/cipher/ee24026f0a9a40a3357334a1b66701265c486116267277b1ccb4f873877ef256.bin": {
+      "bytes": 5722,
+      "sha256": "ee24026f0a9a40a3357334a1b66701265c486116267277b1ccb4f873877ef256"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/cipher/f2be7d96dc465235cbeff84a222dbffd7a6fcc775f32e906068d22011eeb3650.bin": {
+      "bytes": 10748,
+      "sha256": "f2be7d96dc465235cbeff84a222dbffd7a6fcc775f32e906068d22011eeb3650"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/manifest.json": {
+      "bytes": 12129,
+      "sha256": "4b02521e783458f3d00bcd774d8c8ddec8f93a4afb9792938c84c9620521cd13"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl": {
+      "bytes": 1089800,
+      "sha256": "9d6518c8ad4d88019bc72045108eca154301014215222408aa047cf4955c726d"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide-lock.json": {
+      "bytes": 120010,
+      "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.asm.js": {
+      "bytes": 1074322,
+      "sha256": "1263f02b5b26099b96112378156f242dd98b39a8201ba7765e5fe3d455c5ce91"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.asm.wasm": {
+      "bytes": 8647684,
+      "sha256": "e2f4ee75b325e35eb31bfb8c613d4dd5098f5502c156a97847686875b5025480"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.js": {
+      "bytes": 18597,
+      "sha256": "718d40f1c015dd25ec724cc8fc4e2325d6a45a92ae225121ff6953f224a16f72"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/python_stdlib.zip": {
+      "bytes": 2423989,
+      "sha256": "4298b6ee445cb724c3973437da47789752b9e6ff4e26619026b283ec801fc46b"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/runtime-assets.json": {
+      "bytes": 2018,
+      "sha256": "a4fbff0ac1d7506a73264c09c2ee508a11e585393461e6b1d3f642bb43dfce6f"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 869,
+      "sha256": "12f0e5d72adb78058dba39c6aade30a8b3d7de6da3b312c293e1632ade43b5d5"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_adjustment/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/cipher/1e0d8d445eaa63aa11ede4ea35c114c735ad0855715b8193fff99eb6b214c69c.bin": {
+      "bytes": 9006,
+      "sha256": "1e0d8d445eaa63aa11ede4ea35c114c735ad0855715b8193fff99eb6b214c69c"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/cipher/2d0f922f8b3d4acc68fdcff23c408bd7e2987933048afab8b2e1311e189c2c4a.bin": {
+      "bytes": 43976,
+      "sha256": "2d0f922f8b3d4acc68fdcff23c408bd7e2987933048afab8b2e1311e189c2c4a"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/cipher/2eb05ce3f0dc8923f891b0da68da7222263f23b8bac9f1e711fb01ff40a1b2dd.bin": {
+      "bytes": 5722,
+      "sha256": "2eb05ce3f0dc8923f891b0da68da7222263f23b8bac9f1e711fb01ff40a1b2dd"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/cipher/327fe2a207791e6125089d1d6fd077eeec53a75683095df520526448addbda98.bin": {
+      "bytes": 7792,
+      "sha256": "327fe2a207791e6125089d1d6fd077eeec53a75683095df520526448addbda98"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/cipher/4571643a5aae01f0580dba4a7b819816f0228437acb2aa37b53aa924f1be6d96.bin": {
+      "bytes": 108760,
+      "sha256": "4571643a5aae01f0580dba4a7b819816f0228437acb2aa37b53aa924f1be6d96"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/cipher/461e25db3129caadc65fdb473e8072724fab4da02e3bace64e8cba66678ce0cc.bin": {
+      "bytes": 20752,
+      "sha256": "461e25db3129caadc65fdb473e8072724fab4da02e3bace64e8cba66678ce0cc"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/cipher/6d33313fb9be10be4cbec45f5e3065c0290b7a32cce95e1ec3dd7de9877da573.bin": {
+      "bytes": 25129,
+      "sha256": "6d33313fb9be10be4cbec45f5e3065c0290b7a32cce95e1ec3dd7de9877da573"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/cipher/7f1be6d8ee7773b98a653fafb1885d7248a99c957dd1e85002e6ae48413c0f05.bin": {
+      "bytes": 144936,
+      "sha256": "7f1be6d8ee7773b98a653fafb1885d7248a99c957dd1e85002e6ae48413c0f05"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/cipher/84bbad529e29b312088bab3ffd871d820faedb86d77723a266486c984b7fe56b.bin": {
+      "bytes": 776,
+      "sha256": "84bbad529e29b312088bab3ffd871d820faedb86d77723a266486c984b7fe56b"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/cipher/87d41e4fb958dbde409fa988b68af95ea3a55c572d468aba3a6f9014383e34c3.bin": {
+      "bytes": 95368,
+      "sha256": "87d41e4fb958dbde409fa988b68af95ea3a55c572d468aba3a6f9014383e34c3"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/cipher/98ba44d746c0a032da2a2a74779794219ae0e121cdaece15eca444ac1e5e25b9.bin": {
+      "bytes": 10325,
+      "sha256": "98ba44d746c0a032da2a2a74779794219ae0e121cdaece15eca444ac1e5e25b9"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/cipher/a5089dccbdec529e6e0bc9bc7a929b3e59ad887a0f9ecaad4cba55d976fac877.bin": {
+      "bytes": 30056,
+      "sha256": "a5089dccbdec529e6e0bc9bc7a929b3e59ad887a0f9ecaad4cba55d976fac877"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/cipher/ba1a0de55539e162a87547d12ba75a4cd85b54e0935e4a451c9116755b05cb2b.bin": {
+      "bytes": 65801,
+      "sha256": "ba1a0de55539e162a87547d12ba75a4cd85b54e0935e4a451c9116755b05cb2b"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/cipher/df61062ac5c6b8a9ce52f1fcb55225e7cd3b25a935eaa926b2f7aacf8fbead32.bin": {
+      "bytes": 54120,
+      "sha256": "df61062ac5c6b8a9ce52f1fcb55225e7cd3b25a935eaa926b2f7aacf8fbead32"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/cipher/e8859cb4b5861528934f446105846d29f587c6f07e056a6c28bcc4fe3bfa4a86.bin": {
+      "bytes": 65108,
+      "sha256": "e8859cb4b5861528934f446105846d29f587c6f07e056a6c28bcc4fe3bfa4a86"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/manifest.json": {
+      "bytes": 16290,
+      "sha256": "e5dda949bace2a0bf6b79a25e44f13966a151108f0f2b111bc80693a6cd63da9"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/public/font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl": {
+      "bytes": 1089800,
+      "sha256": "9d6518c8ad4d88019bc72045108eca154301014215222408aa047cf4955c726d"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide-lock.json": {
+      "bytes": 120010,
+      "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.asm.js": {
+      "bytes": 1074322,
+      "sha256": "1263f02b5b26099b96112378156f242dd98b39a8201ba7765e5fe3d455c5ce91"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.asm.wasm": {
+      "bytes": 8647684,
+      "sha256": "e2f4ee75b325e35eb31bfb8c613d4dd5098f5502c156a97847686875b5025480"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.js": {
+      "bytes": 18597,
+      "sha256": "718d40f1c015dd25ec724cc8fc4e2325d6a45a92ae225121ff6953f224a16f72"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/public/font-adjustment-local/vendor/pyodide/python_stdlib.zip": {
+      "bytes": 2423989,
+      "sha256": "4298b6ee445cb724c3973437da47789752b9e6ff4e26619026b283ec801fc46b"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/public/font-adjustment-local/vendor/runtime-assets.json": {
+      "bytes": 2018,
+      "sha256": "a4fbff0ac1d7506a73264c09c2ee508a11e585393461e6b1d3f642bb43dfce6f"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_compress/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_glyph_edit/cipher/2a4a53585f2a5d99d6f5abb76b9a0a7ed5f649777f34965da99c24b31738424f.bin": {
+      "bytes": 95368,
+      "sha256": "2a4a53585f2a5d99d6f5abb76b9a0a7ed5f649777f34965da99c24b31738424f"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_glyph_edit/cipher/2c61f131d27e493cb0ef5dd7910c88fe5ca7ae4caae3cc874e51040d8dac1c57.bin": {
+      "bytes": 179393,
+      "sha256": "2c61f131d27e493cb0ef5dd7910c88fe5ca7ae4caae3cc874e51040d8dac1c57"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_glyph_edit/cipher/cfd88011acb87202b9e7c27b4b9ca98ceb61ea36382229bd7af0e2f008defbe7.bin": {
+      "bytes": 5722,
+      "sha256": "cfd88011acb87202b9e7c27b4b9ca98ceb61ea36382229bd7af0e2f008defbe7"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_glyph_edit/cipher/f63682d91e6fc8d15cb113e0c5b81a6828f6b762d38b9dc29f025386dce5aa70.bin": {
+      "bytes": 32579,
+      "sha256": "f63682d91e6fc8d15cb113e0c5b81a6828f6b762d38b9dc29f025386dce5aa70"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_glyph_edit/manifest.json": {
+      "bytes": 5782,
+      "sha256": "425c87b8093b5741c575d3d6f6297bd498cb586296a4b0380b1bbb23538bc98d"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_glyph_edit/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_glyph_edit/public/font-glyph-editor/font-glyph-editor.vendor.js": {
+      "bytes": 391422,
+      "sha256": "b3f3f1bb244109fa7b9beafa716185c73da2b46a0c285fb3cf0e90a9283699b5"
+    },
+    "v2/releases/20260910-download-bridge-v2/font_glyph_edit/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_keyboard_simplify/cipher/2fcba71aff448c4a30b9a1c587b91b9a92df6f4de91ba3d59baee27c351a0e2f.bin": {
+      "bytes": 55071,
+      "sha256": "2fcba71aff448c4a30b9a1c587b91b9a92df6f4de91ba3d59baee27c351a0e2f"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_keyboard_simplify/cipher/391f2bf8ba7778d8b20a556a8f4d27122f28320a99c79be1cc59c819a38fbb4d.bin": {
+      "bytes": 8445,
+      "sha256": "391f2bf8ba7778d8b20a556a8f4d27122f28320a99c79be1cc59c819a38fbb4d"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_keyboard_simplify/cipher/79cea28ae0bb40183cf665a802d65b2d32e7555e367cc0eb126ba38d42e7f74c.bin": {
+      "bytes": 3564,
+      "sha256": "79cea28ae0bb40183cf665a802d65b2d32e7555e367cc0eb126ba38d42e7f74c"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_keyboard_simplify/cipher/a7256eec75641215e489cc95d55976fb3e6372f67c6e877daf1baa5e875f1ac1.bin": {
+      "bytes": 2633,
+      "sha256": "a7256eec75641215e489cc95d55976fb3e6372f67c6e877daf1baa5e875f1ac1"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_keyboard_simplify/cipher/dedbbb397940e4f5b3c1bae392df42362123857e7e0394db14fe443a4f4d436b.bin": {
+      "bytes": 3535,
+      "sha256": "dedbbb397940e4f5b3c1bae392df42362123857e7e0394db14fe443a4f4d436b"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_keyboard_simplify/manifest.json": {
+      "bytes": 6503,
+      "sha256": "bb26eac95d2b4c07577ae5583e1ef654ab5c9b0fef1548ef3755a0b798b40e7c"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_keyboard_simplify/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_keyboard_simplify/public/skin-keyboard-simplify/compression-worker.vendor.js": {
+      "bytes": 64650,
+      "sha256": "8f196903b77e91219eff557f0bd0270dab8e58e4a646c8435c4ec8eb72b1be4c"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_keyboard_simplify/public/skin-keyboard-simplify/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 627,
+      "sha256": "4cf225dea4bde7aac63ede188af8c42439f1c31735e96923c513aa13d62f2b72"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_pic_part/cipher/16d27146415bff94358322c919a9355ebf8bbf542fd099699234d09405709340.bin": {
+      "bytes": 5722,
+      "sha256": "16d27146415bff94358322c919a9355ebf8bbf542fd099699234d09405709340"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_pic_part/cipher/3d0895c691ba16b219c65ad62b1baf3f310a3aca1c0e4c0c096216ec7c7b900c.bin": {
+      "bytes": 8604,
+      "sha256": "3d0895c691ba16b219c65ad62b1baf3f310a3aca1c0e4c0c096216ec7c7b900c"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_pic_part/cipher/43017c3950461c3764040b9531d015326f472ebbe8e008224aa18b99b3878b21.bin": {
+      "bytes": 4176,
+      "sha256": "43017c3950461c3764040b9531d015326f472ebbe8e008224aa18b99b3878b21"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_pic_part/cipher/5a3bca289340347c37b3b2582546e3cc22cb69e347f68bfe43efcb4e388f777e.bin": {
+      "bytes": 4974,
+      "sha256": "5a3bca289340347c37b3b2582546e3cc22cb69e347f68bfe43efcb4e388f777e"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_pic_part/cipher/db49df439a9c7abfc0760029883f4ea1d4870e76a390ce7bea1d7e64ed717ab4.bin": {
+      "bytes": 10936,
+      "sha256": "db49df439a9c7abfc0760029883f4ea1d4870e76a390ce7bea1d7e64ed717ab4"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_pic_part/manifest.json": {
+      "bytes": 6375,
+      "sha256": "0a50e7d10c0372518af5ae65d690f974a767620018da17cd33a043ef6930cdc8"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_pic_part/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_pic_part/public/psd-layer-split/psd-worker.vendor.js": {
+      "bytes": 335174,
+      "sha256": "5e1e9c04a92ee585f43eca84096fd1410a4bbd3574f5e48ae87a20b0172de412"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_pic_part/public/psd-layer-split/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 8236,
+      "sha256": "a2f5cd88ce4c80d3ea3780f13452dfe0e503e957abdecd075b5f3787ee9b9dc9"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_psd_adapter/cipher/16582614c50423cc68d76833952c72486298161a9a3105f2d93b93d7b63f1f01.bin": {
+      "bytes": 9223,
+      "sha256": "16582614c50423cc68d76833952c72486298161a9a3105f2d93b93d7b63f1f01"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_psd_adapter/cipher/7643326887222c5618eef3464e1e384223053589a8ca5b98c6946929e012fdcf.bin": {
+      "bytes": 3740,
+      "sha256": "7643326887222c5618eef3464e1e384223053589a8ca5b98c6946929e012fdcf"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_psd_adapter/cipher/cf905d4d8e7406cff3a6d7425ff71a119a6c0b07b0f43be6d96b1b2547463d65.bin": {
+      "bytes": 4627,
+      "sha256": "cf905d4d8e7406cff3a6d7425ff71a119a6c0b07b0f43be6d96b1b2547463d65"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_psd_adapter/cipher/ff8483ba3640206639ca42274071d921725f8b7b9e5a0da9e58a62adcdf3fdea.bin": {
+      "bytes": 36622,
+      "sha256": "ff8483ba3640206639ca42274071d921725f8b7b9e5a0da9e58a62adcdf3fdea"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_psd_adapter/manifest.json": {
+      "bytes": 5164,
+      "sha256": "911c97ddf62ab012e9cd2e7c2cb5d61f4d915dea056e1b0949cfffd430063ae5"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_psd_adapter/public/skin-psd-adapter/adapter-worker.vendor.js": {
+      "bytes": 347482,
+      "sha256": "045a16b415c3d21eb4abc6208ed4063876bd95d0b5a91a49a0a3d925c6d5dcfd"
+    },
+    "v2/releases/20260910-download-bridge-v2/skin_psd_adapter/public/skin-psd-adapter/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 3709,
+      "sha256": "0898ac280bc1f520c9f6bf68d5375529ffdb0aff8c3727d3cda5c80c350e10b6"
+    },
+    "v2/releases/20260910-download-bridge-v2/video_sound_conversion/cipher/3ad0f10b89a69711b7f5ff628ad66941578c790273dfd9f8685c4bc9603252c0.bin": {
+      "bytes": 3181,
+      "sha256": "3ad0f10b89a69711b7f5ff628ad66941578c790273dfd9f8685c4bc9603252c0"
+    },
+    "v2/releases/20260910-download-bridge-v2/video_sound_conversion/cipher/89aa34df23075dd3a94a414cc662893a7a93e3e1824ce535ab30560b6b433d38.bin": {
+      "bytes": 3012,
+      "sha256": "89aa34df23075dd3a94a414cc662893a7a93e3e1824ce535ab30560b6b433d38"
+    },
+    "v2/releases/20260910-download-bridge-v2/video_sound_conversion/cipher/e41cc200cb5ab3a35dc48d07e7dd46e5310a6e65d62c9f937889a0181b13dd7c.bin": {
+      "bytes": 10389,
+      "sha256": "e41cc200cb5ab3a35dc48d07e7dd46e5310a6e65d62c9f937889a0181b13dd7c"
+    },
+    "v2/releases/20260910-download-bridge-v2/video_sound_conversion/manifest.json": {
+      "bytes": 6700,
+      "sha256": "7c67da495858c4ad2308d9160636d298d8062ce435cfa7d3c46c65fa1057f636"
+    },
+    "v2/releases/20260910-download-bridge-v2/video_sound_conversion/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260910-download-bridge-v2/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg-core.js": {
+      "bytes": 111804,
+      "sha256": "67a48f11645f85439f3fde4f2119042c16b374b910206b7a7a24f342e28dcae3"
+    },
+    "v2/releases/20260910-download-bridge-v2/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg-core.wasm": {
+      "bytes": 32232419,
+      "sha256": "9f57947a5bd530d8f00c5b3f2cb2a3492faa7e5d823315342d6a8656d0a6b7b7"
+    },
+    "v2/releases/20260910-download-bridge-v2/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg.worker.js": {
+      "bytes": 2511,
+      "sha256": "16370a642e2bd09cc877ad9c5b6684c5518f52a0cc6fddcc33ce595ceb6f148f"
+    },
+    "v2/releases/20260910-download-bridge-v2/video_sound_conversion/public/video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 2983,
+      "sha256": "84da95a2c7645232766dc138243337e7bf64d3a17f4443ff7027fecd0d13d4f5"
+    },
+    "v2/releases/20260910-download-bridge-v2/video_sound_conversion/public/video-sound-conversion/vendor/video-sound.vendor.js": {
+      "bytes": 13404,
+      "sha256": "4bcc71104dc7e2bebc8dcc67dfcacbabae96dbb0d7f639b37afe3d60c1625224"
     }
   }
 }

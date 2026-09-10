@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260910-text-eol-v2",
+  "toolKey": "download_bridge",
+  "createdAt": "2026-09-10T13:10:04.193Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "download-bridge/index.html",
+    "styles": [
+      "download-bridge/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "download-bridge/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260910-text-eol-v2:download_bridge",
+      "wrappedKey": "ISDKl15ZVJ7/I5q969LUiqE0M2xLNj0ojN2//Labte9mPyCCk0uv2fNHjOb9sxzL5MnzdCGjdmdC8PXtXzPGNIaQkb0EnZHrHBfAb0VSRJPY1QPagza2hCH81P2FQzSDF6v6rvi2zNUHbWQ7IqQ0yYttoNHcr2YHFZ2El5kObVxUGXCmH3tMVXextqWU8HgpyGKkOS0vrgcu3Sow1JP2xex5EQS095CT1FeM/PtWMwKxyUQaBUudSB/CCLl5+fnBfgaSrnImvC7NxQ1KiFpDPt6tRiKpTu65calZ6UcDA+1YlE5KioeLJX/iPjlL/hBHcDrJDi1bLdVsrzz79sYi6fRD9vXBY255oYgdBrkumzFslQpdboNawhjyFAvrQN90nw1MDmAmun/3ycYHz4Le35Hz/Y8DHkZy6QSP5EhBvD1IhcmLY8/mFmm2FJdL8eKnqgOxuYB4F0BvVmeD4WHAG4+48srmGc0RWKNnCYhZduf+VDywIpnV4m+XnZfk7g6Y"
+    }
+  ],
+  "routes": {
+    "download-bridge/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-251be41d5fec746ef17e",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 895,
+          "sha256": "251be41d5fec746ef17e06191758d421b48941d55c6b7ad8a173a358ed99c80d",
+          "cipherPath": "cipher/d9e0824ef8f1fc22aaeaf8f756e022ffcf0447aeade3ae94dfeb552604cc5991.bin",
+          "cipherSha256": "d9e0824ef8f1fc22aaeaf8f756e022ffcf0447aeade3ae94dfeb552604cc5991",
+          "iv": "q2GPIre8HeSFzLP/",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f22141278f2eca3e6a9c",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 1179,
+          "sha256": "f22141278f2eca3e6a9ccb360ae3a66474c4d42405d21c7e8a870c0d94b11421",
+          "cipherPath": "cipher/c01340a9eefedbee6491f2e0db40b7060f4d4fe91cf8646862ca41f7a0270777.bin",
+          "cipherSha256": "c01340a9eefedbee6491f2e0db40b7060f4d4fe91cf8646862ca41f7a0270777",
+          "iv": "Vp/+hcS/bhoCq1pu",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-74a3f1876616b45e5df5",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 36551,
+          "sha256": "74a3f1876616b45e5df5b3f58fe8e4b5a490f1a65b2793e28e47965e931861d2",
+          "cipherPath": "cipher/9769fddab5121cf769ee014c9a2afff991a118b3e060fdb8a8d683016d32bb38.bin",
+          "cipherSha256": "9769fddab5121cf769ee014c9a2afff991a118b3e060fdb8a8d683016d32bb38",
+          "iv": "EogRYXVmbQo8ZWZx",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "oTyFqhmTqaMN9c+/22xm8NZBOdYzdSkLLsozserWDPF7nteKlRI8wKJNgKP0jLwtk+BneZ7zYyswgVn24piSIw=="
+  }
+}

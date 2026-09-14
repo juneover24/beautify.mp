@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260914-download-bridge-v2-fix",
+  "toolKey": "video_sound_conversion",
+  "createdAt": "2026-09-14T03:36:30.110Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "video-sound-conversion/index.html",
+    "styles": [
+      "video-sound-conversion/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "video-sound-conversion/vendor/video-sound.vendor.js",
+      "video-sound-conversion/app.js"
+    ],
+    "workers": [
+      "video-sound-conversion/vendor/ffmpeg.worker.js"
+    ]
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260914-download-bridge-v2-fix:video_sound_conversion",
+      "wrappedKey": "Ud0yk5dEBmXQBK32E+MeJfZotHIAN+6/0+WUkIJaB5S9YfeCblAqgiCpi4V4TDcDG47xQ4uIDi3fIxh8V7aHNAi+PkMK6YIYSZHGI+NRZo4zqNgltgJxPb4AjZThNtZFp71wGLW6xEXQRONsPbVgY3ovvZmKlgkq8LBK184gOKxNsiZuQ7BMyjgGYD8qbo8cuSLQFG2exmtUEDt0B4pTbnu2fA1NqcJfweV6wXHw4FEzNfUcQpN/PoQ00kGO7cW51IJNFzz8S4U46CCGEQsUgaG4E2YuRhiTRVZf6Yv2yN8gpml2/4j5IuHDzKOwXX3tSvl76j4u1N4EmQ52OBcUxkc1Zi4cshPVRUJ//mQXVCthtSijmPX4w5D6RflzYABu+No53PjmYp/zHDD6mbZOBfThf2x06CZMEk3KjHbKaPCuycm06SduqiCY0II48lP0uRIA9GAjT909TUopy8dQ4zltnaT8bubWxjeUItHuDq2soj9IVe3Dzb97+ep/923P"
+    }
+  ],
+  "routes": {
+    "video-sound-conversion/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-31437d46fb82398a5751",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 2936,
+          "sha256": "31437d46fb82398a5751de87ba41d6b590522904b7afa9d2e7d6b4d75dd21f7e",
+          "cipherPath": "cipher/50b24e10f1e16820bf531e89b40f842ea5030c23a9a6b89ea446a98440d985af.bin",
+          "cipherSha256": "50b24e10f1e16820bf531e89b40f842ea5030c23a9a6b89ea446a98440d985af",
+          "iv": "5HYDFxdGUguPE6c7",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "video-sound-conversion/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-5bfe20346307ac84fe69",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 3112,
+          "sha256": "5bfe20346307ac84fe69ecc4f5210a921fc8121e634d0c91a03fe11dee740800",
+          "cipherPath": "cipher/42acc23ff15cbe7c28ace147282f6d9640b0bd55f1dd63d9e150546f2011449a.bin",
+          "cipherSha256": "42acc23ff15cbe7c28ace147282f6d9640b0bd55f1dd63d9e150546f2011449a",
+          "iv": "Dw5PDjHC4BTQ0jd6",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "video-sound-conversion/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-5b4a77d46d993b30fb41",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 10373,
+          "sha256": "5b4a77d46d993b30fb412ca7fcf81d746f2eead7b79eb85be97334aa04caed27",
+          "cipherPath": "cipher/8dae0d840985c20bdc1b1b7ffc0da53d73d2875762dc577cbe598a0f353377a0.bin",
+          "cipherSha256": "8dae0d840985c20bdc1b1b7ffc0da53d73d2875762dc577cbe598a0f353377a0",
+          "iv": "W/a8W3ITvmi+vniR",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "video-sound-conversion/vendor/video-sound.vendor.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-4bcc71104dc7e2bebc8d",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 13404,
+          "sha256": "4bcc71104dc7e2bebc8dcc67dfcacbabae96dbb0d7f639b37afe3d60c1625224",
+          "publicPath": "public/video-sound-conversion/vendor/video-sound.vendor.js"
+        }
+      ]
+    },
+    "video-sound-conversion/vendor/ffmpeg.worker.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-16370a642e2bd09cc877",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 2511,
+          "sha256": "16370a642e2bd09cc877ad9c5b6684c5518f52a0cc6fddcc33ce595ceb6f148f",
+          "publicPath": "public/video-sound-conversion/vendor/ffmpeg.worker.js"
+        }
+      ]
+    },
+    "video-sound-conversion/vendor/ffmpeg-core.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-67a48f11645f85439f3f",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 111804,
+          "sha256": "67a48f11645f85439f3fde4f2119042c16b374b910206b7a7a24f342e28dcae3",
+          "publicPath": "public/video-sound-conversion/vendor/ffmpeg-core.js"
+        }
+      ]
+    },
+    "video-sound-conversion/vendor/ffmpeg-core.wasm": {
+      "mime": "application/wasm",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-9f57947a5bd530d8f00c",
+          "kind": "vendor",
+          "mime": "application/wasm",
+          "bytes": 32232419,
+          "sha256": "9f57947a5bd530d8f00c5b3f2cb2a3492faa7e5d823315342d6a8656d0a6b7b7",
+          "publicPath": "public/video-sound-conversion/vendor/ffmpeg-core.wasm"
+        }
+      ]
+    },
+    "video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md": {
+      "mime": "text/markdown; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-2b76bd18daf1908ec5e5",
+          "kind": "vendor",
+          "mime": "text/markdown; charset=utf-8",
+          "bytes": 2921,
+          "sha256": "2b76bd18daf1908ec5e5ac37f567cffcf5197c7f299a2f8f34aa3e02a43908f1",
+          "publicPath": "public/video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md"
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "dxy+UC3aqUUQB0NLKAaKd8StK+Yn1RAbgsHUnF99WeMuxqTgWXeJ2I16tkOhAh/NEF9HOE41znpi2Dxx3Xxf6Q=="
+  }
+}

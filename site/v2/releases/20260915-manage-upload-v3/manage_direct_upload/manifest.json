@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260915-manage-upload-v3",
+  "toolKey": "manage_direct_upload",
+  "createdAt": "2026-09-15T03:46:31.405Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "manage-direct-upload/index.html",
+    "styles": [],
+    "scripts": [
+      "fetch-522-retry.js",
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "manage-direct-upload/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260915-manage-upload-v3:manage_direct_upload",
+      "wrappedKey": "nNJc3qXK0O4KE5Vb9aq9604YB7p8N2F0na69wHZ+ZUnl9tQunTHQelHwNbIPx35AmEIGtY/jtCz4HZRGBIUyvUUAhfPGJT37dw+frSPrcwVKy5LutFfcHvfyyAUxLulaI4kXR3q7o/6Qr58JLMxPzZvM90O6T8VhVpFpj8XE8hHEWEu0nq5gUdvI6BTOZXdnf5111MKyt6i1UKdSBZsW/tCHuQLMd3UwvcfC9ZiHdnZemQhOmDLjEhW4MT4xWisnOFdP3wY4zHhNK2/a6My58BU65eGZZzD/Z5JYG5c/N//poNcOdykFRePIHxY1USsen0H/+oP/YPmGqB7wviBl3UdZKJDvZj7EM11Se/nEFEsH5UASlVTO+CTkLe1qAt5R7DyA7re/vnwyuGum706fa6GrC/5vUN75ULUF9XA2/zzWONAyb5jIocOezcs3/l1vg1IdQ/bthqnVCH9LWV9Q1Mrp3cuQsWD/bLCMqyjT62iywS+rT/rHGRT93tY9sBl8"
+    }
+  ],
+  "routes": {
+    "fetch-522-retry.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-410b453e32b62bb60609",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 5641,
+          "sha256": "410b453e32b62bb606096b6f6646a2463235c7dd9345df7034732782ade9013e",
+          "cipherPath": "cipher/3a65429ec0548b6a338617afffe11d335a1ef4e4c816baa65a103a52fd413eae.bin",
+          "cipherSha256": "3a65429ec0548b6a338617afffe11d335a1ef4e4c816baa65a103a52fd413eae",
+          "iv": "+cYuIYzOKS49CLdi",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "manage-direct-upload/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f7c81d6b2477dcb8f578",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 4733,
+          "sha256": "f7c81d6b2477dcb8f578d70be6baf513fd22e6e8c0577f73d3b0673bf71f8629",
+          "cipherPath": "cipher/756a7718e9ad174fd56bfb4ff04877a12f721a5d5838db24ce3bac4b9e5ecc19.bin",
+          "cipherSha256": "756a7718e9ad174fd56bfb4ff04877a12f721a5d5838db24ce3bac4b9e5ecc19",
+          "iv": "YYWlAFSe1zMoEHby",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "manage-direct-upload/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-60ec5e481f8adc4a0e5a",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 165257,
+          "sha256": "60ec5e481f8adc4a0e5a9f331d71838cfce08e1ccf5b6961aec4de6ad935c128",
+          "cipherPath": "cipher/dee06bdbfd8d865d8339f90f4798c6f7b4e89e91c1f42788cba78da1a393f319.bin",
+          "cipherSha256": "dee06bdbfd8d865d8339f90f4798c6f7b4e89e91c1f42788cba78da1a393f319",
+          "iv": "fEiZn/jMb6UVf8+z",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "58Qyf4DvBqofp+K4wcijti2zB0XMeDUQEp/qsf6EcgvjEY8Tb/FVKZc19MH5Bh+6QmS8eVdt3I+0AMBjd1reww=="
+  }
+}

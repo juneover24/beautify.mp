@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260917-member-local-build-v3-return-fix-2",
+  "toolKey": "download_bridge",
+  "createdAt": "2026-09-17T12:03:42.353Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "download-bridge/index.html",
+    "styles": [
+      "download-bridge/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "download-bridge/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260917-member-local-build-v3-return-fix-2:download_bridge",
+      "wrappedKey": "cYJJ7KO/DUvHoBoCdhY4aCuuelfuqtkpfzzYd9vUzYu9ltnES0zfHt12OhKm3YtFoJbrke0Qrd7xcrIye2Wr8h3jU5ww4GbxEO8kWaws3ReOz1fYZR00+ad5QiKrQlevy1akNG5hMt4uUnKBvKDuuQkQ5WuEncXynlLL6KvpOMsUiya7IrTHLPlvYL9vRSFkF2y80Wul+YkOrrDamaaewUxhRve+bo+FviTpBREbYmOp2EdsND+b+xFJN/LCjp8MGkZxgU7PsSa8IS3pXGtF0XH7MiLE00f/S75zLHKX5Ywb085uqp18rqeomodfo78BV3mUbH+liMQZRiqd7soLA9ISJBhUp5gtMGvGi0GFnXVjb/Jdm8FIHNhP9nL25abYc6SZUzagrVp8d4Tn6xkGTkXp/FrZYE+jGUx9h6WAa5IiXaUlFNdq5itAJYsMj3nqgs00ZuU7NREuiXy8RWTlSEDy8wUQ0RmwCf0CAdPUUzJ1dGtcht0FuMaMHJngZRMX"
+    }
+  ],
+  "routes": {
+    "download-bridge/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-449c31c81a347c2d2dc1",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 892,
+          "sha256": "449c31c81a347c2d2dc1e1bd71aa21498408b6f501e5579b1a7aac328048bdfd",
+          "cipherPath": "cipher/407d272c81c8360d5349e4c26806bc60f89f3936c033709fdc367664813325b2.bin",
+          "cipherSha256": "407d272c81c8360d5349e4c26806bc60f89f3936c033709fdc367664813325b2",
+          "iv": "7Iw9/PV3VMVAjSgV",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f22141278f2eca3e6a9c",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 1179,
+          "sha256": "f22141278f2eca3e6a9ccb360ae3a66474c4d42405d21c7e8a870c0d94b11421",
+          "cipherPath": "cipher/edcce0d846189dc6de983fd2112eef8b7b9dc892aae9a42ba0eb2af3dafa5242.bin",
+          "cipherSha256": "edcce0d846189dc6de983fd2112eef8b7b9dc892aae9a42ba0eb2af3dafa5242",
+          "iv": "atoKi8+ZXy8fJBWx",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-890d7e1844e135728c3a",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 53551,
+          "sha256": "890d7e1844e135728c3a4e3ad6bf91f06cd7d50fb7da2f70178a7d92e47526ea",
+          "cipherPath": "cipher/12fd569f5197574b6454b097c91c48f96874f4c01607a21475e689f623ea8911.bin",
+          "cipherSha256": "12fd569f5197574b6454b097c91c48f96874f4c01607a21475e689f623ea8911",
+          "iv": "mHeD55IMKXiKQAaR",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "SKdD4glOjjJb4QdlfTFLFhNXWBaXL7nyu0VLDZ2ztY9Qqut4BrdZ9iCSSMVkyrUn7Kl5ilI7fvzEvhMZ19yZXw=="
+  }
+}

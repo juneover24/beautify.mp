@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260917-member-local-build-v3-return-fix-2",
+  "toolKey": "manage_direct_upload",
+  "createdAt": "2026-09-17T12:03:42.357Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "manage-direct-upload/index.html",
+    "styles": [],
+    "scripts": [
+      "fetch-522-retry.js",
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "manage-direct-upload/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260917-member-local-build-v3-return-fix-2:manage_direct_upload",
+      "wrappedKey": "B6VI/aiylZC8KEeT1+PWkFOot9ayX0NkLe3sSuE65qbwbqrPMvKfKaIaq5yUB9vVeWSwKhSHcW7SOjsg3FxUa6Zbh/H5BTMMYgWxnVCSkQ5wn38yISIpneZcRa/9yExm7cE+YdN43808Ns7Tiwkfhbd5O9sQ5jv+XfG9wECQaZ2bYENGg8QboQiy16nxkt9nZlYuJAxMKgJJW4NCNhbiIICcataGApBbIaql3Mspcxx2CalQjDi5GIZWzfyTrbfilPeXwG2Mlps2PmbvCagXPv7k9OyzwOvnsJZIunvBAdC7+7El+OkKb0WJMTqFdhta3sE/jvU2onz8fhNZC0iEkVx3T6uhtiMr3kuH/21cCt2MOVNj20OD7vJULQoJIaSPf1g6ksCHECq7QbSn394IvzvBGvQMjED5gadBn8ZyYsAWkeQ0Xk6uoa42IgV4LhXSCVdRsUPZ3EonRvo8NfG4VaLleXfgWBf1lg4RJ+mNqQqN1uhaG8S5Wp6U5Cvo3GjS"
+    }
+  ],
+  "routes": {
+    "fetch-522-retry.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-410b453e32b62bb60609",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 5641,
+          "sha256": "410b453e32b62bb606096b6f6646a2463235c7dd9345df7034732782ade9013e",
+          "cipherPath": "cipher/c01090a76a1b950c040332bb7b532ca499e05d22b9fb58217024b800aebb5e90.bin",
+          "cipherSha256": "c01090a76a1b950c040332bb7b532ca499e05d22b9fb58217024b800aebb5e90",
+          "iv": "FqJQL7d1LVtxQoq7",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "manage-direct-upload/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f7c81d6b2477dcb8f578",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 4733,
+          "sha256": "f7c81d6b2477dcb8f578d70be6baf513fd22e6e8c0577f73d3b0673bf71f8629",
+          "cipherPath": "cipher/f59c95716a2a5bb7ac44545517d82f2aaee7b66b6126246222ac64252a3bdce3.bin",
+          "cipherSha256": "f59c95716a2a5bb7ac44545517d82f2aaee7b66b6126246222ac64252a3bdce3",
+          "iv": "d4IepOs/BOooo3ec",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "manage-direct-upload/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-60ec5e481f8adc4a0e5a",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 165257,
+          "sha256": "60ec5e481f8adc4a0e5a9f331d71838cfce08e1ccf5b6961aec4de6ad935c128",
+          "cipherPath": "cipher/1d535649cbfa44a31792993a89f3d07e8ace97b0914622c7f06aa30571f10241.bin",
+          "cipherSha256": "1d535649cbfa44a31792993a89f3d07e8ace97b0914622c7f06aa30571f10241",
+          "iv": "gewTD4h7UutA3pUo",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "tvZsuVZm0sfw/bPV9lrJqYr4vMHf+de4UV6tYU0+FaF4U/yIQK5KeXxcefsi3xscqISTG4RKp+c9rcVKOMZ7Tg=="
+  }
+}

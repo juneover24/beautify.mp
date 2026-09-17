@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260917-member-local-build-v3-return-fix-3",
+  "toolKey": "manage_direct_upload",
+  "createdAt": "2026-09-17T14:23:01.563Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "manage-direct-upload/index.html",
+    "styles": [],
+    "scripts": [
+      "fetch-522-retry.js",
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "manage-direct-upload/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260917-member-local-build-v3-return-fix-3:manage_direct_upload",
+      "wrappedKey": "B3rhy12mTnWsfphB2vo17dwaWGH3TjQYLWcbuQ+re9oewNgkwA9fUJNQZcEgMAzxH4T2rsJUletp6elIgQ42UFjOXgQXc8cDeXkp/UPOPXXuv9E0wJ6rHsR3YTCkav9pwi6Hl2wqbv1uAr/kSEYc18aMBEBOkQiWaCNUHNE2r2LIUu5ajLFMxD+ypnsCtvbDsIC6eCEitUd2R+TMTv46guJF1vrQEtaxlwxZifkTOp840Bpu7KvOm1YeH6bOfCB5Zw01TtPLtWavXQhAyo/pNF9r7DGsusYO7c6jJJq9dIfmXrNnWDsDOaMEZb61pFJJRE3h/HCRAeE8j/bXT+vfcQ6zd2+tX+GL3TLKPF0n9/RpbvqbWSaTQWrjaIAHicsA2P9/aOv9U7LTkQXv1kXFuZYc5OdpXNZx4U14XBH7KAzY6J8XeF2UaU7yAp5AAXVQBdqyVSy5H+pyVPL0k9ggyGrTf707SPo03Qh1+CnVAEvr6mzVs8KUO+chjAaXxnfl"
+    }
+  ],
+  "routes": {
+    "fetch-522-retry.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-410b453e32b62bb60609",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 5641,
+          "sha256": "410b453e32b62bb606096b6f6646a2463235c7dd9345df7034732782ade9013e",
+          "cipherPath": "cipher/3f68472f137b4e6793225f924b99126b9a064ebde29ea2d868980872709fcaa5.bin",
+          "cipherSha256": "3f68472f137b4e6793225f924b99126b9a064ebde29ea2d868980872709fcaa5",
+          "iv": "AugY6MKiqbY4c/FK",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "manage-direct-upload/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f7c81d6b2477dcb8f578",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 4733,
+          "sha256": "f7c81d6b2477dcb8f578d70be6baf513fd22e6e8c0577f73d3b0673bf71f8629",
+          "cipherPath": "cipher/d46861c8166ccfea73be3c3b6134ba5bdba61064929b3d88efac8666c3b0c179.bin",
+          "cipherSha256": "d46861c8166ccfea73be3c3b6134ba5bdba61064929b3d88efac8666c3b0c179",
+          "iv": "N8gPAQV0coV06BOC",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "manage-direct-upload/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-60ec5e481f8adc4a0e5a",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 165257,
+          "sha256": "60ec5e481f8adc4a0e5a9f331d71838cfce08e1ccf5b6961aec4de6ad935c128",
+          "cipherPath": "cipher/6732a6d28342cc6995e776b0d6157c70c9fc28c472896a36516d2a5a81e6f8ab.bin",
+          "cipherSha256": "6732a6d28342cc6995e776b0d6157c70c9fc28c472896a36516d2a5a81e6f8ab",
+          "iv": "ncRDAhtY1VpudiH4",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "6gHnJsKWwUEAkS7L9q8fWgJqtHqWAEpie5jX+poDT8QxO1RvFTkqu3f/r7j01/xGzQDxKzcbecbYbcP0SlUIPw=="
+  }
+}

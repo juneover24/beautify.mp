@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260918-h5-return-admin-log-v1",
+  "toolKey": "download_bridge",
+  "createdAt": "2026-09-18T15:43:37.529Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "download-bridge/index.html",
+    "styles": [
+      "download-bridge/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "download-bridge/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260918-h5-return-admin-log-v1:download_bridge",
+      "wrappedKey": "OdYtsQOI45DZ475iEupViiqRC+hEvBR0UON7bng8gI/ya1iMkgXnHoT342kXi1+aumo7lOIk8kLbQ4LBYDxyd/h1+RtAhaBnmCaoONkAYPxih1Me+Q1f8OTseLOTcng2wEya7Qq64f3pnEvOJZEIjdBqlcZkTsSsImnPlVVVwGDII92otOd6iIbDcuFqADbzwPIazN/NrT8hUdMvdxaR5jhhdFsfQdG9tuXisM8eLI+ndLjz1okxrjUg/LnRvbFYErrg2Pk91wV07b47/VKRUfrU8PLprmm0UMv+Vegt/JJEOPACMlW6bHcY0fClJDKLjAP/GxQlGa2wbGLl93oGhKU8p2/U9qc7L2C+HVhiQgqer1mJ32mMa1EPStUjb3HLMNMMc4pRa4Z83VJg+cdwnZnI7/FYVwm2YWxDzbUYhrKvRSGmGZM5crQCAcW2osCehNVCCrZ6GbhmtARhtAYyWvIvrUDxaOveAtXt2Xsbrj56CAvPXhzHCcrbGnnazF0f"
+    }
+  ],
+  "routes": {
+    "download-bridge/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-449c31c81a347c2d2dc1",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 892,
+          "sha256": "449c31c81a347c2d2dc1e1bd71aa21498408b6f501e5579b1a7aac328048bdfd",
+          "cipherPath": "cipher/b8a9693b85664a02b6729d08dbb7ea9729559d10b9244bfceaed710aa7bfc3a9.bin",
+          "cipherSha256": "b8a9693b85664a02b6729d08dbb7ea9729559d10b9244bfceaed710aa7bfc3a9",
+          "iv": "S9yQMLfsFUjIIl5c",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f22141278f2eca3e6a9c",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 1179,
+          "sha256": "f22141278f2eca3e6a9ccb360ae3a66474c4d42405d21c7e8a870c0d94b11421",
+          "cipherPath": "cipher/3e82fe91288563d87e3154657e4f0eb68a8de80811b315207b84bb96f2ed8c5d.bin",
+          "cipherSha256": "3e82fe91288563d87e3154657e4f0eb68a8de80811b315207b84bb96f2ed8c5d",
+          "iv": "+YxZ55tWq9FOWev2",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-4228a11424f373523a8b",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 41817,
+          "sha256": "4228a11424f373523a8ba3cf10ab10fb052447fa49c3e52258f07d09e951a581",
+          "cipherPath": "cipher/d86b845b2c90a2d94a60da7b9d59f6d37c8aa9821179ff8012c85b4803e7a824.bin",
+          "cipherSha256": "d86b845b2c90a2d94a60da7b9d59f6d37c8aa9821179ff8012c85b4803e7a824",
+          "iv": "SClIM2UsQyzF6Qju",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "Ba/MP8Pb9uP0glb0tkMKZ9SXLkc/tG550LAVdWuApAlYd5Diami7L/NvDlXjndecxyqV+usUJF4iBPn0nWy0bQ=="
+  }
+}

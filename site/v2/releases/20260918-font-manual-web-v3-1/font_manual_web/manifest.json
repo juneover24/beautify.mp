@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260918-font-manual-web-v3-1",
+  "toolKey": "font_manual_web",
+  "createdAt": "2026-09-18T05:27:39.970Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "font-manual-big/index.html",
+    "styles": [],
+    "scripts": [],
+    "workers": [
+      "font-marker-local/marker.worker.js"
+    ]
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260918-font-manual-web-v3-1:font_manual_web",
+      "wrappedKey": "IAwhI/xTL2BtaSpOIn0BrHDYnOwgMlSjgAAKsu0v6c26VhSVNGOV4LYLneP2hHJDOLvDOeY6yyltYMO0Xo0+qp0iy55siyI0ix58EvPo9wILCEOLJKR8uGpTjfkMmQNdecWnOxx8Htp1cadUsZQyQhR7Rz8HwyO7yXan2Q/qBvn2Y8k0qdmAayxTuU9OZxPf7McrUaI6TYTDgTpM+s6QOvlvJW+qH1cRfsi1+EptTj9IM3XJpUgVtKO5UQyTNBMWwOJ8DNcd/DiWop0T5ry4kKuzjURs2nOFCffSJoIlG7rxBHaod8dIr5mwSVHcK5dVd3+SScejmXUeBhy+fipcypMhF5xIo/WsA3jJuvuWzTLWspiK+afaPQGWaShN4kfM7yLw6rx5FUosVFd6nF8XkDicDz+LWwOvXfn4ZJUhc4mUCWaSGDqCJnY9qTeKD8To04at29FHM4kOBsZGzt9eY8MbaE9i5KxiU5m+V6bbBAqXNR3QZX4/HDjjE20UoJC6"
+    }
+  ],
+  "routes": {
+    "font-marker-local/marker.worker.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-a138e77cc655174f6503",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 95352,
+          "sha256": "a138e77cc655174f65031cd10bb6d0cd23c24f929b82d01b906e048538e97b56",
+          "cipherPath": "cipher/51ebf8c3049c312564ea58541abf4f5ed2a7d18c8889cca4e55bdfe8eeb97cde.bin",
+          "cipherSha256": "51ebf8c3049c312564ea58541abf4f5ed2a7d18c8889cca4e55bdfe8eeb97cde",
+          "iv": "b4iLW1WMcDydJFEZ",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-marker-local/font-marker.vendor.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-cb0ff8c3d8992a289c0f",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 58322,
+          "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0",
+          "publicPath": "public/font-marker-local/font-marker.vendor.js"
+        }
+      ]
+    },
+    "spark-md5.min.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-3e97e82939197c7ca4e3",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 10293,
+          "sha256": "3e97e82939197c7ca4e34c7c1db61309fb0390ed077ae819f79c380563c9d0c3",
+          "publicPath": "public/spark-md5.min.js"
+        }
+      ]
+    },
+    "font-manual-big/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-067281598bc567d5a014",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 73378,
+          "sha256": "067281598bc567d5a01452e8011ad9e975c0bd7859a464df17462da304a515c3",
+          "cipherPath": "cipher/5511b768c760a00e2fda55fb801e28bedba05761bdf103e8acfccef3e9787113.bin",
+          "cipherSha256": "5511b768c760a00e2fda55fb801e28bedba05761bdf103e8acfccef3e9787113",
+          "iv": "ASD6+s4CUCN2MDzC",
+          "aadVersion": 2
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "ItiHX2iHsesbhPWeczCIReAq4ykrzGyAsyzcGvz2sJbtMpHNHXptKEbVUgs0o/qAXx6Q2BZgeA6Z4SnOZeuCew=="
+  }
+}

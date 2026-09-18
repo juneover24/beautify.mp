@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260918-font-manual-web-v3-2",
+  "toolKey": "manage_direct_upload",
+  "createdAt": "2026-09-18T08:00:42.253Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "manage-direct-upload/index.html",
+    "styles": [],
+    "scripts": [
+      "fetch-522-retry.js",
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "manage-direct-upload/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260918-font-manual-web-v3-2:manage_direct_upload",
+      "wrappedKey": "SWUBXqMZn6BXl+F1QuwdNPhlZnc5Tf/NCsZ8yChmV40HRYyFSJkhs5gnDByLNX2nbpKcUDbWWuBZ1xIVmRZb9vU9hz90KBMRkQlcKAPerZaotZwCmPTjB+yH+qMzNL/zSV6Ly8gfQDp5ny4tW8/hLHzQ/0DVn6n1DNz0VEv88CxdGH/1jqu/HRTwr2ysTWZ/usbtj+Goke9FAVRkWAdleafB18qf69RBMeklumeY8hi/NjbUNgePTegG15zRrMO7QXcpxVg9Jrr0w2W/ugBfEq/LFCAHeeq1t3gQJWjEmSGxfgopXui5x4K8Sr/WlA0aGu2ephy5GH3bg3sidwK4smwCcTJWvCxLpgBwRMtR3Fi49nNRTpgzVT9kdIPSxWfo2YdWwS9D1IeonnMAXw8ymtroBVg0BSWtA2pRKofp1KAIveHCVBSGmbive6aoa+QA3UKazXZozyocM+ePSZjHH1RJXrXg0lSV9GheOrZcNVIGiNOutM89TEizTvTqgFXn"
+    }
+  ],
+  "routes": {
+    "fetch-522-retry.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-410b453e32b62bb60609",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 5641,
+          "sha256": "410b453e32b62bb606096b6f6646a2463235c7dd9345df7034732782ade9013e",
+          "cipherPath": "cipher/0501b4a6185bd869cf160d2fd7a211029f4c570ddbece61e6abb9bbe55e47cb9.bin",
+          "cipherSha256": "0501b4a6185bd869cf160d2fd7a211029f4c570ddbece61e6abb9bbe55e47cb9",
+          "iv": "EeGFM1sP+dbbMrK4",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "manage-direct-upload/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f7c81d6b2477dcb8f578",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 4733,
+          "sha256": "f7c81d6b2477dcb8f578d70be6baf513fd22e6e8c0577f73d3b0673bf71f8629",
+          "cipherPath": "cipher/ca8be04d8dca750a4c1f6d676a01fae0fcc6a688b007eb0315032429be5b2db0.bin",
+          "cipherSha256": "ca8be04d8dca750a4c1f6d676a01fae0fcc6a688b007eb0315032429be5b2db0",
+          "iv": "BDLaS4er6qvf31yp",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "manage-direct-upload/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-60ec5e481f8adc4a0e5a",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 165257,
+          "sha256": "60ec5e481f8adc4a0e5a9f331d71838cfce08e1ccf5b6961aec4de6ad935c128",
+          "cipherPath": "cipher/0f152d104c9091f67876380aaf673ef5f7625dc094a86e122fdc332e5508ae6a.bin",
+          "cipherSha256": "0f152d104c9091f67876380aaf673ef5f7625dc094a86e122fdc332e5508ae6a",
+          "iv": "k2EWDbT9GRchERH3",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "bL9JKjPXFW5Q3+qrRa9etd1c1XNQ80eh266ZWxEwPJL+wC7wcJfiKJMrk12n0z6mH2VPSQijZU+KW4kXMasYIw=="
+  }
+}

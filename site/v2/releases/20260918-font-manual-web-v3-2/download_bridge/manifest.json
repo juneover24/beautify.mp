@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260918-font-manual-web-v3-2",
+  "toolKey": "download_bridge",
+  "createdAt": "2026-09-18T08:00:42.249Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "download-bridge/index.html",
+    "styles": [
+      "download-bridge/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "download-bridge/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260918-font-manual-web-v3-2:download_bridge",
+      "wrappedKey": "RuGqq1hw6NsLoYnoAL1fUsA4fEYulGj6kguyPwW8w5BfnUHD9mVosR7XCcqhKAV/S4CMKqxzuDySMg2maTVe3gVG8oSFttOLOLQgQ7CgcaBBVE3TUX8Ke7uDBP/n4S/k2Tn/80zxHXBJ2Me0KnfHaJvbbkz35p4qfep8DYSLt/jzMvUPmZIioM9KFe6irhXm/GsfUM3VJ1bU7rL0wHq3j2L3wR5uDq6RIdJurnVsbFIbOGMbKaa7kW9i4QKGMGDjXivmAifKKNL5MZX7nnDGx9eeGiKDMty9MoBCeYzw6JW+7C3iu83P0KNMAdUAjYTfVLd+Nqir+BLB8+TKOWuxTn6hVbPPpX62tReaQKnEekh4q8uOUcQkckhZKwpI+Ulu8uu3nKsfQFfv4Zr3NcsxQKAxgHQkgHK3OVtWWo55C7ydmJtyu9Dt0PJ9IlWqv1M7cv9G87pniwWSUfaV60G09hlEdI28vVbEO/vtaaGs2HXer+O0Xsg8MaUZhawypkwL"
+    }
+  ],
+  "routes": {
+    "download-bridge/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-449c31c81a347c2d2dc1",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 892,
+          "sha256": "449c31c81a347c2d2dc1e1bd71aa21498408b6f501e5579b1a7aac328048bdfd",
+          "cipherPath": "cipher/a2d38a55a239fa2fa1a9d4e8cf7567671917c527bc9114ea4c2453784f412a25.bin",
+          "cipherSha256": "a2d38a55a239fa2fa1a9d4e8cf7567671917c527bc9114ea4c2453784f412a25",
+          "iv": "qbAe2xgp8ceZvncV",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f22141278f2eca3e6a9c",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 1179,
+          "sha256": "f22141278f2eca3e6a9ccb360ae3a66474c4d42405d21c7e8a870c0d94b11421",
+          "cipherPath": "cipher/32193050952ca7c2ff01373ba722faf6fe3039da69d48349b4ec4423d9b30767.bin",
+          "cipherSha256": "32193050952ca7c2ff01373ba722faf6fe3039da69d48349b4ec4423d9b30767",
+          "iv": "48zKK7zgaAB7mQNz",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-890d7e1844e135728c3a",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 53551,
+          "sha256": "890d7e1844e135728c3a4e3ad6bf91f06cd7d50fb7da2f70178a7d92e47526ea",
+          "cipherPath": "cipher/aecf1b5711aa36b190053cf05a41f5390ed6d109946fea04f3d1df1ee11623a4.bin",
+          "cipherSha256": "aecf1b5711aa36b190053cf05a41f5390ed6d109946fea04f3d1df1ee11623a4",
+          "iv": "0S9m2sY+JVMp0Hhv",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "QffJ8k1yZj2efBci+DpbFkkwgYxOE16rPRbe0b4m+u8W8N5vgjP41LK/Nzle0yMv0vD5+ghDsYCasUBOMOjlyA=="
+  }
+}

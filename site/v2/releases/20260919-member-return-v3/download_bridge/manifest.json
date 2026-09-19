@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260919-member-return-v3",
+  "toolKey": "download_bridge",
+  "createdAt": "2026-09-19T04:43:25.152Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "download-bridge/index.html",
+    "styles": [
+      "download-bridge/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "download-bridge/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260919-member-return-v3:download_bridge",
+      "wrappedKey": "ZM3QHib9aRDciwSYQptKS8dy+nrPymSPRDGyIc92OH1Oawqla5gKl95W5l/IOCo1iTNqP0qr4cwdAacyfYZsFIcQ2oXMdnm8rfz06R5kiBOMYqWXhuL8YIWAGjWwG3SrJz2fgIeuK0sUUXLXYu5BZEXk6cRlpWp7vRnIs02ueZO180/aUtApeQbM9hDsOoSffGuGVwlambf4BgiCDct6yIfOrn/nFGZoJ/H1le9i17NyfWqoPRNuwLYxMMsV6XdZINHyVPPWufRZFXVnBPUjQV/lqxnW4efJIhzyoul4cIkIzAtJ6dvzHyeYfpheDEkorA+0t5zFdcIcGIT19YFQOwcvkBGBd9xXxcJHRi6GJ353NbLNYRSNBAZp031OVDVpJdhJnL6CfzfHYcBGXpaPxhHbcQFsgF56sQmOxPy0QyANzwQ0hQrYuSQfYvnStvfVwhp+Tm84tLDVT72wIzTwqlsFntmI/q/FVPNAfKI8iSXN3tRMuigvafy3STqL9Buy"
+    }
+  ],
+  "routes": {
+    "download-bridge/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-449c31c81a347c2d2dc1",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 892,
+          "sha256": "449c31c81a347c2d2dc1e1bd71aa21498408b6f501e5579b1a7aac328048bdfd",
+          "cipherPath": "cipher/fd945141d03f441bdbc9a979a055d9d13dfcd7a610300d57d00de4db85cd703c.bin",
+          "cipherSha256": "fd945141d03f441bdbc9a979a055d9d13dfcd7a610300d57d00de4db85cd703c",
+          "iv": "hrjWZcPV1QJQRwDy",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f22141278f2eca3e6a9c",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 1179,
+          "sha256": "f22141278f2eca3e6a9ccb360ae3a66474c4d42405d21c7e8a870c0d94b11421",
+          "cipherPath": "cipher/9f4cac12b18970a4f5c20dd3518a23dc603f95d4911ab95d3ded55f3eb526a3b.bin",
+          "cipherSha256": "9f4cac12b18970a4f5c20dd3518a23dc603f95d4911ab95d3ded55f3eb526a3b",
+          "iv": "F3YpuOtjLzTzsMe9",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-bd8ff3f24af0a05fbc24",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 42862,
+          "sha256": "bd8ff3f24af0a05fbc2478306b93f970a44c3e54056d99cbcd6c9c053da02bef",
+          "cipherPath": "cipher/85d319a7bb2f7fc1dee3d4a4575b85459e8b4f1d04923e157926c2d9673155e9.bin",
+          "cipherSha256": "85d319a7bb2f7fc1dee3d4a4575b85459e8b4f1d04923e157926c2d9673155e9",
+          "iv": "BTK6x/nzWyQ1fF6d",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "i1q/GaNp1aaWOXvtW5NnSv6M441Yyd78jD9+4Nf0C+LpKTUBErDNiPiAr0EkpTs8ceaK0oHxcCemKhid4Yufwg=="
+  }
+}

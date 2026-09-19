@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260919-member-return-v3",
+  "toolKey": "member_local_build",
+  "createdAt": "2026-09-19T04:43:25.156Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "member-local-build/index.html",
+    "styles": [],
+    "scripts": [
+      "jszip.min.js",
+      "spark-md5.min.js",
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "member-local-build/app.js"
+    ],
+    "workers": [
+      "font-marker-local/marker.worker.js"
+    ]
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260919-member-return-v3:member_local_build",
+      "wrappedKey": "Lf89X616JINHXQeEZGzhzMxNUDankNKvhloF1aiGVUyn6KqrJWa0+tvunvVYbrRIKJdgh5LQE5VonfzSrkVqZzS3Ah6Lc2JriHZsAZzSuuznCrEE56n4xPGQy9GEb2/aVdH8hhE4VzFM6Dg22CaQLcPa87rdjEVqNJZFdxTvMubqFpvlOD6a9Sev9pUVqZL+ttkSUV6DhtfhbX02ePbnhlZKVKsBSut/CuBtqxss1tDn7EdPFOYVlsGanPXaIaVAhBp3pHlInsI3BzEWXrPBZfl7/sfJ0nfI1+NvHVr8S0WUqFF3AY77FtRS4xvI3SvFecSBjafyZDTZdvnNc5147C5CQGMxWnTW4S1MzJ1Ix9q9Obm3xPPVKLM4kHCI0PQpY8V8rU7K+NrCsb1aUR3ISQW7ocZt5QzWIX9MXPeeh0vLE3BCtlMEO2V7PxOV6x71wh8BYgobMYHKq+HpCTME79IHvkFOlUWgLLlfCT02L5ctVOtk59WZBghOmUfIXhQA"
+    }
+  ],
+  "routes": {
+    "font-marker-local/marker.worker.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-a138e77cc655174f6503",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 95352,
+          "sha256": "a138e77cc655174f65031cd10bb6d0cd23c24f929b82d01b906e048538e97b56",
+          "cipherPath": "cipher/a35c86dcda10084ffc9960a77b309cfccad7c4a19d2cd701d1bf38023990dbea.bin",
+          "cipherSha256": "a35c86dcda10084ffc9960a77b309cfccad7c4a19d2cd701d1bf38023990dbea",
+          "iv": "1nNyd8lkBWEgdAeY",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-marker-local/font-marker.vendor.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-cb0ff8c3d8992a289c0f",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 58322,
+          "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0",
+          "publicPath": "public/font-marker-local/font-marker.vendor.js"
+        }
+      ]
+    },
+    "member-local-build/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-7f9c2799cb21b1df2deb",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 2926,
+          "sha256": "7f9c2799cb21b1df2debc0c65898104d79dba3d3040ffbc4b4c393ec4d6e3473",
+          "cipherPath": "cipher/cbdc48ecea01f1fe621631842802faf3ade5a93537d3e039a9d76f130d61af00.bin",
+          "cipherSha256": "cbdc48ecea01f1fe621631842802faf3ade5a93537d3e039a9d76f130d61af00",
+          "iv": "Bb+c39OzVcw6TXc5",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "member-local-build/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-a5c4e4cf568d2ce34c34",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 182178,
+          "sha256": "a5c4e4cf568d2ce34c34f9c62d3da65811d6240bdf45e6ed848508e27f7b6a14",
+          "cipherPath": "cipher/28599bfe31a460e6048a5a3cf9a21982d1c253159d8dcd9d4c1b9d34dcf0c661.bin",
+          "cipherSha256": "28599bfe31a460e6048a5a3cf9a21982d1c253159d8dcd9d4c1b9d34dcf0c661",
+          "iv": "Wrq2ypem6TCfeEWH",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "jszip.min.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-4ec9ea24a3271fcc2803",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 97653,
+          "sha256": "4ec9ea24a3271fcc28035e922116d170ffd83bbf265a82a45e2d2a399b055181",
+          "publicPath": "public/jszip.min.js"
+        }
+      ]
+    },
+    "spark-md5.min.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-3e97e82939197c7ca4e3",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 10293,
+          "sha256": "3e97e82939197c7ca4e34c7c1db61309fb0390ed077ae819f79c380563c9d0c3",
+          "publicPath": "public/spark-md5.min.js"
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "olAXOm04zSzPqu9DW4B6vqwFewTL5O+TA2z1VSIWLitI3lDKaJSklntQZL3BhDAqpup5qiReii69TKRH+XAltg=="
+  }
+}

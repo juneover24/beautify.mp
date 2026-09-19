@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260919-member-return-v1",
+  "toolKey": "download_bridge",
+  "createdAt": "2026-09-19T02:25:43.607Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "download-bridge/index.html",
+    "styles": [
+      "download-bridge/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "download-bridge/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260919-member-return-v1:download_bridge",
+      "wrappedKey": "aW6E+2++ANard6zWkAWuZlFgCDv0lJa62YxVHW3UDYz/SxpC9B8hYlaNlcpd3rXdy3DKRoJIXHJt+UcRqQOSFzQ/8yCn1RlSWhP20AjQdRNDrOGWPzl/W+ODJOUFvWmVN5h3JJj6TVi6pI90XbOsY18ObVeECsk5AuA+IabDVG34WuTdizreCwLYjs88MHihelNU/GzkyqIGE5faNuvcHf9hsOUtWYHBVRAAAfklpUxVJq9gxBi9/sLn6vJRaL2lmEeCNwPZt3JQBjVWC3n2Gn0QFawrBJCJ4lrUw3xGq3XFw7w7VdwNRoXgwJRkcvPHPyLxkfVWzew+6R3L80lzyC3wkw7ATUziHO68NfZ7BZT+zGMbiyV+wzklk6RI4RW+0K9Q/uM8nKjboJCa0xboL8vFSCkVHcCK6RJVDXlU/aWUW8HG961f1CX0DgRwRU4EbIp51Pq5pgwV12FWT8fjYPIq4NIIYmhCOSwMSqzmmGdx7zHVP6t9Gf/xyTUlkP4a"
+    }
+  ],
+  "routes": {
+    "download-bridge/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-449c31c81a347c2d2dc1",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 892,
+          "sha256": "449c31c81a347c2d2dc1e1bd71aa21498408b6f501e5579b1a7aac328048bdfd",
+          "cipherPath": "cipher/7bb93d362d17237ceb95076b15b671c0c91cbb15edff41cf57ffb0db220e913c.bin",
+          "cipherSha256": "7bb93d362d17237ceb95076b15b671c0c91cbb15edff41cf57ffb0db220e913c",
+          "iv": "Hlw6dwfIjpZHsySP",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f22141278f2eca3e6a9c",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 1179,
+          "sha256": "f22141278f2eca3e6a9ccb360ae3a66474c4d42405d21c7e8a870c0d94b11421",
+          "cipherPath": "cipher/cc0fbec1f3d79b9d565bd0b8d447ebd8094ce15ed61dabb18a7e75904ea97c76.bin",
+          "cipherSha256": "cc0fbec1f3d79b9d565bd0b8d447ebd8094ce15ed61dabb18a7e75904ea97c76",
+          "iv": "sO+eYb5d6M3fEJkt",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-bd8ff3f24af0a05fbc24",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 42862,
+          "sha256": "bd8ff3f24af0a05fbc2478306b93f970a44c3e54056d99cbcd6c9c053da02bef",
+          "cipherPath": "cipher/54796091aabfeba48f0ad192fef78489229cd942c31694aaf90cc7fbe074eb76.bin",
+          "cipherSha256": "54796091aabfeba48f0ad192fef78489229cd942c31694aaf90cc7fbe074eb76",
+          "iv": "WnW0UzihVM8ju7sW",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "RQnWPUM4DWO5DB6s2VCL5kp5P+Nw6Whr1XF1PTJymz3RHW1b3XDxBCxG2V8umNe9cXaifUNIq1eCAobD7xM38Q=="
+  }
+}

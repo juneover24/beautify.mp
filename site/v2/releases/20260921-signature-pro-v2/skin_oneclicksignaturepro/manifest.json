@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260921-signature-pro-v2",
+  "toolKey": "skin_oneclicksignaturepro",
+  "createdAt": "2026-09-21T08:26:34.705Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "skin-oneclicksignaturepro/index.html",
+    "styles": [
+      "skin-oneclicksignaturepro/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "skin-oneclicksignaturepro/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260921-signature-pro-v2:skin_oneclicksignaturepro",
+      "wrappedKey": "Tx5OhUp3mJUJpr6tlr2WhOlCTAe8m9tahYf0JTjp6F60AfCUawAaCYLjWQZhGy9fdetZ2KNNqhKz2DNTf6l8znT0F/46ISSw6mvL2uSR8mrryUvv9K4B8s7GKdarriFbMCbl1PC/NJ94mQMOAvxenNSY8ljCBYUxpUtfyjRtCRhFXI170oAvauGuNVMu6CQVo7eqRkqANkzkMZfr4MC/hsMqLc88okcMAAfVBgL/xMQyp7AHpcaMugxZQMc+IIyg97l4Dowq0mHGvaMfagRlHbdE4p7SxuKJLSv6RAzCBVGdT4TXxT/knY6yWjA8UFlU6BebaOfE26tHi2hd9zVAi1IcW+3n/8v+9ZuB9JYuc7JxivM/XUehgFeSlwn3UsEdYqYvbh2aQmm7lKxwSPEHlVmZDGEA/fo1/mswXtnxugNR2gU/F/HoGFHO3D58kDarOrYtU7nA2mX9cCB8QyE19eG5o6UYJ939aOuW426XqRfT+0zWA2NkNo+RW3MCWJMv"
+    }
+  ],
+  "routes": {
+    "skin-oneclicksignaturepro/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-1abe29cb2bd28cbd8d23",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 5097,
+          "sha256": "1abe29cb2bd28cbd8d23f7a8c28a23251c346dc97223f646411eb348b20b6c8f",
+          "cipherPath": "cipher/3f3a68147574dcb1883e2ffcf7d4fe1c27b606da1eabd990d19601f04aea8009.bin",
+          "cipherSha256": "3f3a68147574dcb1883e2ffcf7d4fe1c27b606da1eabd990d19601f04aea8009",
+          "iv": "zhPZg21XxxrXxYjx",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-2162d294c53f061a4b5a",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 4451,
+          "sha256": "2162d294c53f061a4b5a49e1993a960683189a45b4d4ffcc5f4b1ea04eabd261",
+          "cipherPath": "cipher/5de369f7e8d73be7a72c3fdf7ff4cb9a72f4b52f6010be5bb74634786dc7e5a2.bin",
+          "cipherSha256": "5de369f7e8d73be7a72c3fdf7ff4cb9a72f4b52f6010be5bb74634786dc7e5a2",
+          "iv": "MtubCXnWO9fw7jXh",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-c72ab275c2971d89c6ec",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 19460,
+          "sha256": "c72ab275c2971d89c6eca465be6d9344e6ed08d5431f1c5b4bea6db8c8335d0f",
+          "cipherPath": "cipher/07a519a50c1c519fab0281c77e63c3f5898d0224c2bbdcfad4ad4b3385a1ed74.bin",
+          "cipherSha256": "07a519a50c1c519fab0281c77e63c3f5898d0224c2bbdcfad4ad4b3385a1ed74",
+          "iv": "F7n7WEyUaU9KMqoB",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "7Iukylr2z8O13h5I5yTG979Y5GwsJ1nlMzS8I2ZWnRlSjDLzjnX51EoIPP9lEvN5TcKVycozyQbw/d37dgjEUg=="
+  }
+}

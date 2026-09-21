@@ -1,0 +1,431 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260921-signature-pro-v1",
+  "toolKey": "font_compress",
+  "createdAt": "2026-09-21T06:46:20.405Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "font-compress-local/index.html",
+    "styles": [
+      "font-compress-local/styles.css"
+    ],
+    "scripts": [
+      "fetch-522-retry.js",
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "font-compress-local/app.js"
+    ],
+    "workers": [
+      "font-compress-local/font-compress.worker.js",
+      "font-marker-local/marker.worker.js"
+    ]
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260921-signature-pro-v1:font_compress",
+      "wrappedKey": "JYvfVTfxTTENiV8W399dJX5Ndfj/2rPpJ2tBewrVN+dsxQLPl94ztWM9VgXT+ZQH9sd9hKDK2EfPv/Dn8bODny/XDLzlrYJ4z9SZCVUdUsZgSNiaac6OqNSUT6ctI+bgnV8tlOGPr5YOPvbVmK0JmX/fuhSNnmzsT9rnpIb1UVbWiEj9a9bZ/8ZWv1tVfPhWiLMuysZbZRp2Jdidnax6w4tR/Guj7wRWpyr0J4EJvdBP6Ks3vmfh2v+q32Ql44YSLTWSWUv6a6ClL8zHCs49hssM0sj1w7GIndyO9XranhusMgwx5qOXw4tB6f4ySzqVG6+EbYLGSaBprlIo/4yB4t2tU+TiCbT6H6r7r0Rf3y5gIqwAuflG7W8LhWUWB72BcDNLHfzLdnXEybYKvKEnQuLNJNgT0Et9kyhu5+AblnQH4cuGDZD1XZquXM4A+1MqC3B7UyEs5DMFswvXaRq6f1N38doCxsRFXg8wy3d5+nEWkApz+DmMtEJsvLH+y90a"
+    }
+  ],
+  "routes": {
+    "fetch-522-retry.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-410b453e32b62bb60609",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 5641,
+          "sha256": "410b453e32b62bb606096b6f6646a2463235c7dd9345df7034732782ade9013e",
+          "cipherPath": "cipher/03c66f3aeb6ef59a459e2dbf3284b2fbe5bb0c0dcfdee372ffc1de795b1ddb4e.bin",
+          "cipherSha256": "03c66f3aeb6ef59a459e2dbf3284b2fbe5bb0c0dcfdee372ffc1de795b1ddb4e",
+          "iv": "V+2SwQ5UsgchhWrV",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-marker-local/marker.worker.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-a138e77cc655174f6503",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 95352,
+          "sha256": "a138e77cc655174f65031cd10bb6d0cd23c24f929b82d01b906e048538e97b56",
+          "cipherPath": "cipher/917adfb7f477ae02bcb399e108b6edf749c488f66e5447c106c3efbd1872172f.bin",
+          "cipherSha256": "917adfb7f477ae02bcb399e108b6edf749c488f66e5447c106c3efbd1872172f",
+          "iv": "UF5kwmlKJEw0OIOJ",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-marker-local/font-marker.vendor.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-cb0ff8c3d8992a289c0f",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 58322,
+          "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0",
+          "publicPath": "public/font-marker-local/font-marker.vendor.js"
+        }
+      ]
+    },
+    "font-compress-local/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-d5384a92073c5f9cb474",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 7624,
+          "sha256": "d5384a92073c5f9cb4745f5fa5ced3429de75b832a9821164d4f63282b8fcd96",
+          "cipherPath": "cipher/7e4c436c68a47e8c428b9b8d6b26c4876cc86d905f47d6ad776490fa995a848e.bin",
+          "cipherSha256": "7e4c436c68a47e8c428b9b8d6b26c4876cc86d905f47d6ad776490fa995a848e",
+          "iv": "BdzE+WjWCUz90Mny",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-compress-local/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-e50e476d4af2a7d77b8c",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 8828,
+          "sha256": "e50e476d4af2a7d77b8c323fdf8148ce00f87508257b6ce523ec420715703b52",
+          "cipherPath": "cipher/36ac2dfd77bd82e36f8675b291d345609ebe9e2429d8d9013cb45354c87346cb.bin",
+          "cipherSha256": "36ac2dfd77bd82e36f8675b291d345609ebe9e2429d8d9013cb45354c87346cb",
+          "iv": "TCRcuHmjJt8NOgqw",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-compress-local/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-08cc24cf8bef4d132163",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 63661,
+          "sha256": "08cc24cf8bef4d132163edf012990725b5692d9e8d283a43449b2b1b73ae8785",
+          "cipherPath": "cipher/b9b180ddfb3b18bc03a8e255535d0cd107fb3bca9a674eac7bc017ebb5ba5457.bin",
+          "cipherSha256": "b9b180ddfb3b18bc03a8e255535d0cd107fb3bca9a674eac7bc017ebb5ba5457",
+          "iv": "e7DXo/9OVNOkxa7i",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-compress-local/font-compress.worker.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f5a8d97ca156ee7f161d",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 10069,
+          "sha256": "f5a8d97ca156ee7f161db535465f8dda5bd166cb1cace21c25f10cc2b73dcad2",
+          "cipherPath": "cipher/8134ca0afa64373403e47e30f218c346a16673c1a61fe8e4b6f33e1146376ff4.bin",
+          "cipherSha256": "8134ca0afa64373403e47e30f218c346a16673c1a61fe8e4b6f33e1146376ff4",
+          "iv": "HkLTroWiI25xnw+T",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-compress-local/font_compress_processor.py": {
+      "mime": "text/x-python; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-7ac776118513c373bb42",
+          "kind": "owned",
+          "mime": "text/x-python; charset=utf-8",
+          "bytes": 24509,
+          "sha256": "7ac776118513c373bb42a812e41d507b715e13d43f297e9516555415ae498133",
+          "cipherPath": "cipher/907eb8087635fb8975f9af75f3258982d80184cf4062eb14bf66b86506e81fdc.bin",
+          "cipherSha256": "907eb8087635fb8975f9af75f3258982d80184cf4062eb14bf66b86506e81fdc",
+          "iv": "oMGzXa+3Jj3dG7y/",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-compress-local/bare_cff_adapter.py": {
+      "mime": "text/x-python; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-8b8546f58a131442bf49",
+          "kind": "owned",
+          "mime": "text/x-python; charset=utf-8",
+          "bytes": 65785,
+          "sha256": "8b8546f58a131442bf49de25c2a115e8fce63db42dca42c4a4d27366bf77b327",
+          "cipherPath": "cipher/abf25f059fa9c390e9feac598041d944faf7fb3dc9d6d515920d4a6a1975fbfa.bin",
+          "cipherSha256": "abf25f059fa9c390e9feac598041d944faf7fb3dc9d6d515920d4a6a1975fbfa",
+          "iv": "Jk2d84cm5zHUjFm1",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-compress-local/charsets/ascii.txt": {
+      "mime": "text/plain; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-5d8636185ebbf196ee92",
+          "kind": "owned",
+          "mime": "text/plain; charset=utf-8",
+          "bytes": 665,
+          "sha256": "5d8636185ebbf196ee9280786ab5b6c450923a81b1a14c3f935d268941b99b3d",
+          "cipherPath": "cipher/765ceecc4f1e0897b2cc87dffa4d80eca9c35dfc23c5087a419594f0fb01675e.bin",
+          "cipherSha256": "765ceecc4f1e0897b2cc87dffa4d80eca9c35dfc23c5087a419594f0fb01675e",
+          "iv": "Aq7gURVByHSEZwA+",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-compress-local/charsets/basic_symbols.txt": {
+      "mime": "text/plain; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-d773f97850e61bffb94c",
+          "kind": "owned",
+          "mime": "text/plain; charset=utf-8",
+          "bytes": 18144,
+          "sha256": "d773f97850e61bffb94c9cf8fcd4e371f6b0b99c9481fbef294b67d3b6c1a4b1",
+          "cipherPath": "cipher/3415f0a4649f0eef20f75844e7dd170075e5d526188afa1fbaf865a04e3b3e49.bin",
+          "cipherSha256": "3415f0a4649f0eef20f75844e7dd170075e5d526188afa1fbaf865a04e3b3e49",
+          "iv": "FoyROFsjicFglVQ9",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-compress-local/charsets/gb2312_l1.txt": {
+      "mime": "text/plain; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-344e4411b1ccf34fb9ab",
+          "kind": "owned",
+          "mime": "text/plain; charset=utf-8",
+          "bytes": 26285,
+          "sha256": "344e4411b1ccf34fb9ab3ed85fb62804aeb1d137a3f6e5d3e0dd8a50387100e8",
+          "cipherPath": "cipher/7af90a8dc0e371060362bab3e9bd7a66e27c4ed419d6b947dbd9b56d03636e23.bin",
+          "cipherSha256": "7af90a8dc0e371060362bab3e9bd7a66e27c4ed419d6b947dbd9b56d03636e23",
+          "iv": "QredIyJ60vg1VWCG",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-compress-local/charsets/gb2312_all.txt": {
+      "mime": "text/plain; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-1bb7285bd36009a6c6da",
+          "kind": "owned",
+          "mime": "text/plain; charset=utf-8",
+          "bytes": 47341,
+          "sha256": "1bb7285bd36009a6c6dab2d8a20977659bd89328ba2c7c2def240e28109ad3fb",
+          "cipherPath": "cipher/c9230446b08e1a79061dd9426e2ba2d34cb2027cc5362eaae8498188579ef74a.bin",
+          "cipherSha256": "c9230446b08e1a79061dd9426e2ba2d34cb2027cc5362eaae8498188579ef74a",
+          "iv": "pJr0L+c4Uy1JjbiH",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-compress-local/charsets/big5_l1.txt": {
+      "mime": "text/plain; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-ec42e22f23522e4385c4",
+          "kind": "owned",
+          "mime": "text/plain; charset=utf-8",
+          "bytes": 38465,
+          "sha256": "ec42e22f23522e4385c4b0c6f711e7eb27faad5b1baefff75a78ed4ced7404e5",
+          "cipherPath": "cipher/5722b7bfed4624966fbbf7d2599c90ce9f74ff562090ce55740fd276aca90e15.bin",
+          "cipherSha256": "5722b7bfed4624966fbbf7d2599c90ce9f74ff562090ce55740fd276aca90e15",
+          "iv": "wo1nktGKL+elj19C",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-compress-local/charsets/big5_all.txt": {
+      "mime": "text/plain; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-4d750bf6248001b32b26",
+          "kind": "owned",
+          "mime": "text/plain; charset=utf-8",
+          "bytes": 95151,
+          "sha256": "4d750bf6248001b32b26ac19eb57392408189292145129f48c3568378acc6a8a",
+          "cipherPath": "cipher/425a1895f8808471274192c51628801bc9e4d18b979606487797970d976fb824.bin",
+          "cipherSha256": "425a1895f8808471274192c51628801bc9e4d18b979606487797970d976fb824",
+          "iv": "Vmx+S75BO/jmlYvi",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-compress-local/charsets/sc_tc_full.txt": {
+      "mime": "text/plain; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-ce44ad163e89edb4f37d",
+          "kind": "owned",
+          "mime": "text/plain; charset=utf-8",
+          "bytes": 126805,
+          "sha256": "ce44ad163e89edb4f37d588566f1b2d3e03eb6a03145f5c2515cd41baa4ecc45",
+          "cipherPath": "cipher/ad6e4b52eefa1dbc09a0ac5c7b3c14a7ecc147c7c7b509434808d6ab5b601786.bin",
+          "cipherSha256": "ad6e4b52eefa1dbc09a0ac5c7b3c14a7ecc147c7c7b509434808d6ab5b601786",
+          "iv": "6mPmGoqCHwAg9oQh",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/runtime-assets.json": {
+      "mime": "application/json; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-a4fbff0ac1d7506a7326",
+          "kind": "vendor",
+          "mime": "application/json; charset=utf-8",
+          "bytes": 2018,
+          "sha256": "a4fbff0ac1d7506a73264c09c2ee508a11e585393461e6b1d3f642bb43dfce6f",
+          "publicPath": "public/font-adjustment-local/vendor/runtime-assets.json"
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/pyodide/pyodide.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-718d40f1c015dd25ec72",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 18597,
+          "sha256": "718d40f1c015dd25ec724cc8fc4e2325d6a45a92ae225121ff6953f224a16f72",
+          "publicPath": "public/font-adjustment-local/vendor/pyodide/pyodide.js"
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/pyodide/pyodide.asm.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-1263f02b5b26099b9611",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 1074322,
+          "sha256": "1263f02b5b26099b96112378156f242dd98b39a8201ba7765e5fe3d455c5ce91",
+          "publicPath": "public/font-adjustment-local/vendor/pyodide/pyodide.asm.js"
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/pyodide/pyodide.asm.wasm": {
+      "mime": "application/wasm",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-e2f4ee75b325e35eb31b",
+          "kind": "vendor",
+          "mime": "application/wasm",
+          "bytes": 8647684,
+          "sha256": "e2f4ee75b325e35eb31bfb8c613d4dd5098f5502c156a97847686875b5025480",
+          "publicPath": "public/font-adjustment-local/vendor/pyodide/pyodide.asm.wasm"
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/pyodide/python_stdlib.zip": {
+      "mime": "application/zip",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-4298b6ee445cb724c397",
+          "kind": "vendor",
+          "mime": "application/zip",
+          "bytes": 2423989,
+          "sha256": "4298b6ee445cb724c3973437da47789752b9e6ff4e26619026b283ec801fc46b",
+          "publicPath": "public/font-adjustment-local/vendor/pyodide/python_stdlib.zip"
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/pyodide/pyodide-lock.json": {
+      "mime": "application/json; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-3256ffc76388de0e37f4",
+          "kind": "vendor",
+          "mime": "application/json; charset=utf-8",
+          "bytes": 120010,
+          "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac",
+          "publicPath": "public/font-adjustment-local/vendor/pyodide/pyodide-lock.json"
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl": {
+      "mime": "application/zip",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-9d6518c8ad4d88019bc7",
+          "kind": "vendor",
+          "mime": "application/zip",
+          "bytes": 1089800,
+          "sha256": "9d6518c8ad4d88019bc72045108eca154301014215222408aa047cf4955c726d",
+          "publicPath": "public/font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "DHAsP/oF/4wvoZfF9fbk/rS0mzlLFzN+gF7hfBFEDfgL5YD0NX12Gm9UyMOqlp/3pPlizRXk5e/5KW4l8pIuTg=="
+  }
+}

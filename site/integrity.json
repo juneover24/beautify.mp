@@ -13062,6 +13062,38 @@
       "bytes": 13404,
       "sha256": "4bcc71104dc7e2bebc8dcc67dfcacbabae96dbb0d7f639b37afe3d60c1625224"
     },
+    "v2/releases/20260921-member-return-channel-v1/member_local_build/cipher/3f732ef84d33e3b2c195a51a7b47a8c70bf7e3a40c069f98892f50b56c0b4ca1.bin": {
+      "bytes": 197681,
+      "sha256": "3f732ef84d33e3b2c195a51a7b47a8c70bf7e3a40c069f98892f50b56c0b4ca1"
+    },
+    "v2/releases/20260921-member-return-channel-v1/member_local_build/cipher/4ff6cc8775e0b994222d6d60967128fef88283886b35fc5202348de970152775.bin": {
+      "bytes": 95368,
+      "sha256": "4ff6cc8775e0b994222d6d60967128fef88283886b35fc5202348de970152775"
+    },
+    "v2/releases/20260921-member-return-channel-v1/member_local_build/cipher/ee0dc63cc720cbcb937ed412b92b175418576dfe2d9e66ea47346f43cbe5a95f.bin": {
+      "bytes": 4236,
+      "sha256": "ee0dc63cc720cbcb937ed412b92b175418576dfe2d9e66ea47346f43cbe5a95f"
+    },
+    "v2/releases/20260921-member-return-channel-v1/member_local_build/manifest.json": {
+      "bytes": 5487,
+      "sha256": "ac43e04f20f21d67d66c2800c776de14bd52b09e377714c76ce87876d23bb3ea"
+    },
+    "v2/releases/20260921-member-return-channel-v1/member_local_build/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260921-member-return-channel-v1/member_local_build/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20260921-member-return-channel-v1/member_local_build/public/jszip.min.js": {
+      "bytes": 97653,
+      "sha256": "4ec9ea24a3271fcc28035e922116d170ffd83bbf265a82a45e2d2a399b055181"
+    },
+    "v2/releases/20260921-member-return-channel-v1/member_local_build/public/spark-md5.min.js": {
+      "bytes": 10293,
+      "sha256": "3e97e82939197c7ca4e34c7c1db61309fb0390ed077ae819f79c380563c9d0c3"
+    },
     "v2/releases/20260921-pan123-v3-fix-v1/download_bridge/cipher/01a275326918b4035a545283f2f5ee731eeb858889b75b6cfa1f52ec61be3f48.bin": {
       "bytes": 1195,
       "sha256": "01a275326918b4035a545283f2f5ee731eeb858889b75b6cfa1f52ec61be3f48"

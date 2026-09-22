@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260922-signature-pro-v3",
+  "toolKey": "manage_direct_upload",
+  "createdAt": "2026-09-22T05:24:11.960Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "manage-direct-upload/index.html",
+    "styles": [],
+    "scripts": [
+      "fetch-522-retry.js",
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "manage-direct-upload/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260922-signature-pro-v3:manage_direct_upload",
+      "wrappedKey": "a1ZBl8yUdMsawxdae72xafFqwf52vgNZqtOXpTgLmtag1aA4aFkIonQDT/D/IQULA950wVDvFDJOoIKsRuV+OIxLvGsm8ugAEktu6qLfm+/QImyqRsPPsCK+lrDVKf1BHtBbokDRBJD5mY8+540PxjCuYm2FNenKNcRTr2C9+Yjlgy2yPSNybE+UnpgDVHtg3/AaOKlOXrXeUq3a3Y17lmqIk/3HYRhUpWoHMExbRkioBLT/QxhrLWLVtiiLBdomTCsIuzGGCWUa58XbF6XvEXka+cqaEaNfoHQJVGMUPxu2ndd45aMoyB4IZqm1ioedqR8GZMWpG23dA/6CMqdDJ7t8LyUgQVe71nlI6ubYvsCzmkBL6J2j8aa56XIbZor0T6BzyCGqUc41gnLwG3GqtAEBYt1VXlbex4j2p+NONl5byk7Q3kdyvWNwzQmvL3epAz2uG7krv5FPVYszXZfPfZoUFuqS3KDfpW5W2CZhRlBAKs+s6RN0jAhQbILPfj7f"
+    }
+  ],
+  "routes": {
+    "fetch-522-retry.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-410b453e32b62bb60609",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 5641,
+          "sha256": "410b453e32b62bb606096b6f6646a2463235c7dd9345df7034732782ade9013e",
+          "cipherPath": "cipher/e5cdd6b8f7c305675069e2fd636686b1490eef98af9b9e2935f0e568d6c73294.bin",
+          "cipherSha256": "e5cdd6b8f7c305675069e2fd636686b1490eef98af9b9e2935f0e568d6c73294",
+          "iv": "fOrKdSoGkVXgi5P9",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "manage-direct-upload/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f7c81d6b2477dcb8f578",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 4733,
+          "sha256": "f7c81d6b2477dcb8f578d70be6baf513fd22e6e8c0577f73d3b0673bf71f8629",
+          "cipherPath": "cipher/5ac8caaa227bc2352d09e0ebf5e67059b20699c2461fdeedf30c581ceef83b58.bin",
+          "cipherSha256": "5ac8caaa227bc2352d09e0ebf5e67059b20699c2461fdeedf30c581ceef83b58",
+          "iv": "+NHKqs7KiR2plp5z",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "manage-direct-upload/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-60ec5e481f8adc4a0e5a",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 165257,
+          "sha256": "60ec5e481f8adc4a0e5a9f331d71838cfce08e1ccf5b6961aec4de6ad935c128",
+          "cipherPath": "cipher/fce19f15872e83fc399e9d989f1ff24734e6fce3aa7c08e03279be89f22fc904.bin",
+          "cipherSha256": "fce19f15872e83fc399e9d989f1ff24734e6fce3aa7c08e03279be89f22fc904",
+          "iv": "xS0VIzTN97ihJ4pB",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "FaEn3/UuHibsDu5U6/OzvXbfqituxpLnHzwoCzl2wvbQm9mHM83HT0tAZR4RnuLlq43CNBFtPFV6wFEDFpAOUw=="
+  }
+}

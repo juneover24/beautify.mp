@@ -14433,6 +14433,470 @@
     "v2/releases/20260921-signature-pro-v2/video_sound_conversion/public/video-sound-conversion/vendor/video-sound.vendor.js": {
       "bytes": 13404,
       "sha256": "4bcc71104dc7e2bebc8dcc67dfcacbabae96dbb0d7f639b37afe3d60c1625224"
+    },
+    "v2/releases/20260922-signature-pro-v3/download_bridge/cipher/743bdbd38773968449fe4a27538d53526c091b199eb18a037a3433b445d12a46.bin": {
+      "bytes": 908,
+      "sha256": "743bdbd38773968449fe4a27538d53526c091b199eb18a037a3433b445d12a46"
+    },
+    "v2/releases/20260922-signature-pro-v3/download_bridge/cipher/8df0c60fa3499dd5293e28b19ed691a56aae05560ba3697af5bc11d539ad6b3d.bin": {
+      "bytes": 1195,
+      "sha256": "8df0c60fa3499dd5293e28b19ed691a56aae05560ba3697af5bc11d539ad6b3d"
+    },
+    "v2/releases/20260922-signature-pro-v3/download_bridge/cipher/f160405c00c8d7ffcf7909da3fd6844cacef199d8231dc8cc9a416c6a3da8739.bin": {
+      "bytes": 43171,
+      "sha256": "f160405c00c8d7ffcf7909da3fd6844cacef199d8231dc8cc9a416c6a3da8739"
+    },
+    "v2/releases/20260922-signature-pro-v3/download_bridge/manifest.json": {
+      "bytes": 3990,
+      "sha256": "19a184d8d1f29d6a6b79d86d09b02b4c3406d90bdacd862cec9a3aa0e5ddf685"
+    },
+    "v2/releases/20260922-signature-pro-v3/download_bridge/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/cipher/329c64002405079afb08565847c13228711926ee3537852e601d9c450517ce73.bin": {
+      "bytes": 13309,
+      "sha256": "329c64002405079afb08565847c13228711926ee3537852e601d9c450517ce73"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/cipher/3fab24f6b2ea104f884311b1e608f780596ff8d98d4cab105698c1f2a1cf8ba9.bin": {
+      "bytes": 5657,
+      "sha256": "3fab24f6b2ea104f884311b1e608f780596ff8d98d4cab105698c1f2a1cf8ba9"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/cipher/49ba5fa379304f70a6c99a8f1565d1bc2937fa45dc0b9eb536316ffa1922a3f6.bin": {
+      "bytes": 98832,
+      "sha256": "49ba5fa379304f70a6c99a8f1565d1bc2937fa45dc0b9eb536316ffa1922a3f6"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/cipher/86e2c39f155a6788e896a5becf9e7154b9c9d652703ca4e78f1e447f2655411e.bin": {
+      "bytes": 11726,
+      "sha256": "86e2c39f155a6788e896a5becf9e7154b9c9d652703ca4e78f1e447f2655411e"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/cipher/a3bd71c692405c04ccac516122278cf55d39eb0b54283c958a7e2b212c9d98e5.bin": {
+      "bytes": 65801,
+      "sha256": "a3bd71c692405c04ccac516122278cf55d39eb0b54283c958a7e2b212c9d98e5"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/cipher/baad2c4dcfb2f78f5f35411a59adab35f67b2def6206bb8f8a634c5ed8238869.bin": {
+      "bytes": 10571,
+      "sha256": "baad2c4dcfb2f78f5f35411a59adab35f67b2def6206bb8f8a634c5ed8238869"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/cipher/e016d545ae44aa248a6324c7a21bb4cac1d2987de651a1871c10af3dc49f2415.bin": {
+      "bytes": 95368,
+      "sha256": "e016d545ae44aa248a6324c7a21bb4cac1d2987de651a1871c10af3dc49f2415"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/cipher/f3c863d9b52f5a246e7881ac7968d6661dd8342690442c89468db234ad36b905.bin": {
+      "bytes": 130749,
+      "sha256": "f3c863d9b52f5a246e7881ac7968d6661dd8342690442c89468db234ad36b905"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/manifest.json": {
+      "bytes": 12124,
+      "sha256": "26ac0ae5f0d5db464df9d2a7e69bed8f1e294c3dc145082ea98e5bf7a64a91a4"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 869,
+      "sha256": "12f0e5d72adb78058dba39c6aade30a8b3d7de6da3b312c293e1632ade43b5d5"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/public/font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl": {
+      "bytes": 1089800,
+      "sha256": "9d6518c8ad4d88019bc72045108eca154301014215222408aa047cf4955c726d"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide-lock.json": {
+      "bytes": 120010,
+      "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.asm.js": {
+      "bytes": 1074322,
+      "sha256": "1263f02b5b26099b96112378156f242dd98b39a8201ba7765e5fe3d455c5ce91"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.asm.wasm": {
+      "bytes": 8647684,
+      "sha256": "e2f4ee75b325e35eb31bfb8c613d4dd5098f5502c156a97847686875b5025480"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.js": {
+      "bytes": 18597,
+      "sha256": "718d40f1c015dd25ec724cc8fc4e2325d6a45a92ae225121ff6953f224a16f72"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/public/font-adjustment-local/vendor/pyodide/python_stdlib.zip": {
+      "bytes": 2423989,
+      "sha256": "4298b6ee445cb724c3973437da47789752b9e6ff4e26619026b283ec801fc46b"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/public/font-adjustment-local/vendor/runtime-assets.json": {
+      "bytes": 2018,
+      "sha256": "a4fbff0ac1d7506a73264c09c2ee508a11e585393461e6b1d3f642bb43dfce6f"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_adjustment/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/cipher/0fc0538e550aba614bba6703702288ec03a05444c740159bc2face3a5c9276c3.bin": {
+      "bytes": 65801,
+      "sha256": "0fc0538e550aba614bba6703702288ec03a05444c740159bc2face3a5c9276c3"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/cipher/1a1d7871ec914c10e7bf53f0a4cc3ae54b9e2146becef6ddb3171432ae9b6e66.bin": {
+      "bytes": 126821,
+      "sha256": "1a1d7871ec914c10e7bf53f0a4cc3ae54b9e2146becef6ddb3171432ae9b6e66"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/cipher/25ac5918f7a4422fe9c3c680d5455bbf47dba95826e04d26e8c6603a81b3201b.bin": {
+      "bytes": 47357,
+      "sha256": "25ac5918f7a4422fe9c3c680d5455bbf47dba95826e04d26e8c6603a81b3201b"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/cipher/29f3ee830ebaf1a627f5a6585aa3637d749f3d4e2b96ad21ca5334a5be7a6931.bin": {
+      "bytes": 5657,
+      "sha256": "29f3ee830ebaf1a627f5a6585aa3637d749f3d4e2b96ad21ca5334a5be7a6931"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/cipher/471b0bda3408f6fb424925f3efb5ac824546ab2cae41e7188410f6f994ed2bc6.bin": {
+      "bytes": 38481,
+      "sha256": "471b0bda3408f6fb424925f3efb5ac824546ab2cae41e7188410f6f994ed2bc6"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/cipher/4a10465fe5d0082c37d280b1e677e776a37313206339568cc5d69ebdace0906e.bin": {
+      "bytes": 63677,
+      "sha256": "4a10465fe5d0082c37d280b1e677e776a37313206339568cc5d69ebdace0906e"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/cipher/79b15f1184852ebaa0919746836fbb15b6391682d78870490d8744b037db7ca4.bin": {
+      "bytes": 95368,
+      "sha256": "79b15f1184852ebaa0919746836fbb15b6391682d78870490d8744b037db7ca4"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/cipher/95dd46ef93b62dc485af90caa0adeb00cd5682b93d444ba325e7fc36d975ee53.bin": {
+      "bytes": 681,
+      "sha256": "95dd46ef93b62dc485af90caa0adeb00cd5682b93d444ba325e7fc36d975ee53"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/cipher/9c72147b211dfa8343d1f02fea3b79c15eda623b6fe235930a84a58fadeafd3f.bin": {
+      "bytes": 95167,
+      "sha256": "9c72147b211dfa8343d1f02fea3b79c15eda623b6fe235930a84a58fadeafd3f"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/cipher/cc60b060b3b161a97707fc7a7c9cd9c6d75f18b15aabe3b61b6bd3250fa92605.bin": {
+      "bytes": 26301,
+      "sha256": "cc60b060b3b161a97707fc7a7c9cd9c6d75f18b15aabe3b61b6bd3250fa92605"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/cipher/ced34af139b686d6b5108a7668db1f2f788553fc629766a0ac43561c7020fdbb.bin": {
+      "bytes": 8844,
+      "sha256": "ced34af139b686d6b5108a7668db1f2f788553fc629766a0ac43561c7020fdbb"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/cipher/d3efb510b80acc0eb8d4702b532f6dc00d4bb1a6698f3b7a73a99d4ca92e200c.bin": {
+      "bytes": 18160,
+      "sha256": "d3efb510b80acc0eb8d4702b532f6dc00d4bb1a6698f3b7a73a99d4ca92e200c"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/cipher/e769701fcb91327dc32aeda8331a695b5b249e67c1c7ffad7e13f930a2d6e2f5.bin": {
+      "bytes": 24525,
+      "sha256": "e769701fcb91327dc32aeda8331a695b5b249e67c1c7ffad7e13f930a2d6e2f5"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/cipher/eb3b6f1b89077d3b4c96a7aa73ca1eebeddcd39d6fd927104bb481d95e0cb3f8.bin": {
+      "bytes": 7640,
+      "sha256": "eb3b6f1b89077d3b4c96a7aa73ca1eebeddcd39d6fd927104bb481d95e0cb3f8"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/cipher/fae4e2af9bbcacaebcb0f3738ebbd78081fdab5c54f37405e39ab053ddee7dc9.bin": {
+      "bytes": 10085,
+      "sha256": "fae4e2af9bbcacaebcb0f3738ebbd78081fdab5c54f37405e39ab053ddee7dc9"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/manifest.json": {
+      "bytes": 16285,
+      "sha256": "38d3d8ab05d9ede8a088900e95a707f2e4b5a8375f2cd39096df8e709c80dec1"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/public/font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl": {
+      "bytes": 1089800,
+      "sha256": "9d6518c8ad4d88019bc72045108eca154301014215222408aa047cf4955c726d"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide-lock.json": {
+      "bytes": 120010,
+      "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.asm.js": {
+      "bytes": 1074322,
+      "sha256": "1263f02b5b26099b96112378156f242dd98b39a8201ba7765e5fe3d455c5ce91"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.asm.wasm": {
+      "bytes": 8647684,
+      "sha256": "e2f4ee75b325e35eb31bfb8c613d4dd5098f5502c156a97847686875b5025480"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.js": {
+      "bytes": 18597,
+      "sha256": "718d40f1c015dd25ec724cc8fc4e2325d6a45a92ae225121ff6953f224a16f72"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/public/font-adjustment-local/vendor/pyodide/python_stdlib.zip": {
+      "bytes": 2423989,
+      "sha256": "4298b6ee445cb724c3973437da47789752b9e6ff4e26619026b283ec801fc46b"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/public/font-adjustment-local/vendor/runtime-assets.json": {
+      "bytes": 2018,
+      "sha256": "a4fbff0ac1d7506a73264c09c2ee508a11e585393461e6b1d3f642bb43dfce6f"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_compress/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_glyph_edit/cipher/728dec9e13fb0dfbb24354143f552eabffaadacc8f60f1fed2d27d92b6a6b947.bin": {
+      "bytes": 5657,
+      "sha256": "728dec9e13fb0dfbb24354143f552eabffaadacc8f60f1fed2d27d92b6a6b947"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_glyph_edit/cipher/9ffdcf61a57ff88c2894f19e02e4bc80b20b2d703b23a447a07ba417a455eaa1.bin": {
+      "bytes": 95368,
+      "sha256": "9ffdcf61a57ff88c2894f19e02e4bc80b20b2d703b23a447a07ba417a455eaa1"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_glyph_edit/cipher/e7a5c1942da5d5b8c1f4f4d2f60019350c72974ea3963e4fe6f78428fdba5d91.bin": {
+      "bytes": 179393,
+      "sha256": "e7a5c1942da5d5b8c1f4f4d2f60019350c72974ea3963e4fe6f78428fdba5d91"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_glyph_edit/cipher/f4a74a9fbc46df58214b0ae3db4d097918c50d59c092c385e81167e21e660397.bin": {
+      "bytes": 32068,
+      "sha256": "f4a74a9fbc46df58214b0ae3db4d097918c50d59c092c385e81167e21e660397"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_glyph_edit/manifest.json": {
+      "bytes": 5778,
+      "sha256": "d2db5dad261c1c5de1e1a091a7f5ac3e6c022f8fd94d3f9f80a2c84781b278f2"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_glyph_edit/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_glyph_edit/public/font-glyph-editor/font-glyph-editor.vendor.js": {
+      "bytes": 391422,
+      "sha256": "b3f3f1bb244109fa7b9beafa716185c73da2b46a0c285fb3cf0e90a9283699b5"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_glyph_edit/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_manual_web/cipher/3ae4c3751db60374718e6a4d8939e8565058e19f24dfbfd632539118911bf50b.bin": {
+      "bytes": 60955,
+      "sha256": "3ae4c3751db60374718e6a4d8939e8565058e19f24dfbfd632539118911bf50b"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_manual_web/cipher/3f90010149b4d2aa0c96f180d8ed1311ceccfc59a0ba595549984670f7c43ec5.bin": {
+      "bytes": 95368,
+      "sha256": "3f90010149b4d2aa0c96f180d8ed1311ceccfc59a0ba595549984670f7c43ec5"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_manual_web/cipher/6df1fb82ca2788de71e8169cc1d20a8b8bb98639b6447a7d7cd9c7a26af7d136.bin": {
+      "bytes": 9832,
+      "sha256": "6df1fb82ca2788de71e8169cc1d20a8b8bb98639b6447a7d7cd9c7a26af7d136"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_manual_web/manifest.json": {
+      "bytes": 4429,
+      "sha256": "c036fc3b1017a47871dc57088b4e4a554b4c98919022b6be5bd195b424807c20"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_manual_web/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20260922-signature-pro-v3/font_manual_web/public/spark-md5.min.js": {
+      "bytes": 10293,
+      "sha256": "3e97e82939197c7ca4e34c7c1db61309fb0390ed077ae819f79c380563c9d0c3"
+    },
+    "v2/releases/20260922-signature-pro-v3/manage_direct_upload/cipher/5ac8caaa227bc2352d09e0ebf5e67059b20699c2461fdeedf30c581ceef83b58.bin": {
+      "bytes": 4749,
+      "sha256": "5ac8caaa227bc2352d09e0ebf5e67059b20699c2461fdeedf30c581ceef83b58"
+    },
+    "v2/releases/20260922-signature-pro-v3/manage_direct_upload/cipher/e5cdd6b8f7c305675069e2fd636686b1490eef98af9b9e2935f0e568d6c73294.bin": {
+      "bytes": 5657,
+      "sha256": "e5cdd6b8f7c305675069e2fd636686b1490eef98af9b9e2935f0e568d6c73294"
+    },
+    "v2/releases/20260922-signature-pro-v3/manage_direct_upload/cipher/fce19f15872e83fc399e9d989f1ff24734e6fce3aa7c08e03279be89f22fc904.bin": {
+      "bytes": 165273,
+      "sha256": "fce19f15872e83fc399e9d989f1ff24734e6fce3aa7c08e03279be89f22fc904"
+    },
+    "v2/releases/20260922-signature-pro-v3/manage_direct_upload/manifest.json": {
+      "bytes": 4016,
+      "sha256": "565d28cbd841cf0f6ad87d6a5badaaa3a2a48e4ef1fe10ca3fa84fe229130756"
+    },
+    "v2/releases/20260922-signature-pro-v3/manage_direct_upload/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-signature-pro-v3/member_local_build/cipher/3adef5b68053fae04c488baa5a668f09d04108cda85af7e17a5dbf52e2709b45.bin": {
+      "bytes": 4854,
+      "sha256": "3adef5b68053fae04c488baa5a668f09d04108cda85af7e17a5dbf52e2709b45"
+    },
+    "v2/releases/20260922-signature-pro-v3/member_local_build/cipher/5a1fec38e854e950b3ab35e95843b5389263c61639d358afd8a16877704c0c89.bin": {
+      "bytes": 201507,
+      "sha256": "5a1fec38e854e950b3ab35e95843b5389263c61639d358afd8a16877704c0c89"
+    },
+    "v2/releases/20260922-signature-pro-v3/member_local_build/cipher/6c7a77359e1dc01d475e84583ac5723c483b541c30f46b4fa3874e929e9a6468.bin": {
+      "bytes": 95368,
+      "sha256": "6c7a77359e1dc01d475e84583ac5723c483b541c30f46b4fa3874e929e9a6468"
+    },
+    "v2/releases/20260922-signature-pro-v3/member_local_build/manifest.json": {
+      "bytes": 5471,
+      "sha256": "b2986852b5face825c911d4ebc652a964f3f5cf23f556b8712bf5ea9b7ad9ed0"
+    },
+    "v2/releases/20260922-signature-pro-v3/member_local_build/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-signature-pro-v3/member_local_build/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20260922-signature-pro-v3/member_local_build/public/jszip.min.js": {
+      "bytes": 97653,
+      "sha256": "4ec9ea24a3271fcc28035e922116d170ffd83bbf265a82a45e2d2a399b055181"
+    },
+    "v2/releases/20260922-signature-pro-v3/member_local_build/public/spark-md5.min.js": {
+      "bytes": 10293,
+      "sha256": "3e97e82939197c7ca4e34c7c1db61309fb0390ed077ae819f79c380563c9d0c3"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_keyboard_simplify/cipher/03de99c238512e013c274c43ca924b0180fcbe69cf0bfaeb86d67aa41bbcebde.bin": {
+      "bytes": 8445,
+      "sha256": "03de99c238512e013c274c43ca924b0180fcbe69cf0bfaeb86d67aa41bbcebde"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_keyboard_simplify/cipher/3bda4b82130abcf0d30306f19c84780878ce28a15bffa075e20fedf70c33e341.bin": {
+      "bytes": 3492,
+      "sha256": "3bda4b82130abcf0d30306f19c84780878ce28a15bffa075e20fedf70c33e341"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_keyboard_simplify/cipher/4f619093051ec53a542323da09cb64c8b8504f78fd7933c6876ed74ad530e0a0.bin": {
+      "bytes": 55071,
+      "sha256": "4f619093051ec53a542323da09cb64c8b8504f78fd7933c6876ed74ad530e0a0"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_keyboard_simplify/cipher/850a3ae83fba2304a059d5f2b84b326e44fc31ec4bbd4fe8024e6fead803d5b3.bin": {
+      "bytes": 2633,
+      "sha256": "850a3ae83fba2304a059d5f2b84b326e44fc31ec4bbd4fe8024e6fead803d5b3"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_keyboard_simplify/cipher/e5f3b64d04c047004a42ae002a03dec1136afed53e06542802e20e22f373d7b0.bin": {
+      "bytes": 3459,
+      "sha256": "e5f3b64d04c047004a42ae002a03dec1136afed53e06542802e20e22f373d7b0"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_keyboard_simplify/manifest.json": {
+      "bytes": 6499,
+      "sha256": "90d6c7c43af9a6d0c4ca71e3c3f26bbdc445b765470de77430418d054cdf06b3"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_keyboard_simplify/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_keyboard_simplify/public/skin-keyboard-simplify/compression-worker.vendor.js": {
+      "bytes": 64650,
+      "sha256": "8f196903b77e91219eff557f0bd0270dab8e58e4a646c8435c4ec8eb72b1be4c"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_keyboard_simplify/public/skin-keyboard-simplify/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 601,
+      "sha256": "3a159f5e0a31534e4d912e2ce8b390c987baf4abfec58be80f2d769df2cc8c89"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_oneclicksignaturepro/cipher/0598f62e2d85e47bc657e6a2ea2e6b2139ca4d18b781955402c137d64b00d9ae.bin": {
+      "bytes": 20698,
+      "sha256": "0598f62e2d85e47bc657e6a2ea2e6b2139ca4d18b781955402c137d64b00d9ae"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_oneclicksignaturepro/cipher/91e99d01ca57da9f5bdf654e5dc39ea4bdef4d292bf91c4491e391c21e6606d4.bin": {
+      "bytes": 5289,
+      "sha256": "91e99d01ca57da9f5bdf654e5dc39ea4bdef4d292bf91c4491e391c21e6606d4"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_oneclicksignaturepro/cipher/f123e5ffb004e4ddff33c8d7e0a38f7b11c9704a6f32eadb1b6eab70c04cd058.bin": {
+      "bytes": 4552,
+      "sha256": "f123e5ffb004e4ddff33c8d7e0a38f7b11c9704a6f32eadb1b6eab70c04cd058"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_oneclicksignaturepro/manifest.json": {
+      "bytes": 4071,
+      "sha256": "d36860dafa64cabcb515b4220eba5cab29add87043e3b90ae30abc4f11cf5072"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_oneclicksignaturepro/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_pic_part/cipher/12aeb4b5963da1b43db8aab1ad966b8505e6cf760bf5df9b05d4c62cf8795bfd.bin": {
+      "bytes": 5657,
+      "sha256": "12aeb4b5963da1b43db8aab1ad966b8505e6cf760bf5df9b05d4c62cf8795bfd"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_pic_part/cipher/219288cf05aa27323e38006d83c4cce7f2f98f3b7fd7a13f05e9cd88d34b33a8.bin": {
+      "bytes": 4084,
+      "sha256": "219288cf05aa27323e38006d83c4cce7f2f98f3b7fd7a13f05e9cd88d34b33a8"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_pic_part/cipher/71da21a753db94d780e541b0ecaf88c43b239ca4fa7fb48efa831fc72e62f97c.bin": {
+      "bytes": 10936,
+      "sha256": "71da21a753db94d780e541b0ecaf88c43b239ca4fa7fb48efa831fc72e62f97c"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_pic_part/cipher/ddd4947a546c23cc888b3e540bd5da8847b16cb6f0a9bd09f2356cfd7f36361d.bin": {
+      "bytes": 4974,
+      "sha256": "ddd4947a546c23cc888b3e540bd5da8847b16cb6f0a9bd09f2356cfd7f36361d"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_pic_part/cipher/f3d6d705f098093131d13f9062caa133a628f7c1756b7565a12bc8902c678f66.bin": {
+      "bytes": 8604,
+      "sha256": "f3d6d705f098093131d13f9062caa133a628f7c1756b7565a12bc8902c678f66"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_pic_part/manifest.json": {
+      "bytes": 6371,
+      "sha256": "8fe775dd9733921db1d63331316316c3a1a2b4c992f6a3265b90b5d41740164e"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_pic_part/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_pic_part/public/psd-layer-split/psd-worker.vendor.js": {
+      "bytes": 335174,
+      "sha256": "5e1e9c04a92ee585f43eca84096fd1410a4bbd3574f5e48ae87a20b0172de412"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_pic_part/public/psd-layer-split/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 8236,
+      "sha256": "a2f5cd88ce4c80d3ea3780f13452dfe0e503e957abdecd075b5f3787ee9b9dc9"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_psd_adapter/cipher/5827c793a468cb60cb864b432afaa5701774f91018ced5f4492d37424fbea604.bin": {
+      "bytes": 3826,
+      "sha256": "5827c793a468cb60cb864b432afaa5701774f91018ced5f4492d37424fbea604"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_psd_adapter/cipher/5c75c89c8442d5e753fc7c262481c9bbe7a919b63176f98a845a3a75dea8da21.bin": {
+      "bytes": 10288,
+      "sha256": "5c75c89c8442d5e753fc7c262481c9bbe7a919b63176f98a845a3a75dea8da21"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_psd_adapter/cipher/7e724f8d4f4d30cc5c627fe1010f80784e4b79d9575bc65d281c6276a9439f26.bin": {
+      "bytes": 36981,
+      "sha256": "7e724f8d4f4d30cc5c627fe1010f80784e4b79d9575bc65d281c6276a9439f26"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_psd_adapter/cipher/8852f869dbe5d8770ec04e7b04d6827aa6aa959701dce01269e2ac5e77cc76fa.bin": {
+      "bytes": 4627,
+      "sha256": "8852f869dbe5d8770ec04e7b04d6827aa6aa959701dce01269e2ac5e77cc76fa"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_psd_adapter/manifest.json": {
+      "bytes": 5161,
+      "sha256": "8f5c682c80c530d360c372b44df458b537664294a4638186377a44d9e337080a"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_psd_adapter/public/skin-psd-adapter/adapter-worker.vendor.js": {
+      "bytes": 347482,
+      "sha256": "045a16b415c3d21eb4abc6208ed4063876bd95d0b5a91a49a0a3d925c6d5dcfd"
+    },
+    "v2/releases/20260922-signature-pro-v3/skin_psd_adapter/public/skin-psd-adapter/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 3709,
+      "sha256": "0898ac280bc1f520c9f6bf68d5375529ffdb0aff8c3727d3cda5c80c350e10b6"
+    },
+    "v2/releases/20260922-signature-pro-v3/video_sound_conversion/cipher/24ee57bbece563e38b8f665c5f397de7cc1b8ecf8fd4185aff91f60b758d4511.bin": {
+      "bytes": 2952,
+      "sha256": "24ee57bbece563e38b8f665c5f397de7cc1b8ecf8fd4185aff91f60b758d4511"
+    },
+    "v2/releases/20260922-signature-pro-v3/video_sound_conversion/cipher/e1c29b33d73a8f059f9bb40437589d8441ae483432277c7616359006b43f4dd4.bin": {
+      "bytes": 3128,
+      "sha256": "e1c29b33d73a8f059f9bb40437589d8441ae483432277c7616359006b43f4dd4"
+    },
+    "v2/releases/20260922-signature-pro-v3/video_sound_conversion/cipher/fb98fded90b6f334ac621f7a3056273347b86e3fa743492f4a39463a32125bee.bin": {
+      "bytes": 10389,
+      "sha256": "fb98fded90b6f334ac621f7a3056273347b86e3fa743492f4a39463a32125bee"
+    },
+    "v2/releases/20260922-signature-pro-v3/video_sound_conversion/manifest.json": {
+      "bytes": 6696,
+      "sha256": "b81b095ebacf802d04524071dd93a138181c4788757f5f4b76d1b4d18c14eef2"
+    },
+    "v2/releases/20260922-signature-pro-v3/video_sound_conversion/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-signature-pro-v3/video_sound_conversion/public/video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 2921,
+      "sha256": "2b76bd18daf1908ec5e5ac37f567cffcf5197c7f299a2f8f34aa3e02a43908f1"
+    },
+    "v2/releases/20260922-signature-pro-v3/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg-core.js": {
+      "bytes": 111804,
+      "sha256": "67a48f11645f85439f3fde4f2119042c16b374b910206b7a7a24f342e28dcae3"
+    },
+    "v2/releases/20260922-signature-pro-v3/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg-core.wasm": {
+      "bytes": 32232419,
+      "sha256": "9f57947a5bd530d8f00c5b3f2cb2a3492faa7e5d823315342d6a8656d0a6b7b7"
+    },
+    "v2/releases/20260922-signature-pro-v3/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg.worker.js": {
+      "bytes": 2511,
+      "sha256": "16370a642e2bd09cc877ad9c5b6684c5518f52a0cc6fddcc33ce595ceb6f148f"
+    },
+    "v2/releases/20260922-signature-pro-v3/video_sound_conversion/public/video-sound-conversion/vendor/video-sound.vendor.js": {
+      "bytes": 13404,
+      "sha256": "4bcc71104dc7e2bebc8dcc67dfcacbabae96dbb0d7f639b37afe3d60c1625224"
     }
   }
 }

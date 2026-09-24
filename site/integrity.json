@@ -14466,6 +14466,470 @@
       "bytes": 13404,
       "sha256": "4bcc71104dc7e2bebc8dcc67dfcacbabae96dbb0d7f639b37afe3d60c1625224"
     },
+    "v2/releases/20260922-member-return-channel-v2/download_bridge/cipher/0c2943f1bd04e1590045561a3279755f812bcbeb5fe25d80449ac2eb6cdc682a.bin": {
+      "bytes": 908,
+      "sha256": "0c2943f1bd04e1590045561a3279755f812bcbeb5fe25d80449ac2eb6cdc682a"
+    },
+    "v2/releases/20260922-member-return-channel-v2/download_bridge/cipher/22d1b24e14402bf7942c44f2766ab50789b5f017a2b7a87eb8c0532e5ef16717.bin": {
+      "bytes": 1195,
+      "sha256": "22d1b24e14402bf7942c44f2766ab50789b5f017a2b7a87eb8c0532e5ef16717"
+    },
+    "v2/releases/20260922-member-return-channel-v2/download_bridge/cipher/cb62e343e81e06e3065644c1acedd30b7e309ebda3a0582d7b8fa62871fdbc38.bin": {
+      "bytes": 43171,
+      "sha256": "cb62e343e81e06e3065644c1acedd30b7e309ebda3a0582d7b8fa62871fdbc38"
+    },
+    "v2/releases/20260922-member-return-channel-v2/download_bridge/manifest.json": {
+      "bytes": 4006,
+      "sha256": "8d80dfe297a366f5f52ce1d92040729ddcbed9dd1f0a605b7584cbc7c7121e90"
+    },
+    "v2/releases/20260922-member-return-channel-v2/download_bridge/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/cipher/25173492edc3f74ee30b84b47ad471d54fe0f9e81ef5b40afdb37bb33eacd30c.bin": {
+      "bytes": 65801,
+      "sha256": "25173492edc3f74ee30b84b47ad471d54fe0f9e81ef5b40afdb37bb33eacd30c"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/cipher/2a89881a6cf2ee7b069b082601003a319dd48cf29d9936ba229c2d3db2cc83c4.bin": {
+      "bytes": 10571,
+      "sha256": "2a89881a6cf2ee7b069b082601003a319dd48cf29d9936ba229c2d3db2cc83c4"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/cipher/3a2ff8fc9de5351eab028fc00f12fa1c155a67ae90bec32b94c5b73bf8a54857.bin": {
+      "bytes": 98832,
+      "sha256": "3a2ff8fc9de5351eab028fc00f12fa1c155a67ae90bec32b94c5b73bf8a54857"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/cipher/5c16c6ac4fd239e4ad2761c8aa53c60cef9681ca6770863b249c38c221213140.bin": {
+      "bytes": 13309,
+      "sha256": "5c16c6ac4fd239e4ad2761c8aa53c60cef9681ca6770863b249c38c221213140"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/cipher/b05703a35ea6334f638851fa565cd5462d56ffd8e3aea2c5949d19ae14c7e43a.bin": {
+      "bytes": 95368,
+      "sha256": "b05703a35ea6334f638851fa565cd5462d56ffd8e3aea2c5949d19ae14c7e43a"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/cipher/c3d1ebce2cac2e5b01dc7075f542a096cc9b1613b63d1629f4280babd6f7410b.bin": {
+      "bytes": 5657,
+      "sha256": "c3d1ebce2cac2e5b01dc7075f542a096cc9b1613b63d1629f4280babd6f7410b"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/cipher/cc0d972434602a41f8205d13016b16c5f73ea241f1d823c959fed845459892b9.bin": {
+      "bytes": 130749,
+      "sha256": "cc0d972434602a41f8205d13016b16c5f73ea241f1d823c959fed845459892b9"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/cipher/fe0d0d3d036611c581b067c38bc71905314bfeffb6fe0404dc850d3c953473c8.bin": {
+      "bytes": 11726,
+      "sha256": "fe0d0d3d036611c581b067c38bc71905314bfeffb6fe0404dc850d3c953473c8"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/manifest.json": {
+      "bytes": 12140,
+      "sha256": "a7ff5201fd229095bc116402b5df5dcf385bde1128e9a224a0c5ca7de6d78c8d"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 869,
+      "sha256": "12f0e5d72adb78058dba39c6aade30a8b3d7de6da3b312c293e1632ade43b5d5"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl": {
+      "bytes": 1089800,
+      "sha256": "9d6518c8ad4d88019bc72045108eca154301014215222408aa047cf4955c726d"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide-lock.json": {
+      "bytes": 120010,
+      "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.asm.js": {
+      "bytes": 1074322,
+      "sha256": "1263f02b5b26099b96112378156f242dd98b39a8201ba7765e5fe3d455c5ce91"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.asm.wasm": {
+      "bytes": 8647684,
+      "sha256": "e2f4ee75b325e35eb31bfb8c613d4dd5098f5502c156a97847686875b5025480"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.js": {
+      "bytes": 18597,
+      "sha256": "718d40f1c015dd25ec724cc8fc4e2325d6a45a92ae225121ff6953f224a16f72"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/python_stdlib.zip": {
+      "bytes": 2423989,
+      "sha256": "4298b6ee445cb724c3973437da47789752b9e6ff4e26619026b283ec801fc46b"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/public/font-adjustment-local/vendor/runtime-assets.json": {
+      "bytes": 2018,
+      "sha256": "a4fbff0ac1d7506a73264c09c2ee508a11e585393461e6b1d3f642bb43dfce6f"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_adjustment/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/cipher/031b0c783031f538f0db5589f5118719aecd03331635ef1bdb61c20cd26ed4b2.bin": {
+      "bytes": 95368,
+      "sha256": "031b0c783031f538f0db5589f5118719aecd03331635ef1bdb61c20cd26ed4b2"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/cipher/0d38b57c6fc6dc172262a30c5e94b745a0dacd38ff2712c9480b3624d8ce2042.bin": {
+      "bytes": 5657,
+      "sha256": "0d38b57c6fc6dc172262a30c5e94b745a0dacd38ff2712c9480b3624d8ce2042"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/cipher/1501497a02e1d6905f9a6e2be0f90d495413ba663a58c82932ede773319da5b6.bin": {
+      "bytes": 8844,
+      "sha256": "1501497a02e1d6905f9a6e2be0f90d495413ba663a58c82932ede773319da5b6"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/cipher/2d8fcbf88e5acd64db38c9ecf8ef99a3cebf55488a6e365aa4633d445051680e.bin": {
+      "bytes": 24525,
+      "sha256": "2d8fcbf88e5acd64db38c9ecf8ef99a3cebf55488a6e365aa4633d445051680e"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/cipher/34ad490af23e8d6e3f9cfd985ffb19bbf07c852bffa6b3bb18b286709308c50c.bin": {
+      "bytes": 126821,
+      "sha256": "34ad490af23e8d6e3f9cfd985ffb19bbf07c852bffa6b3bb18b286709308c50c"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/cipher/4904211af7e41ab7dcc08c4064154bfc1e3257c7880edae0022c605f3dc8e022.bin": {
+      "bytes": 18160,
+      "sha256": "4904211af7e41ab7dcc08c4064154bfc1e3257c7880edae0022c605f3dc8e022"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/cipher/564d6de1c8828400f7ead984f2ae4cdc5c6827431cf31409248b6bb53de54555.bin": {
+      "bytes": 95167,
+      "sha256": "564d6de1c8828400f7ead984f2ae4cdc5c6827431cf31409248b6bb53de54555"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/cipher/6e096f13b29839ba5e3d93f752a0aa4375703505a3d3f8105520246655264ff5.bin": {
+      "bytes": 7640,
+      "sha256": "6e096f13b29839ba5e3d93f752a0aa4375703505a3d3f8105520246655264ff5"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/cipher/70e413253b97dd89859e2c1b0962c80c1f9ecd65eb97bb7263a7a488ca886653.bin": {
+      "bytes": 26301,
+      "sha256": "70e413253b97dd89859e2c1b0962c80c1f9ecd65eb97bb7263a7a488ca886653"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/cipher/7929c20cd51c107b4af855f5f37729a473b07f1438d4e8a8810b3a9a1b490050.bin": {
+      "bytes": 47357,
+      "sha256": "7929c20cd51c107b4af855f5f37729a473b07f1438d4e8a8810b3a9a1b490050"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/cipher/ad02be153a30c1ae38854219dec9136b240a9da1dd1fc581b762ec10b6870c9b.bin": {
+      "bytes": 681,
+      "sha256": "ad02be153a30c1ae38854219dec9136b240a9da1dd1fc581b762ec10b6870c9b"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/cipher/ad718828a59809565bb81a4e268fee9a269543a9fd9bfb72c6c0dda95f40d9d6.bin": {
+      "bytes": 65801,
+      "sha256": "ad718828a59809565bb81a4e268fee9a269543a9fd9bfb72c6c0dda95f40d9d6"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/cipher/c74839e779a9cbb8c1f59d5dd0a8325faa7a3223304a3bb348d34e42b46b5b42.bin": {
+      "bytes": 10085,
+      "sha256": "c74839e779a9cbb8c1f59d5dd0a8325faa7a3223304a3bb348d34e42b46b5b42"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/cipher/cd8c744f77f839d57263b741ff25780fd684cc21c4c788c6a0882a62fb1dac80.bin": {
+      "bytes": 63677,
+      "sha256": "cd8c744f77f839d57263b741ff25780fd684cc21c4c788c6a0882a62fb1dac80"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/cipher/cf9e83a04516c10094bb55f619a78c41b0cf7740b29193bf1b7e778f4e7f5e70.bin": {
+      "bytes": 38481,
+      "sha256": "cf9e83a04516c10094bb55f619a78c41b0cf7740b29193bf1b7e778f4e7f5e70"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/manifest.json": {
+      "bytes": 16301,
+      "sha256": "7777a1fddee516e86f82aeae7bb144dad7e30b411910f4296b31d400582eef1f"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/public/font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl": {
+      "bytes": 1089800,
+      "sha256": "9d6518c8ad4d88019bc72045108eca154301014215222408aa047cf4955c726d"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide-lock.json": {
+      "bytes": 120010,
+      "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.asm.js": {
+      "bytes": 1074322,
+      "sha256": "1263f02b5b26099b96112378156f242dd98b39a8201ba7765e5fe3d455c5ce91"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.asm.wasm": {
+      "bytes": 8647684,
+      "sha256": "e2f4ee75b325e35eb31bfb8c613d4dd5098f5502c156a97847686875b5025480"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.js": {
+      "bytes": 18597,
+      "sha256": "718d40f1c015dd25ec724cc8fc4e2325d6a45a92ae225121ff6953f224a16f72"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/public/font-adjustment-local/vendor/pyodide/python_stdlib.zip": {
+      "bytes": 2423989,
+      "sha256": "4298b6ee445cb724c3973437da47789752b9e6ff4e26619026b283ec801fc46b"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/public/font-adjustment-local/vendor/runtime-assets.json": {
+      "bytes": 2018,
+      "sha256": "a4fbff0ac1d7506a73264c09c2ee508a11e585393461e6b1d3f642bb43dfce6f"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_compress/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_glyph_edit/cipher/5619d5638f5afdecbc37d82a7443f79c0c88e4ad70910b2a558bb1751c5243df.bin": {
+      "bytes": 32068,
+      "sha256": "5619d5638f5afdecbc37d82a7443f79c0c88e4ad70910b2a558bb1751c5243df"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_glyph_edit/cipher/bdebe436e5443236da2b4366af536c111d197dbb2575348c316b98df3da798f6.bin": {
+      "bytes": 95368,
+      "sha256": "bdebe436e5443236da2b4366af536c111d197dbb2575348c316b98df3da798f6"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_glyph_edit/cipher/e548687d0211a09bd69d4913357a8d9a3388376d3829e17dcdc710f9f7858dc2.bin": {
+      "bytes": 5657,
+      "sha256": "e548687d0211a09bd69d4913357a8d9a3388376d3829e17dcdc710f9f7858dc2"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_glyph_edit/cipher/e949e77cbc95159a96ced3ffd4eca2e9bb5acc3c087769342e721ec40c8430bc.bin": {
+      "bytes": 179393,
+      "sha256": "e949e77cbc95159a96ced3ffd4eca2e9bb5acc3c087769342e721ec40c8430bc"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_glyph_edit/manifest.json": {
+      "bytes": 5794,
+      "sha256": "34da535ace53310536fd86f5dc849d87b4856267ffedf00853f6822a99029493"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_glyph_edit/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_glyph_edit/public/font-glyph-editor/font-glyph-editor.vendor.js": {
+      "bytes": 391422,
+      "sha256": "b3f3f1bb244109fa7b9beafa716185c73da2b46a0c285fb3cf0e90a9283699b5"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_glyph_edit/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_manual_web/cipher/0840358d3cb953924a3448301a8d797293debde15c140e999d128e7df87272e0.bin": {
+      "bytes": 9832,
+      "sha256": "0840358d3cb953924a3448301a8d797293debde15c140e999d128e7df87272e0"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_manual_web/cipher/1d828c6a5d33965c2a1e932c666026643f6ce8463acdcc82d41ad1b716afcae7.bin": {
+      "bytes": 60955,
+      "sha256": "1d828c6a5d33965c2a1e932c666026643f6ce8463acdcc82d41ad1b716afcae7"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_manual_web/cipher/1da93950c90e9d68626a75e7881f30ef043ab1beb39bef5a322ec2ba8a1c4ec1.bin": {
+      "bytes": 95368,
+      "sha256": "1da93950c90e9d68626a75e7881f30ef043ab1beb39bef5a322ec2ba8a1c4ec1"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_manual_web/manifest.json": {
+      "bytes": 4445,
+      "sha256": "5791b760a1e05e3153b7e29b382bad356bf8e18a5cda0be0c0bdfb9a2f726c1f"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_manual_web/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20260922-member-return-channel-v2/font_manual_web/public/spark-md5.min.js": {
+      "bytes": 10293,
+      "sha256": "3e97e82939197c7ca4e34c7c1db61309fb0390ed077ae819f79c380563c9d0c3"
+    },
+    "v2/releases/20260922-member-return-channel-v2/manage_direct_upload/cipher/1ea0b4797c5e47532a224fac3e52b9b8bd84f5b8facc312544a77c494f47c3c6.bin": {
+      "bytes": 5657,
+      "sha256": "1ea0b4797c5e47532a224fac3e52b9b8bd84f5b8facc312544a77c494f47c3c6"
+    },
+    "v2/releases/20260922-member-return-channel-v2/manage_direct_upload/cipher/6d72764e05f9985a4f62784d927dab5a9172893c1f82a53194f5bac047ae0ee6.bin": {
+      "bytes": 165273,
+      "sha256": "6d72764e05f9985a4f62784d927dab5a9172893c1f82a53194f5bac047ae0ee6"
+    },
+    "v2/releases/20260922-member-return-channel-v2/manage_direct_upload/cipher/e4f3c3fd303f5fedcf274ead2e1da61a90952fc37090c92dce5c9d969c66b7ad.bin": {
+      "bytes": 4749,
+      "sha256": "e4f3c3fd303f5fedcf274ead2e1da61a90952fc37090c92dce5c9d969c66b7ad"
+    },
+    "v2/releases/20260922-member-return-channel-v2/manage_direct_upload/manifest.json": {
+      "bytes": 4032,
+      "sha256": "197cd224740da799e56e5dd909aeb2617447aaa257e2a8e6a3e664861ced9b2c"
+    },
+    "v2/releases/20260922-member-return-channel-v2/manage_direct_upload/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-member-return-channel-v2/member_local_build/cipher/1586db70b4e2db3067a37fca9bd050826e6230011bff98f95c0ef36f32075698.bin": {
+      "bytes": 95368,
+      "sha256": "1586db70b4e2db3067a37fca9bd050826e6230011bff98f95c0ef36f32075698"
+    },
+    "v2/releases/20260922-member-return-channel-v2/member_local_build/cipher/1be88c621190265e0a6b23c401b78b73bbc2b8ace271471adec4bf50624f7df1.bin": {
+      "bytes": 4854,
+      "sha256": "1be88c621190265e0a6b23c401b78b73bbc2b8ace271471adec4bf50624f7df1"
+    },
+    "v2/releases/20260922-member-return-channel-v2/member_local_build/cipher/6a03d45d95aa289be6580c970f1d43354e720faf44bbce4697333c3d7fc70e77.bin": {
+      "bytes": 202269,
+      "sha256": "6a03d45d95aa289be6580c970f1d43354e720faf44bbce4697333c3d7fc70e77"
+    },
+    "v2/releases/20260922-member-return-channel-v2/member_local_build/manifest.json": {
+      "bytes": 5487,
+      "sha256": "b7666d459287146c402e1d11e0c4fcac50daddab5b9d33bb12270c15cc8f6c0b"
+    },
+    "v2/releases/20260922-member-return-channel-v2/member_local_build/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-member-return-channel-v2/member_local_build/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20260922-member-return-channel-v2/member_local_build/public/jszip.min.js": {
+      "bytes": 97653,
+      "sha256": "4ec9ea24a3271fcc28035e922116d170ffd83bbf265a82a45e2d2a399b055181"
+    },
+    "v2/releases/20260922-member-return-channel-v2/member_local_build/public/spark-md5.min.js": {
+      "bytes": 10293,
+      "sha256": "3e97e82939197c7ca4e34c7c1db61309fb0390ed077ae819f79c380563c9d0c3"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_keyboard_simplify/cipher/5f7b1a4523d3cd175ed3af0be7313ec526e41f09d1e0f42e082df8be18c70900.bin": {
+      "bytes": 2633,
+      "sha256": "5f7b1a4523d3cd175ed3af0be7313ec526e41f09d1e0f42e082df8be18c70900"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_keyboard_simplify/cipher/68b6352fde74c07256c92729e1bd777a1f874f6cd8c26bf940c03b1e37448cdf.bin": {
+      "bytes": 55071,
+      "sha256": "68b6352fde74c07256c92729e1bd777a1f874f6cd8c26bf940c03b1e37448cdf"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_keyboard_simplify/cipher/6da789da028329570980acfb75cf7949b64c7e5d907c882ff18383f39527691d.bin": {
+      "bytes": 8445,
+      "sha256": "6da789da028329570980acfb75cf7949b64c7e5d907c882ff18383f39527691d"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_keyboard_simplify/cipher/89c0b64fa977e961af83d309a7877331d6fb1b133edff09361de317dfbb59bf1.bin": {
+      "bytes": 3492,
+      "sha256": "89c0b64fa977e961af83d309a7877331d6fb1b133edff09361de317dfbb59bf1"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_keyboard_simplify/cipher/8e9d688d6dcf553d1793fbd799542daa13d499cae4d6fa6c25e927584afe0d4a.bin": {
+      "bytes": 3459,
+      "sha256": "8e9d688d6dcf553d1793fbd799542daa13d499cae4d6fa6c25e927584afe0d4a"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_keyboard_simplify/manifest.json": {
+      "bytes": 6515,
+      "sha256": "c61eafa5d8ed2b78ac609047ca7612b99696d48de2f2ee8b52ee2fe2437b63f1"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_keyboard_simplify/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_keyboard_simplify/public/skin-keyboard-simplify/compression-worker.vendor.js": {
+      "bytes": 64650,
+      "sha256": "8f196903b77e91219eff557f0bd0270dab8e58e4a646c8435c4ec8eb72b1be4c"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_keyboard_simplify/public/skin-keyboard-simplify/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 601,
+      "sha256": "3a159f5e0a31534e4d912e2ce8b390c987baf4abfec58be80f2d769df2cc8c89"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_oneclicksignaturepro/cipher/548d51affbc5e50ee4ae4614c18f4b5519c1dd2e08def787b13422c5f01d3b68.bin": {
+      "bytes": 4552,
+      "sha256": "548d51affbc5e50ee4ae4614c18f4b5519c1dd2e08def787b13422c5f01d3b68"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_oneclicksignaturepro/cipher/a8539a631fe7b1d56a1730ca1394352e2fb3d77a27bf805cfae8903b4b9456b8.bin": {
+      "bytes": 20698,
+      "sha256": "a8539a631fe7b1d56a1730ca1394352e2fb3d77a27bf805cfae8903b4b9456b8"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_oneclicksignaturepro/cipher/daf1c238096572e54ccfce38d432993b16e205933bcf856d23fbd86139a86d46.bin": {
+      "bytes": 5289,
+      "sha256": "daf1c238096572e54ccfce38d432993b16e205933bcf856d23fbd86139a86d46"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_oneclicksignaturepro/manifest.json": {
+      "bytes": 4087,
+      "sha256": "262bfe27d0e6285b4e7d8d8141e8d84cd3960b7ea09cea656425bf23123e4042"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_oneclicksignaturepro/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_pic_part/cipher/2613b02c8dfcaf54e50529b517520a6596434c263461d48ff4d6631fb1c88cf0.bin": {
+      "bytes": 4084,
+      "sha256": "2613b02c8dfcaf54e50529b517520a6596434c263461d48ff4d6631fb1c88cf0"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_pic_part/cipher/570a7142ca6afe27bc5e60a987fef4efe389f4186563234aa6c7bc487c20c68f.bin": {
+      "bytes": 4974,
+      "sha256": "570a7142ca6afe27bc5e60a987fef4efe389f4186563234aa6c7bc487c20c68f"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_pic_part/cipher/5d62a438dd61506b9e112bd59d63276b568b6dac2d9abfe3db2fecc843f42908.bin": {
+      "bytes": 10936,
+      "sha256": "5d62a438dd61506b9e112bd59d63276b568b6dac2d9abfe3db2fecc843f42908"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_pic_part/cipher/93d89ff2a4fb259f12ef008a52a035d9b2fa3507a19719c3862140ca24f3aa3f.bin": {
+      "bytes": 8604,
+      "sha256": "93d89ff2a4fb259f12ef008a52a035d9b2fa3507a19719c3862140ca24f3aa3f"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_pic_part/cipher/bf01ebb62370cd4b9c09834d8696af44b7eedb1c54a6f532290b97bd07fdf207.bin": {
+      "bytes": 5657,
+      "sha256": "bf01ebb62370cd4b9c09834d8696af44b7eedb1c54a6f532290b97bd07fdf207"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_pic_part/manifest.json": {
+      "bytes": 6387,
+      "sha256": "1fc9b86a5682aff17a23fb48255d9c39e585f591393de2d5c418a1252016b040"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_pic_part/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_pic_part/public/psd-layer-split/psd-worker.vendor.js": {
+      "bytes": 335174,
+      "sha256": "5e1e9c04a92ee585f43eca84096fd1410a4bbd3574f5e48ae87a20b0172de412"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_pic_part/public/psd-layer-split/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 8236,
+      "sha256": "a2f5cd88ce4c80d3ea3780f13452dfe0e503e957abdecd075b5f3787ee9b9dc9"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_psd_adapter/cipher/581aabaad19520bf993d6aec336d9b3377edf3493eb8dcbbc452cef87ba2bb55.bin": {
+      "bytes": 4627,
+      "sha256": "581aabaad19520bf993d6aec336d9b3377edf3493eb8dcbbc452cef87ba2bb55"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_psd_adapter/cipher/dbee8767a8169ffcd7e72ba903e4e0e562b4e718311d87808dd3374255ce3730.bin": {
+      "bytes": 3826,
+      "sha256": "dbee8767a8169ffcd7e72ba903e4e0e562b4e718311d87808dd3374255ce3730"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_psd_adapter/cipher/f1b80b25881f92220936007b16d1a41313e722c24bdcfd489103745852ff74a5.bin": {
+      "bytes": 36981,
+      "sha256": "f1b80b25881f92220936007b16d1a41313e722c24bdcfd489103745852ff74a5"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_psd_adapter/cipher/f6414f183435aefe146b9d472f1642c55784bce9120bd9a801041e40ff0aaae5.bin": {
+      "bytes": 10288,
+      "sha256": "f6414f183435aefe146b9d472f1642c55784bce9120bd9a801041e40ff0aaae5"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_psd_adapter/manifest.json": {
+      "bytes": 5177,
+      "sha256": "b10ef6484b482ff030b8dcd2bef10a4b0e1eb60ab4a7039f2af7f0bae39e5598"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_psd_adapter/public/skin-psd-adapter/adapter-worker.vendor.js": {
+      "bytes": 347482,
+      "sha256": "045a16b415c3d21eb4abc6208ed4063876bd95d0b5a91a49a0a3d925c6d5dcfd"
+    },
+    "v2/releases/20260922-member-return-channel-v2/skin_psd_adapter/public/skin-psd-adapter/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 3709,
+      "sha256": "0898ac280bc1f520c9f6bf68d5375529ffdb0aff8c3727d3cda5c80c350e10b6"
+    },
+    "v2/releases/20260922-member-return-channel-v2/video_sound_conversion/cipher/7e63d845a26f1fc22966bf1fce87ac1b93d0b518b898bb43d51466151863814b.bin": {
+      "bytes": 3128,
+      "sha256": "7e63d845a26f1fc22966bf1fce87ac1b93d0b518b898bb43d51466151863814b"
+    },
+    "v2/releases/20260922-member-return-channel-v2/video_sound_conversion/cipher/ed6031e0c98b9674df6e167af9baef07f64dc53bceca9875cdcd4d5567bbad19.bin": {
+      "bytes": 10389,
+      "sha256": "ed6031e0c98b9674df6e167af9baef07f64dc53bceca9875cdcd4d5567bbad19"
+    },
+    "v2/releases/20260922-member-return-channel-v2/video_sound_conversion/cipher/f5a792a6e30ee5826e94c3922b95a5e7fe7d6663ea8e13454084705ef4fe389b.bin": {
+      "bytes": 2952,
+      "sha256": "f5a792a6e30ee5826e94c3922b95a5e7fe7d6663ea8e13454084705ef4fe389b"
+    },
+    "v2/releases/20260922-member-return-channel-v2/video_sound_conversion/manifest.json": {
+      "bytes": 6712,
+      "sha256": "4c47f7f7057b1717e45073d394f4ec40e21486365e7559ad61304215eb892bf1"
+    },
+    "v2/releases/20260922-member-return-channel-v2/video_sound_conversion/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20260922-member-return-channel-v2/video_sound_conversion/public/video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 2921,
+      "sha256": "2b76bd18daf1908ec5e5ac37f567cffcf5197c7f299a2f8f34aa3e02a43908f1"
+    },
+    "v2/releases/20260922-member-return-channel-v2/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg-core.js": {
+      "bytes": 111804,
+      "sha256": "67a48f11645f85439f3fde4f2119042c16b374b910206b7a7a24f342e28dcae3"
+    },
+    "v2/releases/20260922-member-return-channel-v2/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg-core.wasm": {
+      "bytes": 32232419,
+      "sha256": "9f57947a5bd530d8f00c5b3f2cb2a3492faa7e5d823315342d6a8656d0a6b7b7"
+    },
+    "v2/releases/20260922-member-return-channel-v2/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg.worker.js": {
+      "bytes": 2511,
+      "sha256": "16370a642e2bd09cc877ad9c5b6684c5518f52a0cc6fddcc33ce595ceb6f148f"
+    },
+    "v2/releases/20260922-member-return-channel-v2/video_sound_conversion/public/video-sound-conversion/vendor/video-sound.vendor.js": {
+      "bytes": 13404,
+      "sha256": "4bcc71104dc7e2bebc8dcc67dfcacbabae96dbb0d7f639b37afe3d60c1625224"
+    },
     "v2/releases/20260922-signature-pro-v3/download_bridge/cipher/743bdbd38773968449fe4a27538d53526c091b199eb18a037a3433b445d12a46.bin": {
       "bytes": 908,
       "sha256": "743bdbd38773968449fe4a27538d53526c091b199eb18a037a3433b445d12a46"
@@ -14929,6 +15393,26 @@
     "v2/releases/20260922-signature-pro-v3/video_sound_conversion/public/video-sound-conversion/vendor/video-sound.vendor.js": {
       "bytes": 13404,
       "sha256": "4bcc71104dc7e2bebc8dcc67dfcacbabae96dbb0d7f639b37afe3d60c1625224"
+    },
+    "v2/releases/20260924-signature-pro-v4/skin_oneclicksignaturepro/cipher/042dc1070d7a7125db3c4dbf2b0ab8d0cb5565bf1cbf39d247dc8eb93b9ba32a.bin": {
+      "bytes": 21760,
+      "sha256": "042dc1070d7a7125db3c4dbf2b0ab8d0cb5565bf1cbf39d247dc8eb93b9ba32a"
+    },
+    "v2/releases/20260924-signature-pro-v4/skin_oneclicksignaturepro/cipher/53477088e9c54247740caa0fb9209d2de2b6d0b189f8a78e0b77a605cac938bb.bin": {
+      "bytes": 5289,
+      "sha256": "53477088e9c54247740caa0fb9209d2de2b6d0b189f8a78e0b77a605cac938bb"
+    },
+    "v2/releases/20260924-signature-pro-v4/skin_oneclicksignaturepro/cipher/e4b9181b35a36b6227a1faf7a1c3649223aac5d0603fb5eb8b4aad3066a7f217.bin": {
+      "bytes": 4552,
+      "sha256": "e4b9181b35a36b6227a1faf7a1c3649223aac5d0603fb5eb8b4aad3066a7f217"
+    },
+    "v2/releases/20260924-signature-pro-v4/skin_oneclicksignaturepro/manifest.json": {
+      "bytes": 4071,
+      "sha256": "8ad345d41eee3e54f698718adfe247b5b2b6e86e65a75e89a06e3b7cef68b2c0"
+    },
+    "v2/releases/20260924-signature-pro-v4/skin_oneclicksignaturepro/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
     }
   }
 }

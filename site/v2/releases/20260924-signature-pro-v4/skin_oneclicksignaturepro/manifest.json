@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260924-signature-pro-v4",
+  "toolKey": "skin_oneclicksignaturepro",
+  "createdAt": "2026-09-24T06:44:51.066Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "skin-oneclicksignaturepro/index.html",
+    "styles": [
+      "skin-oneclicksignaturepro/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "skin-oneclicksignaturepro/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260924-signature-pro-v4:skin_oneclicksignaturepro",
+      "wrappedKey": "AYMKZ7HukJ1f3xNcJVJRVDNSTwkh/3zY+CNZ/3wnQOHHvbGwKcYNMoyCya9jHXiOMmz2a8ifVCzzRjo7HGWsEtCq2Z8sVetR1MEj0hpFHrTS5+bBjjDzldgS3T5eUmxfJpZtW6WfzaR1AcChRpTMoS1Swsm1URnrEnGsG909BiYgCX8u4Wd+XihR+DXaPOlrbpNChWfKDkGC70QJIhGQuIoEvcS01mtlxY/yeg+NkqQ2e4zxgtvimlpS3tUE+p0XEUmrX7UtmZe/AWDPkLlfJbbohgaf5gctWPnhpFOWl5zvknTHdobKNj8o5WFGdK/osae5PPtHa/WcMIKalk4ehAgqKd8IjbYFtPubOJWA9KhE4az5mq5eRl5lszoCwl3qS7vrNh3vll5OoLadokzv/ymHQa1b6Y7ZTr5TbflVRy7ovsMT6QW8KD+ypX/x7OpMFy2hfg5Xtjw7KnMuyfpy/dGng3HFHUIDFQ0APqqanzFa3M2Qch6HB4oUzUgTTRLe"
+    }
+  ],
+  "routes": {
+    "skin-oneclicksignaturepro/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-7cdf6769db847acbe049",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 5273,
+          "sha256": "7cdf6769db847acbe049e968c1d95bb56e16a88641c969ba0b990aa59547d7e0",
+          "cipherPath": "cipher/53477088e9c54247740caa0fb9209d2de2b6d0b189f8a78e0b77a605cac938bb.bin",
+          "cipherSha256": "53477088e9c54247740caa0fb9209d2de2b6d0b189f8a78e0b77a605cac938bb",
+          "iv": "PyH+boLmlKH7nssQ",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f5b4a11684b514980c45",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 4536,
+          "sha256": "f5b4a11684b514980c458d54380d887194c4f1d01983df985f4f6ce855b38d4a",
+          "cipherPath": "cipher/e4b9181b35a36b6227a1faf7a1c3649223aac5d0603fb5eb8b4aad3066a7f217.bin",
+          "cipherSha256": "e4b9181b35a36b6227a1faf7a1c3649223aac5d0603fb5eb8b4aad3066a7f217",
+          "iv": "c0hgvOIfOF6zm2ZQ",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-c28cd624717c3bc3dd2f",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 21744,
+          "sha256": "c28cd624717c3bc3dd2f94820f753860930f5bd2a7336597e89a9dbb35aec1f0",
+          "cipherPath": "cipher/042dc1070d7a7125db3c4dbf2b0ab8d0cb5565bf1cbf39d247dc8eb93b9ba32a.bin",
+          "cipherSha256": "042dc1070d7a7125db3c4dbf2b0ab8d0cb5565bf1cbf39d247dc8eb93b9ba32a",
+          "iv": "guVVBzNwDMEO+SmA",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "jonvf47JGQSkYqrbyjZPmOqSb+aWIyy/7Ji4EzYnYT3SyHCEgbYLqoVB9YYFf4G2cDtr3l5oxF19cpUgz2oIVg=="
+  }
+}

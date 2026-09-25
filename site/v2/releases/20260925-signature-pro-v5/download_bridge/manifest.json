@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20260925-signature-pro-v5",
+  "toolKey": "download_bridge",
+  "createdAt": "2026-09-25T15:26:46.514Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "download-bridge/index.html",
+    "styles": [
+      "download-bridge/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "download-bridge/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20260925-signature-pro-v5:download_bridge",
+      "wrappedKey": "PJSEaRggZdd5y45c7DzxbdzPg2ojXQeCOGzgm7ZfPmEoj8vL1T3vcCxAV+fLwD6b58MBQshiiLXxacGL2EFOI/timhoEElrmkYlIjiil6gCPw77/9A6ua+L+lBImuRV69xQnnHo8+tTIXw/9tiNsWWBTjqtnJ6FmMtIlzPTzW40X1QYl5UC64siR4kApuorTvZmwkBoiZlEi+6Ml1BW/N1zw5nYRFG9Svy1Ut8zJhppJ5/3mNbV/dbLBjHqvyj9hljgnTcsj5m3R+ILAa0WmvCfyBA7dUA+DlObIJgXPEG5jCwdEgwBm2E8yuCztftRThPy5Am76JO5d+7J9PeOir/PAZzUaybbbyfkxbERK5IHSjKuso+qUYAjC/u8jyQc7Dm7OVjDb3p0RGDPZCGmdaaRD5wTKzLoF8RBP5scvLPxwvzqVT/vCU/Bj+ebAbUzVW2ZC3sGRsdg/2uz1uTyRd9c7P6qia/hjYj56rID1fJkGzTYteo6rKCRtohtGiLsi"
+    }
+  ],
+  "routes": {
+    "download-bridge/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-449c31c81a347c2d2dc1",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 892,
+          "sha256": "449c31c81a347c2d2dc1e1bd71aa21498408b6f501e5579b1a7aac328048bdfd",
+          "cipherPath": "cipher/a8c77f427840effec7783098cec2eed40b54e65a91edc24becc126736bee2193.bin",
+          "cipherSha256": "a8c77f427840effec7783098cec2eed40b54e65a91edc24becc126736bee2193",
+          "iv": "3lNozeqoSjirKo7/",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f22141278f2eca3e6a9c",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 1179,
+          "sha256": "f22141278f2eca3e6a9ccb360ae3a66474c4d42405d21c7e8a870c0d94b11421",
+          "cipherPath": "cipher/50aa96efed10f8c22b01dd117c0416f834166c2453549d43ecbfcf70fe0dd133.bin",
+          "cipherSha256": "50aa96efed10f8c22b01dd117c0416f834166c2453549d43ecbfcf70fe0dd133",
+          "iv": "v0YlZGz06ReLbqIf",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-96e06e155b8121e0a652",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 43155,
+          "sha256": "96e06e155b8121e0a652db2ec156c912217f81fbdf608f3290dbce7781b273e3",
+          "cipherPath": "cipher/3c01e0444e164be3d0e1862409b4086934643ad1aa25ead43f6eb832fc2b7895.bin",
+          "cipherSha256": "3c01e0444e164be3d0e1862409b4086934643ad1aa25ead43f6eb832fc2b7895",
+          "iv": "Crff4KrE8OSRG+uX",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "hYr3NQCfGOyD5Xx8SpJHO9oTKnBs29bwaXWz3JwOCtO71fLLPO7Z8sfXUXOseZLwrLW4DMJzOQNxAlPccTH43A=="
+  }
+}

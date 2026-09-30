@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20261001-strict-bridge-v1",
+  "toolKey": "video_sound_conversion",
+  "createdAt": "2026-09-30T19:50:18.883Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "video-sound-conversion/index.html",
+    "styles": [
+      "video-sound-conversion/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "video-sound-conversion/vendor/video-sound.vendor.js",
+      "video-sound-conversion/app.js"
+    ],
+    "workers": [
+      "video-sound-conversion/vendor/ffmpeg.worker.js"
+    ]
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20261001-strict-bridge-v1:video_sound_conversion",
+      "wrappedKey": "M8hNStXNbXmDB/cCxwlck8N9ta1+cI9Pce/B3t4CkBXjhyTH8wtsiATPY4SORdYJ+cuWL75phbY2SeNLrLYMlrA7S36EZNrQ0jvYPb6eulJ0wn2VjXMIBSfiVApEkVTi4i1SlH1w4wXjN/Uy1xnHCyNCS3S7hbLoylIwSKQK1s5rJeIqAIfE+v6rbBR7d6WN7cOn8T9eK/kIJVxOHX7jGuuljz3HOLk7MBhL2KkVrfqn7ThRJTYfc6qVCJ54HZ+X0Xe6wpiAwkfBaBb5+qoCeb3fC94MO/D+I5TDizD8XigyvSfMQyQWtMylYUcw+sOavsdS0MqaV8o47RIQDQHQBgKnN5RnX17HG+OqlT4Jdz9eAGNzStjRvTP2E6Yja3TrUUrjVZPVCzHtE9S/66oAJsZVEOUyFufDdwNCfkbUARSpHVPnlgNpmS4pH4UGMgqW3oe73XDwkvUlhW8bCLh1RBQXOuHpkev6/6M9tyGdiNIffDnuKItks/liS3I7Y3QP"
+    }
+  ],
+  "routes": {
+    "video-sound-conversion/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-9f67560176c42b64f5d0",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 2912,
+          "sha256": "9f67560176c42b64f5d01ffff05907faf8a0966fdc27bb232fbec93baf1a1bec",
+          "cipherPath": "cipher/c260539a5a57f83ba2cb76262b8fe7e7182dbcfe60b0ac4e5bb60d7777149303.bin",
+          "cipherSha256": "c260539a5a57f83ba2cb76262b8fe7e7182dbcfe60b0ac4e5bb60d7777149303",
+          "iv": "3+fE4vAleXBoxMTs",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "video-sound-conversion/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-5bfe20346307ac84fe69",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 3112,
+          "sha256": "5bfe20346307ac84fe69ecc4f5210a921fc8121e634d0c91a03fe11dee740800",
+          "cipherPath": "cipher/61ef1756d98cec7f3f53f52faf99f9a1f7a12a5168f3dbf8072b5d7d95dcde59.bin",
+          "cipherSha256": "61ef1756d98cec7f3f53f52faf99f9a1f7a12a5168f3dbf8072b5d7d95dcde59",
+          "iv": "g4s7xeJg41vZaIbD",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "video-sound-conversion/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-aff5f86dc282e6c0debb",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 11609,
+          "sha256": "aff5f86dc282e6c0debb6474844e1e662d30dea28f9677f40e4f95697660c03e",
+          "cipherPath": "cipher/e751c30bb9d24a426a15bb85baf2760a53e740ccc4794a0c9a9ab12e52e3a970.bin",
+          "cipherSha256": "e751c30bb9d24a426a15bb85baf2760a53e740ccc4794a0c9a9ab12e52e3a970",
+          "iv": "bTIX9h3zimTVoFHq",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "video-sound-conversion/vendor/video-sound.vendor.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-4bcc71104dc7e2bebc8d",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 13404,
+          "sha256": "4bcc71104dc7e2bebc8dcc67dfcacbabae96dbb0d7f639b37afe3d60c1625224",
+          "publicPath": "public/video-sound-conversion/vendor/video-sound.vendor.js"
+        }
+      ]
+    },
+    "video-sound-conversion/vendor/ffmpeg.worker.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-16370a642e2bd09cc877",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 2511,
+          "sha256": "16370a642e2bd09cc877ad9c5b6684c5518f52a0cc6fddcc33ce595ceb6f148f",
+          "publicPath": "public/video-sound-conversion/vendor/ffmpeg.worker.js"
+        }
+      ]
+    },
+    "video-sound-conversion/vendor/ffmpeg-core.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-67a48f11645f85439f3f",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 111804,
+          "sha256": "67a48f11645f85439f3fde4f2119042c16b374b910206b7a7a24f342e28dcae3",
+          "publicPath": "public/video-sound-conversion/vendor/ffmpeg-core.js"
+        }
+      ]
+    },
+    "video-sound-conversion/vendor/ffmpeg-core.wasm": {
+      "mime": "application/wasm",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-9f57947a5bd530d8f00c",
+          "kind": "vendor",
+          "mime": "application/wasm",
+          "bytes": 32232419,
+          "sha256": "9f57947a5bd530d8f00c5b3f2cb2a3492faa7e5d823315342d6a8656d0a6b7b7",
+          "publicPath": "public/video-sound-conversion/vendor/ffmpeg-core.wasm"
+        }
+      ]
+    },
+    "video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md": {
+      "mime": "text/markdown; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-2b76bd18daf1908ec5e5",
+          "kind": "vendor",
+          "mime": "text/markdown; charset=utf-8",
+          "bytes": 2921,
+          "sha256": "2b76bd18daf1908ec5e5ac37f567cffcf5197c7f299a2f8f34aa3e02a43908f1",
+          "publicPath": "public/video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md"
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "hZhg1Yt3IWX3kQmaeyb+qUU5UZPOaa7VvFfKc0fZ4PM6TLct8k4bfTt6w8V4jlUiaWNg3yarOYxvaO/h4l5V+A=="
+  }
+}

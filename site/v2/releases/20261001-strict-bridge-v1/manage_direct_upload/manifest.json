@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20261001-strict-bridge-v1",
+  "toolKey": "manage_direct_upload",
+  "createdAt": "2026-09-30T19:50:18.892Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "manage-direct-upload/index.html",
+    "styles": [],
+    "scripts": [
+      "fetch-522-retry.js",
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "manage-direct-upload/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20261001-strict-bridge-v1:manage_direct_upload",
+      "wrappedKey": "UWPwwgiSJSBGt9GCJlyyILE5EzMeuRw0hpmceNFrtnOl/DXNuBOZ5ztFH60HeQfC/h2qQ0nnodq6PHrjTXyzYfoPViL4D5zbVMPS0QIyxftLEaifx63LKoMBhFJzW5R6xawXZIclyOg9xtiyyonQYsD7ZyWb22im83fMZmUd5E+1G3BP6Afo+yVdFdJIJiyChv4ChN8l0i+wGxD+Py5vgSLEltHnXbefhfnkMnI5GeW0WBYdokGQfSXc/FcX5SkkBI3cdu89QD6Gj1tsslK4uV2pntbNNqf7PRJmzwi56y6Ur5qgcehbOyAMlHU1ZEFTd7TWt/sadsLo9ttEpk4TpDmokguIfAE2ap7MhiaP6rQoLO3QIi9dp/lpI7PX6/yj71Jyq3GD/ZwzJ2rIwdYMDtNY4UBAbCKRV614DHmm6htb7i2bFk9DWlDedquo+gZcqWNMjK/sucI12tjRsDHnsWwXtuxeIukmwSIpErjcKRviD63CLR4+4X93fqKfr4Bu"
+    }
+  ],
+  "routes": {
+    "fetch-522-retry.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-410b453e32b62bb60609",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 5641,
+          "sha256": "410b453e32b62bb606096b6f6646a2463235c7dd9345df7034732782ade9013e",
+          "cipherPath": "cipher/33a25d36ca68b6f61946cc4c51e209dabea1cb87d84cdd6597d0517da3ead434.bin",
+          "cipherSha256": "33a25d36ca68b6f61946cc4c51e209dabea1cb87d84cdd6597d0517da3ead434",
+          "iv": "UOSQG6EyP7u+LQTD",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "manage-direct-upload/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f7c81d6b2477dcb8f578",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 4733,
+          "sha256": "f7c81d6b2477dcb8f578d70be6baf513fd22e6e8c0577f73d3b0673bf71f8629",
+          "cipherPath": "cipher/d73cb9ad36f1ca9f1754f8cb6cdc110ff301c327005a87ef9e98c5e2feca8284.bin",
+          "cipherSha256": "d73cb9ad36f1ca9f1754f8cb6cdc110ff301c327005a87ef9e98c5e2feca8284",
+          "iv": "MD39yYMgy8sxGYiN",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "manage-direct-upload/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-60ec5e481f8adc4a0e5a",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 165257,
+          "sha256": "60ec5e481f8adc4a0e5a9f331d71838cfce08e1ccf5b6961aec4de6ad935c128",
+          "cipherPath": "cipher/6f1a15c964e9312a5c24af8107371f99f9696d412636ac08f63027ec1a96bd7d.bin",
+          "cipherSha256": "6f1a15c964e9312a5c24af8107371f99f9696d412636ac08f63027ec1a96bd7d",
+          "iv": "ASl9tMvVfSB/07lF",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "PWj0u8LvxnEdycwtpVTz4x1vFWEhAQqu8cm2+q8cwim/VmBqiwhBINO+XOblWvRaNe8ATVGkojRKbconh09dtw=="
+  }
+}

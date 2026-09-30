@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>皮肤 PSD 自动适配工具</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>皮肤 PSD 自动适配工具</h1>
+        <p class="subtle">上传设计稿 PSD / 图片与目标底包，执行图层对齐、切片映射并导出分层 PSD 或皮肤底包。</p>
+      </div>
+      <div id="envStatus" class="status ok">纯端侧运行 · 无数据上传</div>
+    </header>
+
+    <div class="workspace">
+      <aside class="sidebar">
+        <div class="field">
+          <label for="designFile">设计稿 PSD / PSD zip / 图片 (≤60MB)</label>
+          <input id="designFile" type="file" accept=".psd,.zip,.png,.jpg,.jpeg,.webp" />
+        </div>
+
+        <div class="field">
+          <label for="basePackage">目标底包 .bds / .bdi (≤50MB)</label>
+          <input id="basePackage" type="file" accept=".bds,.bdi,.zip" />
+        </div>
+
+        <div class="field">
+          <label>适配面板</label>
+          <div class="checks">
+            <label class="check"><input type="checkbox" name="panel" value="py_26" checked />26 键</label>
+            <label class="check"><input type="checkbox" name="panel" value="py_9" checked />9 键</label>
+            <label class="check"><input type="checkbox" name="panel" value="num_9" checked />123</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="resizeMode">按键缩放模式</label>
+          <select id="resizeMode">
+            <option value="stretch">拉伸到目标框 (默认)</option>
+            <option value="cover">等比铺满并裁切</option>
+            <option value="contain">等比完整放入留白</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="layerMode">PSD 导出模式</label>
+          <select id="layerMode">
+            <option value="panel_layers">每个面板一个图层</option>
+            <option value="key_layers">每个按键独立图层</option>
+          </select>
+        </div>
+
+        <label class="check">
+          <input id="includePressed" type="checkbox" checked />
+          同时替换按压态 HL_IMG
+        </label>
+
+        <label class="check" style="margin-top:8px;">
+          <input id="darkenPressed" type="checkbox" checked />
+          按压态自动微弱压暗 (0.88x)
+        </label>
+
+        <div class="actions">
+          <button id="analyzeBtn" class="secondary">分析结构</button>
+          <button id="previewBtn">合成预览</button>
+          <button id="psdBtn">导出 PSD</button>
+          <button id="packageBtn">导出底包</button>
+          <button id="cancelBtn" class="secondary" hidden>取消当前任务</button>
+        </div>
+      </aside>
+
+      <div class="content">
+        <section class="panel-block">
+          <div class="panel-title">
+            <h2>处理状态</h2>
+          </div>
+          <div id="status" class="status">请选择设计稿文件与目标皮肤底包。</div>
+          <div id="progressContainer" class="progress-bar-container">
+            <div id="progressFill" class="progress-bar-fill"></div>
+          </div>
+        </section>
+
+        <section class="panel-block">
+          <div class="panel-title">
+            <h2>分析报告</h2>
+          </div>
+          <pre id="report">尚未进行分析。</pre>
+        </section>
+
+        <section class="panel-block">
+          <div class="panel-title">
+            <h2>合成预览</h2>
+          </div>
+          <div id="previews" class="preview-grid"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

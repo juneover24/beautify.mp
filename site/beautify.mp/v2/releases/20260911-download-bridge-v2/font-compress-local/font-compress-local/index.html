@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self' 'unsafe-eval' 'wasm-unsafe-eval' https://cdn.jsdelivr.net https://fastly.jsdelivr.net https://gcore.jsdelivr.net; worker-src 'self' blob:; connect-src 'self' https://cdn.jsdelivr.net https://fastly.jsdelivr.net https://gcore.jsdelivr.net https://api.beautify.mp.juneover24.cn https://status.beautify.mp.juneover24.cn; img-src 'self' data: blob:; font-src 'self' blob:; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>字体压缩</title>
+  <link rel="stylesheet" href="styles.css?v=1.0.0">
+  <script defer src="../fetch-522-retry.js?v=2"></script>
+  <script defer src="../font-adjustment-local/vendor/jweixin-1.6.0.js"></script>
+  <script defer src="app.js?v=1.0.0"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="eyebrow">字体工具</div>
+      <h1>字体压缩</h1>
+      <p>按字集子集化字体，可选降低彩色位图分辨率；支持裸 CFF1 转换为 OTF，字体始终在本地处理。</p>
+      <div class="privacy-row">
+        <span>简繁字集</span><span>自定义文本</span><span>SVG 降分辨率</span><span>裸 CFF1 → OTF</span><span>本地处理</span>
+      </div>
+    </header>
+
+    <section class="card picker-card">
+      <div id="launch-notice" class="launch-notice hidden" role="status" aria-live="polite"></div>
+      <label class="file-picker" for="font-file">
+        <input id="font-file" type="file" accept=".ttf,.otf,.cff,font/ttf,font/otf" disabled>
+        <span class="picker-icon">Aa</span>
+        <span class="picker-copy">
+          <strong id="picker-title">选择 TTF、OTF 或裸 CFF1 字体</strong>
+          <small id="picker-subtitle">支持 TTF、OTF 和裸 CFF1（将转换为 OTF）</small>
+        </span>
+      </label>
+      <div id="runtime-status" class="runtime-status loading" role="status" aria-live="polite">正在验证启动权限…</div>
+      <div id="font-meta" class="font-meta hidden"></div>
+      <div id="warnings" class="warnings hidden"></div>
+    </section>
+
+    <section id="controls-card" class="card hidden">
+      <div class="section-heading">
+        <div><h2>压缩选项</h2></div>
+      </div>
+
+      <div class="control-list">
+        <div class="control-item">
+          <div class="control-heading">
+            <label>字集（必选）</label>
+            <output id="charset-output">未选择</output>
+          </div>
+          <div id="charset-grid" class="charset-grid" role="group" aria-label="字集预设"></div>
+          <div id="charset-required" class="charset-required">请至少勾选一个字集，或填写自定义文字后才能开始压缩。</div>
+          <label for="custom-text" class="control-heading" style="margin-top:14px">
+            <span>自定义文字（可选）</span>
+            <output id="custom-output">0 字</output>
+          </label>
+          <textarea id="custom-text" class="custom-text" maxlength="20000" placeholder="粘贴需要保留的文字，工具会自动提取不重复字符" spellcheck="false"></textarea>
+          <div id="hit-summary" class="hit-summary">选择字体并勾选字集后，将显示命中预估；无可靠 cmap 时会提示保留全部 glyph。</div>
+        </div>
+
+        <div class="control-item">
+          <div class="control-heading">
+            <label>压缩参数</label>
+            <output id="option-output">默认推荐</output>
+          </div>
+          <div class="option-list">
+            <label class="option-row">
+              <input id="opt-no-hinting" type="checkbox" checked>
+              <span>
+                <strong>去除 hinting</strong>
+                <small>减小体积；屏幕渲染由系统抗锯齿接管</small>
+              </span>
+            </label>
+            <label class="option-row">
+              <input id="opt-desubroutinize" type="checkbox" checked>
+              <span>
+                <strong>CFF 去子程序</strong>
+                <small>对 OTF/CFF 和裸 CFF1 转换后的 OTF 生效，提升兼容性</small>
+              </span>
+            </label>
+            <label class="option-row">
+              <input id="opt-layout-closure" type="checkbox">
+              <span>
+                <strong>布局闭包</strong>
+                <small>补齐替换/组合字形；体积可能变大，默认关闭</small>
+              </span>
+            </label>
+            <label class="option-row">
+              <input id="opt-retain-gids" type="checkbox">
+              <span>
+                <strong>保留 GID</strong>
+                <small>仅当下游依赖固定字形编号时开启；会削弱压缩效果</small>
+              </span>
+            </label>
+            <label class="option-row">
+              <input id="opt-svg-downsample" type="checkbox" checked>
+              <span>
+                <strong>SVG 内嵌图降分辨率</strong>
+                <small>仅当字体含 SVG 位图时生效</small>
+              </span>
+            </label>
+          </div>
+          <div class="edge-row">
+            <label for="svg-edge">目标边长</label>
+            <select id="svg-edge" aria-label="SVG 降分辨率目标边长">
+              <option value="512">512</option>
+              <option value="640" selected>640</option>
+              <option value="800">800</option>
+            </select>
+          </div>
+          <p id="option-hint">请先选择字体。未勾选字集时无法开始压缩。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="action-card" class="card hidden">
+      <div class="progress-copy" id="progress-copy">准备就绪</div>
+      <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+      <div class="action-row">
+        <button id="process-button" class="primary-button" type="button" disabled>开始压缩</button>
+        <button id="cancel-button" class="secondary-button hidden" type="button">取消</button>
+      </div>
+    </section>
+
+    <section id="result-card" class="card result-card hidden">
+      <div class="result-mark">✓</div>
+      <div class="result-copy">
+        <h2 id="result-title">压缩完成</h2>
+        <p id="result-summary"></p>
+      </div>
+      <div id="result-warnings" class="warnings hidden"></div>
+      <div class="result-actions action-row">
+        <button id="download-button" class="primary-button" type="button">下载字体</button>
+        <button id="return-button" class="primary-button hidden" type="button">返回小程序</button>
+      </div>
+      <p id="delivery-hint" class="delivery-hint"></p>
+    </section>
+
+    <section class="card support-card">
+      <h2>使用说明</h2>
+      <ul>
+        <li>支持 TTF、OTF 和真实裸 CFF1；裸 CFF1 会先转换为 OTF 再压缩。</li>
+        <li>必须先勾选至少一个字集，或填写自定义文字，再开始压缩。</li>
+        <li>「简繁全量」= GB2312 全部 + Big5 全部 + 基础符号，适合中文场景。</li>
+        <li>已打标字体会在压缩后尝试恢复标记；未打标字体不会自动加标。</li>
+        <li>请确认字库授权后再对外分发子集字体。</li>
+      </ul>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

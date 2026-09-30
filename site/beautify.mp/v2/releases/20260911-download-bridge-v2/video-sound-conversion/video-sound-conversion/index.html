@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' blob: 'unsafe-eval' 'wasm-unsafe-eval'; worker-src 'self' blob:; connect-src 'self' https://api.beautify.mp.juneover24.cn; img-src 'self' data: blob:; media-src 'self' blob:; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>视频转音效</title>
+  <link rel="stylesheet" href="./styles.css?v=1.0.0">
+  <script defer src="../font-adjustment-local/vendor/jweixin-1.6.0.js"></script>
+  <script defer src="./app.js?v=1.0.0"></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <span class="eyebrow">本地优先 · 四种音频格式</span>
+      <h1>视频转音效</h1>
+      <p>选择不超过 10 秒的视频，按顺序生成 MP3、M4A、AIFF 和 OGG，并打包为一个 ZIP。</p>
+    </header>
+
+    <section id="launch-notice" class="notice hidden" role="status" aria-live="polite"></section>
+
+    <section class="panel picker-panel">
+      <input id="video-file" type="file" accept="video/*,.mp4,.mov,.mkv,.webm" hidden>
+      <button id="choose-button" class="button button-primary" type="button" disabled>选择视频</button>
+      <div class="file-copy">
+        <strong id="file-name">尚未选择视频</strong>
+        <span id="file-meta">视频必须能明确读取时长，且不超过 10 秒</span>
+      </div>
+    </section>
+
+    <section class="action-strip">
+      <button id="convert-button" class="button button-primary" type="button" disabled>本地转换</button>
+      <button id="reset-button" class="button button-secondary" type="button" disabled>重新选择</button>
+    </section>
+
+    <section id="error-card" class="panel error-panel hidden" role="alert">
+      <strong>处理未完成</strong>
+      <span id="error-text"></span>
+      <button id="fallback-button" class="button button-warning hidden" type="button">Server 处理</button>
+    </section>
+
+    <section id="status-card" class="panel status-panel hidden" aria-live="polite">
+      <strong id="status-text">正在准备…</strong>
+      <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+    </section>
+
+    <section id="result-card" class="panel result-panel hidden">
+      <div class="result-icon" aria-hidden="true">OK</div>
+      <div class="result-copy">
+        <h2>转换完成</h2>
+        <p id="result-meta"></p>
+      </div>
+      <button id="deliver-button" class="button button-primary" type="button" disabled>下载 ZIP</button>
+    </section>
+
+    <p class="boundary-note">本地处理失败不会自动上传。只有点击 Server 处理并确认后，才会发送视频。</p>
+  </main>
+</body>
+</html>

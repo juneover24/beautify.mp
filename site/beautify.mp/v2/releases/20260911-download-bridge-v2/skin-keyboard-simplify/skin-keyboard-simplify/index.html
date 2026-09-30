@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self' https://api.beautify.mp.juneover24.cn https://status.beautify.mp.juneover24.cn; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>皮肤图片 / ZIP 瘦身</title>
+  <link rel="stylesheet" href="./styles.css?v=1.0.0">
+  <script defer src="../font-adjustment-local/vendor/jweixin-1.6.0.js"></script>
+  <script defer src="./app.js?v=1.0.0"></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <span class="hero-badge">本机处理 · 文件不上传</span>
+      <h1>皮肤图片 / ZIP 瘦身</h1>
+      <p>压缩 PNG、GIF 和键盘皮肤归档。计算在专用 Worker 内完成，无收益时原样返回。</p>
+    </header>
+
+    <section id="launch-notice" class="card notice hidden" role="status" aria-live="polite"></section>
+
+    <section class="card picker-card">
+      <!-- 不放 accept：iOS 微信 webview 对 .bds/.bdi/.it 等自定义扩展名无法用 accept 过滤，
+           会直接选不了文件。类型校验全部由 app.js 前端扩展名白名单完成。 -->
+      <input id="source-file" type="file" hidden>
+      <button id="choose-button" class="primary-button" type="button" disabled>选择一个文件</button>
+      <div class="file-copy">
+        <strong id="file-name">尚未选择文件</strong>
+        <span id="file-meta">支持 PNG、GIF、BDS、BDI、IT、ZIP，最大 64 MB</span>
+      </div>
+    </section>
+
+    <section id="error-card" class="card error-card hidden" role="alert">
+      <strong>无法继续处理</strong>
+      <span id="error-text"></span>
+    </section>
+
+    <section id="status-card" class="card status-card hidden" aria-live="polite">
+      <div class="status-line">
+        <strong id="status-text">正在准备…</strong>
+        <button id="cancel-button" class="danger-button" type="button" disabled>取消</button>
+      </div>
+      <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+      <p>取消会立即终止本次专用 Worker，不会留下结果文件。</p>
+    </section>
+
+    <section id="result-card" class="card result-card hidden">
+      <div class="result-mark">✓</div>
+      <div>
+        <h2 id="result-title">压缩完成</h2>
+        <p id="result-meta"></p>
+      </div>
+      <div class="action-row">
+        <button id="restart-button" class="secondary-button" type="button">重新选择</button>
+        <button id="deliver-button" class="primary-button" type="button">保存结果</button>
+      </div>
+    </section>
+
+    <section class="card support-card">
+      <h2>处理规则</h2>
+      <ul>
+        <li>首期一次只处理一个文件或一个归档。</li>
+        <li>PNG 保持尺寸和逐像素 alpha；APNG 不会被静态化。</li>
+        <li>GIF 保留帧数、延迟、循环、透明、局部帧和 disposal 语义；超限会先二次确认。</li>
+        <li>BDS、BDI、IT 需在任意层级含 Info.txt；普通 ZIP 不要求。</li>
+        <li>单图或最终归档没有体积收益时，返回原始字节。</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

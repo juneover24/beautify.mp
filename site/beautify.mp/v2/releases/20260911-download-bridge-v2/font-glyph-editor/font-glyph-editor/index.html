@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self' 'unsafe-eval' 'wasm-unsafe-eval'; worker-src 'self' blob:; connect-src 'self' https://api.beautify.mp.juneover24.cn https://status.beautify.mp.juneover24.cn; img-src 'self' data: blob:; font-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>字体修符</title>
+<style>
+  :root { --ink: #1f2933; --line: #d8dee6; --accent: #3d6fb4; --danger: #e0524d; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body { margin: 0; font: 14px/1.5 -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; color: var(--ink); background: #f4f6f9; }
+  button { font: inherit; padding: 7px 12px; border: 1px solid var(--line); border-radius: 8px; background: #fff; color: var(--ink); }
+  button.active { border-color: var(--accent); color: var(--accent); background: #eef4fc; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  input[type="text"], input[type="search"], textarea { font: inherit; padding: 7px 10px; border: 1px solid var(--line); border-radius: 8px; }
+  .view { padding: 12px; max-width: 1480px; margin: 0 auto; }
+  .toolbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
+  .toolbar .spacer { flex: 1; }
+  #status-bar { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 6px 12px; color: #5a6b7d; font-size: 12px; min-height: 24px; max-width: 860px; margin: 0 auto; }
+  #status-bar.error { color: var(--danger); }
+  #status-bar.loading::before { width: 12px; height: 12px; flex: 0 0 auto; border: 2px solid rgba(61,111,180,.22); border-top-color: var(--accent); border-radius: 50%; content: ''; animation: startup-spin .8s linear infinite; }
+  @keyframes startup-spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) {
+    #status-bar.loading::before { animation: none; border-color: var(--accent); }
+  }
+
+  /* 开始视图 */
+  #view-start { text-align: center; padding-top: 12vh; }
+  #view-start h1 { font-size: 22px; }
+  #view-start p { color: #5a6b7d; }
+  .start-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 22px; }
+  .file-button { display: inline-block; padding: 12px 28px; background: var(--accent); color: #fff; border-radius: 10px; cursor: pointer; }
+  .file-button input { display: none; }
+  .recent-count-badge { display: inline-flex; min-width: 20px; height: 20px; align-items: center; justify-content: center; margin-left: 6px; padding: 0 6px; border-radius: 10px; background: #e8eef7; color: var(--accent); font-size: 11px; }
+
+  /* 最近记录：桌面端同时显示工程和版本，移动端自然折叠为单列。 */
+  #view-recent { max-width: 1120px; }
+  .recent-layout { display: grid; grid-template-columns: minmax(320px, 0.9fr) minmax(380px, 1.1fr); gap: 12px; align-items: start; }
+  .recent-pane { min-width: 0; border: 1px solid var(--line); border-radius: 8px; background: #fff; overflow: hidden; }
+  .recent-pane-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px; border-bottom: 1px solid #edf0f4; }
+  .recent-list, .recent-history-list { display: grid; max-height: calc(100dvh - 150px); overflow-y: auto; }
+  .recent-empty { padding: 34px 18px; color: #6a7788; text-align: center; overflow-wrap: anywhere; }
+  .recent-row { display: grid; gap: 8px; padding: 12px; border-bottom: 1px solid #edf0f4; }
+  .recent-row:last-child { border-bottom: 0; }
+  .recent-row.active { background: #f4f7fb; }
+  .recent-row-title { min-width: 0; overflow: hidden; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
+  .recent-row-meta { display: flex; flex-wrap: wrap; gap: 6px 12px; color: #6a7788; font-size: 12px; overflow-wrap: anywhere; }
+  .recent-row-actions { display: flex; flex-wrap: wrap; gap: 7px; }
+  .recent-row-actions button { padding: 6px 9px; }
+  .recent-row-actions .danger { color: var(--danger); }
+  .recent-save-state { color: #5a6b7d; font-size: 12px; }
+
+  /* 字形网格 */
+  .glyph-grid-viewport { position: relative; height: calc(100vh - 170px); overflow-y: auto; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
+  .glyph-grid-spacer { position: relative; }
+  .glyph-cell { position: absolute; width: 88px; height: 88px; border: 1px solid var(--line); border-radius: 8px; background: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; }
+  .glyph-cell:active { border-color: var(--accent); }
+  .glyph-thumb { width: 64px; height: 64px; }
+  .glyph-label { font-size: 10px; color: #5a6b7d; max-width: 84px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  /* 编辑工作台 */
+  #view-edit > .toolbar { position: relative; z-index: 2; }
+  .editor-layout { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 12px; align-items: start; }
+  .canvas-column { min-width: 0; }
+  .canvas-command-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; min-height: 42px; padding: 8px 10px; border: 1px solid var(--line); border-bottom: 0; border-radius: 8px 8px 0 0; background: #fff; }
+  .canvas-command-bar label { display: flex; align-items: center; gap: 6px; color: #5a6b7d; font-size: 12px; }
+  .canvas-command-bar input[type="range"] { width: 150px; }
+  .canvas-viewport { width: 100%; max-height: calc(100dvh - 166px); overflow: auto; border: 1px solid var(--line); border-radius: 0 0 8px 8px; background: #dfe4ea; overscroll-behavior: contain; }
+  #bitmap-canvas, #vector-svg { width: 100%; max-width: none; aspect-ratio: 3 / 2; background: #dfe4ea; touch-action: none; display: block; transform-origin: top left; }
+  #bitmap-canvas.interaction-disabled, #vector-svg.interaction-disabled { cursor: default; }
+  .inspector { min-width: 0; border: 1px solid var(--line); border-radius: 8px; background: #fff; overflow: hidden; }
+  .tool-section { padding: 12px; border-bottom: 1px solid #edf0f4; }
+  .tool-section:last-child { border-bottom: 0; }
+  .tool-section-title { display: block; margin-bottom: 8px; color: #445468; font-size: 12px; font-weight: 600; }
+  .tool-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
+  .tool-row:first-child { margin-top: 0; }
+  .tool-row label { display: flex; align-items: center; gap: 5px; color: #5a6b7d; font-size: 12px; }
+  .tool-row input[type="range"] { min-width: 110px; flex: 1; }
+  .range-control { display: grid !important; grid-template-columns: auto minmax(84px, 1fr) 66px auto; align-items: center; gap: 7px; min-width: 0; color: #5a6b7d; }
+  .range-control input[type="range"] { width: 100%; min-width: 0; }
+  .range-control .range-number { width: 66px; min-width: 0; padding: 6px 4px; border: 1px solid var(--line); border-radius: 7px; text-align: center; color: var(--ink); background: #fff; }
+  .range-control .range-unit { min-width: 14px; color: #6a7788; }
+  .tool-row .range-control { flex: 1 1 250px; }
+  .spacing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .spacing-field { display: grid; grid-template-columns: 34px minmax(0, 1fr) 34px; gap: 4px; align-items: center; }
+  .spacing-field label { grid-column: 1 / -1; color: #5a6b7d; font-size: 12px; }
+  .spacing-field input { width: 100%; min-width: 0; padding: 7px 5px; text-align: center; border: 1px solid var(--line); border-radius: 7px; }
+  .spacing-field button { width: 34px; padding: 7px 0; }
+  .metric-summary { display: flex; justify-content: space-between; gap: 8px; margin-top: 10px; color: #6a7788; font-size: 12px; }
+  #layer-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .layer-item { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; padding: 5px 7px; border: 1px solid var(--line); border-radius: 8px; background: #fff; cursor: pointer; }
+  .layer-item.active { border-color: var(--accent); background: #eef4fc; }
+  .layer-label { min-width: 42px; color: #445468; font-size: 12px; }
+  .layer-color-controls { display: flex; align-items: center; gap: 5px; min-width: 0; }
+  .layer-color-controls input[type="color"] { flex: 0 0 28px; width: 28px; height: 28px; border: none; padding: 0; background: none; cursor: pointer; }
+  .layer-color-hex { width: 82px; min-width: 0; padding: 6px 7px; border: 1px solid var(--line); border-radius: 7px; background: #fff; color: var(--ink); font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace; font-size: 12px; text-transform: uppercase; }
+  .layer-color-hex:focus { border-color: var(--accent); outline: 2px solid rgba(42, 111, 151, 0.16); outline-offset: 0; }
+  .inline-preview-panel { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
+  .inline-preview-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 8px; color: #445468; }
+  #inline-preview-character { color: var(--ink); font-size: 18px; font-weight: 600; }
+  .inline-preview-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .inline-preview-item { min-width: 0; margin: 0; }
+  .inline-preview-item canvas { display: block; width: 100%; height: 150px; border: 1px solid var(--line); border-radius: 6px; background: #f7f9fb; }
+  .inline-preview-item figcaption { margin-top: 5px; color: #6a7788; font-size: 12px; text-align: center; }
+  .project-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0; }
+  .project-toolbar .project-count { color: #5a6b7d; font-size: 12px; }
+
+  #view-edit.fullscreen-editor { position: fixed; inset: 0; z-index: 60; max-width: none; padding: 10px; overflow: auto; background: #f4f6f9; }
+  #view-edit.fullscreen-editor .canvas-viewport { max-height: calc(100dvh - 112px); }
+
+  @media (max-width: 1023px) {
+    .view { padding: 10px; }
+    .editor-layout { display: block; }
+    .canvas-viewport { max-height: 62dvh; }
+    .inspector { margin-top: 10px; }
+    .tool-section { padding: 10px; }
+    .toolbar { gap: 6px; }
+    .toolbar button { padding: 7px 10px; }
+    .canvas-command-bar { position: sticky; top: 0; }
+    .spacing-mode .mode-tools { display: none; }
+    .spacing-mode #spacing-panel { border-top: 2px solid var(--accent); }
+    .recent-layout { grid-template-columns: 1fr; }
+    .recent-list, .recent-history-list { max-height: 52dvh; }
+  }
+
+  @media (max-width: 560px) {
+    #status-bar { padding: 5px 10px; }
+    #view-edit { padding-left: 6px; padding-right: 6px; }
+    #view-edit > .toolbar strong { width: 100%; order: -1; }
+    .canvas-command-bar .range-control input[type="range"] { width: 100%; }
+    .spacing-grid { grid-template-columns: 1fr; }
+    .tool-row button { min-height: 38px; }
+    .range-control { grid-template-columns: auto minmax(72px, 1fr) 62px auto; width: 100%; }
+    .range-control .range-number { width: 62px; }
+    .inline-preview-grid { grid-template-columns: 1fr; }
+    .inline-preview-item canvas { height: 132px; }
+    .layer-item { flex: 1 1 146px; justify-content: space-between; }
+    .layer-color-hex { width: 78px; }
+    .start-actions { display: grid; grid-template-columns: 1fr; }
+    .start-actions > * { width: 100%; }
+    .file-button { text-align: center; }
+    .recent-row-actions button { flex: 1 1 110px; }
+  }
+
+  /* 导出弹层 */
+  #export-modal { position: fixed; inset: 0; background: rgba(15, 23, 32, 0.55); display: flex; align-items: center; justify-content: center; z-index: 40; }
+  #export-modal[hidden] { display: none; }
+  .modal-card { background: #fff; border-radius: 12px; padding: 20px; width: min(92vw, 420px); }
+  #export-detail { word-break: break-all; color: var(--accent); margin: 10px 0; min-height: 20px; }
+  #preview-modal { position: fixed; inset: 0; background: rgba(15, 23, 32, 0.55); display: flex; align-items: center; justify-content: center; z-index: 45; }
+  #preview-modal[hidden] { display: none; }
+  .preview-dialog { width: min(94vw, 920px); max-height: 92dvh; overflow: auto; }
+  #preview-text-input { display: block; width: 100%; min-height: 86px; resize: vertical; }
+  .preview-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 12px 0; }
+  .preview-controls label { display: flex; align-items: center; gap: 7px; color: #5a6b7d; }
+  .preview-controls .range-control { width: min(100%, 430px); }
+  #preview-status { min-height: 22px; color: #5a6b7d; }
+  #preview-stage { min-height: 260px; max-height: 48dvh; overflow: auto; padding: 24px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+  #preview-stage.dark { border-color: #303a46; background: #17202a; color: #f3f6f8; }
+  #preview-output { min-width: 100%; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.45; letter-spacing: 0; }
+  #project-password-modal { position: fixed; inset: 0; background: rgba(15, 23, 32, 0.55); display: flex; align-items: center; justify-content: center; z-index: 47; }
+  #project-password-modal[hidden] { display: none; }
+  #project-password-input { display: block; width: 100%; margin: 12px 0 8px; padding: 9px 10px; border: 1px solid var(--line); border-radius: 8px; font: inherit; }
+  #project-password-status { min-height: 22px; color: #5a6b7d; word-break: break-word; }
+  #font-naming-modal { position: fixed; inset: 0; background: rgba(15, 23, 32, 0.55); display: flex; align-items: center; justify-content: center; z-index: 80; }
+  #font-naming-modal[hidden] { display: none; }
+  .font-naming-field { display: grid; gap: 6px; margin: 12px 0; color: #5a6b7d; font-size: 12px; }
+  .font-naming-field input { width: 100%; color: var(--ink); }
+  .font-naming-sync { display: flex; align-items: center; gap: 7px; margin: 10px 0 5px; color: #43566c; font-size: 12px; }
+  .font-naming-sync input { margin: 0; }
+  .font-naming-help { margin: 0 0 10px; color: #718096; font-size: 12px; line-height: 1.55; }
+  #font-naming-status { min-height: 22px; color: var(--danger); word-break: break-word; }
+  #recent-save-modal, #restart-modal, #recent-rename-modal { position: fixed; inset: 0; background: rgba(15, 23, 32, 0.55); display: flex; align-items: center; justify-content: center; z-index: 82; }
+  #recent-save-modal[hidden], #restart-modal[hidden], #recent-rename-modal[hidden] { display: none; }
+  .recent-modal-field { display: grid; gap: 6px; margin: 12px 0; color: #5a6b7d; font-size: 12px; }
+  .recent-modal-field input { width: 100%; color: var(--ink); }
+  #recent-save-password { padding: 9px 10px; border: 1px solid var(--line); border-radius: 8px; font: inherit; }
+  #recent-save-status, #recent-rename-status { min-height: 22px; color: var(--danger); word-break: break-word; }
+  .restart-actions { display: grid; gap: 9px; margin-top: 16px; }
+</style>
+</head>
+<body>
+  <div id="status-bar" class="loading" role="status" aria-live="polite" aria-busy="true">正在加载字体修符资源…</div>
+
+  <div id="view-start" class="view">
+    <h1>字体修符</h1>
+    <p>加载字体后可对任意字形手绘修改、裁切部件、导入素材、制作彩色字形。<br>支持 TTF / OTF / CFF(OTF 与 CFF 将以 TTF 导出)。</p>
+    <div class="start-actions">
+      <label class="file-button">选择字体文件
+        <input id="font-file-input" type="file" accept=".ttf,.otf,.cff" disabled data-startup-locked="1">
+      </label>
+      <button id="btn-start-import-project" disabled data-startup-locked="1">导入打底配置</button>
+      <button id="btn-open-recent" disabled>最近字体记录<span id="recent-project-count" class="recent-count-badge">0</span></button>
+    </div>
+  </div>
+
+  <div id="view-recent" class="view" hidden>
+    <div class="toolbar">
+      <button id="btn-recent-back">← 返回</button>
+      <strong>最近字体记录</strong>
+      <span class="spacer"></span>
+      <button id="btn-clear-recent">清空全部</button>
+    </div>
+    <div class="recent-layout">
+      <section class="recent-pane">
+        <div class="recent-pane-heading"><strong>记录</strong><span id="recent-list-summary" class="recent-save-state"></span></div>
+        <div id="recent-project-list" class="recent-list"></div>
+      </section>
+      <section class="recent-pane">
+        <div class="recent-pane-heading"><strong id="recent-history-title">历史保存</strong></div>
+        <div id="recent-history-list" class="recent-history-list"><div class="recent-empty">选择一条记录查看历史保存</div></div>
+      </section>
+    </div>
+  </div>
+
+  <input id="project-file-input" type="file" accept=".j24glyph,application/vnd.juneover24.glyph-project" hidden>
+  <input id="replacement-font-file-input" type="file" accept=".ttf,.otf,.cff" hidden>
+
+  <div id="view-grid" class="view" hidden>
+    <div class="toolbar">
+      <button id="btn-back-start">← 重新开始</button>
+      <strong id="grid-font-name"></strong>
+      <span class="spacer"></span>
+      <input id="glyph-search" type="search" placeholder="输入文字定位字形">
+      <button id="btn-grid-save-recent" disabled>保存过程</button>
+      <button id="btn-open-preview">文字预览</button>
+      <button id="btn-open-export" class="primary">导出字体及配置</button>
+    </div>
+    <div class="project-toolbar">
+      <span class="project-count">配置已保存 <strong data-glyph-project-count>0</strong> 个字符</span>
+      <button id="btn-grid-replace-font">更换打底字体</button>
+      <button id="btn-grid-font-naming" data-font-naming>修改字体名称</button>
+      <button id="btn-grid-import-project">导入打底配置</button>
+      <button id="btn-grid-export-project" data-project-export>导出打底配置</button>
+      <span class="recent-save-state" data-recent-save-state></span>
+    </div>
+    <div id="glyph-grid-host"></div>
+  </div>
+
+  <div id="view-edit" class="view" hidden>
+    <div class="toolbar">
+      <button id="btn-edit-back">← 返回</button>
+      <strong id="edit-glyph-title"></strong>
+      <span class="spacer"></span>
+      <button id="btn-mode-bitmap" class="active">画笔模式</button>
+      <button id="btn-mode-vector">节点模式</button>
+      <button id="btn-mode-spacing">字距调整</button>
+      <button id="btn-editor-fullscreen">全屏编辑</button>
+      <button id="btn-edit-save-recent" disabled>保存过程</button>
+      <button id="btn-edit-done" class="primary">完成</button>
+    </div>
+
+    <div class="editor-layout">
+      <div class="canvas-column">
+        <div class="canvas-command-bar">
+          <label class="range-control"><span>缩放</span><input id="canvas-zoom" type="range" min="75" max="300" step="5" value="100"><input id="canvas-zoom-number" class="range-number" type="number" inputmode="numeric" aria-label="缩放数值"><span class="range-unit">%</span></label>
+          <button id="btn-zoom-fit">适合字形</button>
+          <button id="btn-pan-canvas">移动画布</button>
+          <label><input id="toggle-guides" type="checkbox" checked> 定位线</label>
+        </div>
+        <div id="edit-bitmap">
+          <div id="bitmap-viewport" class="canvas-viewport"><canvas id="bitmap-canvas"></canvas></div>
+        </div>
+        <div id="edit-vector" hidden>
+          <div id="vector-viewport" class="canvas-viewport"><svg id="vector-svg" xmlns="http://www.w3.org/2000/svg"></svg></div>
+        </div>
+      </div>
+
+      <aside class="inspector">
+        <div id="bitmap-tools" class="mode-tools">
+          <section class="tool-section">
+            <span class="tool-section-title">绘制</span>
+            <div class="tool-row">
+              <button id="btn-tool-brush" class="active">画笔</button>
+              <button id="btn-tool-eraser">橡皮</button>
+              <button id="btn-tool-select">选区</button>
+              <button id="btn-undo">撤销</button>
+              <button id="btn-clear-layer">清空本层</button>
+            </div>
+            <div class="tool-row">
+              <label class="range-control"><span>笔宽</span><input id="brush-size" type="range" min="4" max="120" step="1" value="28"><input id="brush-size-number" class="range-number" type="number" inputmode="numeric" aria-label="笔宽数值"><span class="range-unit">px</span></label>
+              <label><input id="toggle-reference" type="checkbox" checked> 原字形参考</label>
+            </div>
+          </section>
+          <section class="tool-section">
+            <span class="tool-section-title">选区与素材</span>
+            <div class="tool-row">
+              <button id="btn-cut-selection">裁切选区</button>
+              <button id="btn-copy-selection">复制选区</button>
+              <button id="btn-paste-component">粘贴部件</button>
+              <button id="btn-import-image">导入素材图</button>
+              <button id="btn-import-color-image">导入彩图</button>
+            </div>
+            <div class="tool-row">
+              <label class="range-control"><span>素材阈值</span><input id="image-threshold" type="range" min="40" max="230" step="1" value="160"><input id="image-threshold-number" class="range-number" type="number" inputmode="numeric" aria-label="素材阈值数值"></label>
+              <label class="range-control"><span>彩图颜色</span><input id="color-layer-count" type="range" min="2" max="8" step="1" value="5"><input id="color-layer-count-number" class="range-number" type="number" inputmode="numeric" aria-label="彩图颜色数值"><span class="range-unit">色</span></label>
+              <input id="image-file-input" type="file" accept="image/*" hidden>
+            </div>
+            <div class="tool-row">
+              <label class="range-control"><span>等比缩放</span><input id="floating-scale" type="range" min="0.2" max="4" step="0.05" value="1"><input id="floating-scale-number" class="range-number" type="number" inputmode="decimal" aria-label="等比缩放数值"><span class="range-unit">×</span></label>
+              <button id="btn-rotate-floating-left" title="向左旋转 90°">↶ 左转</button>
+              <button id="btn-rotate-floating-right" title="向右旋转 90°">↷ 右转</button>
+              <button id="btn-flip-floating-horizontal" title="水平翻转">↔ 水平翻转</button>
+              <button id="btn-flip-floating-vertical" title="垂直翻转">↕ 垂直翻转</button>
+              <button id="btn-commit-floating">放置</button>
+              <button id="btn-discard-floating">丢弃</button>
+            </div>
+          </section>
+          <section class="tool-section">
+            <span class="tool-section-title">彩色图层</span>
+            <div id="layer-list"></div>
+            <div class="tool-row">
+              <button id="btn-add-layer">+ 加层</button>
+              <button id="btn-remove-layer">删层</button>
+            </div>
+          </section>
+        </div>
+
+        <div id="vector-tools" class="mode-tools" hidden>
+          <section class="tool-section">
+            <span class="tool-section-title">节点工具</span>
+            <div class="tool-row">
+              <button id="btn-vec-insert-point">节点后插点</button>
+              <button id="btn-vec-delete-point">删除节点</button>
+              <button id="btn-vec-toggle-curve">直线/曲线切换</button>
+              <button id="btn-vec-delete-contour">删除整条轮廓</button>
+            </div>
+          </section>
+        </div>
+
+        <section id="thickness-tools" class="tool-section mode-tools">
+          <span class="tool-section-title">字形粗细</span>
+          <div class="tool-row">
+            <label class="range-control"><span>粗细</span><input id="glyph-thickness" type="range" min="-120" max="120" step="5" value="0"><input id="glyph-thickness-number" class="range-number" type="number" inputmode="numeric" aria-label="字形粗细数值"><span class="range-unit">单位</span></label>
+            <button id="btn-apply-thickness">应用粗细</button>
+          </div>
+        </section>
+
+        <section id="spacing-panel" class="tool-section">
+          <span class="tool-section-title">左右间距</span>
+          <div class="spacing-grid">
+            <div class="spacing-field">
+              <label for="spacing-left">左间距</label>
+              <button class="spacing-step" data-target="left" data-delta="-10">−</button>
+              <input id="spacing-left" type="number" step="1" value="0">
+              <button class="spacing-step" data-target="left" data-delta="10">+</button>
+            </div>
+            <div class="spacing-field">
+              <label for="spacing-right">右间距</label>
+              <button class="spacing-step" data-target="right" data-delta="-10">−</button>
+              <input id="spacing-right" type="number" step="1" value="0">
+              <button class="spacing-step" data-target="right" data-delta="10">+</button>
+            </div>
+          </div>
+          <div class="metric-summary">
+            <span>总字宽 <strong id="spacing-advance-value">0</strong></span>
+            <span>轮廓范围 <strong id="spacing-bounds-value">0…0</strong></span>
+          </div>
+          <div class="tool-row">
+            <button id="btn-spacing-center">水平居中</button>
+            <button id="btn-spacing-restore">恢复原字距</button>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <section id="inline-preview-panel" class="inline-preview-panel">
+      <div class="inline-preview-heading">
+        <strong>当前字形预览</strong>
+        <span id="inline-preview-character"></span>
+      </div>
+      <div class="inline-preview-grid">
+        <figure class="inline-preview-item">
+          <canvas id="inline-preview-small" aria-label="24 像素字形预览"></canvas>
+          <figcaption>24 px</figcaption>
+        </figure>
+        <figure class="inline-preview-item">
+          <canvas id="inline-preview-medium" aria-label="48 像素字形预览"></canvas>
+          <figcaption>48 px</figcaption>
+        </figure>
+        <figure class="inline-preview-item">
+          <canvas id="inline-preview-large" aria-label="96 像素字形预览"></canvas>
+          <figcaption>96 px</figcaption>
+        </figure>
+      </div>
+      <div class="project-toolbar">
+        <span class="project-count">配置已保存 <strong data-glyph-project-count>0</strong> 个字符</span>
+        <button id="btn-edit-replace-font">更换打底字体</button>
+        <button id="btn-edit-font-naming" data-font-naming>修改字体名称</button>
+        <button id="btn-edit-import-project">导入打底配置</button>
+        <button id="btn-edit-export-project" data-project-export>导出打底配置</button>
+        <span class="recent-save-state" data-recent-save-state></span>
+      </div>
+    </section>
+  </div>
+
+  <div id="preview-modal" hidden>
+    <div class="modal-card preview-dialog">
+      <div class="toolbar">
+        <h3 style="margin:0;">文字预览</h3>
+        <span class="spacer"></span>
+        <button id="btn-preview-close">关闭</button>
+      </div>
+      <textarea id="preview-text-input" placeholder="请输入要预览的文字">字体修符效果预览
+修改后的字形、连续排版与左右间距</textarea>
+      <div class="preview-controls">
+        <label class="range-control"><span>字号</span><input id="preview-font-size" type="range" min="16" max="200" step="2" value="64"><input id="preview-font-size-number" class="range-number" type="number" inputmode="numeric" aria-label="预览字号数值"><span class="range-unit">px</span></label>
+        <label><input id="preview-dark-background" type="checkbox"> 深色背景</label>
+      </div>
+      <div id="preview-status"></div>
+      <div id="preview-stage"><div id="preview-output"></div></div>
+    </div>
+  </div>
+
+  <div id="export-modal" hidden>
+    <div class="modal-card">
+      <h3 style="margin-top:0;">导出字体及配置</h3>
+      <div id="export-status"></div>
+      <div id="export-detail"></div>
+      <div class="toolbar">
+        <button id="btn-download-export" class="primary" hidden>下载 ZIP</button>
+        <span class="spacer"></span>
+        <button id="btn-export-close">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="font-naming-modal" hidden>
+    <div class="modal-card">
+      <h3 style="margin-top:0;">修改字体名称</h3>
+      <label class="font-naming-field">导出文件名称
+        <input id="font-output-file-name-input" type="text" autocomplete="off">
+      </label>
+      <label class="font-naming-field">字体内部名称
+        <input id="font-family-name-input" type="text" autocomplete="off">
+      </label>
+      <label class="font-naming-sync">
+        <input id="font-naming-sync-input" type="checkbox" checked>
+        导出文件名同步为字体内部名称
+      </label>
+      <p class="font-naming-help">开启后，编辑导出文件名会将去除扩展名后的名称同步到字体内部；取消后可分别设置。</p>
+      <div id="font-naming-status"></div>
+      <div class="toolbar" style="margin:10px 0 0;">
+        <button id="btn-font-naming-confirm" class="primary">保存名称</button>
+        <span class="spacer"></span>
+        <button id="btn-font-naming-cancel">取消</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="project-password-modal" hidden>
+    <div class="modal-card">
+      <h3 id="project-password-title" style="margin-top:0;"></h3>
+      <input id="project-password-input" type="password" autocomplete="new-password" placeholder="输入密码（可留空）">
+      <div id="project-password-status"></div>
+      <div class="toolbar" style="margin:10px 0 0;">
+        <button id="btn-project-password-confirm" class="primary"></button>
+        <span class="spacer"></span>
+        <button id="btn-project-password-cancel">取消</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="recent-save-modal" hidden>
+    <div class="modal-card">
+      <h3 style="margin-top:0;">保存过程</h3>
+      <label class="recent-modal-field">记录名称
+        <input id="recent-save-name" type="text" maxlength="80" autocomplete="off">
+      </label>
+      <label class="recent-modal-field">密码（可不填）
+        <input id="recent-save-password" type="password" maxlength="256" autocomplete="new-password">
+      </label>
+      <div id="recent-save-status"></div>
+      <div class="toolbar" style="margin:10px 0 0;">
+        <button id="btn-recent-save-confirm" class="primary">保存</button>
+        <span class="spacer"></span>
+        <button id="btn-recent-save-cancel">取消</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="restart-modal" hidden>
+    <div class="modal-card">
+      <h3 style="margin-top:0;">重新开始</h3>
+      <div>当前页面将返回字体选择，已保存的最近记录不会删除。</div>
+      <div class="restart-actions">
+        <button id="btn-restart-save" class="primary">保存过程后重新开始</button>
+        <button id="btn-restart-direct">直接重新开始</button>
+        <button id="btn-restart-cancel">取消</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="recent-rename-modal" hidden>
+    <div class="modal-card">
+      <h3 style="margin-top:0;">修改记录名称</h3>
+      <label class="recent-modal-field">记录名称
+        <input id="recent-rename-name" type="text" maxlength="80" autocomplete="off">
+      </label>
+      <div id="recent-rename-status"></div>
+      <div class="toolbar" style="margin:10px 0 0;">
+        <button id="btn-recent-rename-confirm" class="primary">保存名称</button>
+        <span class="spacer"></span>
+        <button id="btn-recent-rename-cancel">取消</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./startup-loader.js?v=1.2.27"></script>
+</body>
+</html>

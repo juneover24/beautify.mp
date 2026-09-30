@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; worker-src 'self'; connect-src 'self' https://api.beautify.mp.juneover24.cn https://status.beautify.mp.juneover24.cn; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>PSD 图层分割</title>
+  <link rel="stylesheet" href="./styles.css?v=1.0.0">
+  <script defer src="../font-adjustment-local/vendor/jweixin-1.6.0.js"></script>
+  <script defer src="../fetch-522-retry.js?v=2"></script>
+  <script defer src="./app.js?v=1.1.1"></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="hero">
+      <span class="hero-badge">素材分割 · 图层工作台</span>
+      <h1>PSD 图层分割</h1>
+      <p>读取 PSD 图层结构，选择需要的图层后生成透明 PNG，并统一打包为 ZIP。</p>
+    </header>
+
+    <section id="launch-notice" class="card support-card hidden" role="status" aria-live="polite"></section>
+
+    <section class="card picker-card">
+      <input id="psd-file" type="file" accept=".psd,application/octet-stream" hidden>
+      <button id="choose-button" class="primary-button" type="button" disabled>选择 PSD 文件</button>
+      <div class="file-copy">
+        <strong id="file-name">尚未选择 PSD</strong>
+        <span id="file-meta">支持最大 100 MB 的 PSD 文件</span>
+      </div>
+    </section>
+
+    <section id="error-card" class="card error-card hidden" role="alert">
+      <strong>无法继续处理</strong>
+      <span id="error-text"></span>
+    </section>
+
+    <section id="status-card" class="card status-card hidden" aria-live="polite">
+      <div class="status-line">
+        <strong id="status-text">正在准备…</strong>
+      </div>
+      <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+    </section>
+
+    <section id="workspace" class="card workspace hidden">
+      <div class="section-header">
+        <div>
+          <h2>选择图层</h2>
+          <p id="document-meta"></p>
+        </div>
+        <span id="selected-summary" class="selection-summary"></span>
+      </div>
+
+      <div class="selection-toolbar">
+        <button id="select-visible" type="button">仅选可见</button>
+        <button id="select-all" type="button">选择全部</button>
+        <button id="select-none" type="button">全部取消</button>
+      </div>
+
+      <div id="layer-list" class="layer-list"></div>
+
+      <div class="action-row">
+        <button id="cancel-button" class="secondary-button" type="button" disabled>取消处理</button>
+        <button id="export-button" class="primary-button" type="button">生成图层 ZIP</button>
+      </div>
+      <p class="boundary-hint">图层 PNG 按自身边界导出，原始坐标、可见性和跳过原因会写入 manifest.json。</p>
+    </section>
+
+    <section id="result-card" class="card result-card hidden">
+      <div class="result-mark">✓</div>
+      <div>
+        <h2 id="result-title">PSD 图层导出完成</h2>
+        <p id="result-meta"></p>
+      </div>
+      <div class="action-row result-actions">
+        <button id="restart-button" class="secondary-button" type="button">重新选择</button>
+        <button id="deliver-button" class="primary-button" type="button">下载 ZIP</button>
+      </div>
+    </section>
+
+    <section class="card support-card">
+      <h2>支持范围</h2>
+      <ul>
+        <li>支持 PSD v1、8-bit RGB/灰度文档。</li>
+        <li>暂不支持 PSB、16-bit、CMYK、LAB 和 Indexed 色彩模式。</li>
+        <li>文字、智能对象和效果以 PSD 内保存的栅格像素为准，不重新实现 Photoshop 渲染器。</li>
+        <li>小程序回传 ZIP 最大 50 MB；超出时可减少隐藏图层后重新生成。</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20261001-manage-vendor-resilience-v1",
+  "toolKey": "skin_oneclicksignaturepro",
+  "createdAt": "2026-10-01T03:30:43.455Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "skin-oneclicksignaturepro/index.html",
+    "styles": [
+      "skin-oneclicksignaturepro/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "skin-oneclicksignaturepro/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20261001-manage-vendor-resilience-v1:skin_oneclicksignaturepro",
+      "wrappedKey": "q7b9EBdanQI4zAKaNwB1YtXEjfKkK9gxzGmhvYDOh4OdgqrGplTVpqU31trjMWrPUwJ28gp6mmrM6tXtGhtFf4lLWIBUY4TN74IkM8QbfJHZrw+lmXPhuOw/KU8gx5cY0WjFuvY5gtG93uWKaXUsdF+IAw79TjgpZ+MvRKy3jjk8JfNA4w+rE0CkKuSMI1TOC3p4a3DUcCcA3lleROPyJaKoCqvoxi+qVo8Mhi2LfprtbtU43T4DqbIi+ZTbeJ63tPJptTRQdO8sa6riCshPs0cmf2KRCBFZnVpPlMNxubA/2eUCVuZyqmOeGV+iQfkeIGUwnxw5PYboiZL3D1jhtYaefi4OV2gecurZQf0DiNEJylCwsBkiqM86/nAIFIo7y4WYTY9iAKxoene+xXVOV69TuORPUQ8AbaavInyZOaktD5DsN7ZgLA6pjtnmAcZC+QblCo0UG5NImuuMjKme8LBV/bb0eKq/oHgfGgXVUcW5xP7motDP8xhk9Uj+VFKi"
+    }
+  ],
+  "routes": {
+    "skin-oneclicksignaturepro/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-3603085efd899f348c0a",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 5273,
+          "sha256": "3603085efd899f348c0a8c0875e8fb0b3027749804b5d16c9d533a7ddb08c1a5",
+          "cipherPath": "cipher/bae2da3fd95bb713f79dd5204476612a27a6a1a7ea88916d7e62d1550ee857c0.bin",
+          "cipherSha256": "bae2da3fd95bb713f79dd5204476612a27a6a1a7ea88916d7e62d1550ee857c0",
+          "iv": "xj/pVthwrQNx+AtQ",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f5b4a11684b514980c45",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 4536,
+          "sha256": "f5b4a11684b514980c458d54380d887194c4f1d01983df985f4f6ce855b38d4a",
+          "cipherPath": "cipher/c634e03a26b02c9f5eb9811daf0f85554b112ec4eac56d1ed517919c315adbd8.bin",
+          "cipherSha256": "c634e03a26b02c9f5eb9811daf0f85554b112ec4eac56d1ed517919c315adbd8",
+          "iv": "QT3HBwbok9AmzNBg",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-194778d3433426eb7738",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 21912,
+          "sha256": "194778d3433426eb773810a2a432db73cf58e960b945208c75a750a6116339e6",
+          "cipherPath": "cipher/70479fdf749af44ee58310a9a1ee44a28c303ae8956f4f82ac77c271ada9ee6b.bin",
+          "cipherSha256": "70479fdf749af44ee58310a9a1ee44a28c303ae8956f4f82ac77c271ada9ee6b",
+          "iv": "aKTl9kSPYgxBYTum",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "Pv/XWM8LytEXiQI347U+g2WL4aLU4WTbllAelLM27lrmgjC5aK/uoEf2L0B8WxATskMyDKa3W3Lzq8hgbBd0Jg=="
+  }
+}

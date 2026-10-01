@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20261001-manage-vendor-bundled-v1",
+  "toolKey": "skin_sticker",
+  "createdAt": "2026-10-01T05:05:04.009Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "skin-sticker/index.html",
+    "styles": [
+      "skin-sticker/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "skin-sticker/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20261001-manage-vendor-bundled-v1:skin_sticker",
+      "wrappedKey": "mOqMflatfp0s/iJAwYWCV+AzVWydOC3ByeMiKepVCtETzpqKCSXtFUSIeZsY8rCZR73jJ2yZVeWu6y+TlOcT+0foVrNFLtj/+gUotplpoH1GYZQu3tNGaodNpb1NgdfZja4oLVML7OS8oaMwlOv+X6J+U9zoNxrwiXRM0WLPYw73lWALTCuEjrLKsacl4ZAI06wvjZU9ygvDiCVigGvUAXDBtCSUebe3H0GCXmzuqygNFTJexO9MuNVBCZx3xHcWq3N6V6unoXs+tYAhLrEhbdntZSgNE7G8+RSnTbOUCjBSR+QE1nw9dgxmMBYnh7cHb/EE1VyEmS3zNwXCzZLZk3I8NU8OUlMbr04m2O39Cya1/Gg0/dM18AjUhTQfMa5ZFKKeQIO85TjwTAqhWvJcDT/660YRjmgyCr1yge7vkdEocKt4Q+apI5tIo9a/n/7OfZmP7KD2TLXdk1gFWCCi4UriEQTW9dQM7WYYx5IcIiB4BzkbD02z0BFEcA2cGsOF"
+    }
+  ],
+  "routes": {
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    },
+    "skin-sticker/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-523a40bacc15bf9effa6",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 155,
+          "sha256": "523a40bacc15bf9effa611ec6a4c8bff33eaaa769cf4347b98d115af22cc3a7e",
+          "cipherPath": "cipher/f275c3ae087143208b95f38a7e2ef60d2911c4f13004048ebf468bd5a485b308.bin",
+          "cipherSha256": "f275c3ae087143208b95f38a7e2ef60d2911c4f13004048ebf468bd5a485b308",
+          "iv": "YF1rBLl089hCjJJ3",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-sticker/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-968be7599e20f0ae7847",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 32,
+          "sha256": "968be7599e20f0ae784770a9dd22d745378d051aac5a6536d4036b0d0360b39c",
+          "cipherPath": "cipher/b2bf44bfad0435a0eb5d7ad891f819dff96cce2064c22d446f32714be12bb604.bin",
+          "cipherSha256": "b2bf44bfad0435a0eb5d7ad891f819dff96cce2064c22d446f32714be12bb604",
+          "iv": "p9jHJxZk3kbvZVuB",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-sticker/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-a3104a942e59ce439227",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 50,
+          "sha256": "a3104a942e59ce439227d351db3ca12d0b5259523e9e75e65c9fbd3ad5c66832",
+          "cipherPath": "cipher/6c057918bd026d84b87df2ee447dc230de4409e37343ca765d7309c29b5bfe6c.bin",
+          "cipherSha256": "6c057918bd026d84b87df2ee447dc230de4409e37343ca765d7309c29b5bfe6c",
+          "iv": "RO1JIzpRntYXFOHW",
+          "aadVersion": 2
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "p6Ap/vzdvFHwHsXq8z3ucPV2kLOASdW7gjcCSq3KUSPnfwTzDYSKrUJhK+menMPixSlILhgec/+jCFkQcLf0hA=="
+  }
+}

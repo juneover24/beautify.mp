@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20261001-manage-select-status-v1",
+  "toolKey": "skin_sticker",
+  "createdAt": "2026-10-01T07:08:33.110Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "skin-sticker/index.html",
+    "styles": [
+      "skin-sticker/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "skin-sticker/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20261001-manage-select-status-v1:skin_sticker",
+      "wrappedKey": "hNAma1MvR/8FkKDYVV44x7rCtepFPf1MOjR5FMiQJpzsMARLErzDy75hSqskmv3/KUt1Iv9MeGJ8+jSBnTSLit5URVcD5uGXTDOZdV3HKulAcNk3iTbeoGtk0J8PqMkYG189p5Fpc5y1WABDKQnYuc6zumZuVI/I7AOnpT8kt9POL5zBwUPDD7IAu+md3Hr7zJHtTq4BI4vEGcNa3E/5HcMIOpnSiX3uGXg4BI1dTph/iM2F2L0v9khCoSdcB13WtzQxdnJkXdwyeJhxwUHK1UFnhuKAtqBJglLl+w07SLkFk/JaR5OwFFUaVoZNNhnQhPFaFGloU3DeFK7zMERT6EAiJOY6hR79hX8iNPj1/uO2Z84aF0TnOok5cjKZu+3EIYdUByWc45wAa/TlXoAcHs8lux7y8APz+DR8W83f0L76YpfGY/vRPeXpJ6Xt7FcleP+A41cP/uhzaDLhKWz4oWzXEGNk0z0lrKRQexHj+MvUjkdcwAc5ePtwj3IZkfFS"
+    }
+  ],
+  "routes": {
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    },
+    "skin-sticker/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-523a40bacc15bf9effa6",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 155,
+          "sha256": "523a40bacc15bf9effa611ec6a4c8bff33eaaa769cf4347b98d115af22cc3a7e",
+          "cipherPath": "cipher/4183218ccddd296526c2e5cd59e08891922c4075b3a71fd006198b7f40da4790.bin",
+          "cipherSha256": "4183218ccddd296526c2e5cd59e08891922c4075b3a71fd006198b7f40da4790",
+          "iv": "ypj+/brcpMT8UdWE",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-sticker/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-968be7599e20f0ae7847",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 32,
+          "sha256": "968be7599e20f0ae784770a9dd22d745378d051aac5a6536d4036b0d0360b39c",
+          "cipherPath": "cipher/3d4c9996a02b3e40e5f6d7140aa4eb470ce80e87c0847f9244699f56e978740d.bin",
+          "cipherSha256": "3d4c9996a02b3e40e5f6d7140aa4eb470ce80e87c0847f9244699f56e978740d",
+          "iv": "s5grbJza1U9KbvAH",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-sticker/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-a3104a942e59ce439227",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 50,
+          "sha256": "a3104a942e59ce439227d351db3ca12d0b5259523e9e75e65c9fbd3ad5c66832",
+          "cipherPath": "cipher/09d4dc5b0d340fa78333fb930510dcf82b93a758cbcd84734317a85e9a169df8.bin",
+          "cipherSha256": "09d4dc5b0d340fa78333fb930510dcf82b93a758cbcd84734317a85e9a169df8",
+          "iv": "K7YhR0KkVeQ0WzgM",
+          "aadVersion": 2
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "NV0zIiBh0TRJ7QqEw2eHd8brJWIbAGOIH2knGON/mnvgY6N3jJWzGbfTITjNwLJSApcntDwpWjTvPxufU8nItw=="
+  }
+}

@@ -15,8 +15,8 @@
       "sha256": "17bbd1ee9a583afea7f666918e23aad241a0f80559865c009d20784ffa186135"
     },
     "integrity.json": {
-      "bytes": 1155130,
-      "sha256": "6ed5b436fa9aa299e5879dc9d18ed9b22fc5235f48513e7dc582d7f086ed526d"
+      "bytes": 1185548,
+      "sha256": "4fd5f717e1c42ace58a41ec5e0e9e92dcd0fc9c8dd3a8091153f9dfe7865d72a"
     },
     "releases/20260718-1/manifest.json": {
       "bytes": 21690,
@@ -19341,6 +19341,498 @@
     "v2/releases/20261001-manage-native-bridge-v1/skin_sticker/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
       "bytes": 12938,
       "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_keyboard_simplify/manifest.json": {
+      "bytes": 6503,
+      "sha256": "dc23a1efdae90a980acb560cd68ac31f3aafe8387b728bbaba15a0bbf8bddb09"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_keyboard_simplify/public/skin-keyboard-simplify/compression-worker.vendor.js": {
+      "bytes": 64650,
+      "sha256": "8f196903b77e91219eff557f0bd0270dab8e58e4a646c8435c4ec8eb72b1be4c"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_keyboard_simplify/public/skin-keyboard-simplify/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 601,
+      "sha256": "3a159f5e0a31534e4d912e2ce8b390c987baf4abfec58be80f2d769df2cc8c89"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_keyboard_simplify/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_keyboard_simplify/cipher/a3dd70be71d43f1bf7d3a3af9fdf767ae67545be2bae10b95be2cb7e4f652aed.bin": {
+      "bytes": 8864,
+      "sha256": "a3dd70be71d43f1bf7d3a3af9fdf767ae67545be2bae10b95be2cb7e4f652aed"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_keyboard_simplify/cipher/87d991c62f584b43b7d4911000d472cb498c530d2a6415a4e760c2cb60a45351.bin": {
+      "bytes": 3492,
+      "sha256": "87d991c62f584b43b7d4911000d472cb498c530d2a6415a4e760c2cb60a45351"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_keyboard_simplify/cipher/8d56b84e1af2788aedaed94a2f9700178ef663776e884489578e88dc323ff05b.bin": {
+      "bytes": 3459,
+      "sha256": "8d56b84e1af2788aedaed94a2f9700178ef663776e884489578e88dc323ff05b"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_keyboard_simplify/cipher/2b08894f5cf553e316f5a8ad3e8cd988e3e543dd1ac2996fa426dce07dc740e2.bin": {
+      "bytes": 55080,
+      "sha256": "2b08894f5cf553e316f5a8ad3e8cd988e3e543dd1ac2996fa426dce07dc740e2"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_keyboard_simplify/cipher/69ea5a61e795ac55bc765e2272e0aa5f1d78b12c7ae84c56b1ff32c63fc10a7b.bin": {
+      "bytes": 2633,
+      "sha256": "69ea5a61e795ac55bc765e2272e0aa5f1d78b12c7ae84c56b1ff32c63fc10a7b"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_glyph_edit/manifest.json": {
+      "bytes": 5782,
+      "sha256": "f3ae54eb1b5b0ea8755e8abeb4829d8be7ffbb0a3d1830a4efa59f5bdf60da70"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_glyph_edit/public/font-glyph-editor/font-glyph-editor.vendor.js": {
+      "bytes": 391422,
+      "sha256": "b3f3f1bb244109fa7b9beafa716185c73da2b46a0c285fb3cf0e90a9283699b5"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_glyph_edit/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_glyph_edit/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_glyph_edit/cipher/7666de761dffecf2a37e8378f033831431aa09a20673fcadcf1d7703e1eee234.bin": {
+      "bytes": 32068,
+      "sha256": "7666de761dffecf2a37e8378f033831431aa09a20673fcadcf1d7703e1eee234"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_glyph_edit/cipher/c56546117057ee1115733c7d008ff5a59d8b4b3c3a1f93164bd64e9ddaeb8e63.bin": {
+      "bytes": 179508,
+      "sha256": "c56546117057ee1115733c7d008ff5a59d8b4b3c3a1f93164bd64e9ddaeb8e63"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_glyph_edit/cipher/0734f2c78deb782d5a98ac824117ed0409d740e15f6dd2a33784530f8b095449.bin": {
+      "bytes": 5657,
+      "sha256": "0734f2c78deb782d5a98ac824117ed0409d740e15f6dd2a33784530f8b095449"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_glyph_edit/cipher/9d01c986009fe461db8eb7d69256a134ec1f65baea3b9e21a493996639913cd1.bin": {
+      "bytes": 95368,
+      "sha256": "9d01c986009fe461db8eb7d69256a134ec1f65baea3b9e21a493996639913cd1"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_sticker/manifest.json": {
+      "bytes": 3965,
+      "sha256": "14930c540833f8c49a249c58862bd8893d5060cbca602822b97d975b3e264385"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_sticker/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_sticker/cipher/ac5bcce2422a4e92b19f89434320c3932090d23e6100be5450f5fa03cea75f94.bin": {
+      "bytes": 171,
+      "sha256": "ac5bcce2422a4e92b19f89434320c3932090d23e6100be5450f5fa03cea75f94"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_sticker/cipher/b8cc6467a357615cc00f30f92bee0a48bf5e1a3b4c8d141575779a1794cf9a3a.bin": {
+      "bytes": 48,
+      "sha256": "b8cc6467a357615cc00f30f92bee0a48bf5e1a3b4c8d141575779a1794cf9a3a"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_sticker/cipher/37db62cdf4c710866305ee44fb825c9e68d7155347c0af217839c6c96a35a313.bin": {
+      "bytes": 66,
+      "sha256": "37db62cdf4c710866305ee44fb825c9e68d7155347c0af217839c6c96a35a313"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_psd_adapter/manifest.json": {
+      "bytes": 5165,
+      "sha256": "8b7d800610621a2f2e630f783d9278f7c0cd204cb90d98c06a9891e3a04d133d"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_psd_adapter/public/skin-psd-adapter/adapter-worker.vendor.js": {
+      "bytes": 347482,
+      "sha256": "045a16b415c3d21eb4abc6208ed4063876bd95d0b5a91a49a0a3d925c6d5dcfd"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_psd_adapter/public/skin-psd-adapter/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 3709,
+      "sha256": "0898ac280bc1f520c9f6bf68d5375529ffdb0aff8c3727d3cda5c80c350e10b6"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_psd_adapter/cipher/f583fcfee4555286d3d0af9e5df5394566721269692a06407dcf01165f68f360.bin": {
+      "bytes": 3826,
+      "sha256": "f583fcfee4555286d3d0af9e5df5394566721269692a06407dcf01165f68f360"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_psd_adapter/cipher/5d4f6c2825c0ece2b37ad99c3eeb329c4c73cfade75d0bc83ae89db42f4f1d8d.bin": {
+      "bytes": 11404,
+      "sha256": "5d4f6c2825c0ece2b37ad99c3eeb329c4c73cfade75d0bc83ae89db42f4f1d8d"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_psd_adapter/cipher/6ca52725609550c6da3f789fd9cee3e559c6284f4390e913cde25dceb15c2f1b.bin": {
+      "bytes": 36981,
+      "sha256": "6ca52725609550c6da3f789fd9cee3e559c6284f4390e913cde25dceb15c2f1b"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_psd_adapter/cipher/0aa00dbf0430cd09faa34b9e1c7b4e8cc49ebd6a29944873548597bdf06f3112.bin": {
+      "bytes": 4627,
+      "sha256": "0aa00dbf0430cd09faa34b9e1c7b4e8cc49ebd6a29944873548597bdf06f3112"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/manifest.json": {
+      "bytes": 16289,
+      "sha256": "4d83705a9605bd46e79524e680c68fd960389fa9a3a6de99618aac84e8e2538b"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/public/font-adjustment-local/vendor/runtime-assets.json": {
+      "bytes": 2018,
+      "sha256": "a4fbff0ac1d7506a73264c09c2ee508a11e585393461e6b1d3f642bb43dfce6f"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.js": {
+      "bytes": 18597,
+      "sha256": "718d40f1c015dd25ec724cc8fc4e2325d6a45a92ae225121ff6953f224a16f72"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.asm.js": {
+      "bytes": 1074322,
+      "sha256": "1263f02b5b26099b96112378156f242dd98b39a8201ba7765e5fe3d455c5ce91"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide-lock.json": {
+      "bytes": 120010,
+      "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/public/font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl": {
+      "bytes": 1089800,
+      "sha256": "9d6518c8ad4d88019bc72045108eca154301014215222408aa047cf4955c726d"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/public/font-adjustment-local/vendor/pyodide/python_stdlib.zip": {
+      "bytes": 2423989,
+      "sha256": "4298b6ee445cb724c3973437da47789752b9e6ff4e26619026b283ec801fc46b"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.asm.wasm": {
+      "bytes": 8647684,
+      "sha256": "e2f4ee75b325e35eb31bfb8c613d4dd5098f5502c156a97847686875b5025480"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/cipher/fc51c8bd92b6daf0d5017cf796806ee20297b46c7370a7a77a115da15905c1dd.bin": {
+      "bytes": 681,
+      "sha256": "fc51c8bd92b6daf0d5017cf796806ee20297b46c7370a7a77a115da15905c1dd"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/cipher/643f2c82e1d3efb18947956329e15d0f7ba501e72de884810c328777b78f13c8.bin": {
+      "bytes": 8844,
+      "sha256": "643f2c82e1d3efb18947956329e15d0f7ba501e72de884810c328777b78f13c8"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/cipher/968dda1ddf611adaf06361b234d811b58b898d3f278f8f14765e52cee57aa2c1.bin": {
+      "bytes": 7640,
+      "sha256": "968dda1ddf611adaf06361b234d811b58b898d3f278f8f14765e52cee57aa2c1"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/cipher/e64e9dc528d3c39f048dbdc999d56cf0e6942d421a776e6ed3ae17b3160c8af6.bin": {
+      "bytes": 65625,
+      "sha256": "e64e9dc528d3c39f048dbdc999d56cf0e6942d421a776e6ed3ae17b3160c8af6"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/cipher/737de83e06b5de7eca92b8147ed26f267a0d3ffd9198917fefe2218b5300dc68.bin": {
+      "bytes": 18160,
+      "sha256": "737de83e06b5de7eca92b8147ed26f267a0d3ffd9198917fefe2218b5300dc68"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/cipher/d2d1ec44661529b76d6ba942138f37ade8e579299ba03838a7d49064b5e95bd6.bin": {
+      "bytes": 65801,
+      "sha256": "d2d1ec44661529b76d6ba942138f37ade8e579299ba03838a7d49064b5e95bd6"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/cipher/4b94f15b12b4f5d9af813269e81c9e12afc9300984a8f9a7535a157533a06592.bin": {
+      "bytes": 5657,
+      "sha256": "4b94f15b12b4f5d9af813269e81c9e12afc9300984a8f9a7535a157533a06592"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/cipher/e77561173aed7cbbfe53fde485daa4a3c3b60d60565bb0f59f631832184b2ba9.bin": {
+      "bytes": 126821,
+      "sha256": "e77561173aed7cbbfe53fde485daa4a3c3b60d60565bb0f59f631832184b2ba9"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/cipher/aeb347ffc18e954235a567bafab11d69076c1ed71c551fda7c07759a0da065a2.bin": {
+      "bytes": 95368,
+      "sha256": "aeb347ffc18e954235a567bafab11d69076c1ed71c551fda7c07759a0da065a2"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/cipher/2b2c4954e7e33c0477f97f5d8807bcdf9af20ba3d9430d191ffc0c93a9b3243a.bin": {
+      "bytes": 24525,
+      "sha256": "2b2c4954e7e33c0477f97f5d8807bcdf9af20ba3d9430d191ffc0c93a9b3243a"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/cipher/f3f0c8408839b0e0ab29eb787b275023221cacbde950236a9591183b5a13384a.bin": {
+      "bytes": 95167,
+      "sha256": "f3f0c8408839b0e0ab29eb787b275023221cacbde950236a9591183b5a13384a"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/cipher/0b89868418b05d1f0f94dc6d7ae9b2a58092eca13b30adefcf24851a21c3b32e.bin": {
+      "bytes": 38481,
+      "sha256": "0b89868418b05d1f0f94dc6d7ae9b2a58092eca13b30adefcf24851a21c3b32e"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/cipher/a7aa051278dd489ef3c4618089dc2e00036cbc19a618c062015661eaa98e8329.bin": {
+      "bytes": 10085,
+      "sha256": "a7aa051278dd489ef3c4618089dc2e00036cbc19a618c062015661eaa98e8329"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/cipher/319d2b1c8a9a8411967f868070eb1e4ad3eb4894511843b8874d6e6092fdbce3.bin": {
+      "bytes": 26301,
+      "sha256": "319d2b1c8a9a8411967f868070eb1e4ad3eb4894511843b8874d6e6092fdbce3"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_compress/cipher/5a8a3ee83519e659e58d9f88710ae5e79d6b90270d8c7a5a80eeda395433fb1d.bin": {
+      "bytes": 47357,
+      "sha256": "5a8a3ee83519e659e58d9f88710ae5e79d6b90270d8c7a5a80eeda395433fb1d"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_manual_web/manifest.json": {
+      "bytes": 4433,
+      "sha256": "f004113b8e56e2cfd07b42012ddb4dd97e7385426dff12ef4340eeb006979a54"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_manual_web/cipher/938dadab1d1ba1f43793ea5f64092177542aa52b0c5ec4747cedb12c7cb13f62.bin": {
+      "bytes": 95368,
+      "sha256": "938dadab1d1ba1f43793ea5f64092177542aa52b0c5ec4747cedb12c7cb13f62"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_manual_web/cipher/f87b72f337a1d417acf3e4452f0e95840318669cd2a8318e8c03a0fbc4eccd14.bin": {
+      "bytes": 9832,
+      "sha256": "f87b72f337a1d417acf3e4452f0e95840318669cd2a8318e8c03a0fbc4eccd14"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_manual_web/cipher/48eb8cccd9407d79c4139a37210ea0920bc0e747b3cc4dc7a42a6a04bbb1828c.bin": {
+      "bytes": 60955,
+      "sha256": "48eb8cccd9407d79c4139a37210ea0920bc0e747b3cc4dc7a42a6a04bbb1828c"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_manual_web/public/spark-md5.min.js": {
+      "bytes": 10293,
+      "sha256": "3e97e82939197c7ca4e34c7c1db61309fb0390ed077ae819f79c380563c9d0c3"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_manual_web/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/manifest.json": {
+      "bytes": 12129,
+      "sha256": "157346b4d92ce44cd1ae34cda7520cac83c4e8c9b00d4dc0bdf5b90bb4bcc073"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 869,
+      "sha256": "12f0e5d72adb78058dba39c6aade30a8b3d7de6da3b312c293e1632ade43b5d5"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/public/font-adjustment-local/vendor/runtime-assets.json": {
+      "bytes": 2018,
+      "sha256": "a4fbff0ac1d7506a73264c09c2ee508a11e585393461e6b1d3f642bb43dfce6f"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide-lock.json": {
+      "bytes": 120010,
+      "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/public/font-adjustment-local/vendor/pyodide/python_stdlib.zip": {
+      "bytes": 2423989,
+      "sha256": "4298b6ee445cb724c3973437da47789752b9e6ff4e26619026b283ec801fc46b"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.asm.js": {
+      "bytes": 1074322,
+      "sha256": "1263f02b5b26099b96112378156f242dd98b39a8201ba7765e5fe3d455c5ce91"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/public/font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl": {
+      "bytes": 1089800,
+      "sha256": "9d6518c8ad4d88019bc72045108eca154301014215222408aa047cf4955c726d"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.asm.wasm": {
+      "bytes": 8647684,
+      "sha256": "e2f4ee75b325e35eb31bfb8c613d4dd5098f5502c156a97847686875b5025480"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.js": {
+      "bytes": 18597,
+      "sha256": "718d40f1c015dd25ec724cc8fc4e2325d6a45a92ae225121ff6953f224a16f72"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/cipher/655d01f68203986daf3fed44e467940172ceca3b941d4fe05422c8e419754dd7.bin": {
+      "bytes": 130749,
+      "sha256": "655d01f68203986daf3fed44e467940172ceca3b941d4fe05422c8e419754dd7"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/cipher/6a1f36fbd3a82f68eaf838acb935b6a136015a97d668daa5b44df158cdf115cc.bin": {
+      "bytes": 10571,
+      "sha256": "6a1f36fbd3a82f68eaf838acb935b6a136015a97d668daa5b44df158cdf115cc"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/cipher/82c36ac60a589cf3886655e397a24e4c77fc1fa7a169169726639660459790f3.bin": {
+      "bytes": 11726,
+      "sha256": "82c36ac60a589cf3886655e397a24e4c77fc1fa7a169169726639660459790f3"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/cipher/4b074f9e4490d2e18e075071ca5baa18b2e751079d52f530fcb166919c61d241.bin": {
+      "bytes": 100782,
+      "sha256": "4b074f9e4490d2e18e075071ca5baa18b2e751079d52f530fcb166919c61d241"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/cipher/a2b641d711b46c750475290660b5904df9a34ca3341a62c985e673339919f7bc.bin": {
+      "bytes": 13309,
+      "sha256": "a2b641d711b46c750475290660b5904df9a34ca3341a62c985e673339919f7bc"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/cipher/7f565007de40af7051877d766ac233b6f471c273abc837985a66a7c5e2604071.bin": {
+      "bytes": 65801,
+      "sha256": "7f565007de40af7051877d766ac233b6f471c273abc837985a66a7c5e2604071"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/cipher/c8d6f7cf9d00da6f05c3cb5db549712f32ac09e20d5d008b2386467eb4688587.bin": {
+      "bytes": 5657,
+      "sha256": "c8d6f7cf9d00da6f05c3cb5db549712f32ac09e20d5d008b2386467eb4688587"
+    },
+    "v2/releases/20261001-manage-navretry-v1/font_adjustment/cipher/0eb5c94438a075b5e2f88e0b262462fa3b7625cfe509033381cfc566971e4182.bin": {
+      "bytes": 95368,
+      "sha256": "0eb5c94438a075b5e2f88e0b262462fa3b7625cfe509033381cfc566971e4182"
+    },
+    "v2/releases/20261001-manage-navretry-v1/download_bridge/manifest.json": {
+      "bytes": 3994,
+      "sha256": "723cfcb1b4b93c0df638ebf507318e2808831de4a46180a0f397dd5e73822e36"
+    },
+    "v2/releases/20261001-manage-navretry-v1/download_bridge/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261001-manage-navretry-v1/download_bridge/cipher/fca4041744f5dc955ef187f64ec24067f55d5dca44407b805e74cb271c70124f.bin": {
+      "bytes": 908,
+      "sha256": "fca4041744f5dc955ef187f64ec24067f55d5dca44407b805e74cb271c70124f"
+    },
+    "v2/releases/20261001-manage-navretry-v1/download_bridge/cipher/e1095538657c384f318012127d1a921c02924e5c8e8e60ee5408fb546bf4cd6c.bin": {
+      "bytes": 1195,
+      "sha256": "e1095538657c384f318012127d1a921c02924e5c8e8e60ee5408fb546bf4cd6c"
+    },
+    "v2/releases/20261001-manage-navretry-v1/download_bridge/cipher/1ca6e9e2ba2f41375a75d19a4fff16cdf913270e7ccb276b87cab4111b6bae81.bin": {
+      "bytes": 57717,
+      "sha256": "1ca6e9e2ba2f41375a75d19a4fff16cdf913270e7ccb276b87cab4111b6bae81"
+    },
+    "v2/releases/20261001-manage-navretry-v1/member_local_build/manifest.json": {
+      "bytes": 5475,
+      "sha256": "060ffb01d03a558fdb11530c4eb0cff102e38a1a689dc8b36fcdd6bc93d225da"
+    },
+    "v2/releases/20261001-manage-navretry-v1/member_local_build/public/spark-md5.min.js": {
+      "bytes": 10293,
+      "sha256": "3e97e82939197c7ca4e34c7c1db61309fb0390ed077ae819f79c380563c9d0c3"
+    },
+    "v2/releases/20261001-manage-navretry-v1/member_local_build/public/jszip.min.js": {
+      "bytes": 97653,
+      "sha256": "4ec9ea24a3271fcc28035e922116d170ffd83bbf265a82a45e2d2a399b055181"
+    },
+    "v2/releases/20261001-manage-navretry-v1/member_local_build/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261001-manage-navretry-v1/member_local_build/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20261001-manage-navretry-v1/member_local_build/cipher/eb72ee8c723727e75c00f9b6fef42f36fbd905389c7c4673090d306e3efb21dd.bin": {
+      "bytes": 4236,
+      "sha256": "eb72ee8c723727e75c00f9b6fef42f36fbd905389c7c4673090d306e3efb21dd"
+    },
+    "v2/releases/20261001-manage-navretry-v1/member_local_build/cipher/73b28939e9faff8335dfd85d231e1b8f8ed2513bcda2c75875c552377e65f346.bin": {
+      "bytes": 199885,
+      "sha256": "73b28939e9faff8335dfd85d231e1b8f8ed2513bcda2c75875c552377e65f346"
+    },
+    "v2/releases/20261001-manage-navretry-v1/member_local_build/cipher/158414e70439417349a2bc2032c013edced13b37a1d35b4b0c7a872658dd1df6.bin": {
+      "bytes": 95368,
+      "sha256": "158414e70439417349a2bc2032c013edced13b37a1d35b4b0c7a872658dd1df6"
+    },
+    "v2/releases/20261001-manage-navretry-v1/manage_direct_upload/manifest.json": {
+      "bytes": 4956,
+      "sha256": "5b61ec5cef213ee4d7f39fd38332d18468bc4f8348c15d717c7a0a2ad3d628cc"
+    },
+    "v2/releases/20261001-manage-navretry-v1/manage_direct_upload/public/spark-md5.min.js": {
+      "bytes": 10293,
+      "sha256": "3e97e82939197c7ca4e34c7c1db61309fb0390ed077ae819f79c380563c9d0c3"
+    },
+    "v2/releases/20261001-manage-navretry-v1/manage_direct_upload/public/jszip.min.js": {
+      "bytes": 97653,
+      "sha256": "4ec9ea24a3271fcc28035e922116d170ffd83bbf265a82a45e2d2a399b055181"
+    },
+    "v2/releases/20261001-manage-navretry-v1/manage_direct_upload/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261001-manage-navretry-v1/manage_direct_upload/cipher/657205876b1bbb5948a228d5480f59281d68084abe21243d3baf0bc38df3c954.bin": {
+      "bytes": 5657,
+      "sha256": "657205876b1bbb5948a228d5480f59281d68084abe21243d3baf0bc38df3c954"
+    },
+    "v2/releases/20261001-manage-navretry-v1/manage_direct_upload/cipher/952cb2ec051b835fba306f1e0b915ec4b802f25de5d320217c1fc94514589fce.bin": {
+      "bytes": 170880,
+      "sha256": "952cb2ec051b835fba306f1e0b915ec4b802f25de5d320217c1fc94514589fce"
+    },
+    "v2/releases/20261001-manage-navretry-v1/manage_direct_upload/cipher/20cf93d3a4dd89300195568e7f869e75154df6d1d7c5cd7b66a6830bf62580f3.bin": {
+      "bytes": 4749,
+      "sha256": "20cf93d3a4dd89300195568e7f869e75154df6d1d7c5cd7b66a6830bf62580f3"
+    },
+    "v2/releases/20261001-manage-navretry-v1/video_sound_conversion/manifest.json": {
+      "bytes": 6700,
+      "sha256": "65f56219e6a7f4c4f1d00e863cce1c9d9d354bb3ce5b47504effe6f778dce862"
+    },
+    "v2/releases/20261001-manage-navretry-v1/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg-core.js": {
+      "bytes": 111804,
+      "sha256": "67a48f11645f85439f3fde4f2119042c16b374b910206b7a7a24f342e28dcae3"
+    },
+    "v2/releases/20261001-manage-navretry-v1/video_sound_conversion/public/video-sound-conversion/vendor/video-sound.vendor.js": {
+      "bytes": 13404,
+      "sha256": "4bcc71104dc7e2bebc8dcc67dfcacbabae96dbb0d7f639b37afe3d60c1625224"
+    },
+    "v2/releases/20261001-manage-navretry-v1/video_sound_conversion/public/video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 2921,
+      "sha256": "2b76bd18daf1908ec5e5ac37f567cffcf5197c7f299a2f8f34aa3e02a43908f1"
+    },
+    "v2/releases/20261001-manage-navretry-v1/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg-core.wasm": {
+      "bytes": 32232419,
+      "sha256": "9f57947a5bd530d8f00c5b3f2cb2a3492faa7e5d823315342d6a8656d0a6b7b7"
+    },
+    "v2/releases/20261001-manage-navretry-v1/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg.worker.js": {
+      "bytes": 2511,
+      "sha256": "16370a642e2bd09cc877ad9c5b6684c5518f52a0cc6fddcc33ce595ceb6f148f"
+    },
+    "v2/releases/20261001-manage-navretry-v1/video_sound_conversion/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261001-manage-navretry-v1/video_sound_conversion/cipher/312f2158570444c166b0accb33f461faf6168255530c7a656501ac5074fae68d.bin": {
+      "bytes": 3128,
+      "sha256": "312f2158570444c166b0accb33f461faf6168255530c7a656501ac5074fae68d"
+    },
+    "v2/releases/20261001-manage-navretry-v1/video_sound_conversion/cipher/67ac1cae268e1b816ab2edbbd1d7a3608a29b37ce32fd889fbb5e9f611423cf9.bin": {
+      "bytes": 2928,
+      "sha256": "67ac1cae268e1b816ab2edbbd1d7a3608a29b37ce32fd889fbb5e9f611423cf9"
+    },
+    "v2/releases/20261001-manage-navretry-v1/video_sound_conversion/cipher/35df0998c497adfc49291ee5317031fcbc9623c2f0644bc2b22d0504e11ffa78.bin": {
+      "bytes": 11625,
+      "sha256": "35df0998c497adfc49291ee5317031fcbc9623c2f0644bc2b22d0504e11ffa78"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_pic_part/manifest.json": {
+      "bytes": 6375,
+      "sha256": "8089608e8b3200d0399a9d8b356117f5d0395a3f404816079757214f5edc988b"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_pic_part/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_pic_part/public/psd-layer-split/psd-worker.vendor.js": {
+      "bytes": 335174,
+      "sha256": "5e1e9c04a92ee585f43eca84096fd1410a4bbd3574f5e48ae87a20b0172de412"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_pic_part/public/psd-layer-split/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 8236,
+      "sha256": "a2f5cd88ce4c80d3ea3780f13452dfe0e503e957abdecd075b5f3787ee9b9dc9"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_pic_part/cipher/f411f96f83efb4977b6655b767e1e12fedabd6cdd23f1cbc49d96edf36954e80.bin": {
+      "bytes": 4084,
+      "sha256": "f411f96f83efb4977b6655b767e1e12fedabd6cdd23f1cbc49d96edf36954e80"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_pic_part/cipher/409a093b9f81ee1ca3ed769038dabd057a3741c92ff3c906d69999adf25dd437.bin": {
+      "bytes": 4974,
+      "sha256": "409a093b9f81ee1ca3ed769038dabd057a3741c92ff3c906d69999adf25dd437"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_pic_part/cipher/3c6ee4cca7cef57bb6ee4783fde8bb64abf1c96ccd05199ead085787f757d05a.bin": {
+      "bytes": 5657,
+      "sha256": "3c6ee4cca7cef57bb6ee4783fde8bb64abf1c96ccd05199ead085787f757d05a"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_pic_part/cipher/077ac523f9d7863c49a5a0f8cccb41256f40e40c27e60d381cb03a5f612a02a3.bin": {
+      "bytes": 8604,
+      "sha256": "077ac523f9d7863c49a5a0f8cccb41256f40e40c27e60d381cb03a5f612a02a3"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_pic_part/cipher/2672459fd0d02b27ae9241d1fd9daa64ab3fe8e49c6b6981fa7555f254b2cbd7.bin": {
+      "bytes": 12171,
+      "sha256": "2672459fd0d02b27ae9241d1fd9daa64ab3fe8e49c6b6981fa7555f254b2cbd7"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_oneclicksignaturepro/manifest.json": {
+      "bytes": 4075,
+      "sha256": "5dc9931d68d78f687b32e3ab1a04bb4b22c7540eafe6f1504ca5efff7ebdb31c"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_oneclicksignaturepro/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_oneclicksignaturepro/cipher/1ca202eadd92ad404580b51ddb8aee3ffcb2afeac962312793e1df0c6c36f95f.bin": {
+      "bytes": 4552,
+      "sha256": "1ca202eadd92ad404580b51ddb8aee3ffcb2afeac962312793e1df0c6c36f95f"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_oneclicksignaturepro/cipher/2ace1d21dc53876dcb7729a11e25cc354083a6b987dfa77c72f84a46a13ba670.bin": {
+      "bytes": 5289,
+      "sha256": "2ace1d21dc53876dcb7729a11e25cc354083a6b987dfa77c72f84a46a13ba670"
+    },
+    "v2/releases/20261001-manage-navretry-v1/skin_oneclicksignaturepro/cipher/2eedfd9d16ae5674df4fa65c2ce3a3cbd7bc029920c6f22239bea157cf6ee22e.bin": {
+      "bytes": 21928,
+      "sha256": "2eedfd9d16ae5674df4fa65c2ce3a3cbd7bc029920c6f22239bea157cf6ee22e"
     },
     "beautify.mp/v2/releases/20260911-download-bridge-v2/font-adjustment-local/font-adjustment-local/font-adjustment.worker.js": {
       "bytes": 11976,

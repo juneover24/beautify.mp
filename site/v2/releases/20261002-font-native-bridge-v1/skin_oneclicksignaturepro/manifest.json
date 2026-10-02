@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20261002-font-native-bridge-v1",
+  "toolKey": "skin_oneclicksignaturepro",
+  "createdAt": "2026-10-02T14:07:01.284Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "skin-oneclicksignaturepro/index.html",
+    "styles": [
+      "skin-oneclicksignaturepro/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "skin-oneclicksignaturepro/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20261002-font-native-bridge-v1:skin_oneclicksignaturepro",
+      "wrappedKey": "FX4mjgrrDTiRHGogok8QV9Zi5xCs5Rjek33JBkzaXXoDSn1SwHW+922aTWcjNODcv3Wgbb2P6442Rx4mQuew2WvbzPDxXIXk7n/1l0fdlmBMakpOQVtOzgTJLj41PTSr9AVPkcn/VQlR+amw0dsJEnNBg4pyUYgTRfNFZ0SnmNYYcpiL/474+2+jZgFF/kcKVajfmntZoxfmlZ0LDQml+P34qXArJyMJ7q1RvCQaunC/HemJJG/upUdVDgOBGQA5wmEwlOJ7Z/KoDFuEQXQKkf63HhU1KPVVY7rt6a6ZHcPjMVbXRI2YvMJoWAebggTJJtTdRJIYDPo9Dx4ge3gvHBcke2cm3H6o3VUyojrZyOqKgNRZpiZHgzFPRKQsgbR5pEAwxKD4hHWhVak86H6mScQ4lDs4s6SVU3tlU3aW732/Yog8hNSgjW3gDpZXfgPm/j1P2BmSMIS7ExTDYLNE8irwMXxmf0lRDLwJbrPyJ7+EG4ZMC4QuXNXHLwTbK8Py"
+    }
+  ],
+  "routes": {
+    "skin-oneclicksignaturepro/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-3603085efd899f348c0a",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 5273,
+          "sha256": "3603085efd899f348c0a8c0875e8fb0b3027749804b5d16c9d533a7ddb08c1a5",
+          "cipherPath": "cipher/d5f0e570473e2355d89b8ce7296efd5f69560984e7ae4c74904677b5b7d8491c.bin",
+          "cipherSha256": "d5f0e570473e2355d89b8ce7296efd5f69560984e7ae4c74904677b5b7d8491c",
+          "iv": "djGBertccZyBa8kB",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f5b4a11684b514980c45",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 4536,
+          "sha256": "f5b4a11684b514980c458d54380d887194c4f1d01983df985f4f6ce855b38d4a",
+          "cipherPath": "cipher/7aead0bef35fbcc755d19c652cef78dc5294b4e94bdd4c6b7fb8e1f9dac76151.bin",
+          "cipherSha256": "7aead0bef35fbcc755d19c652cef78dc5294b4e94bdd4c6b7fb8e1f9dac76151",
+          "iv": "YJjlTGPnZkzxe+BP",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-194778d3433426eb7738",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 21912,
+          "sha256": "194778d3433426eb773810a2a432db73cf58e960b945208c75a750a6116339e6",
+          "cipherPath": "cipher/819d765562778f638233783208e61fe5e9dd35b1875a99f7640510c1c1a91189.bin",
+          "cipherSha256": "819d765562778f638233783208e61fe5e9dd35b1875a99f7640510c1c1a91189",
+          "iv": "fSZaSS08w4hz+Det",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "4VKh8aY8mkNqsb3CMtSYie1ieuXtwxKkRQSLY7dVAQSZxNCOM67dzsRmlnZlHtlJIf+MLdPQbFgmOy+38+mylw=="
+  }
+}

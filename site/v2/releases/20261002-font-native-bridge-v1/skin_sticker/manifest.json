@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20261002-font-native-bridge-v1",
+  "toolKey": "skin_sticker",
+  "createdAt": "2026-10-02T14:07:01.293Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "skin-sticker/index.html",
+    "styles": [
+      "skin-sticker/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "skin-sticker/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20261002-font-native-bridge-v1:skin_sticker",
+      "wrappedKey": "ZbvxLLkaEC4v5UImIZYOQ4dM6B6ocuRycuQjv0GPivDXhJRlJcgTPYaZondsBE8j8BqPMOoGTl5ruQsZm859h8vfETz9WTCiksvdqOQ5PzcvnVfjuJHtH137u0gScofaLP1o3D25pT3WTQuB5T/jpLeWtrPcxaUZJaWKCZfwcwnGHKqXre8RIPaOaxWMrZsPsHEq9uO0vnX+zkAfTh5o7QBgtqt4h8dTJCKGsbmWVkZLnoh3Dnu665OAo7OelrEfdnuaqE1PWcNg3ki8Iw1C1SUte02bGE7pwWtY5Io6EGQ8ridMquZXoQCEyreZsdAJ5u21Wsbd6lwPo9IhN2nnmrj9Wowzi2lw3qrzkscOfUW3p+6qwR0wPkArIkcH+8aaBZ0DxIxhaWvlo0R3q1s57IEZmjsJ1XTvD/mTUXy8YlGX8T3MpLUR1kYY/HLN8XKFslVq7gn/qyVYN3/xXMZ9I1hiEQj/0wVSYD1S67pcHP8badbw830D0wsST9ZqWj7W"
+    }
+  ],
+  "routes": {
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    },
+    "skin-sticker/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-523a40bacc15bf9effa6",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 155,
+          "sha256": "523a40bacc15bf9effa611ec6a4c8bff33eaaa769cf4347b98d115af22cc3a7e",
+          "cipherPath": "cipher/63085cb8012c13a264fba913920fc74358c74e1c8d766c1e51360bb0ce866d35.bin",
+          "cipherSha256": "63085cb8012c13a264fba913920fc74358c74e1c8d766c1e51360bb0ce866d35",
+          "iv": "vP9/sVzwDwF73RMP",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-sticker/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-968be7599e20f0ae7847",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 32,
+          "sha256": "968be7599e20f0ae784770a9dd22d745378d051aac5a6536d4036b0d0360b39c",
+          "cipherPath": "cipher/ef4e3516a2314800396c7093ce88ae34955536b30318c6928b0fb24402ee4020.bin",
+          "cipherSha256": "ef4e3516a2314800396c7093ce88ae34955536b30318c6928b0fb24402ee4020",
+          "iv": "CqaGSD2PpQOTm6xN",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-sticker/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-a3104a942e59ce439227",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 50,
+          "sha256": "a3104a942e59ce439227d351db3ca12d0b5259523e9e75e65c9fbd3ad5c66832",
+          "cipherPath": "cipher/870986d0cf72f31714d18da3877507b005daafb1b443679af5d75394dd5f35cd.bin",
+          "cipherSha256": "870986d0cf72f31714d18da3877507b005daafb1b443679af5d75394dd5f35cd",
+          "iv": "j5vrvcceJSyeIv2o",
+          "aadVersion": 2
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "Dwc6k0ILnXMVLEVnQUOdBFKjfPVeL4X2oef3mimL/tTjvm4gp0R+f1DjPGbPtyl0jSgX+X0o/e6dw/zZdMbOkw=="
+  }
+}

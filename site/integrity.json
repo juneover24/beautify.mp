@@ -15,8 +15,8 @@
       "sha256": "17bbd1ee9a583afea7f666918e23aad241a0f80559865c009d20784ffa186135"
     },
     "integrity.json": {
-      "bytes": 1215351,
-      "sha256": "fb306c6625a12083363f6a69dd3541761730865ae57b8aca8247ae8ead9df8ab"
+      "bytes": 1245277,
+      "sha256": "c53124ed45d66e98c9deb0eb79e0782410105ce96063099481a7b509e21637dc"
     },
     "releases/20260718-1/manifest.json": {
       "bytes": 21690,
@@ -20325,6 +20325,498 @@
     "v2/releases/20261002-manage-requestid-v1/member_local_build/cipher/7e3c7a5c3702a61c94a814b83eee4f80e6715ef704a55b6649bf8092bced7c37.bin": {
       "bytes": 4236,
       "sha256": "7e3c7a5c3702a61c94a814b83eee4f80e6715ef704a55b6649bf8092bced7c37"
+    },
+    "v2/releases/20261002-manage-handoff-v2/video_sound_conversion/manifest.json": {
+      "bytes": 6698,
+      "sha256": "3964893c78567dfa7ca1b9978c9a4c9786756a2b3d9575f837acbf9eed19b80d"
+    },
+    "v2/releases/20261002-manage-handoff-v2/video_sound_conversion/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261002-manage-handoff-v2/video_sound_conversion/public/video-sound-conversion/vendor/video-sound.vendor.js": {
+      "bytes": 13404,
+      "sha256": "4bcc71104dc7e2bebc8dcc67dfcacbabae96dbb0d7f639b37afe3d60c1625224"
+    },
+    "v2/releases/20261002-manage-handoff-v2/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg-core.wasm": {
+      "bytes": 32232419,
+      "sha256": "9f57947a5bd530d8f00c5b3f2cb2a3492faa7e5d823315342d6a8656d0a6b7b7"
+    },
+    "v2/releases/20261002-manage-handoff-v2/video_sound_conversion/public/video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 2921,
+      "sha256": "2b76bd18daf1908ec5e5ac37f567cffcf5197c7f299a2f8f34aa3e02a43908f1"
+    },
+    "v2/releases/20261002-manage-handoff-v2/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg.worker.js": {
+      "bytes": 2511,
+      "sha256": "16370a642e2bd09cc877ad9c5b6684c5518f52a0cc6fddcc33ce595ceb6f148f"
+    },
+    "v2/releases/20261002-manage-handoff-v2/video_sound_conversion/public/video-sound-conversion/vendor/ffmpeg-core.js": {
+      "bytes": 111804,
+      "sha256": "67a48f11645f85439f3fde4f2119042c16b374b910206b7a7a24f342e28dcae3"
+    },
+    "v2/releases/20261002-manage-handoff-v2/video_sound_conversion/cipher/0f4889bd70d93982e2ddc5e439d86daa92803121c89b0b7e55c70dc835eaeddf.bin": {
+      "bytes": 2928,
+      "sha256": "0f4889bd70d93982e2ddc5e439d86daa92803121c89b0b7e55c70dc835eaeddf"
+    },
+    "v2/releases/20261002-manage-handoff-v2/video_sound_conversion/cipher/1210ab24eb034a2a0af86bdd7ba3ec9e7815eaccfc63df221fce732cff0f6a32.bin": {
+      "bytes": 3128,
+      "sha256": "1210ab24eb034a2a0af86bdd7ba3ec9e7815eaccfc63df221fce732cff0f6a32"
+    },
+    "v2/releases/20261002-manage-handoff-v2/video_sound_conversion/cipher/c3c67af28dada1f1812ef97047b8b0b2069fe1cc99241d9efc7376baf84c2283.bin": {
+      "bytes": 11625,
+      "sha256": "c3c67af28dada1f1812ef97047b8b0b2069fe1cc99241d9efc7376baf84c2283"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_glyph_edit/manifest.json": {
+      "bytes": 5780,
+      "sha256": "db980e7e628ab520354c145fb51f2839275905724b1c2793682d6ae8de3b2294"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_glyph_edit/public/font-glyph-editor/font-glyph-editor.vendor.js": {
+      "bytes": 391422,
+      "sha256": "b3f3f1bb244109fa7b9beafa716185c73da2b46a0c285fb3cf0e90a9283699b5"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_glyph_edit/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_glyph_edit/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_glyph_edit/cipher/6aea6c2a0ad6110e1eb527235e61713afe585b897a18375df05c40da0a621dd6.bin": {
+      "bytes": 95368,
+      "sha256": "6aea6c2a0ad6110e1eb527235e61713afe585b897a18375df05c40da0a621dd6"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_glyph_edit/cipher/bc7601e36e80b3482e95854772d91cebaaeb93ab9d7ca81764a8780ccf41edb3.bin": {
+      "bytes": 32068,
+      "sha256": "bc7601e36e80b3482e95854772d91cebaaeb93ab9d7ca81764a8780ccf41edb3"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_glyph_edit/cipher/626866daabe2942793ce09d8d1879df4c31e629cc14beef7916b2084132b3610.bin": {
+      "bytes": 5657,
+      "sha256": "626866daabe2942793ce09d8d1879df4c31e629cc14beef7916b2084132b3610"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_glyph_edit/cipher/1215a73c9c946b8bc0b8c80924bb51d7dbf569ff6a844d02d4af90f007b2e0b6.bin": {
+      "bytes": 179508,
+      "sha256": "1215a73c9c946b8bc0b8c80924bb51d7dbf569ff6a844d02d4af90f007b2e0b6"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_sticker/manifest.json": {
+      "bytes": 3963,
+      "sha256": "672796fd46759196bcef6479853b0deee3750aede600c40397bffeb7cfd3336c"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_sticker/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_sticker/cipher/4364f92690d416f0450e00ab0b823c4ec322548953d558ea6da146a429d0ba4b.bin": {
+      "bytes": 66,
+      "sha256": "4364f92690d416f0450e00ab0b823c4ec322548953d558ea6da146a429d0ba4b"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_sticker/cipher/0c531de5b76f8d5087bd86657ff2a7559b2158c841a5950c1d6c95dd82f8bf98.bin": {
+      "bytes": 171,
+      "sha256": "0c531de5b76f8d5087bd86657ff2a7559b2158c841a5950c1d6c95dd82f8bf98"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_sticker/cipher/9765537a4911a9a2300f0f61e551ff2a59e1609f883c6e4763a42fc9a7c7651d.bin": {
+      "bytes": 48,
+      "sha256": "9765537a4911a9a2300f0f61e551ff2a59e1609f883c6e4763a42fc9a7c7651d"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_manual_web/manifest.json": {
+      "bytes": 4431,
+      "sha256": "c4e6c0fb977268e307931ae737175b9ec350c72a7d95210447570a8f1ddacb90"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_manual_web/public/spark-md5.min.js": {
+      "bytes": 10293,
+      "sha256": "3e97e82939197c7ca4e34c7c1db61309fb0390ed077ae819f79c380563c9d0c3"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_manual_web/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_manual_web/cipher/035f9331ba7c7d23ae7b9176379bbbafaba4cdf402f24360fdbce06be32c23ea.bin": {
+      "bytes": 60955,
+      "sha256": "035f9331ba7c7d23ae7b9176379bbbafaba4cdf402f24360fdbce06be32c23ea"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_manual_web/cipher/9b68c8859cdf63953421a814ea4433f7a2abb63ce128d4c1290fd6a5ca6d3329.bin": {
+      "bytes": 95368,
+      "sha256": "9b68c8859cdf63953421a814ea4433f7a2abb63ce128d4c1290fd6a5ca6d3329"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_manual_web/cipher/cc837913825eba8188e4b297fcb7418c69cf0dcec628dd8f681f60f142e8eb12.bin": {
+      "bytes": 9832,
+      "sha256": "cc837913825eba8188e4b297fcb7418c69cf0dcec628dd8f681f60f142e8eb12"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/manifest.json": {
+      "bytes": 12127,
+      "sha256": "1307caa4f3d24c13310d9f7c5c40ecf885a96ddda2c986c35fb5ef24ef912fef"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/public/font-adjustment-local/vendor/runtime-assets.json": {
+      "bytes": 2018,
+      "sha256": "a4fbff0ac1d7506a73264c09c2ee508a11e585393461e6b1d3f642bb43dfce6f"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/public/font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 869,
+      "sha256": "12f0e5d72adb78058dba39c6aade30a8b3d7de6da3b312c293e1632ade43b5d5"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/python_stdlib.zip": {
+      "bytes": 2423989,
+      "sha256": "4298b6ee445cb724c3973437da47789752b9e6ff4e26619026b283ec801fc46b"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl": {
+      "bytes": 1089800,
+      "sha256": "9d6518c8ad4d88019bc72045108eca154301014215222408aa047cf4955c726d"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.asm.wasm": {
+      "bytes": 8647684,
+      "sha256": "e2f4ee75b325e35eb31bfb8c613d4dd5098f5502c156a97847686875b5025480"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.js": {
+      "bytes": 18597,
+      "sha256": "718d40f1c015dd25ec724cc8fc4e2325d6a45a92ae225121ff6953f224a16f72"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide-lock.json": {
+      "bytes": 120010,
+      "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/public/font-adjustment-local/vendor/pyodide/pyodide.asm.js": {
+      "bytes": 1074322,
+      "sha256": "1263f02b5b26099b96112378156f242dd98b39a8201ba7765e5fe3d455c5ce91"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/cipher/945efe4ffc38c5e4e3d1fef763137388d6d481bf80775801e43fd71b40825f3a.bin": {
+      "bytes": 100782,
+      "sha256": "945efe4ffc38c5e4e3d1fef763137388d6d481bf80775801e43fd71b40825f3a"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/cipher/dd660f99a6cfbb08fd6106e152993b44b8ee856197b5bb030d6a5e1f9f368bef.bin": {
+      "bytes": 5657,
+      "sha256": "dd660f99a6cfbb08fd6106e152993b44b8ee856197b5bb030d6a5e1f9f368bef"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/cipher/9456b871c4f0273c7edd0cd82425e9fa57ff9a2dc28572d42a4029134c4bd30e.bin": {
+      "bytes": 130749,
+      "sha256": "9456b871c4f0273c7edd0cd82425e9fa57ff9a2dc28572d42a4029134c4bd30e"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/cipher/7d86827550fb5ed635e6a115ee87219f6f381e5d0edab323b04533b329a87308.bin": {
+      "bytes": 10571,
+      "sha256": "7d86827550fb5ed635e6a115ee87219f6f381e5d0edab323b04533b329a87308"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/cipher/78f6ca386d32e088960f6308cebfef5edf22e722b867bdc12d405aa41ba7a7be.bin": {
+      "bytes": 11726,
+      "sha256": "78f6ca386d32e088960f6308cebfef5edf22e722b867bdc12d405aa41ba7a7be"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/cipher/e0c235ffbab9f86b1cf591260251eca3fa1269753be957a4f0519ec6356bceb2.bin": {
+      "bytes": 65801,
+      "sha256": "e0c235ffbab9f86b1cf591260251eca3fa1269753be957a4f0519ec6356bceb2"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/cipher/83e932adb72ffc6769bb1795bdc21b907f08cb16fafaaace5ccc873a1eb9fbca.bin": {
+      "bytes": 95368,
+      "sha256": "83e932adb72ffc6769bb1795bdc21b907f08cb16fafaaace5ccc873a1eb9fbca"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_adjustment/cipher/6e02287f4561abfcf4a8d89de0e75433cdcd1a1f912d6c702d5b939beabad732.bin": {
+      "bytes": 13309,
+      "sha256": "6e02287f4561abfcf4a8d89de0e75433cdcd1a1f912d6c702d5b939beabad732"
+    },
+    "v2/releases/20261002-manage-handoff-v2/download_bridge/manifest.json": {
+      "bytes": 3992,
+      "sha256": "cab69a0a9a9d2e4447bdee9c4a42730e569404de889205a087e1efc34c3549dc"
+    },
+    "v2/releases/20261002-manage-handoff-v2/download_bridge/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261002-manage-handoff-v2/download_bridge/cipher/5eab4020f7c3380dd787f30a5491bce6d39ea87e4a277649ae63e1979e9d8ccc.bin": {
+      "bytes": 57717,
+      "sha256": "5eab4020f7c3380dd787f30a5491bce6d39ea87e4a277649ae63e1979e9d8ccc"
+    },
+    "v2/releases/20261002-manage-handoff-v2/download_bridge/cipher/32f80ba153ba6488afae5bf654e8219bc715829a4b72b04d90099c8345e4bc2c.bin": {
+      "bytes": 908,
+      "sha256": "32f80ba153ba6488afae5bf654e8219bc715829a4b72b04d90099c8345e4bc2c"
+    },
+    "v2/releases/20261002-manage-handoff-v2/download_bridge/cipher/7b143ecabbfaab78d00ce37ae41432a1958e225b970d40e4e3fac2cfeb245f5b.bin": {
+      "bytes": 1195,
+      "sha256": "7b143ecabbfaab78d00ce37ae41432a1958e225b970d40e4e3fac2cfeb245f5b"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/manifest.json": {
+      "bytes": 16287,
+      "sha256": "c4b28924927564768b41cc90b23030630f6c045e22197e558f973a65221f0c8a"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/public/font-adjustment-local/vendor/runtime-assets.json": {
+      "bytes": 2018,
+      "sha256": "a4fbff0ac1d7506a73264c09c2ee508a11e585393461e6b1d3f642bb43dfce6f"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.js": {
+      "bytes": 18597,
+      "sha256": "718d40f1c015dd25ec724cc8fc4e2325d6a45a92ae225121ff6953f224a16f72"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.asm.wasm": {
+      "bytes": 8647684,
+      "sha256": "e2f4ee75b325e35eb31bfb8c613d4dd5098f5502c156a97847686875b5025480"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide-lock.json": {
+      "bytes": 120010,
+      "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/public/font-adjustment-local/vendor/pyodide/python_stdlib.zip": {
+      "bytes": 2423989,
+      "sha256": "4298b6ee445cb724c3973437da47789752b9e6ff4e26619026b283ec801fc46b"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/public/font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl": {
+      "bytes": 1089800,
+      "sha256": "9d6518c8ad4d88019bc72045108eca154301014215222408aa047cf4955c726d"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/public/font-adjustment-local/vendor/pyodide/pyodide.asm.js": {
+      "bytes": 1074322,
+      "sha256": "1263f02b5b26099b96112378156f242dd98b39a8201ba7765e5fe3d455c5ce91"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/cipher/8bac1fe904fc4bbed65782c03f9f1ea88b35b4593d0f3a5dd6d5156781bae6a8.bin": {
+      "bytes": 38481,
+      "sha256": "8bac1fe904fc4bbed65782c03f9f1ea88b35b4593d0f3a5dd6d5156781bae6a8"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/cipher/c805a802150a073762c1eaa35c1ddbe84715ad7cef147ede57378819b6bef78c.bin": {
+      "bytes": 95167,
+      "sha256": "c805a802150a073762c1eaa35c1ddbe84715ad7cef147ede57378819b6bef78c"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/cipher/e822a82798e4cae9e69b30a66ba41b285c8d9c33e4c6ae3fa66a9ecaa794da4c.bin": {
+      "bytes": 8844,
+      "sha256": "e822a82798e4cae9e69b30a66ba41b285c8d9c33e4c6ae3fa66a9ecaa794da4c"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/cipher/7b0a55413c8e10ccd70570f74d35020c8770a81e7e2496959dcb0b58d2dcb8f2.bin": {
+      "bytes": 26301,
+      "sha256": "7b0a55413c8e10ccd70570f74d35020c8770a81e7e2496959dcb0b58d2dcb8f2"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/cipher/87b1c89f889453044595bdf7a575e078bab06e7ef6272129247974eaf2dfc9f3.bin": {
+      "bytes": 5657,
+      "sha256": "87b1c89f889453044595bdf7a575e078bab06e7ef6272129247974eaf2dfc9f3"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/cipher/c7ff65e998244865437fe3646ee10e046c1fe8e59b3ba538916a5781151a2809.bin": {
+      "bytes": 95368,
+      "sha256": "c7ff65e998244865437fe3646ee10e046c1fe8e59b3ba538916a5781151a2809"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/cipher/20245e97d99982198a3367f6cb7906593c32a7acd504b4661def0e6cb8acb54e.bin": {
+      "bytes": 65801,
+      "sha256": "20245e97d99982198a3367f6cb7906593c32a7acd504b4661def0e6cb8acb54e"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/cipher/98add78f48b22f0f3f69c1721a77d9aa20c0b0651795ea7547b1deef2befa3a9.bin": {
+      "bytes": 18160,
+      "sha256": "98add78f48b22f0f3f69c1721a77d9aa20c0b0651795ea7547b1deef2befa3a9"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/cipher/c4cde345fe1ffd35c10017d32cc0e641feffebefb11d9121d675e87f93fcef21.bin": {
+      "bytes": 10085,
+      "sha256": "c4cde345fe1ffd35c10017d32cc0e641feffebefb11d9121d675e87f93fcef21"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/cipher/97fb27578a822d50f9b970bf16b96bc0e3786a6b45522e217ee23cc7608e77ba.bin": {
+      "bytes": 65625,
+      "sha256": "97fb27578a822d50f9b970bf16b96bc0e3786a6b45522e217ee23cc7608e77ba"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/cipher/b3c6add691794bb32a4f10f9594e1495a25cb1da5c5a7033faf03658622bd18d.bin": {
+      "bytes": 7640,
+      "sha256": "b3c6add691794bb32a4f10f9594e1495a25cb1da5c5a7033faf03658622bd18d"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/cipher/4cee68000030e5ffdbe29c67cfcd5c7b0e7c52e023a2ef830c36860826c86280.bin": {
+      "bytes": 24525,
+      "sha256": "4cee68000030e5ffdbe29c67cfcd5c7b0e7c52e023a2ef830c36860826c86280"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/cipher/019f46c8eb1d93f347b67d03dcf89ae83747d3b1ff11e94e0595ee9db12c264b.bin": {
+      "bytes": 681,
+      "sha256": "019f46c8eb1d93f347b67d03dcf89ae83747d3b1ff11e94e0595ee9db12c264b"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/cipher/d3809fddda80dead868f4916e113b9f327570d6343a54754a63f42b3c566b814.bin": {
+      "bytes": 126821,
+      "sha256": "d3809fddda80dead868f4916e113b9f327570d6343a54754a63f42b3c566b814"
+    },
+    "v2/releases/20261002-manage-handoff-v2/font_compress/cipher/66e55454063d0cb01c729872ce4b0dc87300ad5ece34f359673821ef2eea9d4e.bin": {
+      "bytes": 47357,
+      "sha256": "66e55454063d0cb01c729872ce4b0dc87300ad5ece34f359673821ef2eea9d4e"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_keyboard_simplify/manifest.json": {
+      "bytes": 6501,
+      "sha256": "31888232d60bf5eded39158770b4452d4191b01d1ebc4bc5218e1bdf321a9588"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_keyboard_simplify/public/skin-keyboard-simplify/compression-worker.vendor.js": {
+      "bytes": 64650,
+      "sha256": "8f196903b77e91219eff557f0bd0270dab8e58e4a646c8435c4ec8eb72b1be4c"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_keyboard_simplify/public/skin-keyboard-simplify/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 601,
+      "sha256": "3a159f5e0a31534e4d912e2ce8b390c987baf4abfec58be80f2d769df2cc8c89"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_keyboard_simplify/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_keyboard_simplify/cipher/9cb92fc1050c3e5a7c9d995594179764763f46c70df63e17cfacf51d9864646f.bin": {
+      "bytes": 2633,
+      "sha256": "9cb92fc1050c3e5a7c9d995594179764763f46c70df63e17cfacf51d9864646f"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_keyboard_simplify/cipher/f0be4a9865740faab0231eb443ec502b70590f7531c40e7d7577197bb9f86afc.bin": {
+      "bytes": 55080,
+      "sha256": "f0be4a9865740faab0231eb443ec502b70590f7531c40e7d7577197bb9f86afc"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_keyboard_simplify/cipher/dc5b691602c0cfcd13988cc9323c6694fa9dfa0b38c6571f398a79e637aa582f.bin": {
+      "bytes": 3492,
+      "sha256": "dc5b691602c0cfcd13988cc9323c6694fa9dfa0b38c6571f398a79e637aa582f"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_keyboard_simplify/cipher/88e7af85adf5d0976efb3f51bb28d51de1826283a2a1d477e53d2ea37bb625cd.bin": {
+      "bytes": 3459,
+      "sha256": "88e7af85adf5d0976efb3f51bb28d51de1826283a2a1d477e53d2ea37bb625cd"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_keyboard_simplify/cipher/5dd5b9fe74991a523a57c9c4a840c63cc995faa4bbd8257151d8b2f526c5f15d.bin": {
+      "bytes": 8864,
+      "sha256": "5dd5b9fe74991a523a57c9c4a840c63cc995faa4bbd8257151d8b2f526c5f15d"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_psd_adapter/manifest.json": {
+      "bytes": 5163,
+      "sha256": "c0b4bd362e5775c386b6e1bb05626f9aca0bf946b30f0ed5b896d265d1d21b5e"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_psd_adapter/public/skin-psd-adapter/adapter-worker.vendor.js": {
+      "bytes": 347482,
+      "sha256": "045a16b415c3d21eb4abc6208ed4063876bd95d0b5a91a49a0a3d925c6d5dcfd"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_psd_adapter/public/skin-psd-adapter/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 3709,
+      "sha256": "0898ac280bc1f520c9f6bf68d5375529ffdb0aff8c3727d3cda5c80c350e10b6"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_psd_adapter/cipher/b952f8c9733845c8df5a13e9f7b14feaa74162a35a22f103415b762160f5dcb1.bin": {
+      "bytes": 11404,
+      "sha256": "b952f8c9733845c8df5a13e9f7b14feaa74162a35a22f103415b762160f5dcb1"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_psd_adapter/cipher/b2f3612d28dc8763bf33ea82f773de3ac4325f6c6deca2ff42a5b432fb614438.bin": {
+      "bytes": 4627,
+      "sha256": "b2f3612d28dc8763bf33ea82f773de3ac4325f6c6deca2ff42a5b432fb614438"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_psd_adapter/cipher/9cc2b0aca869f27e1ad44f710979b6fde9c635d67dc5e2ab7834fca28505c748.bin": {
+      "bytes": 3826,
+      "sha256": "9cc2b0aca869f27e1ad44f710979b6fde9c635d67dc5e2ab7834fca28505c748"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_psd_adapter/cipher/b478185acb4631c9fdc2de4b0bec8ff8ad1afcd30046c639c0c08c5e8a4814e9.bin": {
+      "bytes": 36981,
+      "sha256": "b478185acb4631c9fdc2de4b0bec8ff8ad1afcd30046c639c0c08c5e8a4814e9"
+    },
+    "v2/releases/20261002-manage-handoff-v2/manage_direct_upload/manifest.json": {
+      "bytes": 4954,
+      "sha256": "6d1463789461b48264608ecc7ecdde7bac491cd52bd6ed07d3d6a680859ed1fe"
+    },
+    "v2/releases/20261002-manage-handoff-v2/manage_direct_upload/public/jszip.min.js": {
+      "bytes": 97653,
+      "sha256": "4ec9ea24a3271fcc28035e922116d170ffd83bbf265a82a45e2d2a399b055181"
+    },
+    "v2/releases/20261002-manage-handoff-v2/manage_direct_upload/public/spark-md5.min.js": {
+      "bytes": 10293,
+      "sha256": "3e97e82939197c7ca4e34c7c1db61309fb0390ed077ae819f79c380563c9d0c3"
+    },
+    "v2/releases/20261002-manage-handoff-v2/manage_direct_upload/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261002-manage-handoff-v2/manage_direct_upload/cipher/5ffafa6d05d0747a5f4c6fc52ec925e3c91bd5beb7cd7dc2955ac502b54cc0a4.bin": {
+      "bytes": 172776,
+      "sha256": "5ffafa6d05d0747a5f4c6fc52ec925e3c91bd5beb7cd7dc2955ac502b54cc0a4"
+    },
+    "v2/releases/20261002-manage-handoff-v2/manage_direct_upload/cipher/72a5a64d0254c4f94595384c781b68886eb750e1f5eaf1e9915edb35a35b3536.bin": {
+      "bytes": 4749,
+      "sha256": "72a5a64d0254c4f94595384c781b68886eb750e1f5eaf1e9915edb35a35b3536"
+    },
+    "v2/releases/20261002-manage-handoff-v2/manage_direct_upload/cipher/25bac0f09bdf9a48b622474cf2847b8f9363e799f1e8ff8e5e2067ca998a12a1.bin": {
+      "bytes": 5657,
+      "sha256": "25bac0f09bdf9a48b622474cf2847b8f9363e799f1e8ff8e5e2067ca998a12a1"
+    },
+    "v2/releases/20261002-manage-handoff-v2/member_local_build/manifest.json": {
+      "bytes": 5473,
+      "sha256": "4579191d399587d8b6c2c8cd0e531dcfa1339db385d26ca2c059ff305d649098"
+    },
+    "v2/releases/20261002-manage-handoff-v2/member_local_build/public/jszip.min.js": {
+      "bytes": 97653,
+      "sha256": "4ec9ea24a3271fcc28035e922116d170ffd83bbf265a82a45e2d2a399b055181"
+    },
+    "v2/releases/20261002-manage-handoff-v2/member_local_build/public/spark-md5.min.js": {
+      "bytes": 10293,
+      "sha256": "3e97e82939197c7ca4e34c7c1db61309fb0390ed077ae819f79c380563c9d0c3"
+    },
+    "v2/releases/20261002-manage-handoff-v2/member_local_build/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261002-manage-handoff-v2/member_local_build/public/font-marker-local/font-marker.vendor.js": {
+      "bytes": 58322,
+      "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0"
+    },
+    "v2/releases/20261002-manage-handoff-v2/member_local_build/cipher/3e060db4abb12f347ac7bbdb0e4c22eaf73518a213ec2d3ac7014ee6a53f838c.bin": {
+      "bytes": 199885,
+      "sha256": "3e060db4abb12f347ac7bbdb0e4c22eaf73518a213ec2d3ac7014ee6a53f838c"
+    },
+    "v2/releases/20261002-manage-handoff-v2/member_local_build/cipher/f6ad55561f7cb9f3a5482802cd890a444bc6161bc3fa4cbaa71fba54d006a8bb.bin": {
+      "bytes": 95368,
+      "sha256": "f6ad55561f7cb9f3a5482802cd890a444bc6161bc3fa4cbaa71fba54d006a8bb"
+    },
+    "v2/releases/20261002-manage-handoff-v2/member_local_build/cipher/b53215963695de17b7875d5c551e80277f073a79c17f8d009c78f6efeb651c40.bin": {
+      "bytes": 4236,
+      "sha256": "b53215963695de17b7875d5c551e80277f073a79c17f8d009c78f6efeb651c40"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_oneclicksignaturepro/manifest.json": {
+      "bytes": 4073,
+      "sha256": "8defdb9b64240d7dbc466fe955c726a24dfe6e06eeb5f28cf8a8e0dbd2bfe976"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_oneclicksignaturepro/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_oneclicksignaturepro/cipher/5da000f749ec1f3d9755d4cef1bbb4121adc3995cec9acf3ebd9ef66c059505e.bin": {
+      "bytes": 5289,
+      "sha256": "5da000f749ec1f3d9755d4cef1bbb4121adc3995cec9acf3ebd9ef66c059505e"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_oneclicksignaturepro/cipher/b44462764b10e9767a7dea8a4eb22c5cecc70d55252ae812133b6d30149b50f2.bin": {
+      "bytes": 4552,
+      "sha256": "b44462764b10e9767a7dea8a4eb22c5cecc70d55252ae812133b6d30149b50f2"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_oneclicksignaturepro/cipher/df9e3c8a970b046fab362051fd232afef611aca8f18f1df9d0d76242b616c953.bin": {
+      "bytes": 21928,
+      "sha256": "df9e3c8a970b046fab362051fd232afef611aca8f18f1df9d0d76242b616c953"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_pic_part/manifest.json": {
+      "bytes": 6373,
+      "sha256": "fa3beef99844f741842529f01af3d44998f2b312505f78c9a1d8e4f307851f5d"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_pic_part/public/psd-layer-split/psd-worker.vendor.js": {
+      "bytes": 335174,
+      "sha256": "5e1e9c04a92ee585f43eca84096fd1410a4bbd3574f5e48ae87a20b0172de412"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_pic_part/public/psd-layer-split/vendor/THIRD_PARTY_NOTICES.md": {
+      "bytes": 8236,
+      "sha256": "a2f5cd88ce4c80d3ea3780f13452dfe0e503e957abdecd075b5f3787ee9b9dc9"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_pic_part/public/font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "bytes": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_pic_part/cipher/8b46d6921d08695a270a6ac8abfb8b9181058a3d577d189cbe9b4c078b533a93.bin": {
+      "bytes": 12171,
+      "sha256": "8b46d6921d08695a270a6ac8abfb8b9181058a3d577d189cbe9b4c078b533a93"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_pic_part/cipher/6f817f4f93f3f4c8dca1cf6c80fd11fe0241f70fefbff74a045dd19ea8091ba0.bin": {
+      "bytes": 8604,
+      "sha256": "6f817f4f93f3f4c8dca1cf6c80fd11fe0241f70fefbff74a045dd19ea8091ba0"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_pic_part/cipher/6978dff08689cdaf422476c73bbeafe180d9bcc453aa4160912dec9504fc52fe.bin": {
+      "bytes": 5657,
+      "sha256": "6978dff08689cdaf422476c73bbeafe180d9bcc453aa4160912dec9504fc52fe"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_pic_part/cipher/42c9deb7a1c4bde5a4b3aa374b2041b40bf26fbc37ede96ab85ab8ad72a5e853.bin": {
+      "bytes": 4974,
+      "sha256": "42c9deb7a1c4bde5a4b3aa374b2041b40bf26fbc37ede96ab85ab8ad72a5e853"
+    },
+    "v2/releases/20261002-manage-handoff-v2/skin_pic_part/cipher/e7c6584e80074941ed21d2a35baf535551bf7e5be276a88b3e1e57f7e2cee65b.bin": {
+      "bytes": 4084,
+      "sha256": "e7c6584e80074941ed21d2a35baf535551bf7e5be276a88b3e1e57f7e2cee65b"
     },
     "beautify.mp/v2/releases/20260911-download-bridge-v2/font-adjustment-local/font-adjustment-local/font-adjustment.worker.js": {
       "bytes": 11976,

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "20261001-manage-native-bridge-v1",
+  "toolKey": "skin_oneclicksignaturepro",
+  "createdAt": "2026-10-02T02:33:08.231Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "skin-oneclicksignaturepro/index.html",
+    "styles": [
+      "skin-oneclicksignaturepro/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "skin-oneclicksignaturepro/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:20261001-manage-native-bridge-v1:skin_oneclicksignaturepro",
+      "wrappedKey": "Uj3g9vzklzZCNq8B4ay6JYe4G25B8unIHR1t5rk8a//etaJb0RkEjmxV5OXOmCrvKNLZFcf+6pAjlyUh9rYv0MA4iO0C8eTHY+vGtvOLkWKFqtcloB6Hurx4TUP3dqqbevlAUR+7ifihKHXCj6NuJlIq4q1m2xHIxL86kuqi2mUiw4jhBjvxqJnSOhJgOTIeq5b28o9VxvNuZ+bJ2wcOXhjYY7tX5m9dXkjtGl4xhxHzsUGdQnIVqJjtigosPjMXTD3o5uenC+PmqlF2mIH0UNbqKmZCqHSYXbTUCtRsm+/93l82GW67eFz0M/4JUS9khA9HD/v5jQgRVeNWi9h5idr3CN5SOo5jQf72JyjFkwEJV8Rr4sypoE8JEiNG4TjsaJq7z1fy1aCncIgYxIdL3aLSGsS8oZAae5rQ9MwNND87CB5s7gpOpOyj7219EUCdcsX4FVTt1GjqOuz5Of2uU0D4Dm8USK10pjeNy6cXGz6ITAq2mBwZtz6QLbjhdVHV"
+    }
+  ],
+  "routes": {
+    "skin-oneclicksignaturepro/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-3603085efd899f348c0a",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 5273,
+          "sha256": "3603085efd899f348c0a8c0875e8fb0b3027749804b5d16c9d533a7ddb08c1a5",
+          "cipherPath": "cipher/c7d2f97f9a83e32a551589f43425d01140e61c58d6ab6a4e57dc9f90fa580bb3.bin",
+          "cipherSha256": "c7d2f97f9a83e32a551589f43425d01140e61c58d6ab6a4e57dc9f90fa580bb3",
+          "iv": "IJDG+PC5vHz87F8K",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f5b4a11684b514980c45",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 4536,
+          "sha256": "f5b4a11684b514980c458d54380d887194c4f1d01983df985f4f6ce855b38d4a",
+          "cipherPath": "cipher/362034cb3e6ce8d50d4f5c9f3b99945d71b9aa42b39d08375affca4ea52db457.bin",
+          "cipherSha256": "362034cb3e6ce8d50d4f5c9f3b99945d71b9aa42b39d08375affca4ea52db457",
+          "iv": "QpC5O0GWwPoWZF0q",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-194778d3433426eb7738",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 21912,
+          "sha256": "194778d3433426eb773810a2a432db73cf58e960b945208c75a750a6116339e6",
+          "cipherPath": "cipher/ed15b5103bf1d9fddbea0ff13f9d33efb3ff60b9f7a3cfe76da353cb0e807937.bin",
+          "cipherSha256": "ed15b5103bf1d9fddbea0ff13f9d33efb3ff60b9f7a3cfe76da353cb0e807937",
+          "iv": "t9RVXH23yA1VLu8v",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "manifest-primary",
+    "alg": "ES256",
+    "value": "3ajsZCbWs+Gpzde6ih+W6YqNPaWhto9bV7qVvMPWkrlFRCDsD0IK6SdOUKBcjECWDV56ibCF4+PNiUWI6Wzdew=="
+  }
+}

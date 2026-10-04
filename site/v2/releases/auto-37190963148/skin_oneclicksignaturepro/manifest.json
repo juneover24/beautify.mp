@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "auto-37190963148",
+  "toolKey": "skin_oneclicksignaturepro",
+  "createdAt": "2026-10-04T09:05:00.091Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "skin-oneclicksignaturepro/index.html",
+    "styles": [
+      "skin-oneclicksignaturepro/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "skin-oneclicksignaturepro/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:auto-37190963148:skin_oneclicksignaturepro",
+      "wrappedKey": "FN+qIK1MNuA4ZLzIQUNhNqa17IO8tdb4d7OHSNvHMBAefUy0WnCFSTDob8vIBICvcJGVDmdhYxziddsWMqSqH3E9v2EC+FdD65qo6nfN3eiwlKrAiTmfJNlsEjSafZ7cwCiVMK0yWYgCJCPQbOyW79m4eqFeMAWsMiMOerZ1GkFM3Pdzlou4r+Uv5WTL/iLQ02iCqdjarjimdRMANd8oLVfkDqEWj72bVFrWvGi2eDtUCD1zzQXJhXJFxpiotgCf83lr62/S7Pplaz/uqkNftTxfrjKipTdPFZqVK2Xaoe+eBMH/YLeu7GkxL6Qd2lDLtnCfEap+5zzH+v5mzIjDWNELj71YdA4j7CJElQXcPHibktzdXyTYYsrW7M95IlQSK0gbcvrXABik8n8ulPi5Pe+b/A+tRV3lEUz9Vw6raZ2Wi2iRCfGyOwvv/n0OVoAxrCumcfoKF6f44OqEJ5rl+Q09SoVphF3+IkFde/Hc87+wHAg8Arr3zF76a+tiK1nx"
+    }
+  ],
+  "routes": {
+    "skin-oneclicksignaturepro/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-3603085efd899f348c0a",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 5273,
+          "sha256": "3603085efd899f348c0a8c0875e8fb0b3027749804b5d16c9d533a7ddb08c1a5",
+          "cipherPath": "cipher/d637e6841e75ed5d772887a20a7fd9a0052d37e7b378212d37583aa53ce57309.bin",
+          "cipherSha256": "d637e6841e75ed5d772887a20a7fd9a0052d37e7b378212d37583aa53ce57309",
+          "iv": "jlzPtTrL4NbIReuL",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f5b4a11684b514980c45",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 4536,
+          "sha256": "f5b4a11684b514980c458d54380d887194c4f1d01983df985f4f6ce855b38d4a",
+          "cipherPath": "cipher/9445f9bbb7fdfb7bc0e409d58098fb967e511f21ac9f7000b54001a197c618fd.bin",
+          "cipherSha256": "9445f9bbb7fdfb7bc0e409d58098fb967e511f21ac9f7000b54001a197c618fd",
+          "iv": "K/yDVMamX6z/aeUM",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-194778d3433426eb7738",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 21912,
+          "sha256": "194778d3433426eb773810a2a432db73cf58e960b945208c75a750a6116339e6",
+          "cipherPath": "cipher/aa1cc533b403a82f3e1277a1c64d0f859af8245efc18cda0a664ec54cdd7ab2e.bin",
+          "cipherSha256": "aa1cc533b403a82f3e1277a1c64d0f859af8245efc18cda0a664ec54cdd7ab2e",
+          "iv": "KiSprBU1lHcTGV23",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "beautify-mp-manifest-v1",
+    "alg": "ES256",
+    "value": "GVadfZRwegyyNqwiwhYF0GBcFfJyd0SGF4eby3Jd13wfqsE/TYcp6n2auVnORWD5zaAiKIViSa5m5HNzWc0n5Q=="
+  }
+}

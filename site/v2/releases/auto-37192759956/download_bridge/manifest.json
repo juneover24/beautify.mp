@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "auto-37192759956",
+  "toolKey": "download_bridge",
+  "createdAt": "2026-10-04T09:43:02.804Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "download-bridge/index.html",
+    "styles": [
+      "download-bridge/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "download-bridge/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:auto-37192759956:download_bridge",
+      "wrappedKey": "ClOGZZc5Gkw6AiVW3jjzKHcEb1kkqk2me+SqbciBBXSwv2GnrkCklioZgWQrW28VK1nrgIhudV2hGjNLDPJJ2t8/NY8tw34YKOswGMiW+qoA0gVEJjc0zuqmS5ACZCcxAJBVoD2S2Vh+d0F+BWG4UA3P0xllRuW74pZgarcOsJ/DO3Q8HJpxV63RUMX7OIp4c1rpDzNZdRhALCHsKgQSId3AR3cPuPnmvN8hdltQwoojuto/klzpde640V/Rw7mTEJxvR2X04221DnLvxYO06lEhm7QOpQ/9VJBHzsCRSgUq7oCkScFTPNtYR02arOhC8CCQ/AFGe5kxZIC/7MfsZfHy/6AEo4oDrcgWWz7I8mFkVO9VEAiPFYLIry6k7EP5Ru3J8U6SICeVaIUYrsmAYOeAyEpVYp4XQrVWwyD+//khd/2sPeoDeYUInAgg4I1FqyPxVusmqOrzZobqF8kCpK9thvn9eCmvQXFIfIFGNO2q4PcGDMb2jsYUY2ZqD/P5"
+    }
+  ],
+  "routes": {
+    "download-bridge/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-449c31c81a347c2d2dc1",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 892,
+          "sha256": "449c31c81a347c2d2dc1e1bd71aa21498408b6f501e5579b1a7aac328048bdfd",
+          "cipherPath": "cipher/d7859a520b45dfc6b63d132ab87495432410b6ee85bc8bc82ed73e03feda26e0.bin",
+          "cipherSha256": "d7859a520b45dfc6b63d132ab87495432410b6ee85bc8bc82ed73e03feda26e0",
+          "iv": "5UJEBerpZ4kHQYwv",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f22141278f2eca3e6a9c",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 1179,
+          "sha256": "f22141278f2eca3e6a9ccb360ae3a66474c4d42405d21c7e8a870c0d94b11421",
+          "cipherPath": "cipher/ef93fb2664d4608916204ed28194e484c8bb8d36a23f6b2a7415f088485c8ab7.bin",
+          "cipherSha256": "ef93fb2664d4608916204ed28194e484c8bb8d36a23f6b2a7415f088485c8ab7",
+          "iv": "WQ4GBSSCHok1mQ5M",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-c94fdea0e496d80428c1",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 57701,
+          "sha256": "c94fdea0e496d80428c1963c9340bc052a841aeb20f6a8a4834646ca058243a4",
+          "cipherPath": "cipher/7de6da02550752701177cd54bed979ffdc1e00278f6c70cce1a60efb9dd8a7c0.bin",
+          "cipherSha256": "7de6da02550752701177cd54bed979ffdc1e00278f6c70cce1a60efb9dd8a7c0",
+          "iv": "7pFg5OC4CiNGhVAa",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "beautify-mp-manifest-v1",
+    "alg": "ES256",
+    "value": "zqYxZzph68FlFHBHBfk+LVr0gZzsoBVbMIIjC5rh0ZEx4kw5yfWDtIBQv8eWbrgNOArEFgygmd5em68mKc4P5w=="
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "auto-37192759956",
+  "toolKey": "skin_oneclicksignaturepro",
+  "createdAt": "2026-10-04T09:43:02.803Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "skin-oneclicksignaturepro/index.html",
+    "styles": [
+      "skin-oneclicksignaturepro/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "skin-oneclicksignaturepro/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:auto-37192759956:skin_oneclicksignaturepro",
+      "wrappedKey": "DVtGDKtCHv7OQPqRS1MQPegHENNzRrea94abWMFdVSmpX+elk3VrXDKBW7KMFkZD9KAgxSrC8xT0Oocgr7j9ZZfwthU1rJTBr+ZkjBACaVXEAf64AmI90d8zwl6dnNmPrXOSugQX9n4xjLUeqDJ7rMY259ceesN9G3kz1Llw/XdYBubSNpwXFZSEbCFSTsZ9ZBk+MLnZV+PehbHPB246eIuQISKkA/vcry7con8Fo9NPFLjxBU2nnkZTFWuOxAVQLC2RZUdkQks6duwq5mJzHscwOazcTHM3vkcPXrTDR/UFaKXmwZOz0DwQf+CH0lkVjZabfHevDoFvUyu6NIdnhK8tcjENpa67zQQRkhg7ZJTInc5cun96JysVWknWGdoBlKYoGhQjDHM5l5qJSBwx5k0QXavjCO5Q4CNPn5MPGzgwh4jMdyuX0seI20BdrcBMowu9AiVR2l6eLlhkxJhA6qEhQrhjrCHgQrxlIN98uwg7gHIhhbCvu0BJ1TGmCIZW"
+    }
+  ],
+  "routes": {
+    "skin-oneclicksignaturepro/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-3603085efd899f348c0a",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 5273,
+          "sha256": "3603085efd899f348c0a8c0875e8fb0b3027749804b5d16c9d533a7ddb08c1a5",
+          "cipherPath": "cipher/eb36e2c5052dd02f96739681b1c04c660629cc327f9251533e0cfed968f3b6a8.bin",
+          "cipherSha256": "eb36e2c5052dd02f96739681b1c04c660629cc327f9251533e0cfed968f3b6a8",
+          "iv": "OD7csllZ+ovGmtVK",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f5b4a11684b514980c45",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 4536,
+          "sha256": "f5b4a11684b514980c458d54380d887194c4f1d01983df985f4f6ce855b38d4a",
+          "cipherPath": "cipher/204892254a91eed772aebbe7162a93d5fae37b968df909d95963f1e9c2dbe393.bin",
+          "cipherSha256": "204892254a91eed772aebbe7162a93d5fae37b968df909d95963f1e9c2dbe393",
+          "iv": "fAytFG+YOR3ecDME",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-194778d3433426eb7738",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 21912,
+          "sha256": "194778d3433426eb773810a2a432db73cf58e960b945208c75a750a6116339e6",
+          "cipherPath": "cipher/9025a320c7877c99103b0b6f38fc32277245c06cb068206b6ddee82447e35125.bin",
+          "cipherSha256": "9025a320c7877c99103b0b6f38fc32277245c06cb068206b6ddee82447e35125",
+          "iv": "mFfxxTWK1XirzXHN",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "beautify-mp-manifest-v1",
+    "alg": "ES256",
+    "value": "7BfO052inwJ4rkYaTZVmOGmikKQxWrTChQd/1/ARYhwbzyjahqoLGrfYiQVBNkmIr/TMA/X6niTvLg21boWjMw=="
+  }
+}

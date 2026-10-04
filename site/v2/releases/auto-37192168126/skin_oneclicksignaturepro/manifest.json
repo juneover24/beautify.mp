@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "auto-37192168126",
+  "toolKey": "skin_oneclicksignaturepro",
+  "createdAt": "2026-10-04T09:32:27.738Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "skin-oneclicksignaturepro/index.html",
+    "styles": [
+      "skin-oneclicksignaturepro/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "skin-oneclicksignaturepro/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:auto-37192168126:skin_oneclicksignaturepro",
+      "wrappedKey": "olP0lJYT2QMI9tVv99kZFhd6oL6xN/WkVYDrUey99P+tpGuDKNh+8smclgWx8ul3q5lh7rxq2fqHXLv9cVMl09GzNiKos+z7hvSoDD7dwaOX9rODdzGUqJLHPUXgBwf/9U4eg4NbPC077OX9Hd3yffsUVa+WBIhHwzij5GpEn8dHpS6SdtVELZA0I9dGEXR0ay8whTLAJPNYZ8dYSsMiavagtAY/xQJ5H/uDf1FdeAiFt9kPwr83+Ivl00i61hwTWPNkChYBwSER8RWdmFK3qSzKvcU8l31ITRTEsehmn//gWQHLVBydOK6LuttDLHU11+fGhb+JGxUNye+K5rLN8i2p6jvgkrF7hm8vvUsDWTiPLit7QL7nDltI+cLbGojAKOMSliKSs6v0vXLdxfYVzCWg+Fq2Zx/G9cTKUG4SXdYfWbEOS3weO1UtryMmGZ3kcgIXxb7wtsjQQZSCyg4Viuo5IQkhGUb9CElwHkXUGeHb2UIaaBtJco5QM0/vh+SX"
+    }
+  ],
+  "routes": {
+    "skin-oneclicksignaturepro/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-3603085efd899f348c0a",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 5273,
+          "sha256": "3603085efd899f348c0a8c0875e8fb0b3027749804b5d16c9d533a7ddb08c1a5",
+          "cipherPath": "cipher/2731cef7cbc7e1c42a19296d962d7d0b72ff6281bada59148737528e7ab83aa1.bin",
+          "cipherSha256": "2731cef7cbc7e1c42a19296d962d7d0b72ff6281bada59148737528e7ab83aa1",
+          "iv": "FVb6gImgWvX1+uQ8",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f5b4a11684b514980c45",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 4536,
+          "sha256": "f5b4a11684b514980c458d54380d887194c4f1d01983df985f4f6ce855b38d4a",
+          "cipherPath": "cipher/37d2242bbf1742658cfbb5e14f5fe5dccb93e6d7e1dc501cb3e26ba153dc7d86.bin",
+          "cipherSha256": "37d2242bbf1742658cfbb5e14f5fe5dccb93e6d7e1dc501cb3e26ba153dc7d86",
+          "iv": "JKlxoyLmvqFqPtU1",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-194778d3433426eb7738",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 21912,
+          "sha256": "194778d3433426eb773810a2a432db73cf58e960b945208c75a750a6116339e6",
+          "cipherPath": "cipher/2206a8035e91b6137f3341d6be9117b5d4b20336f0199fd70ed8a783bf668d57.bin",
+          "cipherSha256": "2206a8035e91b6137f3341d6be9117b5d4b20336f0199fd70ed8a783bf668d57",
+          "iv": "8/wPVbKAFlp1o1U4",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "beautify-mp-manifest-v1",
+    "alg": "ES256",
+    "value": "YMLL3GBvvd4dx0zr0+HuNgt4Vt7alLst2HueLbXxnAmy2w2rHql7AdHRFSNwhGPUElmsjG0n2B9C/G6j6j32jQ=="
+  }
+}

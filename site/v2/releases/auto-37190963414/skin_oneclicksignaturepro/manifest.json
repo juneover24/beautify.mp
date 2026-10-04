@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "auto-37190963414",
+  "toolKey": "skin_oneclicksignaturepro",
+  "createdAt": "2026-10-04T09:10:05.964Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "skin-oneclicksignaturepro/index.html",
+    "styles": [
+      "skin-oneclicksignaturepro/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "skin-oneclicksignaturepro/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:auto-37190963414:skin_oneclicksignaturepro",
+      "wrappedKey": "B8/xa8mw9cR4FAbLZy+QhEQJltvmdPydpM67Agqom2SRAhtQQnnGmxJNrwyhnJOSFlk3bzqfLp45audWpOOFcco4xgk1lbZhi1hrBLZFUD//9XfEdjxoInn77ZU7AxV3LzbEFRft4xULG6njLNSOz/o8XeBOPZQ2Og7B/Tg99/aLtxNnIE5Znu8Mf4vFJdCZ42u4OZqbVgJHBXz6ZihPa5y7Ce2i3bEDIkhEebZHM4/AWYLD1B/u5eNPLVqZsrKjVSqVSS6BmUwdkIYwFA36gPMoLXMsl/19Ni6s1jDJmt8VjYmQEvZihkgyRjHYT32eAdDWqodOjTHIZfVXDVObvQvSuKOJD6BvXfOf3DyyCLA+Xly4DeJtdWumlKmuq8QCwNv24tdLmBKPuxUbfLvlCAXsm+VI+AtM7JnaITO94i7VXDBkNFR60RKcr1iMGUap0Q+49DAzFdAS3vQhLBQaw35+v721WC3QZVweWlKaLlj905V414q2cmCVnDfrqRaR"
+    }
+  ],
+  "routes": {
+    "skin-oneclicksignaturepro/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-3603085efd899f348c0a",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 5273,
+          "sha256": "3603085efd899f348c0a8c0875e8fb0b3027749804b5d16c9d533a7ddb08c1a5",
+          "cipherPath": "cipher/508087863b6cb44f5712fae6a31475e8cea527afd1afb7c65623eea80af477d2.bin",
+          "cipherSha256": "508087863b6cb44f5712fae6a31475e8cea527afd1afb7c65623eea80af477d2",
+          "iv": "b+EhCosD+penttn9",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f5b4a11684b514980c45",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 4536,
+          "sha256": "f5b4a11684b514980c458d54380d887194c4f1d01983df985f4f6ce855b38d4a",
+          "cipherPath": "cipher/c369b8708e56a0f3fa133e1a7430c21d3fbcbd80d79275ee1f8110d3109a6568.bin",
+          "cipherSha256": "c369b8708e56a0f3fa133e1a7430c21d3fbcbd80d79275ee1f8110d3109a6568",
+          "iv": "JJBskXawpfQvgGwE",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-194778d3433426eb7738",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 21912,
+          "sha256": "194778d3433426eb773810a2a432db73cf58e960b945208c75a750a6116339e6",
+          "cipherPath": "cipher/c30ab6a0bd03207cc3f807620f82add2114b08cea506dfa135cee7ab816809ea.bin",
+          "cipherSha256": "c30ab6a0bd03207cc3f807620f82add2114b08cea506dfa135cee7ab816809ea",
+          "iv": "pkAh3nvHoh6s0uzR",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "beautify-mp-manifest-v1",
+    "alg": "ES256",
+    "value": "P2CIlacwzdlvEbcb9b+72RLjPaK1tnA1jSGPaAOl7tBY6tccwOB7dRBjq9ro2V0QFsrzMuPXsZbn/g/6vqrzXA=="
+  }
+}

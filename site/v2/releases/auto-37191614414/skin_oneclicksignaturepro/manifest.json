@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "auto-37191614414",
+  "toolKey": "skin_oneclicksignaturepro",
+  "createdAt": "2026-10-04T09:21:44.993Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "skin-oneclicksignaturepro/index.html",
+    "styles": [
+      "skin-oneclicksignaturepro/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "skin-oneclicksignaturepro/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:auto-37191614414:skin_oneclicksignaturepro",
+      "wrappedKey": "FDxP1u9eq4PQ59HhtOg7O/0Q4zgsfeux+uemeot03e6iDW5WBGR21gPbKeROIdgxe8ISaDJ/1LHvA2SIuSAJV9zYRTJ+sYYo4PksQitvhuXGknCMPAEFw6vpTUWYbVy4D18oS09/dpHvspPWLNDgc80g9uv7tDp0/diKlZuX39O2NdFn2hRwqmbcTz5Lpk99fFLWdp6YisD07kcvyIw4RFWZXXGUmMTXWOK3J1MG7oZEuF/4i7Ail6zKcO8roY78BxDq8+ELTLmhK0zsjNHv3xx/UXEO8/wM+GmLmaY+auLhO+IIGTLRTXwIs3fJlsai16iJU1bilaeW5gsfUdoyAaUf4GL4M5P3wMdCfIs4q+5nbhmOfQXBwFs/U4x+1CghTzjgvAEMXM700HoHEBmrH9ykc4vSjNM0XsjngqZPeIYnY1z1qiwsZu2nG6FFPcaLjDoZwmfjbRHsh13/WWVE3ye0LBIl1QtssWwIR5/ong56EBryLt4MMtiBcVxPZ4AJ"
+    }
+  ],
+  "routes": {
+    "skin-oneclicksignaturepro/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-3603085efd899f348c0a",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 5273,
+          "sha256": "3603085efd899f348c0a8c0875e8fb0b3027749804b5d16c9d533a7ddb08c1a5",
+          "cipherPath": "cipher/31f3cf218384e5125bda651e72edfedbf3db66205e3721131ff9fe8931fa247f.bin",
+          "cipherSha256": "31f3cf218384e5125bda651e72edfedbf3db66205e3721131ff9fe8931fa247f",
+          "iv": "qFGalIpP1ed5tM5u",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f5b4a11684b514980c45",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 4536,
+          "sha256": "f5b4a11684b514980c458d54380d887194c4f1d01983df985f4f6ce855b38d4a",
+          "cipherPath": "cipher/d0c6f3bc1a201a73fcbfb4b97fa4dbfe3ab4f54569725b44d5e000fa3002fe50.bin",
+          "cipherSha256": "d0c6f3bc1a201a73fcbfb4b97fa4dbfe3ab4f54569725b44d5e000fa3002fe50",
+          "iv": "UsN68xJljV1ucHou",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-oneclicksignaturepro/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-194778d3433426eb7738",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 21912,
+          "sha256": "194778d3433426eb773810a2a432db73cf58e960b945208c75a750a6116339e6",
+          "cipherPath": "cipher/29dbc20055baa08c4f0c3517520f20359ea40a70225de27b25adb1e90ce8a5f3.bin",
+          "cipherSha256": "29dbc20055baa08c4f0c3517520f20359ea40a70225de27b25adb1e90ce8a5f3",
+          "iv": "ywpAKA0W9yrZ+isK",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "beautify-mp-manifest-v1",
+    "alg": "ES256",
+    "value": "MVtkd9RXRQwg9stUtp4iUi0ybBg07fLucF0qSgOgsdTlOpOFMshUNBYkauIgXHjYq7BSZM0Z3vLatc5qWmZZ1g=="
+  }
+}

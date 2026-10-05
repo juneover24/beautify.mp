@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>加载工具</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;overflow:hidden}
+body{display:flex;align-items:center;justify-content:center;background:#f5f5f5;font-family:system-ui,-apple-system,sans-serif;color:#333}
+.loader{text-align:center;padding:20px}
+.spinner{width:40px;height:40px;margin:0 auto 16px;border:4px solid #e0e0e0;border-top-color:#1890ff;border-radius:50%;animation:spin 0.8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.status{font-size:14px;color:#666;line-height:1.6}
+.error{color:#ff4d4f}
+</style>
+</head>
+<body>
+<div class="loader">
+<div class="spinner"></div>
+<div class="status" id="status">正在初始化...</div>
+</div>
+<script>
+(function launchBeautifyV3(global) {
+'use strict';
+
+var PROTOCOL_VERSION = 3;
+var V3_AUDIENCE = 'tool_h5_latest_encrypted_release';
+var V3_PROTOCOL_FLOOR = 3;
+var V3_BOOTSTRAP_VERSION = 'loader-v3-8';
+// 过渡窗口：同时接受旧版 claims（见 V3_LEGACY_BOOTSTRAP_VERSIONS 注释）；收紧部署清空。
+var V3_LEGACY_BOOTSTRAP_VERSIONS = ["loader-v3-2","loader-v3-3","loader-v3-4","loader-v3-5","loader-v3-6","loader-v3-7"];
+var V3_TICKET_HEADER = 'X-V3-Launch-Ticket';
+var MAX_TICKET_BYTES = 8192;
+var MAX_MANIFEST_BYTES = 2 * 1024 * 1024;
+// 单线程 @ffmpeg/core 0.12.10 wasm 实测为 32,232,419 bytes；与 builder/Gateway 共用 34 MiB 紧边界。
+var MAX_ASSET_BYTES = 34 * 1024 * 1024;
+var MAX_ENVELOPE_BYTES = 16 * 1024;
+var encoder = new TextEncoder();
+var decoder = new TextDecoder('utf-8', { fatal: true });
+var hasOwn = function hasOwn(value, key) {
+  return Object.prototype.hasOwnProperty.call(value, key);
+};
+
+// 与 v2 loader 完全同一份 profile 内容契约：entry/owned/vendor/retained 必须与
+// builder 生成的 manifest routes 一一对应，任何一侧单独改动都会在完整性校验处失败。
+var profiles = {
+  font_adjustment: {
+    entry: {
+      html: 'font-adjustment-local/index.html',
+      styles: ['font-adjustment-local/styles.css'],
+      scripts: [
+        'fetch-522-retry.js',
+        'font-adjustment-local/vendor/jweixin-1.6.0.js',
+        'font-adjustment-local/app.js'
+      ],
+      workers: [
+        'font-adjustment-local/font-adjustment.worker.js',
+        'font-marker-local/marker.worker.js'
+      ]
+    },
+    owned: [
+      'fetch-522-retry.js',
+      'font-adjustment-local/index.html',
+      'font-adjustment-local/styles.css',
+      'font-adjustment-local/app.js',
+      'font-adjustment-local/font-adjustment.worker.js',
+      'font-adjustment-local/font_processor.py',
+      'font-adjustment-local/bare_cff_adapter.py',
+      'font-marker-local/marker.worker.js'
+    ],
+    vendor: [
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'font-marker-local/font-marker.vendor.js',
+      'font-adjustment-local/vendor/runtime-assets.json',
+      'font-adjustment-local/vendor/THIRD_PARTY_NOTICES.md',
+      'font-adjustment-local/vendor/pyodide/pyodide.js',
+      'font-adjustment-local/vendor/pyodide/pyodide.asm.js',
+      'font-adjustment-local/vendor/pyodide/pyodide.asm.wasm',
+      'font-adjustment-local/vendor/pyodide/python_stdlib.zip',
+      'font-adjustment-local/vendor/pyodide/pyodide-lock.json',
+      'font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl'
+    ],
+    retained: [
+      'fetch-522-retry.js',
+      'font-adjustment-local/index.html',
+      'font-adjustment-local/styles.css',
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'font-adjustment-local/app.js',
+      'font-adjustment-local/font-adjustment.worker.js',
+      'font-adjustment-local/font_processor.py',
+      'font-adjustment-local/bare_cff_adapter.py',
+      'font-marker-local/marker.worker.js',
+      'font-marker-local/font-marker.vendor.js'
+    ]
+  },
+  font_glyph_edit: {
+    entry: {
+      html: 'font-glyph-editor/index.html',
+      styles: [],
+      scripts: [
+        'fetch-522-retry.js',
+        'font-adjustment-local/vendor/jweixin-1.6.0.js',
+        'font-glyph-editor/font-glyph-editor.vendor.js',
+        'font-glyph-editor/editor.js'
+      ],
+      workers: ['font-marker-local/marker.worker.js']
+    },
+    owned: [
+      'fetch-522-retry.js',
+      'font-glyph-editor/index.html',
+      'font-glyph-editor/editor.js',
+      'font-marker-local/marker.worker.js'
+    ],
+    vendor: [
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'font-glyph-editor/font-glyph-editor.vendor.js',
+      'font-marker-local/font-marker.vendor.js'
+    ],
+    retained: [
+      'fetch-522-retry.js',
+      'font-glyph-editor/index.html',
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'font-glyph-editor/font-glyph-editor.vendor.js',
+      'font-glyph-editor/editor.js',
+      'font-marker-local/marker.worker.js',
+      'font-marker-local/font-marker.vendor.js'
+    ]
+  },
+  skin_pic_part: {
+    entry: {
+      html: 'psd-layer-split/index.html',
+      styles: ['psd-layer-split/styles.css'],
+      scripts: [
+        'font-adjustment-local/vendor/jweixin-1.6.0.js',
+        'fetch-522-retry.js',
+        'psd-layer-split/app.js'
+      ],
+      workers: ['psd-layer-split/psd-worker.js']
+    },
+    owned: [
+      'fetch-522-retry.js',
+      'psd-layer-split/index.html',
+      'psd-layer-split/styles.css',
+      'psd-layer-split/app.js',
+      'psd-layer-split/psd-worker.js'
+    ],
+    vendor: [
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'psd-layer-split/psd-worker.vendor.js',
+      'psd-layer-split/vendor/THIRD_PARTY_NOTICES.md'
+    ],
+    retained: [
+      'fetch-522-retry.js',
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'psd-layer-split/index.html',
+      'psd-layer-split/styles.css',
+      'psd-layer-split/app.js',
+      'psd-layer-split/psd-worker.js',
+      'psd-layer-split/psd-worker.vendor.js'
+    ]
+  },
+  font_compress: {
+    entry: {
+      html: 'font-compress-local/index.html',
+      styles: ['font-compress-local/styles.css'],
+      scripts: [
+        'fetch-522-retry.js',
+        'font-adjustment-local/vendor/jweixin-1.6.0.js',
+        'font-compress-local/app.js'
+      ],
+      workers: [
+        'font-compress-local/font-compress.worker.js',
+        'font-marker-local/marker.worker.js'
+      ]
+    },
+    owned: [
+      'fetch-522-retry.js',
+      'font-compress-local/index.html',
+      'font-compress-local/styles.css',
+      'font-compress-local/app.js',
+      'font-compress-local/font-compress.worker.js',
+      'font-compress-local/font_compress_processor.py',
+      'font-compress-local/bare_cff_adapter.py',
+      'font-compress-local/charsets/ascii.txt',
+      'font-compress-local/charsets/basic_symbols.txt',
+      'font-compress-local/charsets/gb2312_l1.txt',
+      'font-compress-local/charsets/gb2312_all.txt',
+      'font-compress-local/charsets/big5_l1.txt',
+      'font-compress-local/charsets/big5_all.txt',
+      'font-compress-local/charsets/sc_tc_full.txt',
+      'font-marker-local/marker.worker.js'
+    ],
+    vendor: [
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'font-marker-local/font-marker.vendor.js',
+      'font-adjustment-local/vendor/runtime-assets.json',
+      'font-adjustment-local/vendor/pyodide/pyodide.js',
+      'font-adjustment-local/vendor/pyodide/pyodide.asm.js',
+      'font-adjustment-local/vendor/pyodide/pyodide.asm.wasm',
+      'font-adjustment-local/vendor/pyodide/python_stdlib.zip',
+      'font-adjustment-local/vendor/pyodide/pyodide-lock.json',
+      'font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl'
+    ],
+    retained: [
+      'fetch-522-retry.js',
+      'font-compress-local/index.html',
+      'font-compress-local/styles.css',
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'font-compress-local/app.js',
+      'font-compress-local/font-compress.worker.js',
+      'font-compress-local/font_compress_processor.py',
+      'font-compress-local/bare_cff_adapter.py',
+      'font-compress-local/charsets/ascii.txt',
+      'font-compress-local/charsets/basic_symbols.txt',
+      'font-compress-local/charsets/gb2312_l1.txt',
+      'font-compress-local/charsets/gb2312_all.txt',
+      'font-compress-local/charsets/big5_l1.txt',
+      'font-compress-local/charsets/big5_all.txt',
+      'font-compress-local/charsets/sc_tc_full.txt',
+      'font-marker-local/marker.worker.js',
+      'font-marker-local/font-marker.vendor.js'
+    ]
+  },
+  skin_sticker: {
+    entry: {
+      html: 'skin-sticker/index.html',
+      styles: ['skin-sticker/styles.css'],
+      scripts: [
+        'font-adjustment-local/vendor/jweixin-1.6.0.js',
+        'skin-sticker/app.js'
+      ],
+      workers: []
+    },
+    owned: [
+      'skin-sticker/index.html',
+      'skin-sticker/styles.css',
+      'skin-sticker/app.js'
+    ],
+    vendor: [
+      'font-adjustment-local/vendor/jweixin-1.6.0.js'
+    ],
+    retained: [
+      'skin-sticker/index.html',
+      'skin-sticker/styles.css',
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'skin-sticker/app.js'
+    ]
+  },
+  video_sound_conversion: {
+    entry: {
+      html: 'video-sound-conversion/index.html',
+      styles: ['video-sound-conversion/styles.css'],
+      scripts: [
+        'font-adjustment-local/vendor/jweixin-1.6.0.js',
+        'video-sound-conversion/vendor/video-sound.vendor.js',
+        'video-sound-conversion/app.js'
+      ],
+      workers: ['video-sound-conversion/vendor/ffmpeg.worker.js']
+    },
+    owned: [
+      'video-sound-conversion/index.html',
+      'video-sound-conversion/styles.css',
+      'video-sound-conversion/app.js'
+    ],
+    vendor: [
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'video-sound-conversion/vendor/video-sound.vendor.js',
+      'video-sound-conversion/vendor/ffmpeg.worker.js',
+      'video-sound-conversion/vendor/ffmpeg-core.js',
+      'video-sound-conversion/vendor/ffmpeg-core.wasm',
+      'video-sound-conversion/vendor/THIRD_PARTY_NOTICES.md'
+    ],
+    retained: [
+      'video-sound-conversion/index.html',
+      'video-sound-conversion/styles.css',
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'video-sound-conversion/vendor/video-sound.vendor.js',
+      'video-sound-conversion/app.js'
+    ]
+  },
+  skin_keyboard_simplify: {
+    entry: {
+      html: 'skin-keyboard-simplify/index.html',
+      styles: ['skin-keyboard-simplify/styles.css'],
+      scripts: [
+        'font-adjustment-local/vendor/jweixin-1.6.0.js',
+        'skin-keyboard-simplify/app.js'
+      ],
+      workers: ['skin-keyboard-simplify/compression-worker.js']
+    },
+    owned: [
+      'skin-keyboard-simplify/index.html',
+      'skin-keyboard-simplify/styles.css',
+      'skin-keyboard-simplify/app.js',
+      'skin-keyboard-simplify/compression-core.js',
+      'skin-keyboard-simplify/compression-worker.js'
+    ],
+    vendor: [
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'skin-keyboard-simplify/compression-worker.vendor.js',
+      'skin-keyboard-simplify/vendor/THIRD_PARTY_NOTICES.md'
+    ],
+    retained: [
+      'skin-keyboard-simplify/index.html',
+      'skin-keyboard-simplify/styles.css',
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'skin-keyboard-simplify/app.js',
+      'skin-keyboard-simplify/compression-core.js',
+      'skin-keyboard-simplify/compression-worker.js',
+      'skin-keyboard-simplify/compression-worker.vendor.js'
+    ]
+  },
+  skin_oneclicksignaturepro: {
+    entry: {
+      html: 'skin-oneclicksignaturepro/index.html',
+      styles: ['skin-oneclicksignaturepro/styles.css'],
+      scripts: [
+        'font-adjustment-local/vendor/jweixin-1.6.0.js',
+        'skin-oneclicksignaturepro/app.js'
+      ],
+      workers: []
+    },
+    owned: [
+      'skin-oneclicksignaturepro/index.html',
+      'skin-oneclicksignaturepro/styles.css',
+      'skin-oneclicksignaturepro/app.js'
+    ],
+    vendor: [
+      'font-adjustment-local/vendor/jweixin-1.6.0.js'
+    ],
+    retained: [
+      'skin-oneclicksignaturepro/index.html',
+      'skin-oneclicksignaturepro/styles.css',
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'skin-oneclicksignaturepro/app.js'
+    ]
+  },
+  download_bridge: {
+    entry: {
+      html: 'download-bridge/index.html',
+      styles: ['download-bridge/styles.css'],
+      scripts: [
+        'font-adjustment-local/vendor/jweixin-1.6.0.js',
+        'download-bridge/app.js'
+      ],
+      workers: []
+    },
+    owned: [
+      'download-bridge/index.html',
+      'download-bridge/styles.css',
+      'download-bridge/app.js'
+    ],
+    vendor: [
+      'font-adjustment-local/vendor/jweixin-1.6.0.js'
+    ],
+    retained: [
+      'download-bridge/index.html',
+      'download-bridge/styles.css',
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'download-bridge/app.js'
+    ]
+  },
+  skin_psd_adapter: {
+    entry: {
+      html: 'skin-psd-adapter/index.html',
+      styles: ['skin-psd-adapter/styles.css'],
+      scripts: ['skin-psd-adapter/app.js'],
+      workers: ['skin-psd-adapter/adapter-worker.js']
+    },
+    owned: [
+      'skin-psd-adapter/index.html',
+      'skin-psd-adapter/styles.css',
+      'skin-psd-adapter/app.js',
+      'skin-psd-adapter/adapter-worker.js'
+    ],
+    vendor: [
+      'skin-psd-adapter/adapter-worker.vendor.js',
+      'skin-psd-adapter/vendor/THIRD_PARTY_NOTICES.md'
+    ],
+    retained: [
+      'skin-psd-adapter/index.html',
+      'skin-psd-adapter/styles.css',
+      'skin-psd-adapter/app.js',
+      'skin-psd-adapter/adapter-worker.js',
+      'skin-psd-adapter/adapter-worker.vendor.js'
+    ]
+  },
+  // 管理端大文件 H5 直传（V3 拆分版，20260915 加入第 9 个 profile）。
+  // entry/owned/vendor/retained 必须与 build-v2 产出的 manifest routes 一一对应：
+  // routes = fetch-522-retry.js(owned) + manage-direct-upload/index.html(owned)
+  //        + manage-direct-upload/app.js(owned) + jweixin vendor；
+  // retained 只物化入口实际需要的文件（entry.html + scripts，无 styles/workers）。
+  manage_direct_upload: {
+    entry: {
+      html: 'manage-direct-upload/index.html',
+      styles: [],
+      scripts: [
+        'fetch-522-retry.js',
+        'font-adjustment-local/vendor/jweixin-1.6.0.js',
+        'jszip.min.js',
+        'spark-md5.min.js',
+        'manage-direct-upload/app.js'
+      ],
+      workers: []
+    },
+    owned: [
+      'fetch-522-retry.js',
+      'manage-direct-upload/index.html',
+      'manage-direct-upload/app.js'
+    ],
+    vendor: [
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'jszip.min.js',
+      'spark-md5.min.js'
+    ],
+    retained: [
+      'fetch-522-retry.js',
+      'manage-direct-upload/index.html',
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'jszip.min.js',
+      'spark-md5.min.js',
+      'manage-direct-upload/app.js'
+    ]
+  },
+  // 会员本地构建 H5（V3 第 10 个 profile）。入口 HTML 不携带脚本或外链，
+  // 所有供应商与业务脚本由 Loader 按签名顺序执行；font-marker Worker 由 Loader
+  // 读取 retained 资产并在内存中拼接 vendor，避免回到旧 wxview 明文地址。
+  member_local_build: {
+    entry: {
+      html: 'member-local-build/index.html',
+      styles: [],
+      scripts: [
+        'jszip.min.js',
+        'spark-md5.min.js',
+        'font-adjustment-local/vendor/jweixin-1.6.0.js',
+        'member-local-build/app.js'
+      ],
+      workers: ['font-marker-local/marker.worker.js']
+    },
+    owned: [
+      'member-local-build/index.html',
+      'member-local-build/app.js',
+      'font-marker-local/marker.worker.js'
+    ],
+    vendor: [
+      'jszip.min.js',
+      'spark-md5.min.js',
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'font-marker-local/font-marker.vendor.js'
+    ],
+    retained: [
+      'member-local-build/index.html',
+      'jszip.min.js',
+      'spark-md5.min.js',
+      'font-adjustment-local/vendor/jweixin-1.6.0.js',
+      'member-local-build/app.js',
+      'font-marker-local/marker.worker.js',
+      'font-marker-local/font-marker.vendor.js'
+    ]
+  },
+  // 手动字体大文件打标 H5（V3 第 11 个 profile，20260918 整页迁入 V3）。
+  // v3-1 首发时业务逻辑内联在入口 HTML，而 installDocument 会移除入口 HTML 全部
+  // <script>（含内联），导致页面停在“正在初始化...”；v3-2 起业务脚本拆分为外链
+  // 资产 font-manual-big/app.js 由 Loader 按序执行，SparkMD5 也预置于 scripts
+  // 首位（页面 capture 检查直接命中全局，不再依赖 CDN 兜底）。fflate 仍由页面
+  // cdn-first 策略加载；font-marker Worker 由 Loader 读取 retained 资产提供。
+  font_manual_web: {
+    entry: {
+      html: 'font-manual-big/index.html',
+      styles: [],
+      scripts: ['spark-md5.min.js', 'font-manual-big/app.js'],
+      workers: ['font-marker-local/marker.worker.js']
+    },
+    owned: [
+      'font-manual-big/index.html',
+      'font-manual-big/app.js',
+      'font-marker-local/marker.worker.js'
+    ],
+    vendor: [
+      'spark-md5.min.js',
+      'font-marker-local/font-marker.vendor.js'
+    ],
+    retained: [
+      'font-manual-big/index.html',
+      'font-manual-big/app.js',
+      'font-marker-local/marker.worker.js',
+      'font-marker-local/font-marker.vendor.js',
+      'spark-md5.min.js'
+    ]
+  }
+};
+
+function isRecord(value) {
+  return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
+}
+
+function exactKeys(value, expected, field) {
+  if (!isRecord(value)) throw new Error(field + ' must be an object');
+  var actual = Object.keys(value).sort();
+  var wanted = expected.slice().sort();
+  if (actual.length !== wanted.length) throw new Error(field + ' fields invalid');
+  for (var index = 0; index < actual.length; index += 1) {
+    if (actual[index] !== wanted[index]) throw new Error(field + ' fields invalid');
+  }
+}
+
+function canonicalize(value) {
+  if (value === null || typeof value === 'boolean' || typeof value === 'string') {
+    return JSON.stringify(value);
+  }
+  if (typeof value === 'number') {
+    if (!Number.isFinite(value)) throw new Error('non-finite JSON number');
+    return JSON.stringify(value);
+  }
+  if (Array.isArray(value)) {
+    return '[' + value.map(canonicalize).join(',') + ']';
+  }
+  if (isRecord(value)) {
+    return '{' + Object.keys(value).filter(function filterDefined(key) {
+      return value[key] !== undefined;
+    }).sort().map(function mapEntry(key) {
+      return JSON.stringify(key) + ':' + canonicalize(value[key]);
+    }).join(',') + '}';
+  }
+  throw new Error('unsupported JSON value');
+}
+
+function strictText(value, field, maximum) {
+  if (typeof value !== 'string' || value !== value.trim() || !value || value.length > maximum) {
+    throw new Error(field + ' invalid');
+  }
+  return value;
+}
+
+function bytesFromBase64(value) {
+  var text = strictText(value, 'base64', 4096);
+  if (!/^[A-Za-z0-9+/]+={0,2}$/.test(text) || text.length % 4 !== 0) {
+    throw new Error('base64 invalid');
+  }
+  var output = Uint8Array.from(atob(text), function fromCharacter(character) {
+    return character.charCodeAt(0);
+  });
+  var binary = '';
+  output.forEach(function appendByte(byte) { binary += String.fromCharCode(byte); });
+  if (btoa(binary) !== text) throw new Error('base64 is not canonical');
+  return output;
+}
+
+function bytesFromBase64Url(value) {
+  var text = strictText(value, 'base64url', 4096);
+  if (text.indexOf('=') >= 0 || !/^[A-Za-z0-9_-]+$/.test(text) || text.length % 4 === 1) {
+    throw new Error('base64url invalid');
+  }
+  var standard = text.replace(/-/g, '+').replace(/_/g, '/');
+  var output = Uint8Array.from(atob(standard + '='.repeat((4 - standard.length % 4) % 4)), function fromCharacter(character) {
+    return character.charCodeAt(0);
+  });
+  var binary = '';
+  output.forEach(function appendByte(byte) { binary += String.fromCharCode(byte); });
+  var encoded = btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  if (encoded !== text) throw new Error('base64url is not canonical');
+  return output;
+}
+
+function bytesToBase64Url(bytes) {
+  var binary = '';
+  bytes.forEach(function appendByte(byte) { binary += String.fromCharCode(byte); });
+  return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+function safeLogicalPath(value) {
+  var path = strictText(value, 'logical path', 400);
+  var segments = path.split('/');
+  var windowsReserved = /^(?:con|prn|aux|nul|com[1-9]|lpt[1-9])(?:\.|$)/i;
+  if (!/^[A-Za-z0-9][A-Za-z0-9._\/-]{0,399}$/.test(path)
+    || path.indexOf('//') >= 0
+    || segments.some(function unsafeSegment(segment) {
+      return segment === '.' || segment === '..' || segment === '__proto__'
+        || segment.slice(-1) === '.' || windowsReserved.test(segment);
+    })) {
+    throw new Error('logical path invalid');
+  }
+  return path;
+}
+
+async function sha256Hex(value) {
+  var digest = new Uint8Array(await crypto.subtle.digest('SHA-256', value));
+  return Array.from(digest, function hexByte(byte) {
+    return byte.toString(16).padStart(2, '0');
+  }).join('');
+}
+
+function equalList(left, right, field) {
+  if (!Array.isArray(left) || left.length !== right.length) throw new Error(field + ' invalid');
+  for (var index = 0; index < right.length; index += 1) {
+    if (!hasOwn(left, index) || left[index] !== right[index]) throw new Error(field + ' invalid');
+  }
+}
+
+// V3 票据放在 hash 的 toolLaunchTicket 参数里（与小程序 appendToolH5LaunchTicket
+// 对应），读取后立即清除整个 fragment；location.search 的业务 query 保持原样。
+function readTicketAndClearFragment() {
+  var params = new URLSearchParams(global.location.hash.replace(/^#/, ''));
+  var tickets = params.getAll('toolLaunchTicket');
+  params.delete('toolLaunchTicket');
+  var remaining = params.toString();
+  var cleanUrl = global.location.pathname + global.location.search + (remaining ? '#' + remaining : '');
+  global.history.replaceState(null, '', cleanUrl);
+  if (tickets.length !== 1) throw new Error('launch ticket missing or ambiguous');
+  var ticket = strictText(tickets[0], 'launch ticket', MAX_TICKET_BYTES);
+  if (ticket.split('.').length !== 3) throw new Error('launch ticket invalid');
+  return ticket;
+}
+
+function normalizeLaunchPathname(pathname) {
+  // 入口可能是 /latest/<toolKey>/ 或被 WebView 规范化成 .../index.html；
+  // 比较前统一去掉结尾的 index.html，保留尾斜杠与 claims.launchPath 对齐。
+  return pathname.replace(/index\.html$/, '');
+}
+
+function parseTicket(ticket) {
+  var segments = ticket.split('.');
+  if (segments.length !== 3) throw new Error('launch ticket invalid');
+  var header = JSON.parse(decoder.decode(bytesFromBase64Url(segments[0])));
+  var claims = JSON.parse(decoder.decode(bytesFromBase64Url(segments[1])));
+  if (bytesFromBase64Url(segments[2]).byteLength !== 64) throw new Error('ticket signature invalid');
+  exactKeys(header, ['alg', 'kid', 'typ'], 'ticket header');
+  // 阶段 4 双 schema（提案第十二节 12.1）：15 claims = 旧票（AAD v3）；11 claims =
+  // 新票（去 mapVersion/releaseSetId/bootstrapVersion/profileDigest，AAD v4）。
+  var claimCount = Object.keys(claims).length;
+  var ticketSchema = claimCount === 15 ? 3 : (claimCount === 11 ? 4 : 0);
+  if (ticketSchema === 3) {
+    exactKeys(claims, [
+      'aud', 'bootstrapVersion', 'entryPath', 'exp', 'iat', 'jti', 'launchPath',
+      'manifestSha256', 'mapVersion', 'profileDigest', 'protocolFloor',
+      'releaseId', 'releaseSetId', 'toolKey', 'v'
+    ], 'ticket claims');
+  } else if (ticketSchema === 4) {
+    exactKeys(claims, [
+      'aud', 'entryPath', 'exp', 'iat', 'jti', 'launchPath',
+      'manifestSha256', 'protocolFloor', 'releaseId', 'toolKey', 'v'
+    ], 'ticket claims');
+  } else {
+    throw new Error('ticket claims must be 15 (legacy) or 11 (new), got ' + claimCount);
+  }
+  if (header.alg !== 'ES256' || header.kid !== 'tool-h5-launch-v3' || header.typ !== 'JWT'
+    || claims.v !== 3 || claims.aud !== V3_AUDIENCE || claims.protocolFloor !== 3
+    || !/^[a-z][a-z0-9_]{0,63}$/.test(claims.toolKey)
+    || !/^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$/.test(claims.releaseId)
+    || !/^[A-Za-z0-9_-]{1,256}$/.test(claims.jti)
+    || !/^[0-9a-f]{64}$/.test(claims.manifestSha256)
+    || claims.launchPath !== '/latest/' + claims.toolKey + '/'
+    || !Number.isInteger(claims.iat) || !Number.isInteger(claims.exp)
+    || claims.iat <= 0 || claims.exp <= claims.iat || claims.exp <= Math.floor(Date.now() / 1000)) {
+    throw new Error('ticket claims invalid');
+  }
+  if (ticketSchema === 3) {
+    // 过渡窗口：bootstrapVersion 收自身版本或 legacy 版本（见 V3_LEGACY_BOOTSTRAP_VERSIONS）；
+    // map 系字段仅在旧票上校验。
+    if ((claims.bootstrapVersion !== V3_BOOTSTRAP_VERSION
+      && V3_LEGACY_BOOTSTRAP_VERSIONS.indexOf(claims.bootstrapVersion) < 0)
+      || !/^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$/.test(claims.mapVersion)
+      || !/^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$/.test(claims.releaseSetId)
+      || !/^[0-9a-f]{64}$/.test(claims.profileDigest)) {
+      throw new Error('ticket claims invalid');
+    }
+  }
+  claims.__ticketSchema = ticketSchema;
+  if (normalizeLaunchPathname(global.location.pathname) !== claims.launchPath) {
+    throw new Error('ticket launch path mismatch');
+  }
+  var expectedEntryPrefix = '/v2/releases/' + claims.releaseId + '/' + claims.toolKey + '/';
+  if (claims.entryPath.indexOf(expectedEntryPrefix) !== 0
+    || safeLogicalPath(claims.entryPath.slice(expectedEntryPrefix.length)) !== profiles[claims.toolKey].entry.html) {
+    throw new Error('ticket path binding invalid');
+  }
+  return claims;
+}
+
+async function readLimited(response, limit) {
+  var rawLength = response.headers.get('content-length');
+  if (rawLength && (!/^\d+$/.test(rawLength) || Number(rawLength) > limit)) {
+    try { await response.body.cancel(); } catch (_) { /* release only */ }
+    throw new Error('response is too large');
+  }
+  if (!response.body) return new Uint8Array();
+  var reader = response.body.getReader();
+  var chunks = [];
+  var total = 0;
+  try {
+    while (true) {
+      var item = await reader.read();
+      if (item.done) break;
+      total += item.value.byteLength;
+      if (total > limit) {
+        await reader.cancel('response size limit exceeded');
+        throw new Error('response is too large');
+      }
+      chunks.push(item.value);
+    }
+  } finally {
+    reader.releaseLock();
+  }
+  var output = new Uint8Array(total);
+  var offset = 0;
+  chunks.forEach(function copyChunk(chunk) {
+    output.set(chunk, offset);
+    offset += chunk.byteLength;
+  });
+  return output;
+}
+
+// V3 资源一律经 /latest/<toolKey>/<logicalPath> 代理：除 envelope POST 外，
+// 所有同源 fetch 都必须携带票据头，网关验票后才代理到不可变 release。
+async function fetchBytes(path, options, limit, ticket) {
+  var url = new URL(path, global.location.origin);
+  if (url.origin !== global.location.origin || url.hash) throw new Error('asset URL invalid');
+  var headers = Object.assign({}, (options && options.headers) || {});
+  if (ticket) headers[V3_TICKET_HEADER] = ticket;
+  var response = await global.fetch(url.href, Object.assign({}, options || {}, {
+    credentials: 'omit',
+    redirect: 'error',
+    headers: headers
+  }));
+  if (!response.ok) {
+    try { await response.body.cancel(); } catch (_) { /* release only */ }
+    throw new Error('v3 request rejected');
+  }
+  return readLimited(response, limit);
+}
+
+function normalizePublicJwk(value) {
+  exactKeys(value, ['crv', 'kty', 'x', 'y'], 'ECDH public key');
+  if (value.kty !== 'EC' || value.crv !== 'P-256'
+    || bytesFromBase64Url(value.x).byteLength !== 32
+    || bytesFromBase64Url(value.y).byteLength !== 32) {
+    throw new Error('ECDH public key invalid');
+  }
+  return { kty: 'EC', crv: 'P-256', x: value.x, y: value.y };
+}
+
+// 与网关 handleV3EnvelopeRequest 的 aadContext 逐字段一致：这是 HKDF 的 info，
+// 不是 AES-GCM additionalData（V3 envelope 的 DEK 包装不带 additionalData）。
+function buildEnvelopeAadContext(claims, clientPublicKeyB64, serverPublicKeyJwk) {
+  // 阶段 4 双 schema：15-claims 旧票走 aadVersion:3（15 字段）；11-claims 新票走
+  // aadVersion:4（11 字段，无 map 系字段）。两端（loader/网关）按票据 claims 集合
+  // 同步派生，HKDF info 逐字节一致才能解出同一把 KEK。
+  var aadVersion = claims.__ticketSchema === 4 ? 4 : 3;
+  var fields = [
+    'aadVersion:' + aadVersion,
+    'protocolVersion:3',
+    'purpose:beautify.mp:v3:latest-dek-envelope',
+    'ticketJti:' + (claims.jti || ''),
+    'toolKey:' + claims.toolKey,
+    'launchPath:' + claims.launchPath,
+    'releaseId:' + claims.releaseId,
+    'entryPath:' + claims.entryPath,
+    'manifestSha256:' + claims.manifestSha256
+  ];
+  if (aadVersion === 3) {
+    fields.push(
+      'mapVersion:' + claims.mapVersion,
+      'releaseSetId:' + claims.releaseSetId,
+      'bootstrapVersion:' + claims.bootstrapVersion,
+      'profileDigest:' + claims.profileDigest
+    );
+  }
+  fields.push('clientPublicKey:' + clientPublicKeyB64);
+  fields.push('serverPublicKey:' + serverPublicKeyJwk.x + ':' + serverPublicKeyJwk.y);
+  return fields.join('|');
+}
+
+async function requestEnvelope(ticket, claims) {
+  var pair = await crypto.subtle.generateKey(
+    { name: 'ECDH', namedCurve: 'P-256' },
+    false,
+    ['deriveBits']
+  );
+  if (pair.privateKey.extractable !== false) throw new Error('ECDH private key must be non-extractable');
+  var exported = new Uint8Array(await crypto.subtle.exportKey('raw', pair.publicKey));
+  var clientPublicKeyB64 = bytesToBase64Url(exported);
+  var raw = await fetchBytes('/v3/envelopes', {
+    method: 'POST',
+    cache: 'no-store',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      protocolVersion: 3,
+      ticket: ticket,
+      clientPublicKey: clientPublicKeyB64
+    })
+  }, MAX_ENVELOPE_BYTES);
+  var payload = JSON.parse(decoder.decode(raw));
+  var legacyEnvelope = typeof payload.mapVersion === 'string';
+  if (legacyEnvelope) {
+    exactKeys(payload, [
+      'bootstrapVersion', 'envelope', 'entryPath', 'expiresAt', 'launchPath',
+      'manifestSha256', 'manifestVerifyPublicKey', 'mapVersion', 'profileDigest',
+      'protocolVersion', 'releaseId', 'releaseSetId', 'success', 'toolKey'
+    ], 'envelope response');
+  } else {
+    exactKeys(payload, [
+      'envelope', 'entryPath', 'expiresAt', 'launchPath',
+      'manifestSha256', 'manifestVerifyPublicKey',
+      'protocolVersion', 'releaseId', 'success', 'toolKey'
+    ], 'envelope response');
+  }
+  if (payload.success !== true) throw new Error('envelope response failed');
+  exactKeys(payload.envelope, [
+    'aadVersion', 'iv', 'kdf', 'serverPublicKey', 'tag', 'wrapAlg', 'wrappedDEK'
+  ], 'DEK envelope');
+  if (payload.protocolVersion !== 3 || payload.toolKey !== claims.toolKey
+    || payload.releaseId !== claims.releaseId || payload.launchPath !== claims.launchPath
+    || payload.entryPath !== claims.entryPath || payload.manifestSha256 !== claims.manifestSha256
+    || !Number.isInteger(payload.expiresAt) || payload.expiresAt < Math.floor(Date.now() / 1000)
+    || payload.envelope.kdf !== 'HKDF-SHA-256' || payload.envelope.wrapAlg !== 'A256GCM'
+    || payload.envelope.aadVersion !== (legacyEnvelope ? 3 : 4)) {
+    throw new Error('envelope binding invalid');
+  }
+  if (legacyEnvelope && (payload.mapVersion !== claims.mapVersion
+    || payload.releaseSetId !== claims.releaseSetId
+    || payload.bootstrapVersion !== claims.bootstrapVersion
+    || payload.profileDigest !== claims.profileDigest)) {
+    throw new Error('envelope binding invalid');
+  }
+  // manifest 验签公钥来自网关 crypto.subtle.exportKey('jwk')，恒定六字段。
+  exactKeys(payload.manifestVerifyPublicKey, ['crv', 'ext', 'key_ops', 'kty', 'x', 'y'], 'manifest verify key');
+  if (payload.manifestVerifyPublicKey.kty !== 'EC' || payload.manifestVerifyPublicKey.crv !== 'P-256'
+    || payload.manifestVerifyPublicKey.ext !== true
+    || !Array.isArray(payload.manifestVerifyPublicKey.key_ops)
+    || payload.manifestVerifyPublicKey.key_ops.length !== 1
+    || payload.manifestVerifyPublicKey.key_ops[0] !== 'verify'
+    || bytesFromBase64Url(payload.manifestVerifyPublicKey.x).byteLength !== 32
+    || bytesFromBase64Url(payload.manifestVerifyPublicKey.y).byteLength !== 32) {
+    throw new Error('manifest verify key invalid');
+  }
+  var manifestVerifyKey = await crypto.subtle.importKey(
+    'jwk', payload.manifestVerifyPublicKey, { name: 'ECDSA', namedCurve: 'P-256' }, false, ['verify']
+  );
+  var serverPublicKey = normalizePublicJwk(payload.envelope.serverPublicKey);
+  var importedServerKey = await crypto.subtle.importKey(
+    'jwk', serverPublicKey, { name: 'ECDH', namedCurve: 'P-256' }, false, []
+  );
+  var sharedSecret = new Uint8Array(await crypto.subtle.deriveBits(
+    { name: 'ECDH', public: importedServerKey }, pair.privateKey, 256
+  ));
+  var aadContext = encoder.encode(
+    buildEnvelopeAadContext(claims, clientPublicKeyB64, serverPublicKey)
+  );
+  var iv = bytesFromBase64Url(payload.envelope.iv);
+  var wrappedDek = bytesFromBase64Url(payload.envelope.wrappedDEK);
+  var tag = bytesFromBase64Url(payload.envelope.tag);
+  // 网关把 wrapKey 输出的 ciphertext||tag 拆成两个字段下发，解包前重新拼接。
+  if (iv.byteLength !== 12 || tag.byteLength !== 16
+    || wrappedDek.byteLength < 32 || wrappedDek.byteLength > 64) {
+    throw new Error('envelope bytes invalid');
+  }
+  var hkdfKey = await crypto.subtle.importKey('raw', sharedSecret, 'HKDF', false, ['deriveKey']);
+  sharedSecret.fill(0);
+  var kek = await crypto.subtle.deriveKey(
+    { name: 'HKDF', hash: 'SHA-256', salt: new Uint8Array(0), info: aadContext },
+    hkdfKey,
+    { name: 'AES-GCM', length: 256 },
+    false,
+    ['unwrapKey']
+  );
+  var combined = new Uint8Array(wrappedDek.byteLength + tag.byteLength);
+  combined.set(wrappedDek, 0);
+  combined.set(tag, wrappedDek.byteLength);
+  var dek = await crypto.subtle.unwrapKey(
+    'raw',
+    combined,
+    kek,
+    { name: 'AES-GCM', iv: iv, tagLength: 128 },
+    { name: 'AES-GCM', length: 256 },
+    false,
+    ['decrypt']
+  );
+  if (dek.extractable !== false) throw new Error('release DEK must be non-extractable');
+  return { dek: dek, manifestVerifyKey: manifestVerifyKey };
+}
+
+function validateManifest(value, claims, profile) {
+  exactKeys(value, [
+    'aad', 'createdAt', 'enc', 'entry', 'recipients', 'releaseId',
+    'routes', 'schemaVersion', 'signature', 'toolKey'
+  ], 'manifest');
+  if (value.schemaVersion !== 2 || value.releaseId !== claims.releaseId
+    || value.toolKey !== claims.toolKey || value.enc !== 'A256GCM'
+    || typeof value.createdAt !== 'string' || value.createdAt.length > 64
+    || !Number.isFinite(Date.parse(value.createdAt))) {
+    throw new Error('manifest identity invalid');
+  }
+  exactKeys(value.aad, ['fields', 'version'], 'manifest AAD');
+  var aadFields = [
+    'releaseId', 'toolKey', 'logicalPath', 'part.id', 'part.kind',
+    'part.mime', 'part.bytes', 'part.sha256'
+  ];
+  if (value.aad.version !== 2) throw new Error('manifest AAD invalid');
+  equalList(value.aad.fields, aadFields, 'manifest AAD fields');
+  exactKeys(value.entry, ['html', 'scripts', 'styles', 'workers'], 'manifest entry');
+  if (value.entry.html !== profile.entry.html) throw new Error('manifest entry invalid');
+  equalList(value.entry.styles, profile.entry.styles, 'manifest styles');
+  equalList(value.entry.scripts, profile.entry.scripts, 'manifest scripts');
+  equalList(value.entry.workers, profile.entry.workers, 'manifest workers');
+
+  if (!Array.isArray(value.recipients) || value.recipients.length < 1 || value.recipients.length > 32) {
+    throw new Error('manifest recipients invalid');
+  }
+  var recipientKids = new Set();
+  value.recipients.forEach(function validateRecipient(recipient) {
+    exactKeys(recipient, ['alg', 'kid', 'label', 'wrappedKey'], 'manifest recipient');
+    var wrapped = bytesFromBase64(recipient.wrappedKey);
+    if (!/^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$/.test(recipient.kid)
+      || recipientKids.has(recipient.kid) || recipient.alg !== 'RSA-OAEP-256'
+      || recipient.label !== 'beautify.mp:v2:' + claims.releaseId + ':' + claims.toolKey
+      || wrapped.byteLength < 128 || wrapped.byteLength > 1024) {
+      throw new Error('manifest recipient invalid');
+    }
+    recipientKids.add(recipient.kid);
+  });
+
+  if (!isRecord(value.routes)) throw new Error('manifest routes invalid');
+  var expectedKinds = Object.create(null);
+  profile.owned.forEach(function markOwned(path) { expectedKinds[path] = 'owned'; });
+  profile.vendor.forEach(function markVendor(path) { expectedKinds[path] = 'vendor'; });
+  // 阶段 4 loader 资产化（提案第十二节 12.2）：release 自带的 loader 路由为可选——
+  // 存在时按 vendor 校验（含 sha256）；迁移期旧 manifest 无此路由照样通过。
+  if (value.routes['loader/loader.html']) expectedKinds['loader/loader.html'] = 'vendor';
+  // 阶段 4 loader 资产化（提案第十二节 12.2）：release 自带的 loader 路由为可选——
+  // 存在时按 vendor 校验（含 sha256）；迁移期旧 manifest 无此路由照样通过。
+  if (value.routes['_loader/loader.html']) expectedKinds['_loader/loader.html'] = 'vendor';
+  var routePaths = Object.keys(value.routes).sort();
+  var expectedPaths = Object.keys(expectedKinds).sort();
+  equalList(routePaths, expectedPaths, 'manifest routes');
+  var partIds = new Set();
+  routePaths.forEach(function validateRoute(logicalPath) {
+    if (safeLogicalPath(logicalPath) !== logicalPath) throw new Error('manifest route path invalid');
+    var route = value.routes[logicalPath];
+    exactKeys(route, ['cacheMode', 'mime', 'parts'], 'manifest route');
+    var mime = strictText(route.mime, 'route MIME', 200);
+    if (/\r|\n/.test(mime) || !Array.isArray(route.parts) || route.parts.length !== 1) {
+      throw new Error('manifest route invalid');
+    }
+    var part = route.parts[0];
+    var kind = expectedKinds[logicalPath];
+    var common = ['bytes', 'id', 'kind', 'mime', 'sha256'];
+    exactKeys(part, kind === 'owned'
+      ? common.concat(['aadVersion', 'cipherPath', 'cipherSha256', 'iv'])
+      : common.concat(['publicPath']), 'manifest part');
+    if (!/^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$/.test(part.id) || partIds.has(part.id)
+      || part.kind !== kind || part.mime !== mime
+      || !Number.isSafeInteger(part.bytes) || part.bytes < 0 || part.bytes > MAX_ASSET_BYTES
+      || !/^[0-9a-f]{64}$/.test(part.sha256)
+      || route.cacheMode !== (kind === 'owned' ? 'no-store' : 'immutable')) {
+      throw new Error('manifest part invalid');
+    }
+    partIds.add(part.id);
+    if (kind === 'owned') {
+      if (part.aadVersion !== 2 || !/^[0-9a-f]{64}$/.test(part.cipherSha256)
+        || part.cipherPath !== 'cipher/' + part.cipherSha256 + '.bin'
+        || bytesFromBase64(part.iv).byteLength !== 12) {
+        throw new Error('owned manifest part invalid');
+      }
+    } else if (part.publicPath !== 'public/' + logicalPath) {
+      throw new Error('vendor manifest part invalid');
+    }
+  });
+
+  exactKeys(value.signature, ['alg', 'kid', 'value'], 'manifest signature');
+  if (value.signature.alg !== 'ES256'
+    || !/^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$/.test(value.signature.kid)
+    || bytesFromBase64(value.signature.value).byteLength !== 64) {
+    throw new Error('manifest signature invalid');
+  }
+  return value;
+}
+
+function assetAad(manifest, logicalPath, part) {
+  return encoder.encode(canonicalize({
+    v: 2,
+    releaseId: manifest.releaseId,
+    toolKey: manifest.toolKey,
+    logicalPath: logicalPath,
+    part: {
+      id: part.id,
+      kind: part.kind,
+      mime: part.mime,
+      bytes: part.bytes,
+      sha256: part.sha256
+    }
+  }));
+}
+
+async function loadManifest(claims, profile, prefix, ticket, manifestVerifyKey) {
+  var raw = await fetchBytes(prefix + '/manifest.json', {
+    method: 'GET', cache: 'no-store', headers: { Accept: 'application/json' }
+  }, MAX_MANIFEST_BYTES, ticket);
+  if (await sha256Hex(raw) !== claims.manifestSha256) throw new Error('manifest hash mismatch');
+  var parsed = JSON.parse(decoder.decode(raw));
+  var manifest = validateManifest(parsed, claims, profile);
+  var unsigned = Object.assign({}, parsed);
+  delete unsigned.signature;
+  var verified = await crypto.subtle.verify(
+    { name: 'ECDSA', hash: 'SHA-256' },
+    manifestVerifyKey,
+    bytesFromBase64(manifest.signature.value),
+    encoder.encode(canonicalize(unsigned))
+  );
+  if (!verified) throw new Error('manifest signature invalid');
+  return manifest;
+}
+
+async function materializeRoute(prefix, ticket, manifest, logicalPath, dek) {
+  var route = manifest.routes[logicalPath];
+  var part = route.parts[0];
+  var raw;
+  if (part.kind === 'vendor') {
+    raw = await fetchBytes(prefix + '/' + part.publicPath, { method: 'GET', cache: 'force-cache' }, part.bytes, ticket);
+    if (raw.byteLength !== part.bytes || await sha256Hex(raw) !== part.sha256) {
+      throw new Error('vendor integrity mismatch');
+    }
+    return raw;
+  }
+  var cipher = await fetchBytes(prefix + '/' + part.cipherPath, { method: 'GET', cache: 'force-cache' }, part.bytes + 16, ticket);
+  if (cipher.byteLength !== part.bytes + 16 || await sha256Hex(cipher) !== part.cipherSha256) {
+    throw new Error('cipher integrity mismatch');
+  }
+  raw = new Uint8Array(await crypto.subtle.decrypt({
+    name: 'AES-GCM',
+    iv: bytesFromBase64(part.iv),
+    additionalData: assetAad(manifest, logicalPath, part),
+    tagLength: 128
+  }, dek, cipher));
+  if (raw.byteLength !== part.bytes || await sha256Hex(raw) !== part.sha256) {
+    throw new Error('plaintext integrity mismatch');
+  }
+  return raw;
+}
+
+async function materializeRelease(prefix, ticket, manifest, profile, dek) {
+  var retained = new Set(profile.retained);
+  var assets = new Map();
+  var queue = Array.from(retained);
+  var cursor = 0;
+  async function consume() {
+    while (cursor < queue.length) {
+      var index = cursor;
+      cursor += 1;
+      var logicalPath = queue[index];
+      var bytes = await materializeRoute(prefix, ticket, manifest, logicalPath, dek);
+      if (retained.has(logicalPath)) assets.set(logicalPath, bytes);
+    }
+  }
+  await Promise.all([consume(), consume(), consume()]);
+  if (assets.size !== retained.size) throw new Error('required release asset missing');
+  return assets;
+}
+
+function textAsset(assets, manifest, logicalPath, mimePrefixes) {
+  var bytes = assets.get(logicalPath);
+  var route = manifest.routes[logicalPath];
+  if (!bytes || !route) throw new Error('text asset missing');
+  var mime = route.mime.toLowerCase();
+  if (!mimePrefixes.some(function allowed(prefix) { return mime.indexOf(prefix) === 0; })) {
+    throw new Error('text asset MIME invalid');
+  }
+  return decoder.decode(bytes);
+}
+
+function replaceOnce(source, needle, replacement, field) {
+  var first = source.indexOf(needle);
+  if (first < 0 || source.indexOf(needle, first + needle.length) >= 0) {
+    throw new Error(field + ' compatibility marker invalid');
+  }
+  return source.slice(0, first) + replacement + source.slice(first + needle.length);
+}
+
+/**
+ * 页面脚本用 '../font-marker-local/marker.worker.js' 这类兄弟目录相对路径创建 Worker。
+ * V3 页面位于 '/latest/<toolKey>/'，'../' 会退到 '/latest/' 级；把 '/latest/' 级下
+ * 本工具已声明过的 Worker 逻辑路径归一回当前工具前缀，其余 URL 原样返回并交给
+ * 原生 Worker（fail closed）。
+ */
+function resolveWorkerUrl(resolved, claims, prefix, profile) {
+  var toolPrefix = prefix + '/';
+  if (resolved.origin !== global.location.origin || resolved.pathname.indexOf(toolPrefix) === 0) {
+    return resolved;
+  }
+  var latestBase = '/latest/';
+  if (resolved.pathname.indexOf(latestBase) === 0) {
+    var siblingPath = resolved.pathname.slice(latestBase.length);
+    if (profile.entry.workers.indexOf(siblingPath) >= 0) {
+      resolved.pathname = toolPrefix + siblingPath;
+    }
+  }
+  return resolved;
+}
+
+function installWorkerResolver(claims, prefix, profile, manifest, assets) {
+  var NativeWorker = global.Worker;
+  if (typeof NativeWorker !== 'function') throw new Error('Web Worker unavailable');
+  var liveUrls = new Set();
+  var liveWorkers = new Set();
+  var pythonUrl = null;
+  var adapterUrl = null;
+  var compressPythonUrl = null;
+  var compressAdapterUrl = null;
+  if (claims.toolKey === 'font_adjustment') {
+    var pythonSource = textAsset(
+      assets, manifest, 'font-adjustment-local/font_processor.py', ['text/x-python', 'text/plain']
+    );
+    pythonUrl = URL.createObjectURL(new Blob([pythonSource], { type: 'text/x-python;charset=utf-8' }));
+    liveUrls.add(pythonUrl);
+    var adapterSource = textAsset(
+      assets, manifest, 'font-adjustment-local/bare_cff_adapter.py', ['text/x-python', 'text/plain']
+    );
+    adapterUrl = URL.createObjectURL(new Blob([adapterSource], { type: 'text/x-python;charset=utf-8' }));
+    liveUrls.add(adapterUrl);
+  }
+  if (claims.toolKey === 'font_compress') {
+    var compressPythonSource = textAsset(
+      assets, manifest, 'font-compress-local/font_compress_processor.py', ['text/x-python', 'text/plain']
+    );
+    compressPythonUrl = URL.createObjectURL(new Blob([compressPythonSource], { type: 'text/x-python;charset=utf-8' }));
+    liveUrls.add(compressPythonUrl);
+    var compressAdapterSource = textAsset(
+      assets, manifest, 'font-compress-local/bare_cff_adapter.py', ['text/x-python', 'text/plain']
+    );
+    compressAdapterUrl = URL.createObjectURL(new Blob([compressAdapterSource], { type: 'text/x-python;charset=utf-8' }));
+    liveUrls.add(compressAdapterUrl);
+  }
+
+  function sourceFor(logicalPath, originalUrl) {
+    if (logicalPath === 'font-marker-local/marker.worker.js') {
+      var markerBanner = "if (!globalThis.__J24_FONT_MARKER_VENDOR__) { importScripts(new URL('./font-marker.vendor.js', self.location.href).href); }";
+      var markerSource = replaceOnce(
+        textAsset(assets, manifest, logicalPath, ['text/javascript', 'application/javascript']),
+        markerBanner,
+        '',
+        'marker Worker vendor import'
+      );
+      return textAsset(assets, manifest, 'font-marker-local/font-marker.vendor.js', ['text/javascript', 'application/javascript'])
+        + '\n' + markerSource;
+    }
+    if (logicalPath === 'psd-layer-split/psd-worker.js') {
+      var banner = "importScripts(new URL('./psd-worker.vendor.js', self.location.href).href);";
+      var workerSource = textAsset(assets, manifest, logicalPath, ['text/javascript', 'application/javascript']);
+      if (workerSource.slice(0, banner.length) !== banner) throw new Error('PSD Worker banner invalid');
+      workerSource = replaceOnce(workerSource, banner, '', 'PSD Worker vendor import');
+      return textAsset(assets, manifest, 'psd-layer-split/psd-worker.vendor.js', ['text/javascript', 'application/javascript'])
+        + '\n' + workerSource;
+    }
+    if (logicalPath === 'skin-keyboard-simplify/compression-worker.js') {
+      var simplifyBanner = "importScripts(new URL('./compression-worker.vendor.js', self.location.href).href, new URL('./compression-core.js', self.location.href).href);";
+      var simplifyWorkerSource = textAsset(
+        assets, manifest, logicalPath, ['text/javascript', 'application/javascript']
+      );
+      // 与 PSD Worker 一致：banner 必须是文件第一字节，任何前置注释/包装都会
+      // 改变执行顺序并破坏 vendor/core 先于 owned 代码的精确契约。
+      if (simplifyWorkerSource.slice(0, simplifyBanner.length) !== simplifyBanner) {
+        throw new Error('skin simplify Worker banner invalid');
+      }
+      simplifyWorkerSource = replaceOnce(
+        simplifyWorkerSource,
+        simplifyBanner,
+        '',
+        'skin simplify Worker dependency import'
+      );
+      return textAsset(
+        assets,
+        manifest,
+        'skin-keyboard-simplify/compression-worker.vendor.js',
+        ['text/javascript', 'application/javascript']
+      ) + '\n' + textAsset(
+        assets,
+        manifest,
+        'skin-keyboard-simplify/compression-core.js',
+        ['text/javascript', 'application/javascript']
+      ) + '\n' + simplifyWorkerSource;
+    }
+    if (logicalPath === 'skin-psd-adapter/adapter-worker.js') {
+      var adapterBanner = "importScripts(new URL('./adapter-worker.vendor.js', self.location.href).href);";
+      var adapterWorkerSource = textAsset(
+        assets, manifest, logicalPath, ['text/javascript', 'application/javascript']
+      );
+      // adapter Worker 的 vendor 必须先于 owned 逻辑执行；只接受构建脚本生成的首字节 banner，
+      // 并在 Blob 化前移除相对 import，避免解密后的 Worker 再访问未签名的静态路径。
+      if (adapterWorkerSource.slice(0, adapterBanner.length) !== adapterBanner) {
+        throw new Error('skin PSD adapter Worker banner invalid');
+      }
+      adapterWorkerSource = replaceOnce(
+        adapterWorkerSource,
+        adapterBanner,
+        '',
+        'skin PSD adapter Worker vendor import'
+      );
+      return textAsset(
+        assets, manifest,
+        'skin-psd-adapter/adapter-worker.vendor.js',
+        ['text/javascript', 'application/javascript']
+      ) + '\n' + adapterWorkerSource;
+    }
+    if (logicalPath === 'font-adjustment-local/font-adjustment.worker.js') {
+      var source = textAsset(assets, manifest, logicalPath, ['text/javascript', 'application/javascript']);
+      var publicRoot = global.location.origin + prefix + '/public/font-adjustment-local/';
+      source = replaceOnce(
+        source,
+        'const ROOT_URL = canonicalRootUrl();',
+        'const ROOT_URL = new URL(' + JSON.stringify(publicRoot) + ');',
+        'font Worker root'
+      );
+      source = replaceOnce(
+        source,
+        "const workerQuery = new URL(self.location.href).searchParams;",
+        'const workerQuery = new URLSearchParams(' + JSON.stringify(originalUrl.search.slice(1)) + ');',
+        'font Worker query'
+      );
+      source = source.replace(
+        /const runtimeSource = requestedRuntimeSource === 'local'\r?\n  \|\| Object\.prototype\.hasOwnProperty\.call\(RUNTIME_SOURCE_ORIGINS, requestedRuntimeSource\)\r?\n  \? requestedRuntimeSource\r?\n  : 'local';/,
+        "const runtimeSource = 'local';"
+      );
+      if (source.indexOf("const runtimeSource = 'local';") < 0) {
+        throw new Error('font Worker runtime source compatibility marker invalid');
+      }
+      source = replaceOnce(
+        source,
+        "importScripts(new URL('../fetch-522-retry.js', ROOT_URL).href);",
+        '',
+        'font Worker retry import'
+      );
+      source = replaceOnce(
+        source,
+        "const adapterUrl = new URL('bare_cff_adapter.py', ROOT_URL);",
+        'const adapterUrl = new URL(' + JSON.stringify(adapterUrl) + ');',
+        'font Worker adapter URL'
+      );
+      source = replaceOnce(
+        source,
+        "adapterUrl.searchParams.set('v', runtimeAssetVersion);",
+        '',
+        'font Worker adapter query'
+      );
+      source = replaceOnce(
+        source,
+        "const processorUrl = new URL('font_processor.py', ROOT_URL);",
+        'const processorUrl = new URL(' + JSON.stringify(pythonUrl) + ');',
+        'font Worker Python URL'
+      );
+      source = replaceOnce(
+        source,
+        "processorUrl.searchParams.set('v', runtimeAssetVersion);",
+        '',
+        'font Worker Python query'
+      );
+      return source;
+    }
+    if (logicalPath === 'font-compress-local/font-compress.worker.js') {
+      // 压缩 Worker 的 Python 核心是 owned 资产，不能从 /public 明文路径读取；
+      // 与 font_adjustment 一致，解密后生成 Blob URL 再精确替换 processorUrl。
+      var compressSource = textAsset(assets, manifest, logicalPath, ['text/javascript', 'application/javascript']);
+      var compressPublicRoot = global.location.origin + prefix + '/public/font-compress-local/';
+      compressSource = replaceOnce(
+        compressSource,
+        'const ROOT_URL = canonicalCompressRootUrl();',
+        'const ROOT_URL = new URL(' + JSON.stringify(compressPublicRoot) + ');',
+        'font compress Worker root'
+      );
+      compressSource = replaceOnce(
+        compressSource,
+        "const workerQuery = new URL(self.location.href).searchParams;",
+        'const workerQuery = new URLSearchParams(' + JSON.stringify(originalUrl.search.slice(1)) + ');',
+        'font compress Worker query'
+      );
+      compressSource = replaceOnce(
+        compressSource,
+        "importScripts(new URL('../fetch-522-retry.js', ROOT_URL).href);",
+        '',
+        'font compress Worker retry import'
+      );
+      compressSource = replaceOnce(
+        compressSource,
+        "const adapterUrl = new URL('bare_cff_adapter.py', ROOT_URL);",
+        'const adapterUrl = new URL(' + JSON.stringify(compressAdapterUrl) + ');',
+        'font compress Worker adapter URL'
+      );
+      compressSource = replaceOnce(
+        compressSource,
+        "adapterUrl.searchParams.set('v', runtimeAssetVersion);",
+        '',
+        'font compress Worker adapter query'
+      );
+      compressSource = replaceOnce(
+        compressSource,
+        "const processorUrl = new URL('font_compress_processor.py', ROOT_URL);",
+        'const processorUrl = new URL(' + JSON.stringify(compressPythonUrl) + ');',
+        'font compress Worker Python URL'
+      );
+      compressSource = replaceOnce(
+        compressSource,
+        "processorUrl.searchParams.set('v', runtimeAssetVersion);",
+        '',
+        'font compress Worker Python query'
+      );
+      return compressSource;
+    }
+    throw new Error('undeclared Worker requested');
+  }
+
+  function WrappedWorker(input, options) {
+    var resolved = resolveWorkerUrl(new URL(String(input), global.location.href), claims, prefix, profile);
+    var toolPrefix = prefix + '/';
+    if (resolved.origin !== global.location.origin || resolved.pathname.indexOf(toolPrefix) !== 0) {
+      return new NativeWorker(input, options);
+    }
+    var videoWorkerPath = 'video-sound-conversion/vendor/ffmpeg.worker.js';
+    var videoWorkerUrl = prefix + '/public/' + videoWorkerPath;
+    if (claims.toolKey === 'video_sound_conversion' && resolved.pathname === videoWorkerUrl) {
+      if (!options || options.type !== 'module' || profile.entry.workers.indexOf(videoWorkerPath) < 0) {
+        throw new Error('video module Worker options invalid');
+      }
+      return new NativeWorker(resolved.href, options);
+    }
+    var logicalPath = safeLogicalPath(resolved.pathname.slice(toolPrefix.length));
+    if (profile.entry.workers.indexOf(logicalPath) < 0) {
+      // V2→V3 兼容：旧 release 的 H5 以 entry html 所在目录为基准拼接 Worker 相对
+      // 路径（V2 页面 URL 自带 entry 子目录），latest 入口把页面搬到
+      // /latest/<toolKey>/ 后相对路径会丢失 entry 子目录前缀（如 font_adjustment
+      // 的 font-adjustment.worker.js）。这里按 entry 目录归位后再校验；最终路径
+      // 仍必须命中已签名 workers 清单，保持 fail-closed，不放宽签名边界。
+      var entryDir = profile.entry.html.slice(0, profile.entry.html.lastIndexOf('/') + 1);
+      var entryRelativePath = entryDir ? safeLogicalPath(entryDir + logicalPath) : logicalPath;
+      if (profile.entry.workers.indexOf(entryRelativePath) < 0) {
+        throw new Error('Worker is outside signed entry');
+      }
+      logicalPath = entryRelativePath;
+    }
+    if (options && options.type === 'module') throw new Error('module Worker is not supported by this release');
+    var source = sourceFor(logicalPath, resolved);
+    var blobUrl = URL.createObjectURL(new Blob([source], { type: 'text/javascript;charset=utf-8' }));
+    liveUrls.add(blobUrl);
+    var worker;
+    try {
+      worker = new NativeWorker(blobUrl, options);
+    } catch (error) {
+      liveUrls.delete(blobUrl);
+      URL.revokeObjectURL(blobUrl);
+      throw error;
+    }
+    // 运行中的压缩/处理 Worker 在页面退出后仍会占用 CPU。revoke Blob URL 不会终止
+    // 已创建的 Worker；pagehide 时先 terminate 再 revoke，避免 BFCache 之后继续跑任务。
+    liveWorkers.add(worker);
+    var terminate = worker.terminate.bind(worker);
+    try {
+      Object.defineProperty(worker, 'terminate', {
+        configurable: true,
+        value: function terminateV3Worker() {
+          terminate();
+          liveUrls.delete(blobUrl);
+          URL.revokeObjectURL(blobUrl);
+          liveWorkers.delete(worker);
+        }
+      });
+    } catch (_) {
+      // 某些旧 WebView 的 Worker 实例不可扩展，pagehide 仍会统一终止并回收。
+    }
+    return worker;
+  }
+  WrappedWorker.prototype = NativeWorker.prototype;
+  Object.defineProperty(global, 'Worker', { configurable: false, writable: false, value: WrappedWorker });
+  global.addEventListener('pagehide', function releaseWorkerUrls() {
+    liveWorkers.forEach(function terminateWorker(worker) { try { worker.terminate(); } catch (_) {} });
+    liveWorkers.clear();
+    liveUrls.forEach(function revoke(url) { URL.revokeObjectURL(url); });
+    liveUrls.clear();
+  }, { once: true });
+}
+
+/**
+ * 页面侧 fetch 拦截仅针对 font_compress：字集密文资产只存在于内存 assets Map，
+ * pyodide 本地探测用 '../' 相对路径。其余 URL 原样交给原生 fetch。
+ */
+function installPageSideFetchResolver(claims, prefix, profile, manifest, assets) {
+  if (claims.toolKey !== 'font_compress') return;
+  var charsetIds = ['ascii', 'basic_symbols', 'gb2312_l1', 'gb2312_all', 'big5_l1', 'big5_all', 'sc_tc_full'];
+  var toolPrefix = prefix + '/';
+  var releaseId = claims.releaseId;
+  var compressCharsets = {};
+  for (var ci = 0; ci < charsetIds.length; ci += 1) {
+    var id = charsetIds[ci];
+    var logicalPath = 'font-compress-local/charsets/' + id + '.txt';
+    var bytes = assets.get(logicalPath);
+    var route = manifest.routes[logicalPath];
+    if (!bytes || !route || route.mime.toLowerCase().indexOf('text/plain') !== 0) {
+      throw new Error('compress charset asset missing');
+    }
+    compressCharsets[id] = decoder.decode(bytes);
+  }
+  Object.freeze(compressCharsets);
+  try {
+    Object.defineProperty(global, '__JUNEOVER24_COMPRESS_CHARSETS__', {
+      configurable: false,
+      enumerable: false,
+      writable: false,
+      value: compressCharsets
+    });
+  } catch (_) {
+    // 旧 WebView 可能不允许新增只读全局；fetch 拦截仍可直接读取闭包中的字集。
+  }
+  var nativeFetch = global.fetch;
+  if (typeof nativeFetch !== 'function') throw new Error('fetch unavailable');
+
+  function requestHeaderValue(input, init, name) {
+    var lowerName = String(name).toLowerCase();
+    var header = null;
+    if (init && init.headers) header = init.headers;
+    else if (input && typeof input.headers === 'object' && typeof input.headers.get === 'function') header = input.headers;
+    if (!header) return null;
+    if (typeof header.get === 'function') return header.get(name);
+    if (Array.isArray(header)) {
+      for (var hi = 0; hi < header.length; hi += 1) {
+        if (String(header[hi][0]).toLowerCase() === lowerName) return String(header[hi][1]);
+      }
+      return null;
+    }
+    if (typeof header === 'object') {
+      for (var key in header) {
+        if (Object.prototype.hasOwnProperty.call(header, key) && String(key).toLowerCase() === lowerName) {
+          return String(header[key]);
+        }
+      }
+    }
+    return null;
+  }
+
+  function charsetIdFor(pathname) {
+    for (var si = 0; si < charsetIds.length; si += 1) {
+      var sid = charsetIds[si];
+      if (pathname === toolPrefix + 'charsets/' + sid + '.txt'
+        || pathname === toolPrefix + 'font-compress-local/charsets/' + sid + '.txt'
+        || pathname === '/latest/charsets/' + sid + '.txt'
+        || pathname === '/latest/font-compress-local/charsets/' + sid + '.txt') {
+        return sid;
+      }
+    }
+    return null;
+  }
+
+  function isPyodideProbe(pathname) {
+    var releaseProbe = '/v2/releases/' + releaseId + '/font-adjustment-local/vendor/pyodide/pyodide.js';
+    return pathname === releaseProbe
+      || pathname === toolPrefix + 'font-adjustment-local/vendor/pyodide/pyodide.js'
+      || pathname === '/latest/font-adjustment-local/vendor/pyodide/pyodide.js';
+  }
+
+  function wrappedFetch(input, init) {
+    var method = 'GET';
+    if (init && init.method) method = String(init.method).toUpperCase();
+    else if (input && typeof input.method === 'string') method = String(input.method).toUpperCase();
+    var rawUrl = input instanceof global.Request ? input.url : String(input);
+    var resolved = new URL(rawUrl, global.location.href);
+    if (resolved.origin !== global.location.origin) return nativeFetch(input, init);
+    var pathname = resolved.pathname;
+    var charsetId = charsetIdFor(pathname);
+    if (charsetId !== null) {
+      if (method !== 'GET' && method !== 'HEAD') return nativeFetch(input, init);
+      return Promise.resolve(new Response(compressCharsets[charsetId], {
+        status: 200,
+        headers: {
+          'Content-Type': 'text/plain; charset=utf-8',
+          'Cache-Control': 'no-store'
+        }
+      }));
+    }
+    if (isPyodideProbe(pathname) && method === 'GET'
+      && String(requestHeaderValue(input, init, 'Range') || '').toLowerCase() === 'bytes=0-0') {
+      return Promise.resolve(new Response(new Uint8Array([0]), {
+        status: 206,
+        headers: {
+          'Content-Range': 'bytes 0-0/*',
+          'Accept-Ranges': 'bytes',
+          'Content-Length': '1'
+        }
+      }));
+    }
+    return nativeFetch(input, init);
+  }
+
+  Object.defineProperty(global, 'fetch', {
+    configurable: true,
+    writable: true,
+    value: wrappedFetch
+  });
+}
+
+function installVideoFallbackCapability(claims, bearerTicket) {
+  if (claims.toolKey !== 'video_sound_conversion') return;
+  var nativeFetch = global.fetch;
+  if (typeof nativeFetch !== 'function') throw new Error('fetch unavailable');
+  var live = true;
+  // bearer 只存在 bootstrap 闭包；暴露给业务 realm 的冻结对象没有 token、URL 或任意可枚举状态。
+  var bearer = bearerTicket;
+  async function fetchVideoFallback(formData) {
+    if (!live || !bearer || Math.floor(Date.now() / 1000) >= claims.exp) {
+      throw new Error('Server processing capability expired');
+    }
+    if (!(formData instanceof global.FormData)) throw new Error('fallback body must be FormData');
+    return nativeFetch('https://api.beautify.mp.juneover24.cn/api/sound/video-convert-fallback', {
+      method: 'POST',
+      body: formData,
+      headers: { Authorization: 'Bearer ' + bearer },
+      credentials: 'omit',
+      redirect: 'error',
+      cache: 'no-store'
+    });
+  }
+  var capability = Object.freeze({ fetchVideoFallback: fetchVideoFallback });
+  Object.defineProperty(global, 'JuneOver24VideoSoundCapability', {
+    configurable: false,
+    enumerable: false,
+    writable: false,
+    value: capability
+  });
+  global.addEventListener('pagehide', function expireVideoFallbackCapability() {
+    live = false;
+    bearer = '';
+  }, { once: true });
+}
+
+function installDocument(htmlSource, stylePaths, assets, manifest) {
+  var parsed = new DOMParser().parseFromString(htmlSource, 'text/html');
+  if (!parsed || !parsed.head || !parsed.body) throw new Error('entry HTML invalid');
+  Array.from(parsed.querySelectorAll('*')).forEach(function rejectInlineHandlers(element) {
+    Array.from(element.attributes || []).forEach(function inspectAttribute(attribute) {
+      if (/^on/i.test(attribute.name)) throw new Error('inline event handlers are not allowed');
+    });
+  });
+  Array.from(parsed.querySelectorAll('script,link,base,meta[http-equiv]')).forEach(function removeExecutable(element) {
+    element.remove();
+  });
+  Array.from(parsed.head.children).forEach(function restrictHead(element) {
+    if (!/^(META|STYLE|TITLE)$/.test(element.tagName)) element.remove();
+  });
+  while (document.head.firstChild) document.head.removeChild(document.head.firstChild);
+  Array.from(parsed.head.childNodes).forEach(function importHead(node) {
+    document.head.appendChild(document.importNode(node, true));
+  });
+  var nextBody = document.importNode(parsed.body, true);
+  document.documentElement.replaceChild(nextBody, document.body);
+  document.documentElement.lang = parsed.documentElement.lang || 'zh-CN';
+  stylePaths.forEach(function installStyle(logicalPath) {
+    var style = document.createElement('style');
+    style.dataset.v2LogicalPath = logicalPath;
+    style.textContent = textAsset(assets, manifest, logicalPath, ['text/css']);
+    document.head.appendChild(style);
+  });
+}
+
+function normalizeDownloadBridgeScript(source, logicalPath) {
+  if (logicalPath !== 'download-bridge/app.js' || source.indexOf('PAN123_DOWNLOAD_HOST_SUFFIXES') < 0) {
+    return source;
+  }
+  // 旧 V2 release 的下载桥把 CDN 主机硬编码为 123pan.com/123pan.cn；官方
+  // download_info 现在会返回滚动节点（如 123295.com / pd1.cjjd19.com），旧
+  // 资产因此在 validateDownloadUrl 处误报“服务器未返回有效下载地址”。不能改写
+  // immutable release 的密文文件，改由版本化 loader 在执行旧脚本前做一次精确兼容
+  // 替换；替换后的校验仍保留 HTTPS、无 userinfo、标准 443 端口和合法主机检查。
+  // 使用 ASCII 正则定位完整函数，避免旧资产的中文错误文案因不同编码或压缩形式
+  // 破坏替换；真实 URL 仍由原函数前面的 parseStrictHttpsUrl 负责结构校验。
+  const legacyValidator = /function validateDownloadUrl\(value\) \{[\s\S]*?if \(!parsed \|\| !allowed\) throw new Error\([^;]+\);\r?\n  return parsed\.href;\r?\n\}/;
+  if (!legacyValidator.test(source)) throw new Error('download bridge URL validator compatibility marker invalid');
+  const replacement = 'function validateDownloadUrl(value) {'
+    + '\n  const parsed = parseStrictHttpsUrl(value);'
+    + "\n  if (!parsed) throw new Error('invalid download URL');"
+    + '\n  return parsed.href;'
+    + '\n}';
+  const withoutLegacyValidator = source.replace(legacyValidator, replacement);
+  return withoutLegacyValidator.replace(
+    /const PAN123_DOWNLOAD_HOST_SUFFIXES = \['123pan\.com', '123pan\.cn'\];\r?\n?/,
+    '',
+  );
+}
+
+var WEIXIN_SCRIPT_PATH = 'font-adjustment-local/vendor/jweixin-1.6.0.js';
+
+async function executeEntryScripts(claims, profile, assets, manifest) {
+  if (claims.toolKey !== 'download_bridge') {
+    for (var index = 0; index < profile.entry.scripts.length; index += 1) {
+      await executeScript(profile.entry.scripts[index], assets, manifest);
+    }
+    return;
+  }
+
+  var weixinScriptIndex = profile.entry.scripts.indexOf(WEIXIN_SCRIPT_PATH);
+  if (weixinScriptIndex !== 0) throw new Error('download bridge jweixin script must be first');
+  // jweixin 必须先执行，才能在 document 上注册 WeixinJSBridgeReady 监听并由其
+  // 自己处理 postMessage/navigateBack 的原生调用。不能在这里额外等待一个自定义
+  // bridge 门禁：真实微信注入 bridge 可能晚于页面脚本启动，提前 reject 会只显示
+  // “安全启动失败”，反而阻断 SDK 的兼容队列；legacy 页面也采用该 SDK-first 顺序。
+  for (var index = 0; index <= weixinScriptIndex; index += 1) {
+    await executeScript(profile.entry.scripts[index], assets, manifest);
+  }
+  for (var index = weixinScriptIndex + 1; index < profile.entry.scripts.length; index += 1) {
+    await executeScript(profile.entry.scripts[index], assets, manifest);
+  }
+}
+
+async function executeScript(logicalPath, assets, manifest) {
+  var source = textAsset(assets, manifest, logicalPath, ['text/javascript', 'application/javascript']);
+  source = normalizeDownloadBridgeScript(source, logicalPath);
+  var blobUrl = URL.createObjectURL(new Blob([source], { type: 'text/javascript;charset=utf-8' }));
+  try {
+    await new Promise(function loadScript(resolve, reject) {
+      var runtimeError = null;
+      var observeError = function observeError(event) {
+        if (event && event.filename === blobUrl) runtimeError = new Error('release script execution failed');
+      };
+      global.addEventListener('error', observeError, true);
+      var script = document.createElement('script');
+      script.async = false;
+      script.src = blobUrl;
+      script.onload = function loaded() {
+        global.removeEventListener('error', observeError, true);
+        script.remove();
+        if (runtimeError) reject(runtimeError); else resolve();
+      };
+      script.onerror = function failed() {
+        global.removeEventListener('error', observeError, true);
+        script.remove();
+        reject(new Error('release script load failed'));
+      };
+      document.head.appendChild(script);
+    });
+  } finally {
+    URL.revokeObjectURL(blobUrl);
+  }
+}
+
+function renderFailure() {
+  document.title = '安全启动失败';
+  while (document.head.firstChild) document.head.removeChild(document.head.firstChild);
+  while (document.body.firstChild) document.body.removeChild(document.body.firstChild);
+  var main = document.createElement('main');
+  main.setAttribute('role', 'alert');
+  main.style.cssText = 'max-width:32rem;margin:18vh auto;padding:24px;font:16px/1.7 sans-serif;color:#1f2937;';
+  var title = document.createElement('h1');
+  title.textContent = '安全启动失败';
+  var detail = document.createElement('p');
+  detail.textContent = '当前加密工具无法安全加载，请返回小程序后重试。';
+  main.appendChild(title);
+  main.appendChild(detail);
+  document.body.appendChild(main);
+}
+
+var ticket;
+try {
+  // fragment 票据在任何异步操作、网络请求或业务脚本执行前读取并立即清除。
+  ticket = readTicketAndClearFragment();
+} catch (_) {
+  renderFailure();
+  return;
+}
+
+(async function bootstrap() {
+  var claims = parseTicket(ticket);
+  var profile = profiles[claims.toolKey];
+  if (!profile) throw new Error('tool profile unsupported');
+  var prefix = '/latest/' + claims.toolKey;
+  if (normalizeLaunchPathname(global.location.pathname) !== claims.launchPath) {
+    throw new Error('canonical entry mismatch');
+  }
+  var keyMaterial = await requestEnvelope(ticket, claims);
+  var manifest = await loadManifest(claims, profile, prefix, ticket, keyMaterial.manifestVerifyKey);
+  var assets = await materializeRelease(prefix, ticket, manifest, profile, keyMaterial.dek);
+  // envelope 的 GCM/HKDF 绑定、manifest 摘要/签名和 retained 资产完整性校验均已完成。
+  // 不把已从 fragment 移除的票据重新暴露给业务 realm；gate 只暴露已验签的非敏感
+  // releaseId 与工具标识校验能力。
+  var launchGate = Object.freeze({
+    releaseId: claims.releaseId,
+    verify: async function verifyV3Launch(expectedToolKey) {
+      if (expectedToolKey !== claims.toolKey) throw new Error('启动工具标识不匹配');
+      return Object.freeze({ valid: true, toolKey: claims.toolKey, releaseId: claims.releaseId, mode: 'v3', disabledFeatures: [] });
+    }
+  });
+  Object.defineProperty(global, 'JuneOver24ToolLaunchGate', {
+    configurable: false,
+    enumerable: false,
+    writable: false,
+    value: launchGate,
+  });
+  // capability 只能在 ticket、envelope 绑定、manifest hash/signature 与 retained 资产完整性全部通过后安装。
+  installVideoFallbackCapability(claims, ticket);
+  ticket = '';
+  // 原生桥捕获：web-view 宿主（真实微信/开发者工具）可能在页面加载时注入原生
+  // wx.miniProgram，而 jweixin-1.6.0 作为入口脚本会用 WeixinJSBridge 门控版本
+  // 整体覆写 window.wx——开发者工具不派发 WeixinJSBridgeReady，覆写后原生通道
+  // 永久失效。这里在覆写前留档，业务 H5 经 __J24_NATIVE_WX__ 恢复原生返回通道。
+  try {
+    var nativeWx = global.wx || null;
+    if (nativeWx && nativeWx.miniProgram && typeof nativeWx.miniProgram.postMessage === 'function') {
+      global.__J24_NATIVE_WX__ = nativeWx;
+    } else {
+      global.__J24_NATIVE_WX__ = null;
+    }
+  } catch (_) {
+    global.__J24_NATIVE_WX__ = null;
+  }
+  var htmlSource = textAsset(assets, manifest, profile.entry.html, ['text/html']);
+  installWorkerResolver(claims, prefix, profile, manifest, assets);
+  // 页面侧 fetch 拦截必须在业务脚本执行前安装；font_compress 的字集/探测依赖它。
+  installPageSideFetchResolver(claims, prefix, profile, manifest, assets);
+  installDocument(htmlSource, profile.entry.styles, assets, manifest);
+  await executeEntryScripts(claims, profile, assets, manifest);
+})().catch(function failClosed() {
+  ticket = '';
+  renderFailure();
+});
+})(globalThis);
+</script>
+</body>
+</html>

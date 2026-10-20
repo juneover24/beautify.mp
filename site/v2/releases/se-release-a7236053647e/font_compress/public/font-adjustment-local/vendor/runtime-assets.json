@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "path": "server/static/font-adjustment-local/vendor/pyodide/pyodide.js",
+      "url": "https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide.js",
+      "size": 18597,
+      "sha256": "718d40f1c015dd25ec724cc8fc4e2325d6a45a92ae225121ff6953f224a16f72"
+    },
+    {
+      "path": "server/static/font-adjustment-local/vendor/pyodide/pyodide.asm.js",
+      "url": "https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide.asm.js",
+      "size": 1074322,
+      "sha256": "1263f02b5b26099b96112378156f242dd98b39a8201ba7765e5fe3d455c5ce91"
+    },
+    {
+      "path": "server/static/font-adjustment-local/vendor/pyodide/pyodide.asm.wasm",
+      "url": "https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide.asm.wasm",
+      "size": 8647684,
+      "sha256": "e2f4ee75b325e35eb31bfb8c613d4dd5098f5502c156a97847686875b5025480"
+    },
+    {
+      "path": "server/static/font-adjustment-local/vendor/pyodide/python_stdlib.zip",
+      "url": "https://cdn.jsdelivr.net/pyodide/v0.29.3/full/python_stdlib.zip",
+      "size": 2423989,
+      "sha256": "4298b6ee445cb724c3973437da47789752b9e6ff4e26619026b283ec801fc46b"
+    },
+    {
+      "path": "server/static/font-adjustment-local/vendor/pyodide/pyodide-lock.json",
+      "url": "https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide-lock.json",
+      "size": 120010,
+      "sha256": "3256ffc76388de0e37f4b34d42ab484268d1afc675179ff97b2a5bb14f84ccac"
+    },
+    {
+      "path": "server/static/font-adjustment-local/vendor/pyodide/fonttools-4.56.0-py3-none-any.whl",
+      "url": "https://cdn.jsdelivr.net/pyodide/v0.29.3/full/fonttools-4.56.0-py3-none-any.whl",
+      "size": 1089800,
+      "sha256": "9d6518c8ad4d88019bc72045108eca154301014215222408aa047cf4955c726d"
+    },
+    {
+      "path": "server/static/font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "url": "https://res.wx.qq.com/open/js/jweixin-1.6.0.js",
+      "size": 12938,
+      "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba"
+    }
+  ]
+}
+

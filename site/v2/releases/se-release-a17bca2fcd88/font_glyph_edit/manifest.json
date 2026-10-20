@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "se-release-a17bca2fcd88",
+  "toolKey": "font_glyph_edit",
+  "createdAt": "2026-10-20T11:56:18.546Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "font-glyph-editor/index.html",
+    "styles": [],
+    "scripts": [
+      "fetch-522-retry.js",
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "font-glyph-editor/font-glyph-editor.vendor.js",
+      "font-glyph-editor/editor.js"
+    ],
+    "workers": [
+      "font-marker-local/marker.worker.js"
+    ]
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:se-release-a17bca2fcd88:font_glyph_edit",
+      "wrappedKey": "EdQ3KuRcPtjSOUc9lTm6vZm39kQAOppfOdmQGfCpx9dHAqgRD/XtKap+Km3rBPVINsBKWCsq1+nrSKsDlg08qj+ZXAuAFSJLMIZiEez61i/aZ3MZy2ienzvDMvyIdq0+OPkoApp0hatKwp3xe5Fq9VSPGhVBt+xYoEoQnt0qmeS6yy8rdVcIIlLRljbct5NwEZdnLCSFnz766PWbJD5XvMcIGcZZh3/leF0Vw2oqcCMcSE+ghEt8cOGz8huW/KuvvE2ijSYOjeKo5jDYeQbCRkzgEYzgp+9rF4251FKOM+S5FU4zcjxvLBVUmdyGfR8sVCJy5c+F8t7NPNo5+dfmzS+oXDGS6+va1QhPC3Jd45zhhNuG5o6e5l8o5Qvbp+F1za9mvjziEuKg/NCznOdhR+cRRSYmfnVZezdPsezHgpVOzYgNcfD/xG+Sb6oKTsAKXbQZ5TvFRGUJjRXusAmZtW4YkaFFwAACFq0wh2EMarB8rU2ApF+Og7E3I5RLGl+S"
+    }
+  ],
+  "routes": {
+    "fetch-522-retry.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-410b453e32b62bb60609",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 5641,
+          "sha256": "410b453e32b62bb606096b6f6646a2463235c7dd9345df7034732782ade9013e",
+          "cipherPath": "cipher/6b4fcb18984b2f6a8483ce8f9fef4e4aae36c00505a47e586f8ced109a401072.bin",
+          "cipherSha256": "6b4fcb18984b2f6a8483ce8f9fef4e4aae36c00505a47e586f8ced109a401072",
+          "iv": "v55zqKWQj41C2g/W",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-glyph-editor/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-9fb2edf7ffcfa4b0bea6",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 32435,
+          "sha256": "9fb2edf7ffcfa4b0bea67726ac937acf732e0f13011cade6fb62eb4f740feb17",
+          "cipherPath": "cipher/eac1e7e88a37bd423c3f645bdc7593503767f459a6755f2ab242631fb132dc68.bin",
+          "cipherSha256": "eac1e7e88a37bd423c3f645bdc7593503767f459a6755f2ab242631fb132dc68",
+          "iv": "jtY2HMUfVQvnSkgp",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-glyph-editor/editor.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-0779d266b098aa7fc0ff",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 204125,
+          "sha256": "0779d266b098aa7fc0ffe9aebd0e73f219332a718cef444922e61929abeadac3",
+          "cipherPath": "cipher/2d4cbf941fd40d5712b3c468c277feeb82551fc8618ea36a7b6572b91b52c045.bin",
+          "cipherSha256": "2d4cbf941fd40d5712b3c468c277feeb82551fc8618ea36a7b6572b91b52c045",
+          "iv": "mmCckZgJkBp1ExBe",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-glyph-editor/font-glyph-editor.vendor.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-b3f3f1bb244109fa7b9b",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 391422,
+          "sha256": "b3f3f1bb244109fa7b9beafa716185c73da2b46a0c285fb3cf0e90a9283699b5",
+          "publicPath": "public/font-glyph-editor/font-glyph-editor.vendor.js"
+        }
+      ]
+    },
+    "font-marker-local/marker.worker.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-a138e77cc655174f6503",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 95352,
+          "sha256": "a138e77cc655174f65031cd10bb6d0cd23c24f929b82d01b906e048538e97b56",
+          "cipherPath": "cipher/eab638c37d2526015b504c49c6c982e0177a20b7312fec315f607d274d0c26cf.bin",
+          "cipherSha256": "eab638c37d2526015b504c49c6c982e0177a20b7312fec315f607d274d0c26cf",
+          "iv": "DoY15nAoNggBrTva",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-marker-local/font-marker.vendor.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-cb0ff8c3d8992a289c0f",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 58322,
+          "sha256": "cb0ff8c3d8992a289c0fd2fd1223a66cd2334cb0722c2ee1ab4046c0355701d0",
+          "publicPath": "public/font-marker-local/font-marker.vendor.js"
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    },
+    "loader/loader.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-787fc3010b8e02e8fdb3",
+          "kind": "vendor",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 76370,
+          "sha256": "787fc3010b8e02e8fdb3f01c95d4a3ca052adfb8fed5af9f403e3e63d1d6f199",
+          "publicPath": "public/loader/loader.html"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "beautify-mp-manifest-v1",
+    "alg": "ES256",
+    "value": "G1PW5f2vx2raYSA2tZ1uhTUYcrdAvRNNYi1zslP0ph5Xkbueb7N+AMGwZi9ZUVKrH9WdvBOuQQISo5OFTAgVYg=="
+  }
+}

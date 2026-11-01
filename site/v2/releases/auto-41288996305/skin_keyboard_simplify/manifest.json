@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "auto-41288996305",
+  "toolKey": "skin_keyboard_simplify",
+  "createdAt": "2026-11-01T08:29:50.177Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "skin-keyboard-simplify/index.html",
+    "styles": [
+      "skin-keyboard-simplify/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "skin-keyboard-simplify/app.js"
+    ],
+    "workers": [
+      "skin-keyboard-simplify/compression-worker.js"
+    ]
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:auto-41288996305:skin_keyboard_simplify",
+      "wrappedKey": "ezQu/+YlNyPHwkqKzqJClGx2Z8J0CO1aPVVO6wOAAzyP1bR2BgKl/rUZl4drBfFToTbaWHbeBF5SEdoDkOr0gtakYfIiEbs7P9EFg08c78fsU+ALlFJQIh6zGsXmrjLld2dEGbsi69bW5iW1+nJOCyEJoo7oqvsYnDmGeOXXZKXc51b9ip+fbPHXbP0pzkbS3vz2DSbiivNQ29yF6VVDboI9wU4BrZKgrh5dw303s8QkHaT0F2yxoDJn/cfmwVSfAuPJCu6kST4rpnf+pIIA9R7kU8sBVfbQG4k9v2RsmeBp6QBWtZ6IeBUPVvm0madDfhuRGo2HKoOMYRENLRIzSsHMCEIN1CLQKLqxt0bLiTWqVPcXfoYk/criBnwfppWnKsLeevKzvOBiPsELyTDTYj+9ej8NQRW0i7+id5y6ygaLsEUt9qdoZ3WmxkD6h1TREhkjAJI8KXOO1s497kmg69FUKefk6am/+6KKtfmESt9xWBb37+EEtVfKMbZey6+V"
+    }
+  ],
+  "routes": {
+    "skin-keyboard-simplify/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-b464564cbb76f45e299e",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 4308,
+          "sha256": "b464564cbb76f45e299e2f1483806e71db94b1a96ed14eed10c6a998bcd743e4",
+          "cipherPath": "cipher/af0a2337de3f007a10ff765d9d9cbe9d5c8a0929229c99f7380a9d8175a51fc7.bin",
+          "cipherSha256": "af0a2337de3f007a10ff765d9d9cbe9d5c8a0929229c99f7380a9d8175a51fc7",
+          "iv": "Uv6Kq/nJXralZa3c",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-keyboard-simplify/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-3037d6835cb7d70c2b87",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 6984,
+          "sha256": "3037d6835cb7d70c2b877ab4e8c7ea27aad6be71e814f66f66e5f2464b929c81",
+          "cipherPath": "cipher/7ad00d14516f1be5c0925bd182887b615a2e35cf05fd428633189037d426188f.bin",
+          "cipherSha256": "7ad00d14516f1be5c0925bd182887b615a2e35cf05fd428633189037d426188f",
+          "iv": "bIaSz8gLBjG4yUHl",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-keyboard-simplify/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-1071922532642a647120",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 17262,
+          "sha256": "1071922532642a64712066f54cc150fafb6925909f85edda5a5cee0a5e8dfbd3",
+          "cipherPath": "cipher/1b1c8845572e3f3b80ce2a2f08446734bdea7291de34becf9f0edf20cdc4d232.bin",
+          "cipherSha256": "1b1c8845572e3f3b80ce2a2f08446734bdea7291de34becf9f0edf20cdc4d232",
+          "iv": "XlzKMK0xRSge1qeM",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-keyboard-simplify/compression-core.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-59cd0e62917174ee1afd",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 58699,
+          "sha256": "59cd0e62917174ee1afd71f31b65b8ed76f93e62d8f38e004fb4d5e3cc5d52d4",
+          "cipherPath": "cipher/0da62e51e58a2214ae950c13ffa751b53118792a3f3d1fdea15ad405db0a74cb.bin",
+          "cipherSha256": "0da62e51e58a2214ae950c13ffa751b53118792a3f3d1fdea15ad405db0a74cb",
+          "iv": "O0dGXTc+hkXlzUu6",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-keyboard-simplify/compression-worker.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-5799e5f2793b4dde2387",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 2579,
+          "sha256": "5799e5f2793b4dde2387877e8679e3d11bf94442d79b5d1ab0388fd8547a358c",
+          "cipherPath": "cipher/877e28c137ccc874a3f0c0c69b2c0d0da46c7dd8f9852da1a67675569d8aba21.bin",
+          "cipherSha256": "877e28c137ccc874a3f0c0c69b2c0d0da46c7dd8f9852da1a67675569d8aba21",
+          "iv": "+jzgIdKwgbpaeokC",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-keyboard-simplify/compression-worker.vendor.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-8f196903b77e91219eff",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 64650,
+          "sha256": "8f196903b77e91219eff557f0bd0270dab8e58e4a646c8435c4ec8eb72b1be4c",
+          "publicPath": "public/skin-keyboard-simplify/compression-worker.vendor.js"
+        }
+      ]
+    },
+    "skin-keyboard-simplify/vendor/THIRD_PARTY_NOTICES.md": {
+      "mime": "text/markdown; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-3a159f5e0a31534e4d91",
+          "kind": "vendor",
+          "mime": "text/markdown; charset=utf-8",
+          "bytes": 601,
+          "sha256": "3a159f5e0a31534e4d912e2ce8b390c987baf4abfec58be80f2d769df2cc8c89",
+          "publicPath": "public/skin-keyboard-simplify/vendor/THIRD_PARTY_NOTICES.md"
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    },
+    "loader/loader.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-f00243dc397a62ab6def",
+          "kind": "vendor",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 79779,
+          "sha256": "f00243dc397a62ab6def96f99214eafb26d6318c9b9b88790f04a4548851714a",
+          "publicPath": "public/loader/loader.html"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "beautify-mp-manifest-v1",
+    "alg": "ES256",
+    "value": "qscgmo1kZP7sY8qTUWo3ptuY6MqsAUQno95z4a+zXEm1pWM+3I62rgqXjp+rXM344g9Ism67jn0/A+LyF/b8hA=="
+  }
+}

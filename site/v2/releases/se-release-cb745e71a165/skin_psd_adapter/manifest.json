@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "se-release-cb745e71a165",
+  "toolKey": "skin_psd_adapter",
+  "createdAt": "2026-11-06T15:55:58.597Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "skin-psd-adapter/index.html",
+    "styles": [
+      "skin-psd-adapter/styles.css"
+    ],
+    "scripts": [
+      "skin-psd-adapter/app.js"
+    ],
+    "workers": [
+      "skin-psd-adapter/adapter-worker.js"
+    ]
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:se-release-cb745e71a165:skin_psd_adapter",
+      "wrappedKey": "RYfd/dlK4yAa5csq02N89UUWu0GBlBX6L2WPobcqQamTejbCu1VdECzkj18WsZeHJ06q+S7U+Q4G88pPIN9fhdWD2zUWqBF/JrXj0Yml45xuV9tqG5Wuizxy787DYpPjyZhOJCzyd93bBcIj8aSWSBysngJquSYYNE107pcyaKqPQ5D6mRsMQknaDKxD2QEr8DZYjVCrY3C4ruCCBuAy30Sck94QUsnBAOtDLiuEdoBKyOpDQSjSZ3WuRHupK2qW+hgpC1H2wymYZqxXVKysDtsibFU1/iLd+eXNNhk98Co+ih9xYjXUMyy7bZ0CtU0pNgkCEnIEnsA1epb0DpPLTBYunRTrEWmM5uZHemAjE5ZIrh+QX4V+CjUp1S6BeTzo3AJkYZuvJg8VitSh5Cg+riKR3Nsnnl1u2zEM7TiTMYE5VY7hYtcvcsNAL8xMsN+WYd23I7RpZGXG2FZtvNu4IxpH8pEgOycR/d3A5PkX+/L0fAKSLtBp+YXy0hYa/pfS"
+    }
+  ],
+  "routes": {
+    "skin-psd-adapter/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-a5b4a337d680e45bdbc4",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 3810,
+          "sha256": "a5b4a337d680e45bdbc4747e6b9cc8fe6d3540ff7cd66c3974f33a04fe3cba98",
+          "cipherPath": "cipher/543a7ae25d32dda24bf87b2f8931e4cb72ba3c49210b6c365d1f9ce28f1e5910.bin",
+          "cipherSha256": "543a7ae25d32dda24bf87b2f8931e4cb72ba3c49210b6c365d1f9ce28f1e5910",
+          "iv": "zaNsr2j/7DgKjesE",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-psd-adapter/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-5c6a5d96443c2a5fb1a1",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 4611,
+          "sha256": "5c6a5d96443c2a5fb1a1a333cb139b90f8001eae75670740e275c049f6ec362f",
+          "cipherPath": "cipher/5a820f0e6c1f037fdcfcc8efd801f71564d786e053796623d40d1e9875b64b36.bin",
+          "cipherSha256": "5a820f0e6c1f037fdcfcc8efd801f71564d786e053796623d40d1e9875b64b36",
+          "iv": "ZmzLwEt0NdoUk0SO",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-psd-adapter/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-e17ca8dfeb83714d2aa2",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 11585,
+          "sha256": "e17ca8dfeb83714d2aa2319b89f82dd570773671137e4ae06dc61aa608e8999e",
+          "cipherPath": "cipher/c770f37e65ef338fc354c10d48596029f846a44c5d1857829f4dacb58ae388de.bin",
+          "cipherSha256": "c770f37e65ef338fc354c10d48596029f846a44c5d1857829f4dacb58ae388de",
+          "iv": "HLlda9+JxUxYAr+o",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-psd-adapter/adapter-worker.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-d073e74916485d947e97",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 36965,
+          "sha256": "d073e74916485d947e9738d7763462da7e3490c02562a37282ff7ba984c2941d",
+          "cipherPath": "cipher/72c24006ce76c15b4dfc2e77f37524ec84907fde6b4260026dfe5837fe0011b6.bin",
+          "cipherSha256": "72c24006ce76c15b4dfc2e77f37524ec84907fde6b4260026dfe5837fe0011b6",
+          "iv": "qXz/aP4/JeNB1qt1",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "skin-psd-adapter/adapter-worker.vendor.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-045a16b415c3d21eb4ab",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 347482,
+          "sha256": "045a16b415c3d21eb4abc6208ed4063876bd95d0b5a91a49a0a3d925c6d5dcfd",
+          "publicPath": "public/skin-psd-adapter/adapter-worker.vendor.js"
+        }
+      ]
+    },
+    "skin-psd-adapter/vendor/THIRD_PARTY_NOTICES.md": {
+      "mime": "text/markdown; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0898ac280bc1f520c9f6",
+          "kind": "vendor",
+          "mime": "text/markdown; charset=utf-8",
+          "bytes": 3709,
+          "sha256": "0898ac280bc1f520c9f6bf68d5375529ffdb0aff8c3727d3cda5c80c350e10b6",
+          "publicPath": "public/skin-psd-adapter/vendor/THIRD_PARTY_NOTICES.md"
+        }
+      ]
+    },
+    "loader/loader.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-8b69af408b16f93b9d9f",
+          "kind": "vendor",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 83230,
+          "sha256": "8b69af408b16f93b9d9fbef130b325ed9c3d86d6818b3efae23488f6aff4c258",
+          "publicPath": "public/loader/loader.html"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "beautify-mp-manifest-v1",
+    "alg": "ES256",
+    "value": "HWNQ6LyJXsu8TUIM6OwIs1rNL/xXcDQ5/TuOq28rLNHuYc3M5sHoqeninJ25548rhJJIOa73PTDeIMkDjuMV7w=="
+  }
+}

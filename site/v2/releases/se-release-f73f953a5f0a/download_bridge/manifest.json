@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "se-release-f73f953a5f0a",
+  "toolKey": "download_bridge",
+  "createdAt": "2026-11-07T10:51:51.708Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "download-bridge/index.html",
+    "styles": [
+      "download-bridge/styles.css"
+    ],
+    "scripts": [
+      "font-adjustment-local/vendor/jweixin-1.6.0.js",
+      "download-bridge/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:se-release-f73f953a5f0a:download_bridge",
+      "wrappedKey": "Drdvez3GiZ8kTbpiIzu5cX2z7oDcYZicsBlPi4M/fjYBV6+0fZyyCmn+vgpXbDmtVNCEzgjKuhp45u0Sa8qD0NuKQjhrKiqOqM1q1DBt2BSAsq1BwuhqQ7eXCR+aV17KZhZ3idCsgMYhyTlVrn/ruuyR7zQJUzzQ+qA6ZcXjQiO7siazFWrZEi5JTlQllSj8R6kxTfI4we8HiOTZxl/WEFAIk/aWc3Jc/EXWRd/nem4Se4r9zLc9Vgp1oS5rNwIqo2eUARrQtfLIXhdq3hzNiJwBRjUVSWx5I4jclURlccf4WFGzWJFnvUAiZP8llVz+9VGnn2kNHIihjRPlEyS6Fm407Ygo1l/BlIdZvR+fUpVH35MF8bM7LzOZeo6fvr9E929A4ZKkWlRKi3AQplnSw7M+eatuf09LKASPcs8BW5jkBz9UFQixqh6P8e8S+j2t2mIY2v+/KhhFoH0MiiN9adE9AlOUQBQ9tivbwd5qmP6reZtY54Pt/hTbibw9dq/h"
+    }
+  ],
+  "routes": {
+    "download-bridge/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-449c31c81a347c2d2dc1",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 892,
+          "sha256": "449c31c81a347c2d2dc1e1bd71aa21498408b6f501e5579b1a7aac328048bdfd",
+          "cipherPath": "cipher/09179b1bc8587f2d3985b6a1565a2016c1f7ff3f9ca7b10c5db3f1c266edc8e4.bin",
+          "cipherSha256": "09179b1bc8587f2d3985b6a1565a2016c1f7ff3f9ca7b10c5db3f1c266edc8e4",
+          "iv": "jTsUz53PVZA6DwMW",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-f22141278f2eca3e6a9c",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 1179,
+          "sha256": "f22141278f2eca3e6a9ccb360ae3a66474c4d42405d21c7e8a870c0d94b11421",
+          "cipherPath": "cipher/abf4c5386cc4b5cd00c4e8018e44676b3b0e4b231d50064598b237fd96c6ffe9.bin",
+          "cipherSha256": "abf4c5386cc4b5cd00c4e8018e44676b3b0e4b231d50064598b237fd96c6ffe9",
+          "iv": "hKdeo2PKmqhTpuza",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "download-bridge/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-c94fdea0e496d80428c1",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 57701,
+          "sha256": "c94fdea0e496d80428c1963c9340bc052a841aeb20f6a8a4834646ca058243a4",
+          "cipherPath": "cipher/e769a87140a268b13d7873177da8d1016428329e98862d270214a5c93cd8c1f1.bin",
+          "cipherSha256": "e769a87140a268b13d7873177da8d1016428329e98862d270214a5c93cd8c1f1",
+          "iv": "xjcKR+HxLeT4vXUf",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "font-adjustment-local/vendor/jweixin-1.6.0.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-0f17c4f7daf51a49a962",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 12938,
+          "sha256": "0f17c4f7daf51a49a9627714ad2da6c037352442699ba8ceca68b7c6dc0b1dba",
+          "publicPath": "public/font-adjustment-local/vendor/jweixin-1.6.0.js"
+        }
+      ]
+    },
+    "loader/loader.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-2460efc2a07504432d74",
+          "kind": "vendor",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 83890,
+          "sha256": "2460efc2a07504432d74da42cf3eed68d16613d2c1387fd8b7daaebbf06cf1da",
+          "publicPath": "public/loader/loader.html"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "beautify-mp-manifest-v1",
+    "alg": "ES256",
+    "value": "QT03LawYd9B58FUqavGuCtZSAIVXAgEz7odobELhuMHJwKfam97PDdoKrdsjMk9G5GROz41DxEd7zsceiatksQ=="
+  }
+}

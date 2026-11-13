@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "se-release-469d46092a91",
+  "toolKey": "assets_psd_excel_batch",
+  "createdAt": "2026-11-13T02:59:22.621Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "assets-psd-excel-batch/index.html",
+    "styles": [
+      "assets-psd-excel-batch/styles.css"
+    ],
+    "scripts": [
+      "assets-psd-excel-batch/app.js"
+    ],
+    "workers": [
+      "assets-psd-excel-batch/worker.js"
+    ]
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:se-release-469d46092a91:assets_psd_excel_batch",
+      "wrappedKey": "knHgueVh0U2E5ZkNlSlnnNLamqt/qJB/rG0ninZug7wAD8h7SUOStZpkDvFxi0OFUv02Ym4/kmABAAaYUjEFUUddTV+IXkeKQHY53tDB1m9z8TX2C+TlxN+LtARVay5mrP7DYB2Y9a51Z6VPiM5ksydrekhFcEfs9h7C9jL5FZEucGnjqCPMomkiWyAm6BanVQh65gPmShDwIVyLKiirDyM+gVulxbbpRARr0iGlKlxG7/MrlCGcjvSleLDYWS43/m3pchYOLtjxiD21rR7rA0Q8PA2buvQhFEIrH9PWjRr0BtsZxoKj5V+dKToAxIaNz/2vSDykMi9zIPosajin3bb5fClzNnSkaw7+igIb2TV03ZyLsdpfZnvISweNLCx065ezn89kMhvv/U70lyixfeWhAhVEtRNlbOyKvm9Y2p5730Z573GLV8Y8BLUlEovibOLgH4b/dc3RP3mXoj6Kq5sLMKP2S2fzPb4GHOTtsVjwgyLy+NPCjcflfw7XF0gT"
+    }
+  ],
+  "routes": {
+    "assets-psd-excel-batch/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-16f05c067805428504b4",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 8672,
+          "sha256": "16f05c067805428504b416cd8d18f9f633c88214fdf16d3ba3e1c1af631d5d93",
+          "cipherPath": "cipher/c64dfd44ec0764ce4963e4598faad2447fecacddbc416d8e24e05d3b4acbae28.bin",
+          "cipherSha256": "c64dfd44ec0764ce4963e4598faad2447fecacddbc416d8e24e05d3b4acbae28",
+          "iv": "Ei2HkPC7J2ypMgnx",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "assets-psd-excel-batch/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-c5589176aa3144e996e9",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 10604,
+          "sha256": "c5589176aa3144e996e9979fb24b95360c93ffdc4210fff61829a1724afb3337",
+          "cipherPath": "cipher/21d503a2100856fd1d02e5ba72ae0c734b50ccbd27804ae9470689b1fda0e6d3.bin",
+          "cipherSha256": "21d503a2100856fd1d02e5ba72ae0c734b50ccbd27804ae9470689b1fda0e6d3",
+          "iv": "4YZ16HJ8OQFPopMS",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "assets-psd-excel-batch/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-a21ce54728a8558357b6",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 84260,
+          "sha256": "a21ce54728a8558357b649c5f8ca6aa4276eabd775a2a6ef635f16ca6c03bacb",
+          "cipherPath": "cipher/73f215bd8deee7ebc24e102b6cf611ae01d506a7ef1817ba49da47fe6b3cd1cd.bin",
+          "cipherSha256": "73f215bd8deee7ebc24e102b6cf611ae01d506a7ef1817ba49da47fe6b3cd1cd",
+          "iv": "zeiVzE6ejDy2tYCv",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "assets-psd-excel-batch/worker.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-003e711f6efaaeffdbe2",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 30222,
+          "sha256": "003e711f6efaaeffdbe26ac7d0ba833089e95dc4cbc53c63ee7c9a2619b3048a",
+          "cipherPath": "cipher/ef028c6c08439fa7035db9f992b7cdf81a49a3c69f4795a3b081d466d907801e.bin",
+          "cipherSha256": "ef028c6c08439fa7035db9f992b7cdf81a49a3c69f4795a3b081d466d907801e",
+          "iv": "CR75ZS8u47NLAjT1",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "assets-psd-excel-batch/worker.vendor.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-be19344cdf72095afaaa",
+          "kind": "vendor",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 781720,
+          "sha256": "be19344cdf72095afaaaa1f8c3883285d773a6091e7a6a8c1803f1d0c06582cc",
+          "publicPath": "public/assets-psd-excel-batch/worker.vendor.js"
+        }
+      ]
+    },
+    "assets-psd-excel-batch/vendor/THIRD_PARTY_NOTICES.md": {
+      "mime": "text/markdown; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-b58b733817dda4471c91",
+          "kind": "vendor",
+          "mime": "text/markdown; charset=utf-8",
+          "bytes": 438,
+          "sha256": "b58b733817dda4471c919a7f58fde0adeacba7826ee77f54486dfc0d882606c1",
+          "publicPath": "public/assets-psd-excel-batch/vendor/THIRD_PARTY_NOTICES.md"
+        }
+      ]
+    },
+    "loader/loader.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-2460efc2a07504432d74",
+          "kind": "vendor",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 83890,
+          "sha256": "2460efc2a07504432d74da42cf3eed68d16613d2c1387fd8b7daaebbf06cf1da",
+          "publicPath": "public/loader/loader.html"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "beautify-mp-manifest-v1",
+    "alg": "ES256",
+    "value": "DhWqDteY7GLnVu1ODhrGl51APSlCFk/LlEf1MJsJc/t4k4bwdTQi2pHqsb+Zn9OqT/Rr2u8nfpGywxjkv/2tOA=="
+  }
+}

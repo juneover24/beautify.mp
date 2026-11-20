@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 2,
+  "releaseId": "se-release-5e3828c332ec",
+  "toolKey": "sound_package_maker",
+  "createdAt": "2026-11-20T13:05:51.886Z",
+  "enc": "A256GCM",
+  "aad": {
+    "version": 2,
+    "fields": [
+      "releaseId",
+      "toolKey",
+      "logicalPath",
+      "part.id",
+      "part.kind",
+      "part.mime",
+      "part.bytes",
+      "part.sha256"
+    ]
+  },
+  "entry": {
+    "html": "sound-package-maker/index.html",
+    "styles": [
+      "sound-package-maker/styles.css"
+    ],
+    "scripts": [
+      "sound-package-maker/app.js"
+    ],
+    "workers": []
+  },
+  "recipients": [
+    {
+      "kid": "cloudflare-primary",
+      "alg": "RSA-OAEP-256",
+      "label": "beautify.mp:v2:se-release-5e3828c332ec:sound_package_maker",
+      "wrappedKey": "FmBcEB11q2Z+IZzy/3juY1DslmNBt9kJYdgQwbP8TJE6/CB0CWmHTQGDD3669GN9FoQzHruScaCHdcX4qMOkhWT3ejKuugVohmk1+hESz/4JSeH0jQDPqimnUYmmAcHkmpCC8Cg6iGQnJDqFZsJlPdZgzMZLzBHT+BAOXhBrfgTE610BRhN2HLAhyIW8QQKNLCFv/kxl3B8Ow6q30yoy1stp8uLiFaueKTjnIuRPtweJY+8NKoj7ViFMQqxgFMGbenoJlxSuc6sFl5h9BDBYYtgBwoo9X1Z6T2q17S4LQFI/DOe3B4yC+53VeB0/B9ygr0xVqQur5FHqtmUdrXPD95Zeqv1UWZY8VQtGJErvpLwIibgQI5WCJwUBMoROM2Ac/VY2u2Iv3FB/iVf304ZLuBV5fRDysQ/mFfVVEkQGoFSWg+JwcqsFsL3gF34INgYxO+T9Fy8UnKFdFX4zjk7egjR02HQ1PaXz96MUD1YpfB86P3JLMOdsm/Ch4X8lry7n"
+    }
+  ],
+  "routes": {
+    "sound-package-maker/index.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-944cab3e70dde777f564",
+          "kind": "owned",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 12098,
+          "sha256": "944cab3e70dde777f5645714eb5f045b4e65e5061cc0208b933036e352924dd9",
+          "cipherPath": "cipher/e65d7601a56d66eada8238fca909260b46c998e9a5245c8d97592acbaf65750f.bin",
+          "cipherSha256": "e65d7601a56d66eada8238fca909260b46c998e9a5245c8d97592acbaf65750f",
+          "iv": "84C5ZXfiP/1itPEC",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "sound-package-maker/styles.css": {
+      "mime": "text/css; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-99878842b16bf4b5b6fb",
+          "kind": "owned",
+          "mime": "text/css; charset=utf-8",
+          "bytes": 14821,
+          "sha256": "99878842b16bf4b5b6fb2631d56cae532a7940aa50df3b9c2bfb4058efc5db04",
+          "cipherPath": "cipher/c7bcdf208617c5082a2d98980c11a4f06e09836191be9e873cf3c68ea9a0f6ad.bin",
+          "cipherSha256": "c7bcdf208617c5082a2d98980c11a4f06e09836191be9e873cf3c68ea9a0f6ad",
+          "iv": "MAdBvRn901CIq8EV",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "sound-package-maker/app.js": {
+      "mime": "text/javascript; charset=utf-8",
+      "cacheMode": "no-store",
+      "parts": [
+        {
+          "id": "asset-03d89a26ace54734c5a1",
+          "kind": "owned",
+          "mime": "text/javascript; charset=utf-8",
+          "bytes": 51689,
+          "sha256": "03d89a26ace54734c5a17fb60521ee07d9884b670db2e0c4eedc40357876834e",
+          "cipherPath": "cipher/1ff1a29d0f620c5b8012fec889a8f5425bdda79a473f48386be06b6a0c999620.bin",
+          "cipherSha256": "1ff1a29d0f620c5b8012fec889a8f5425bdda79a473f48386be06b6a0c999620",
+          "iv": "Hg6n5PKm47anELPT",
+          "aadVersion": 2
+        }
+      ]
+    },
+    "sound-package-maker/vendor/THIRD_PARTY_NOTICES.md": {
+      "mime": "text/markdown; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-525ce716c25544eddcde",
+          "kind": "vendor",
+          "mime": "text/markdown; charset=utf-8",
+          "bytes": 322,
+          "sha256": "525ce716c25544eddcdef2db8228a3124e34a0d663378da3fcefb0e032d2ab79",
+          "publicPath": "public/sound-package-maker/vendor/THIRD_PARTY_NOTICES.md"
+        }
+      ]
+    },
+    "loader/loader.html": {
+      "mime": "text/html; charset=utf-8",
+      "cacheMode": "immutable",
+      "parts": [
+        {
+          "id": "asset-2460efc2a07504432d74",
+          "kind": "vendor",
+          "mime": "text/html; charset=utf-8",
+          "bytes": 83890,
+          "sha256": "2460efc2a07504432d74da42cf3eed68d16613d2c1387fd8b7daaebbf06cf1da",
+          "publicPath": "public/loader/loader.html"
+        }
+      ]
+    }
+  },
+  "signature": {
+    "kid": "beautify-mp-manifest-v1",
+    "alg": "ES256",
+    "value": "SiUMe7RLi/+PnB6X88FvEUBMv+Uc/rGoonU036bzGrsDCf51Ncud6tsIzI5FpeJwWL9txz+aYao9AE1xLK/xPA=="
+  }
+}
